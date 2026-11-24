@@ -1,0 +1,995 @@
+{
+ "dry": [
+  {
+   "n": "Me-O Adult Dry Cat Food Tuna Flavour (1.1kg)",
+   "b": "Me-O",
+   "t": "Dry Cat Food",
+   "i": "p/dry-me-o.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/me_oadult_tuna.jpg?v=1741276245&width=600",
+   "p": 800
+  },
+  {
+   "n": "Kitchen Flavor Grain Free Cat Food With Real Meat Cubes, Adult",
+   "b": "Kitchen Flavor",
+   "t": "Dry Cat Food",
+   "i": "p/dry-kitchen-flavor.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/grainfreeadultcatfood.jpg?v=1748077374&width=600",
+   "p": 390
+  },
+  {
+   "n": "Whiskas Adult Tuna Dry Cat Food",
+   "b": "Whiskas",
+   "t": "Dry Cat Food",
+   "i": "p/dry-whiskas.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/WhiskasTunaAdult.jpg?v=1740932352&width=600",
+   "p": 420
+  },
+  {
+   "n": "Royal Canin Kitten Cat Dry Food",
+   "b": "Royal Canin",
+   "t": "Dry Cat Food",
+   "i": "p/dry-royal-canin.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/ROYAL-CANIN-KITTEN-CAT-DRY-FOOD.jpg?v=1777191944&width=600",
+   "p": 1150
+  },
+  {
+   "n": "Purina Friskies Seafood Sensations Dry Cat Food",
+   "b": "Friskies",
+   "t": "Dry Cat Food",
+   "i": "p/dry-friskies.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/PurinaFriskiesSeafoodSensationsCatFood.jpg?v=1741254754&width=600",
+   "p": 430
+  },
+  {
+   "n": "SmartHeart Adult Cat Food Chicken & Tuna",
+   "b": "SmartHeart",
+   "t": "Dry Cat Food",
+   "i": "p/dry-smartheart.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/smartheartAdult_Chicken_Tuna_1.jpg?v=1740929263&width=600",
+   "p": 370
+  },
+  {
+   "n": "Reflex Plus Kitten Salmon Super Premium Dry Food",
+   "b": "Reflex",
+   "t": "Dry Cat Food",
+   "i": "p/dry-reflex.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/kitten-salmon-re.jpg?v=1779173516&width=600",
+   "p": 1090
+  },
+  {
+   "n": "BonaCibo Adult Cat Food Chicken with Anchovy & Rice",
+   "b": "Bonacibo",
+   "t": "Dry Cat Food",
+   "i": "p/dry-bonacibo.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/BonaciboAdultChickenwithAnchovy_RiceCatDryfood.jpg?v=1741014547&width=600",
+   "p": 1290
+  },
+  {
+   "n": "Kaniva Chicken, Tuna & Rice Cat Food",
+   "b": "Kaniva",
+   "t": "Dry Cat Food",
+   "i": "p/dry-kaniva.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/KANIVA-Cat-Food-Chicken-Tuna-and-Rice.jpg?v=1762614669&width=600",
+   "p": 320
+  },
+  {
+   "n": "Lara Adult Dry Cat Food Fish with Salmon",
+   "b": "Lara",
+   "t": "Dry Cat Food",
+   "i": "p/dry-lara.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Versele-Laga-Lara-Adult-Dry-Cat-Food-Fish-with-Salmon.jpg?v=1778684464&width=600",
+   "p": 749
+  },
+  {
+   "n": "Gibo Dry Cat Food",
+   "b": "Gibo",
+   "t": "Dry Cat Food"
+  },
+  {
+   "n": "Zoi Cat Food All Breed Mixed Flavor 1kg",
+   "b": "Zoi Cat",
+   "t": "Dry Cat Food",
+   "i": "p/dry-zoi-cat.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/zoicatfod.jpg?v=1740997035&width=600",
+   "p": 420
+  },
+  {
+   "n": "Enjoy Adult Cat Food Premium Nutrition",
+   "b": "Enjoy",
+   "t": "Dry Cat Food",
+   "i": "p/dry-enjoy.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/enjoycatfood.jpg?v=1741257632&width=600",
+   "p": 480
+  },
+  {
+   "n": "CLEO Cat Food Chicken Flavor 1.2kg",
+   "b": "Cleo",
+   "t": "Dry Cat Food",
+   "i": "p/dry-cleo.jpg",
+   "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83MDgyN1wvNzA4MjctVW50aXRsZWQtZGVzaWduLTIwMjQtMTAtMTlUMjE0NjQyLXRnZTkzNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMCwiZml0Ijoib3V0c2lkZSJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtaXNjXC93bS5wbmciLCJhbHBoYSI6OTB9fX0=",
+   "p": 675
+  },
+  {
+   "n": "Jungle Adult Cat Food With Chicken and Fish",
+   "b": "Jungle",
+   "t": "Dry Cat Food",
+   "i": "p/dry-jungle.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/jungleadultchicken_fish1.jpg?v=1740991979&width=600",
+   "p": 320
+  },
+  {
+   "n": "ProDiet Mackerel Dry Cat Food 1.2kg",
+   "b": "ProDiet",
+   "t": "Dry Cat Food",
+   "i": "p/dry-prodiet.jpg",
+   "r": "https://zigly.com/cdn/shop/files/OTRFO2635.jpg?v=1790171964"
+  },
+  {
+   "n": "Oskies Adult Cat Food 1kg",
+   "b": "Oskies",
+   "t": "Dry Cat Food",
+   "i": "p/dry-oskies.jpg",
+   "r": "https://images.othoba.com/images/thumbs/2472673_oskies-adult-cat-food-1kg.jpeg",
+   "p": 364
+  },
+  {
+   "n": "Nature Bridge Classic Complete Food for Adult Cat",
+   "b": "Nature Bridge",
+   "t": "Dry Cat Food",
+   "i": "p/dry-nature-bridge.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/NatureBridge-Classic-Complete-Food-for-Adult-Cat-600x680_png.webp?v=1791021184&width=600",
+   "p": 1850
+  },
+  {
+   "n": "Drools Adult Cat Food Ocean Fish Flavour",
+   "b": "Drools",
+   "t": "Dry Cat Food",
+   "i": "p/dry-drools.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/drools-ocen.jpg?v=1765720788&width=600",
+   "p": 280
+  },
+  {
+   "n": "Captain Dry Cat Food",
+   "b": "Captain",
+   "t": "Dry Cat Food"
+  },
+  {
+   "n": "Haisenpet Premium Cat Food Chicken, Tuna & Turkey",
+   "b": "Haisenpet",
+   "t": "Dry Cat Food",
+   "i": "p/dry-haisenpet.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/haisenpetchickenandturkey.jpg?v=1743955966&width=600",
+   "p": 280
+  },
+  {
+   "n": "Micho Dry Cat Food (Adult)",
+   "b": "Micho",
+   "t": "Dry Cat Food",
+   "i": "p/dry-micho.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/MichoDryCatFood_adult.jpg?v=1740927331&width=600",
+   "p": 790
+  },
+  {
+   "n": "Mito Adult Cat Food with Chicken",
+   "b": "Mito",
+   "t": "Dry Cat Food",
+   "i": "p/dry-mito.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/mito-chicken.jpg?v=1764167266&width=600",
+   "p": 520
+  },
+  {
+   "n": "Dr. Petz Adult Cat Chicken & Tuna Flavor 1kg",
+   "b": "Dr. Petz",
+   "t": "Dry Cat Food",
+   "i": "p/dry-dr-petz.jpg",
+   "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83Mzk5MFwvNzM5OTAtRFItN25kbXdjLndlYnAiLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMCwiZml0Ijoib3V0c2lkZSJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtaXNjXC93bS5wbmciLCJhbHBoYSI6OTB9fX0=",
+   "p": 463
+  },
+  {
+   "n": "Taipet Premium Chicken & Tuna Dry Cat Food (Adult)",
+   "b": "Taipet",
+   "t": "Dry Cat Food",
+   "i": "p/dry-taipet.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/6ffaf2fc-d147-4326-95c3-993f2785da5b_jpg.webp?v=1775633208&width=600",
+   "p": 200
+  },
+  {
+   "n": "Paw Paw Adult Cat Food Chicken",
+   "b": "Paw Paw",
+   "t": "Dry Cat Food",
+   "i": "p/dry-paw-paw.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/pawadult.jpg?v=1744817636&width=600",
+   "p": 480
+  },
+  {
+   "n": "Petmetro Dry Cat Food",
+   "b": "Petmetro",
+   "t": "Dry Cat Food"
+  },
+  {
+   "n": "Felicia Low Grain Starter Care Kitten Chicken Dry Cat Food",
+   "b": "Felicia",
+   "t": "Dry Cat Food",
+   "i": "p/dry-felicia.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/feliciakittenchicken.jpg?v=1742225819&width=600",
+   "p": 400
+  }
+ ],
+ "wet": [
+  {
+   "n": "Sheba Tuna, Pumpkin & Carrot Cat Pouch 70g",
+   "b": "Sheba",
+   "t": "Wet Pouch",
+   "i": "p/wet-sheba.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/sheba-Tuna_-Pumpkin-_-Carrot.jpg?v=1764083391&width=600",
+   "p": 115
+  },
+  {
+   "n": "Purina Felix Adult Cat Pouch Chicken in Jelly 85g",
+   "b": "Felix",
+   "t": "Wet Pouch",
+   "i": "p/wet-felix.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/purina-chicken-in-jelly_b7bc841e-cb9d-4f51-b4b5-63646be69da4.jpg?v=1758637984&width=600",
+   "p": 110
+  },
+  {
+   "n": "Nekko Pouch Real Tuna in Jelly 70g",
+   "b": "Nekko",
+   "t": "Wet Pouch",
+   "i": "p/wet-nekko.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/NekkoPouchRealTunaInJelly.jpg?v=1740974604&width=600",
+   "p": 85
+  },
+  {
+   "n": "Pramy Carnivore Pouch Tuna in Gravy 70g",
+   "b": "Pramy",
+   "t": "Wet Pouch",
+   "i": "p/wet-pramy.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/pramytunaingravy.jpg?v=1754892529&width=600",
+   "p": 85
+  },
+  {
+   "n": "Bellotta Adult Pouch Tuna & Salmon 85g",
+   "b": "Bellotta",
+   "t": "Wet Pouch",
+   "i": "p/wet-bellotta.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Bellotta-Adult-Pouch-Tuna-_-Salmon-85gm.jpg?v=1762270160&width=600",
+   "p": 75
+  },
+  {
+   "n": "SmartHeart Adult Cat Pouch Tuna in Jelly 85g",
+   "b": "SmartHeart",
+   "t": "Wet Pouch",
+   "i": "p/wet-smartheart.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/smartheartpouchtunaadult1.jpg?v=1741015420&width=600",
+   "p": 89
+  },
+  {
+   "n": "Me-O Delite Tuna with Chicken Flake in Jelly 70g",
+   "b": "Me-O",
+   "t": "Wet Pouch",
+   "p": 120
+  },
+  {
+   "n": "Whiskas Adult Pouch Grilled Saba 80g",
+   "b": "Whiskas",
+   "t": "Wet Pouch",
+   "i": "p/wet-whiskas.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/WhiskasPouchAdult1_YearsGrilledSabaFlavourCatFood85g.jpg?v=1740933445&width=600",
+   "p": 89
+  },
+  {
+   "n": "Ciao Cat Pouch",
+   "b": "Ciao",
+   "t": "Wet Pouch"
+  },
+  {
+   "n": "Wanpy Kitten Pouch Salmon & Tuna in Gravy 70g",
+   "b": "Wanpy",
+   "t": "Wet Pouch",
+   "i": "p/wet-wanpy.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Kitten-Salmon-_-Tuna-wanpy-pouch.jpg?v=1762009885&width=600",
+   "p": 75
+  },
+  {
+   "n": "Royal Canin Hairball Care Pouch in Gravy 85g",
+   "b": "Royal Canin",
+   "t": "Wet Pouch",
+   "i": "p/wet-royal-canin.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Royal_Canin_Hairball_Care_Cat_Pouch_in_Gravy.jpg?v=1741339247&width=600",
+   "p": 190
+  },
+  {
+   "n": "Taipet Pouch Chicken & Tuna in Jelly 70g",
+   "b": "Taipet",
+   "t": "Wet Pouch",
+   "i": "p/wet-taipet.jpg",
+   "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC84MTA4OVwvODEwODktY2hja2VuLXR1bmFzLXQybjV6dS5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19",
+   "p": 75
+  },
+  {
+   "n": "Kaniva Cat Pouch Tuna & Chicken in Gravy 70g",
+   "b": "Kaniva",
+   "t": "Wet Pouch",
+   "i": "p/wet-kaniva.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Kaniva-Cat-Pouch-Tuna-_-Chicken-In-Gravy-Pouch-70g.jpg?v=1762613387&width=600",
+   "p": 100
+  },
+  {
+   "n": "Gibo Cat Pouch Tuna & Chicken Shreds in Gravy 85g",
+   "b": "Gibo",
+   "t": "Wet Pouch",
+   "i": "p/wet-gibo.jpg",
+   "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC84NTgzNlwvODU4MzYtTWFsaWhhLTIwLXVkcXd2Zy5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19",
+   "p": 90
+  },
+  {
+   "n": "Moochie Cat Pouch",
+   "b": "Moochie",
+   "t": "Wet Pouch"
+  },
+  {
+   "n": "Paw Paw Pouch Adult Chicken 85g",
+   "b": "Paw Paw",
+   "t": "Wet Pouch",
+   "i": "p/wet-paw-paw.jpg",
+   "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83NDk5MVwvNzQ5OTEtUGF3cGF3LXRhdnVrbHUtY2hpY2tlcm4tMS15ZWFyLWkzb29nYy5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19",
+   "p": 90
+  },
+  {
+   "n": "PetMetro Balance Nutrition Pouch Tuna & Salmon 85g",
+   "b": "Petmetro",
+   "t": "Wet Pouch",
+   "i": "p/wet-petmetro.jpg",
+   "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83NjYyOVwvNzY2MjktQmFsYW5jZS1OdXRyaXRpb24tVHVuYS1TYWxtb25pbi1qZWxseS04NWdtLWNvcHktbmZ2enY3LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMCwiZml0Ijoib3V0c2lkZSJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtaXNjXC93bS5wbmciLCJhbHBoYSI6OTB9fX0=",
+   "p": 90
+  },
+  {
+   "n": "Cuties Catz Pouch Adult Tuna 75g",
+   "b": "Cuties Catz",
+   "t": "Wet Pouch",
+   "i": "p/wet-cuties-catz.jpg",
+   "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83NDQzMlwvNzQ0MzItUENHLUN1dGllcy1DYXR6LVR1bmEtRmxhdm91ci1Ja2FuLVR1bmEtNzVnLWNvcHktaGN3Y2NhLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMCwiZml0Ijoib3V0c2lkZSJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtaXNjXC93bS5wbmciLCJhbHBoYSI6OTB9fX0=",
+   "p": 90
+  },
+  {
+   "n": "Bonacibo Adult Sterilised Chicken Chunks in Jelly 85g",
+   "b": "Bonacibo",
+   "t": "Wet Pouch",
+   "i": "p/wet-bonacibo.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/BonaciboAdultCatSterilisedChicken-ChunksInJelly85GPouch_medium_02bd796d-8d8e-4092-a39c-112135b3ae4a.avif?v=1776698795&width=600",
+   "p": 90
+  },
+  {
+   "n": "Lola & Co Mobility Pouch Tuna & Chicken with Sardine 80g",
+   "b": "Lola & Co",
+   "t": "Wet Pouch",
+   "i": "p/wet-lola-co.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Tuna-_-Chicken-Topping-Sardine-in-Jelly--lola-co.jpg?v=1761494147&width=600",
+   "p": 75
+  },
+  {
+   "n": "Felicia Kitten Pouch Chicken 85g",
+   "b": "Felicia",
+   "t": "Wet Pouch",
+   "i": "p/wet-felicia.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/kitten-chicken_648de9f4-967a-470d-b975-f0bfd80ed422.jpg?v=1782127950&width=600",
+   "p": 95
+  },
+  {
+   "n": "Kandy Cat Pouch",
+   "b": "Kandy",
+   "t": "Wet Pouch"
+  }
+ ],
+ "can": [
+  {
+   "n": "Meow Meow Tuna Topping Chicken in Jelly 400g",
+   "b": "Meow Meow",
+   "t": "Canned Food",
+   "i": "p/can-meow-meow.jpg",
+   "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC81Njk0MlwvNTY5NDItMS0yMDI2LTA5LTEwVDEwMTYxMi1kbGxsb2cucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19",
+   "p": 200
+  },
+  {
+   "n": "Gibo Cat Canned Food Tuna Meat Paste 375g",
+   "b": "Gibo",
+   "t": "Canned Food",
+   "i": "p/can-gibo.jpg",
+   "r": "https://decent.com.bd/wp-content/uploads/2025/10/gibo-tuna-meat-paste.webp",
+   "p": 180
+  },
+  {
+   "n": "Whiskas Can Tuna in Jelly 400g",
+   "b": "Whiskas",
+   "t": "Canned Food",
+   "i": "p/can-whiskas.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/WhiskasCanCatFoodTunaInJelly400gm.jpg?v=1740995284&width=600",
+   "p": 320
+  },
+  {
+   "n": "Snacky Chunk Salmon Canned Food 400g",
+   "b": "Snacky",
+   "t": "Canned Food",
+   "i": "p/can-snacky.jpg",
+   "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC81Njc0MlwvNTY3NDItU05BQ0tZLXdpdGgtU2FsbW9uLXBvdC1jb3B5LWFpZ3h4Yy5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19",
+   "p": 235
+  },
+  {
+   "n": "Bioline Natural Feast Pate Salmon 170g",
+   "b": "Bioline",
+   "t": "Canned Food",
+   "i": "p/can-bioline.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/170g-2-150x150.png?v=1784742633&width=600",
+   "p": 190
+  },
+  {
+   "n": "Sheba Deluxe Tuna in Gravy Can 85g",
+   "b": "Sheba",
+   "t": "Canned Food",
+   "i": "p/can-sheba.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/SHEBA-TUNA-GRAVY.jpg?v=1779035134&width=600",
+   "p": 240
+  },
+  {
+   "n": "Cuties Catz Adult Canned Chicken 400g",
+   "b": "Cuties Catz",
+   "t": "Canned Food",
+   "i": "p/can-cuties-catz.jpg",
+   "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83NDYxN1wvNzQ2MTctQ3V0aWVzLUNhdHotQ2hpY2tlbi1BeWFtLTQwMGdtLXVxMDY4ZS5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19",
+   "p": 250
+  },
+  {
+   "n": "SmartHeart Can Tuna in Jelly 400g",
+   "b": "SmartHeart",
+   "t": "Canned Food",
+   "i": "p/can-smartheart.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/smartheartcantunainjelly1.jpg?v=1740994334&width=600",
+   "p": 260
+  },
+  {
+   "n": "Wanpy Holistic Cat Can Tuna 375g",
+   "b": "Wanpy",
+   "t": "Canned Food",
+   "i": "p/can-wanpy.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/wanpy-can.jpg?v=1770397176&width=600",
+   "p": 200
+  },
+  {
+   "n": "Jungle Canned Cat Wet Food 400g",
+   "b": "Jungle",
+   "t": "Canned Food",
+   "i": "p/can-jungle.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/jungleacn.jpg?v=1741016065&width=600",
+   "p": 220
+  },
+  {
+   "n": "Pet Metro Can Tuna & Chicken in Jelly 430g",
+   "b": "Petmetro",
+   "t": "Canned Food",
+   "i": "p/can-petmetro.jpg",
+   "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC82ODc1OVwvNjg3NTktUGhvdG8tMS1wM3E1Z3guanBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MTAwMCwiaGVpZ2h0IjoxMDAwLCJmaXQiOiJvdXRzaWRlIn0sIm92ZXJsYXlXaXRoIjp7ImJ1Y2tldCI6ImFyb2dnYSIsImtleSI6Im1pc2NcL3dtLnBuZyIsImFscGhhIjo5MH19fQ==",
+   "p": 300
+  }
+ ],
+ "treat": [
+  {
+   "n": "Haisenpet Creamy Cat Treat Chicken 5×15g",
+   "b": "Haisenpet",
+   "t": "Creamy Treat",
+   "i": "p/treat-haisenpet.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/HaisenpetCreamyCatTreatChicken75gm.jpg?v=1748967924&width=600",
+   "p": 149
+  },
+  {
+   "n": "Taipet Creamy Treat Chicken 5×15g",
+   "b": "Taipet",
+   "t": "Creamy Treat",
+   "i": "p/treat-taipet.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Taipet-Cat-Creamy-Treat-Chicken-Recipe-5_15g.webp?v=1782316378&width=600",
+   "p": 150
+  },
+  {
+   "n": "SmartHeart Creamy Treat Chicken 4×15g",
+   "b": "SmartHeart",
+   "t": "Creamy Treat",
+   "i": "p/treat-smartheart.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/smarthearttreatchickenshopify.jpg?v=1740930299&width=600",
+   "p": 230
+  },
+  {
+   "n": "PetMetro Milk Cat Treat",
+   "b": "PetMetro",
+   "t": "Creamy Treat"
+  },
+  {
+   "n": "Wanpy Creamy Lickable Treat Chicken 5×14g",
+   "b": "Wanpy",
+   "t": "Creamy Treat",
+   "i": "p/treat-wanpy.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Wanpy_Creamy_Treats_for_Cats_with_Chicken_70g.jpg?v=1759416765&width=600",
+   "p": 220
+  },
+  {
+   "n": "Amna Cat Treat",
+   "b": "Amna",
+   "t": "Creamy Treat"
+  },
+  {
+   "n": "GOODIES Lickable Cat Treat",
+   "b": "Goodies",
+   "t": "Creamy Treat"
+  },
+  {
+   "n": "Gibo Cat Treat",
+   "b": "Gibo",
+   "t": "Creamy Treat"
+  },
+  {
+   "n": "Drools Real Chicken Creamy Cat Treat 75g",
+   "b": "Drools",
+   "t": "Creamy Treat",
+   "i": "p/treat-drools.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/drools-real-chicken.jpg?v=1758708662&width=600",
+   "p": 200
+  },
+  {
+   "n": "PetMetro Creamy Treat Tuna 5×15g",
+   "b": "Pet Metro",
+   "t": "Creamy Treat",
+   "p": 240
+  },
+  {
+   "n": "Bioline Natural Feast Pate Treat Tuna 5×15g",
+   "b": "Bioline",
+   "t": "Creamy Treat",
+   "i": "p/treat-bioline.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Untitled-design-3-768x960.png?v=1785169277&width=600",
+   "p": 190
+  },
+  {
+   "n": "4 Paws Cat Treat",
+   "b": "4 Paws",
+   "t": "Creamy Treat"
+  },
+  {
+   "n": "Truly Cat Treat Shrimp & Codfish 5×14g",
+   "b": "Truly",
+   "t": "Creamy Treat",
+   "i": "p/treat-truly.jpg",
+   "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83MDcxMVwvNzA3MTEtVHJ1bHktQ3JlYW15LUxpY2thYmxlLUNhdC1UcmVhdC1TYWxvbW9uLUFuZC1DcmFuYmVycnktaW4tamFycy0zMFBjcy0xNGcteC0zMC0yNC0xYXNvZXUuanBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MTAwMCwiaGVpZ2h0IjoxMDAwLCJmaXQiOiJvdXRzaWRlIn0sIm92ZXJsYXlXaXRoIjp7ImJ1Y2tldCI6ImFyb2dnYSIsImtleSI6Im1pc2NcL3dtLnBuZyIsImFscGhhIjo5MH19fQ==",
+   "p": 228
+  }
+ ],
+ "dtreat": [
+  {
+   "n": "Jungle Crunch Dry Treat Hair & Skin Chicken 60g",
+   "b": "Jungle",
+   "t": "Dry Treat",
+   "i": "p/dtreat-jungle.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/jungle-hair-ball-treat.jpg?v=1758036088&width=600",
+   "p": 270
+  },
+  {
+   "n": "Friskies Party Mix Mixed Grill Treats 60g",
+   "b": "Party Mix",
+   "t": "Dry Treat",
+   "i": "p/dtreat-party-mix.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Grill-Crunch-party-mix.jpg?v=1762352356&width=600",
+   "p": 300
+  },
+  {
+   "n": "Lara Pillows with Salmon Cat Treats 60g",
+   "b": "Lara",
+   "t": "Dry Treat",
+   "i": "p/dtreat-lara.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/FISH-LARA.jpg?v=1778687840&width=600",
+   "p": 320
+  },
+  {
+   "n": "Wanpy Chicken Jerky Bites Cat Treat 80g",
+   "b": "Wanpy",
+   "t": "Dry Treat",
+   "i": "p/dtreat-wanpy.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/WanpyChickenJerkyBitesCat.jpg?v=1746686401&width=600",
+   "p": 350
+  },
+  {
+   "n": "Taipet Freeze-Dried Chicken Treat",
+   "b": "Taipet",
+   "t": "Dry Treat"
+  },
+  {
+   "n": "Petmetro Dry Cat Treat",
+   "b": "Petmetro",
+   "t": "Dry Treat"
+  }
+ ],
+ "litter": [
+  {
+   "n": "Paws Clumping Bentonite Cat Litter",
+   "b": "Paws",
+   "t": "Cat Litter",
+   "i": "p/litter-paws.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/pawslitte.jpg?v=1740926079&width=600",
+   "p": 300
+  },
+  {
+   "n": "Cozie Cat Clumping Cat Litter 5L",
+   "b": "Cozie Cats",
+   "t": "Cat Litter",
+   "i": "p/litter-cozie-cats.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/cozziecat.jpg?v=1740925542&width=600",
+   "p": 320
+  },
+  {
+   "n": "Kitty Choice Natural Bentonite Cat Litter",
+   "b": "Kitty Choice",
+   "t": "Cat Litter",
+   "i": "p/litter-kitty-choice.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/KittyChoicePureNaturalBentoniteCatLitter.jpg?v=1741104061&width=600",
+   "p": 300
+  },
+  {
+   "n": "Lazy Lady Premium Bentonite Cat Litter 5L",
+   "b": "Lazy Lady",
+   "t": "Cat Litter",
+   "i": "p/litter-lazy-lady.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/lazylady.jpg?v=1740925865&width=600",
+   "p": 300
+  },
+  {
+   "n": "Haisenpet Bentonite Cat Litter",
+   "b": "Haisenpet",
+   "t": "Cat Litter",
+   "i": "p/litter-haisenpet.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/hasienpet.jpg?v=1741011063&width=600",
+   "p": 320
+  },
+  {
+   "n": "Captain Meow Clumping Cat Litter",
+   "b": "Captain Mew",
+   "t": "Cat Litter",
+   "i": "p/litter-captain-mew.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/captain-meow.jpg?v=1785577936&width=600",
+   "p": 250
+  },
+  {
+   "n": "Petmetro Cat Litter",
+   "b": "Petmetro",
+   "t": "Cat Litter"
+  },
+  {
+   "n": "Natural Tofu Cat Litter 6L",
+   "b": "Tofu",
+   "t": "Cat Litter",
+   "i": "p/litter-tofu.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/hosemlitter.jpg?v=1741342722&width=600",
+   "p": 690
+  },
+  {
+   "n": "Cature Odor Control Pellet Litter 8kg",
+   "b": "Cature",
+   "t": "Cat Litter",
+   "p": 1499
+  }
+ ],
+ "toy": [
+  {
+   "n": "Plush Toy with Catnip",
+   "b": "PetVerse",
+   "i": "ph-t1.webp",
+   "ph": 1,
+   "p": 220,
+   "o": 300
+  },
+  {
+   "n": "Crown Chew Toy, Soft Rubber",
+   "b": "PetVerse",
+   "i": "ph-t10.webp",
+   "ph": 1,
+   "p": 260,
+   "o": 350
+  },
+  {
+   "n": "Sisal Scratching Post with Pom Pom",
+   "b": "PetVerse",
+   "i": "ph-t11.webp",
+   "ph": 1,
+   "p": 1450,
+   "o": 1750
+  },
+  {
+   "n": "Round Scratcher Bed",
+   "b": "PetVerse",
+   "i": "ph-t12.webp",
+   "ph": 1,
+   "p": 990,
+   "o": 1250,
+   "nw": 1
+  },
+  {
+   "n": "Feather Wand Teaser",
+   "b": "PetVerse",
+   "i": "ph-t2.webp",
+   "ph": 1,
+   "p": 180,
+   "o": 250
+  },
+  {
+   "n": "Jingle Ball Toys, Set of 3",
+   "b": "PetVerse",
+   "i": "ph-t3.webp",
+   "ph": 1,
+   "p": 150,
+   "o": 200
+  },
+  {
+   "n": "Telescopic Wand with Feathers",
+   "b": "PetVerse",
+   "i": "ph-t4.webp",
+   "ph": 1,
+   "p": 290,
+   "o": 380
+  },
+  {
+   "n": "Rainbow Ribbon Teaser Wand",
+   "b": "PetVerse",
+   "i": "ph-t5.webp",
+   "ph": 1,
+   "p": 240,
+   "o": 320
+  },
+  {
+   "n": "Kitten Play Ball",
+   "b": "PetVerse",
+   "i": "ph-t6.webp",
+   "ph": 1,
+   "p": 120,
+   "o": 160
+  },
+  {
+   "n": "Pink Mouse Toy",
+   "b": "PetVerse",
+   "i": "ph-t7.webp",
+   "ph": 1,
+   "p": 130,
+   "o": 180
+  },
+  {
+   "n": "Long Rainbow Rope Teaser",
+   "b": "PetVerse",
+   "i": "ph-t8.webp",
+   "ph": 1,
+   "p": 260,
+   "o": 340
+  },
+  {
+   "n": "LED Light-Up Ball",
+   "b": "PetVerse",
+   "i": "ph-t9.webp",
+   "ph": 1,
+   "p": 210,
+   "o": 280,
+   "nw": 1
+  }
+ ],
+ "acc": [
+  {
+   "n": "Reflective Collar with Bell",
+   "b": "PetVerse",
+   "i": "ph-a1.webp",
+   "ph": 1,
+   "p": 280,
+   "o": 350
+  },
+  {
+   "n": "Pink Padded Harness & Leash",
+   "b": "PetVerse",
+   "i": "ph-a2.webp",
+   "ph": 1,
+   "p": 650,
+   "o": 800,
+   "nw": 1
+  },
+  {
+   "n": "Blue Breakaway Collar",
+   "b": "PetVerse",
+   "i": "ph-a3.webp",
+   "ph": 1,
+   "p": 220,
+   "o": 300
+  },
+  {
+   "n": "Bow Tie Harness Vest",
+   "b": "PetVerse",
+   "i": "ph-a4.webp",
+   "ph": 1,
+   "p": 690,
+   "o": 850
+  },
+  {
+   "n": "Red Walking Harness Set",
+   "b": "PetVerse",
+   "i": "ph-a5.webp",
+   "ph": 1,
+   "p": 590,
+   "o": 750
+  },
+  {
+   "n": "Red Collar with Name Tag",
+   "b": "PetVerse",
+   "i": "ph-a6.webp",
+   "ph": 1,
+   "p": 320,
+   "o": 400
+  },
+  {
+   "n": "Collar with Bell, Grey",
+   "b": "PetVerse",
+   "i": "ph-a7.webp",
+   "ph": 1,
+   "p": 240,
+   "o": 320
+  },
+  {
+   "n": "Water Fountain & Feeder",
+   "b": "PetVerse",
+   "i": "ph-a8.webp",
+   "ph": 1,
+   "p": 2900,
+   "o": 3400
+  },
+  {
+   "n": "Raised Ceramic Food Bowl",
+   "b": "PetVerse",
+   "i": "ph-a9.webp",
+   "ph": 1,
+   "p": 550,
+   "o": 700
+  },
+  {
+   "n": "Stainless Steel Food Bowl",
+   "b": "PetVerse",
+   "i": "ph-a10.webp",
+   "ph": 1,
+   "p": 320,
+   "o": 420
+  },
+  {
+   "n": "Cat Tree with Hanging Toy",
+   "b": "PetVerse",
+   "i": "ph-a11.webp",
+   "ph": 1,
+   "p": 3900,
+   "o": 4600
+  },
+  {
+   "n": "Self-Cleaning Litter Box",
+   "b": "PetVerse",
+   "i": "ph-a12.webp",
+   "ph": 1,
+   "p": 18500,
+   "o": 21000
+  }
+ ],
+ "dog": [
+  {
+   "n": "PetVerse Adult Dog Food Chicken & Rice 3kg",
+   "b": "PetVerse",
+   "i": "dog-01.webp",
+   "p": 1650,
+   "o": 1900,
+   "nw": 1
+  },
+  {
+   "n": "PetVerse Puppy Food Milk & Chicken 1.5kg",
+   "b": "PetVerse",
+   "i": "dog-02.webp",
+   "p": 1150,
+   "o": 1300
+  },
+  {
+   "n": "WhiskerWell Chicken Jerky Dog Treats 200g",
+   "b": "WhiskerWell",
+   "i": "dog-03.webp",
+   "p": 450,
+   "o": 550
+  },
+  {
+   "n": "PurrFect Large Breed Lamb & Brown Rice 3kg",
+   "b": "PurrFect",
+   "i": "dog-04.webp",
+   "p": 2350,
+   "o": 2650
+  },
+  {
+   "n": "Plush Squeaky Toy for Dogs",
+   "b": "PetVerse",
+   "u": "1591946614720-90a587da4a36",
+   "p": 350,
+   "o": 450
+  },
+  {
+   "n": "Blue Nylon Dog Collar",
+   "b": "PetVerse",
+   "u": "1600352712371-15fd49ca42b5",
+   "p": 390,
+   "o": 490
+  },
+  {
+   "n": "Stuffed Toy for Puppies",
+   "b": "PetVerse",
+   "u": "1774440865489-c7827c96aabc",
+   "p": 290,
+   "o": 380
+  },
+  {
+   "n": "Padded Dog Harness, Purple",
+   "b": "PetVerse",
+   "u": "1787561375245-efc541f1ee87",
+   "p": 890,
+   "o": 1100,
+   "nw": 1
+  }
+ ],
+ "small": [
+  {
+   "n": "PetVerse Budgie & Finch Seed Mix 1kg",
+   "b": "PetVerse",
+   "i": "bird-01.webp",
+   "p": 320,
+   "o": 400
+  },
+  {
+   "n": "PetVerse Parrot Food Fruit & Nut Mix 1kg",
+   "b": "PetVerse",
+   "i": "bird-02.webp",
+   "p": 650,
+   "o": 780,
+   "nw": 1
+  },
+  {
+   "n": "CleanPaws Rabbit Timothy Pellets 1kg",
+   "b": "CleanPaws",
+   "i": "rabbit-01.webp",
+   "p": 590,
+   "o": 700
+  },
+  {
+   "n": "CleanPaws Timothy Hay 500g",
+   "b": "CleanPaws",
+   "i": "rabbit-02.webp",
+   "p": 420,
+   "o": 500
+  },
+  {
+   "n": "CleanPaws Hamster Seed & Grain Mix 500g",
+   "b": "CleanPaws",
+   "i": "hamster-01.webp",
+   "p": 280,
+   "o": 350
+  },
+  {
+   "n": "PetVerse Goldfish Flakes 100g",
+   "b": "PetVerse",
+   "i": "fish-01.webp",
+   "p": 240,
+   "o": 300
+  },
+  {
+   "n": "Hamster Cage Starter Kit",
+   "b": "PetVerse",
+   "u": "1425082661705-1834bfd09dca",
+   "p": 2450,
+   "o": 2900
+  },
+  {
+   "n": "Hamster Wooden Hideout House",
+   "b": "PetVerse",
+   "u": "1584553421349-3557471bed79",
+   "p": 450,
+   "o": 550
+  }
+ ]
+}
