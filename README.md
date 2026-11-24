@@ -4,7 +4,10 @@
 
 A fast, phone-first pet shop website for PetVerse, with an admin panel.
 
-## Live demo (GitHub Pages)
+## Live site (GitHub Pages)
+GitHub Pages is the live site. There is no PHP there, so checkout sends the order on WhatsApp and the admin runs in demo mode (changes stay in your own browser). To change products or prices for everyone, the files in `data/` must be updated in this repo.
+
+## Links
 - Shop: https://abid2929.github.io/petverse/
 - Admin demo: https://abid2929.github.io/petverse/admin/ (opens without a password on the demo; changes are saved only in your own browser)
 

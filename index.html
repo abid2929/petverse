@@ -8,13 +8,13 @@
 <meta name="theme-color" content="#4a0e7a">
 <meta property="og:title" content="PetVerse | Caring for Every Paw, Every Need!">
 <meta property="og:description" content="Pet food, accessories, vaccination, grooming, deworming, vet support and medicine delivery in Bangladesh.">
-<meta property="og:image" content="img/og.jpg">
+<meta property="og:image" content="https://abid2929.github.io/petverse/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PetVerse">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="./">
+<link rel="canonical" href="https://abid2929.github.io/petverse/"><meta property="og:url" content="https://abid2929.github.io/petverse/">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -23,7 +23,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@500;600;700&display=swap"></noscript>
 <link rel="preload" as="image" href="img/hero-art-820.webp" imagesrcset="img/hero-art-820.webp 820w, img/hero-art.webp 1625w" imagesizes="(max-width:760px) 100vw, 610px" fetchpriority="high">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"PetStore","name":"PetVerse","slogan":"Caring for Every Paw, Every Need!","telephone":"+8801880972500","image":"img/logo-full.webp","address":{"@type":"PostalAddress","addressLocality":"Dhaka","addressCountry":"BD"},"priceRange":"৳৳"}
+{"@context":"https://schema.org","@type":"PetStore","name":"PetVerse","slogan":"Caring for Every Paw, Every Need!","telephone":"+8801880972500","image":"https://abid2929.github.io/petverse/img/logo-full.webp","url":"https://abid2929.github.io/petverse/","address":{"@type":"PostalAddress","addressLocality":"Dhaka","addressCountry":"BD"},"priceRange":"৳৳"}
 </script>
 <style>
 :root{
@@ -820,7 +820,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
     <div class="pay"><span style="color:#e2136e">bKash</span><span style="color:#f6921e">Nagad</span><span style="color:#8c3494">Rocket</span><span style="color:var(--gr2)">Cash on Delivery</span></div>
     </div>
   </div>
-  <div class="cp"><span>© <span id="yr">2026</span> PetVerse. All rights reserved.</span><span>Designed &amp; developed by <a href="https://www.boostnixmedia.com" target="_blank" rel="noopener">Boostnix Media</a></span></div>
+  <div class="cp"><span>© <span id="yr">2026</span> PetVerse. All rights reserved. · <a href="admin/" rel="nofollow">Admin</a></span><span>Designed &amp; developed by <a href="https://www.boostnixmedia.com" target="_blank" rel="noopener">Boostnix Media</a></span></div>
 </div></footer>
 
 <div class="fab"><a class="wa" href="https://wa.me/8801880972500" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7a11.6 11.6 0 0 1-4.5-4c-.4-.6-1-1.7-1-2.8 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a><a class="tel" href="tel:01880972500" aria-label="Call"><svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a></div>
@@ -1010,11 +1010,12 @@ let cart={},wish=new Set();
 try{cart=JSON.parse(localStorage.getItem("pv_cart")||"{}");wish=new Set(JSON.parse(localStorage.getItem("pv_wish")||"[]"))}catch(e){}
 const all={};
 const US=(id,w)=>`https://images.unsplash.com/photo-${id}?w=${w||800}&h=${w||800}&fit=crop&q=80&auto=format`;
+const PAGES=/github\.io$/.test(location.hostname);
 const cw=u=>String(u||"").replace("&width=1200","&width=600");
-function pimg(x){if(!x.i&&!x.u&&!x.r)return `<div class="fbb"><b>${x.b||"PetVerse"}</b><small>${x.t||""}</small></div>`;if(x.r&&!x.i)return `<img src="${cw(x.r)}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;if(x.r)return `<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" data-r="${cw(x.r)}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;return x.u?`<img class="ph" src="${US(x.u)}" alt="${x.n}" loading="lazy" width="600" height="600" onerror="fb(this)">`:`<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff">`}
+function pimg(x){if(!x.i&&!x.u&&!x.r)return `<div class="fbb"><b>${x.b||"PetVerse"}</b><small>${x.t||""}</small></div>`;if(x.r&&(!x.i||(PAGES&&/^p\//.test(x.i))))return `<img src="${cw(x.r)}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;if(x.r)return `<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" data-r="${cw(x.r)}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;return x.u?`<img class="ph" src="${US(x.u)}" alt="${x.n}" loading="lazy" width="600" height="600" onerror="fb(this)">`:`<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff">`}
 function fr(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r;return}const x=all[el.closest("[data-id]")?.dataset.id]||{};const d=document.createElement("div");d.className="fbb";d.innerHTML=`<b>${x.b||"PetVerse"}</b><small>${x.t||"Cat Food"}</small>`;el.replaceWith(d)}
 function fb(el){const d=document.createElement("div");d.className="fb";d.innerHTML="<span>🐾</span><small>PetVerse</small>";el.replaceWith(d)}
-const thumb=x=>x.u?US(x.u,160):x.i?(/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i):(x.r||"");
+const thumb=x=>x.u?US(x.u,160):(PAGES&&x.r&&/^p\//.test(x.i||""))?cw(x.r):x.i?(/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i):(x.r||"");
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function card(x,id){
  const off=x.o?Math.round((x.o-x.p)/x.o*100):0;
@@ -1035,7 +1036,7 @@ function render(){
 function fillGrid(g){const k=g.dataset.cat;g.innerHTML=(P[k]||[]).map((x,j)=>{const id=x.id||k+j;all[id]=x;return card(x,id)}).join("");g.classList.remove("all");g.scrollLeft=0;const v=g.closest(".wrap").querySelector(".va");if(v)v.textContent=(P[k]||[]).length>12||innerWidth<=760?"View All ("+(P[k]||[]).length+") →":"";}
 function tabCounts(){document.querySelectorAll(".tabs button").forEach(b=>{let c=b.querySelector("small");if(!c){c=document.createElement("small");b.append(c)}c.textContent=(P[b.dataset.k]||[]).length})}
 tabCounts();
-if(/github\.io$/.test(location.hostname)){const d=document.createElement("div");d.style.cssText="background:#ffd54a;color:#3a2a00;text-align:center;font:600 13px Poppins,sans-serif;padding:7px 10px";d.innerHTML='DEMO PREVIEW · <a href="admin/" style="color:#5b2a86">Open the admin panel</a> (no password needed in the demo)';document.body.prepend(d)}
+if(PAGES){document.querySelectorAll("img.rp[data-r]").forEach(i=>{if(/img\/p\//.test(i.getAttribute("src")))i.src=i.dataset.r});}
 document.querySelectorAll(".tabs").forEach(t=>{t.querySelectorAll("button").forEach(b=>{b.onclick=()=>{t.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x==b));const g=t.parentNode.querySelector(".grid");g.dataset.cat=b.dataset.k;fillGrid(g);g.querySelectorAll(".rv-in").forEach(e=>e.classList.add("vis"))}})});
 function save(){try{localStorage.setItem("pv_cart",JSON.stringify(cart));localStorage.setItem("pv_wish",JSON.stringify([...wish]))}catch(e){}}
 function counts(){const c=Object.values(cart).reduce((a,b)=>a+b,0);document.getElementById("cn").textContent=c;document.getElementById("tn").textContent=c;document.getElementById("wn").textContent=wish.size}
@@ -1095,7 +1096,7 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")pvClose()});
 
 /* ---------- quick view ---------- */
 function quickView(id){const x=all[id];if(!x)return;
- const imgs=[];if(x.i||x.r)imgs.push({s:x.i?isrc(x.i):x.r,r:x.r||"",c:""});(x.g||[]).forEach(g=>g&&g.s&&imgs.push({s:isrc(g.s),r:"",c:g.c||""}));
+ const imgs=[];if(x.i||x.r)imgs.push({s:x.i&&!(PAGES&&x.r&&/^p\//.test(x.i))?isrc(x.i):x.r,r:x.r||"",c:""});(x.g||[]).forEach(g=>g&&g.s&&imgs.push({s:isrc(g.s),r:"",c:g.c||""}));
  const off=x.o&&x.p?Math.round((x.o-x.p)/x.o*100):0,out=x.st===0;
  const cols=(x.cl||"").split(",").map(v=>v.trim()).filter(Boolean),szs=(x.sz||"").split(",").map(v=>v.trim()).filter(Boolean);
  pvModal(`<div class="qv-g"><div class="qv-main" data-id="${id}">${imgs.length?`<img id="qvImg" src="${esc(imgs[0].s)}" data-r="${esc(imgs[0].r)}" onerror="fr(this)" alt="${esc(x.n)}">`:`<div class="fbb"><b>${esc(x.b||"PetVerse")}</b><small>${esc(x.t||"")}</small></div>`}</div>
@@ -1167,7 +1168,7 @@ function trackOrder(no,ph){pvModal(`<h3 style="margin:0 0 4px">Track your order<
  if(no&&ph)doTrack(document.querySelector("#pvm form"))}
 async function doTrack(f){const o=document.getElementById("trk"),no=f.no.value.trim().toUpperCase(),ph=f.phone.value.replace(/[^\d]/g,"").replace(/^88/,"");o.innerHTML='<p class="co-n">Checking…</p>';
  let r=null;if(SRV){try{r=await(await fetch(`shop-api.php?a=track&no=${encodeURIComponent(no)}&phone=${encodeURIComponent(ph)}`)).json()}catch(e){}}
- else{const x=(LSG("orders")||[]).find(z=>z.no===no&&z.phone===ph);r=x?{ok:1,no:x.no,status:x.status,t:x.t,total:x.total,items:x.items.length,track:x.courier&&x.courier.code}:{error:"No order found with this number and phone."}}
+ else{const x=(LSG("orders")||[]).find(z=>z.no===no&&z.phone===ph);r=x?{ok:1,no:x.no,status:x.status,t:x.t,total:x.total,items:x.items.length,track:x.courier&&x.courier.code}:{error:"We could not find it here. Please send your order number on WhatsApp ("+(SITE.store?.phone||"01880972500")+") and we will tell you the status."}}
  if(!r){o.innerHTML=`<p class="co-n">Tracking is not available right now. Call <a href="tel:${esc(SITE.store?.phone||"01880972500")}">${esc(SITE.store?.phone||"01880972500")}</a>.</p>`;return false}
  if(r.error){o.innerHTML=`<p class="trk-e">${esc(r.error)}</p>`;return false}
  const steps=["pending","processing","shipped","delivered"],i=steps.indexOf(r.status);
@@ -1208,7 +1209,7 @@ function applySite(S){if(!S||typeof S!=="object")return;SITE=S;const st=S.store|
  if(cms.announce){const a=document.createElement("div");a.className="ann";a.textContent=cms.announce;document.body.prepend(a)}
  if(cms.about){const a=document.querySelector(".about-tx");if(a)a.innerHTML=esc(cms.about).replace(/\n/g,"<br>")}
  const dl=cms.deal||{},x=dl.id&&all[dl.id];if(dl.ends)window.DEAL_END=dl.ends;
- if(x){const p=document.querySelector(".dl-p");if(p){const im=x.i||x.r?`<img class="rp" src="${esc(x.i?isrc(x.i):x.r)}" data-r="${esc(x.r||"")}" onerror="pf(this)" alt="${esc(x.n)}">`:"";p.innerHTML=`${im}<div><small>${esc((x.b||"").toUpperCase())}${x.t?" · "+esc(x.t.toUpperCase()):""}</small><h4>${esc(x.n)}</h4><div class="pr"><b>${tk(x.p||0)}</b>${x.o?` <s>${tk(x.o)}</s>`:""}</div><button class="btn" onclick="add('${dl.id}',this)">Add to Cart</button></div>`}}
+ if(x){const p=document.querySelector(".dl-p");if(p){const im=x.i||x.r?`<img class="rp" src="${esc(x.i&&!(PAGES&&x.r&&/^p\//.test(x.i))?isrc(x.i):x.r)}" data-r="${esc(x.r||"")}" onerror="pf(this)" alt="${esc(x.n)}">`:"";p.innerHTML=`${im}<div><small>${esc((x.b||"").toUpperCase())}${x.t?" · "+esc(x.t.toUpperCase()):""}</small><h4>${esc(x.n)}</h4><div class="pr"><b>${tk(x.p||0)}</b>${x.o?` <s>${tk(x.o)}</s>`:""}</div><button class="btn" onclick="add('${dl.id}',this)">Add to Cart</button></div>`}}
  if(!window.PV_SSR){const px=(S.pixel||{}).id,ga=(S.seo||{}).ga;
   if(px&&/^\d{6,20}$/.test(px)){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",px);fbq("track","PageView")}
   if(ga&&/^G-[A-Z0-9]{4,15}$/i.test(ga)){const s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+ga;document.head.append(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config",ga)}}}

@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Disallow: /inc/
-Disallow: /data/private/
+
+Sitemap: https://abid2929.github.io/petverse/sitemap.xml
