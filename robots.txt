@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://abid2929.github.io/petverse/sitemap.xml
+Sitemap: https://abid2929.github.io/Petverse/sitemap.xml

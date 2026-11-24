@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://abid2929.github.io/petverse/"><img alt="Live demo" src="https://img.shields.io/badge/Live%20demo-open%20shop-6a1fb0?style=for-the-badge"></a>
-  <a href="https://abid2929.github.io/petverse/admin/"><img alt="Admin demo" src="https://img.shields.io/badge/Admin-demo-e8418d?style=for-the-badge"></a>
+  <a href="https://abid2929.github.io/Petverse/"><img alt="Live demo" src="https://img.shields.io/badge/Live%20demo-open%20shop-6a1fb0?style=for-the-badge"></a>
+  <a href="https://abid2929.github.io/Petverse/admin/"><img alt="Admin demo" src="https://img.shields.io/badge/Admin-demo-e8418d?style=for-the-badge"></a>
   <img alt="Version" src="https://img.shields.io/badge/version-2.2-13a06a?style=for-the-badge">
 </p>
 
@@ -25,8 +25,8 @@
 
 | | |
 |---|---|
-| 🛍️ **Shop** | https://abid2929.github.io/petverse/ |
-| 🔧 **Admin (demo)** | https://abid2929.github.io/petverse/admin/ |
+| 🛍️ **Shop** | https://abid2929.github.io/Petverse/ |
+| 🔧 **Admin (demo)** | https://abid2929.github.io/Petverse/admin/ |
 | 📞 **Call / WhatsApp** | 01880972500 (Bashundhara R/A branch) |
 
 > On GitHub Pages there is no server, so checkout sends the order on WhatsApp and the admin runs as a **demo** (no password; changes stay only in your own browser). Product and price changes for everyone are made in the `data/` files of this repo.
