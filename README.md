@@ -1,37 +1,92 @@
-# PetVerse – Online Pet Shop (Bangladesh)
+<p align="center">
+  <img src="img/logo-full.webp" alt="PetVerse" height="90">
+</p>
 
-**Caring for Every Paw, Every Need!** · Bashundhara R/A Branch · Call / WhatsApp: 01880972500
+<h1 align="center">PetVerse: Online Pet Shop</h1>
 
-A fast, phone-first pet shop website for PetVerse, with an admin panel.
+<p align="center">
+  <b>Caring for Every Paw, Every Need.</b><br>
+  A fast, phone-first pet shop for Bangladesh, with a full admin panel in Bangla.
+</p>
 
-## Live site (GitHub Pages)
-GitHub Pages is the live site. There is no PHP there, so checkout sends the order on WhatsApp and the admin runs in demo mode (changes stay in your own browser). To change products or prices for everyone, the files in `data/` must be updated in this repo.
+<p align="center">
+  <a href="https://abid2929.github.io/petverse/"><img alt="Live demo" src="https://img.shields.io/badge/Live%20demo-open%20shop-6a1fb0?style=for-the-badge"></a>
+  <a href="https://abid2929.github.io/petverse/admin/"><img alt="Admin demo" src="https://img.shields.io/badge/Admin-demo-e8418d?style=for-the-badge"></a>
+  <img alt="Version" src="https://img.shields.io/badge/version-2.2-13a06a?style=for-the-badge">
+</p>
 
-## Links
-- Shop: https://abid2929.github.io/petverse/
-- Admin demo: https://abid2929.github.io/petverse/admin/ (opens without a password on the demo; changes are saved only in your own browser)
+<p align="center">
+  <img src="docs/screens/home-pc.webp" alt="PetVerse home page on PC" width="760">
+</p>
 
-## What's inside
-- Home page with auto-sliding banners, Shop by Animal, services with booking, home service, offers, deal of the day, brands, about and contact. All text in English.
-- **Cat Food** by type: Dry Food, Wet Pouch, Canned, Creamy Treats, Dry Treats. Plus Cat Litter, Toys, Accessories, Dog, Bird and Small Pets.
-- Product quick view (gallery, sizes, colours, description), cart, wishlist.
-- **Checkout** that saves the order on the server (delivery charge inside / outside Dhaka, Cash on Delivery, bKash, Nagad with TrxID), order number and **Track Order**. WhatsApp ordering is still there.
-- Facebook Pixel + Conversions API (deduplicated Purchase), Google Analytics, SEO settings.
-- **Admin panel** (`/admin`, in Bangla with an EN switch): dashboard (visitors, live activity, sales, orders, stock, 7-day chart, status donut), orders with invoice print and CSV export, Steadfast courier hub, customers, reports, products (sizes, colours, multi-image gallery, AI copywriter, flash sale / new / best seller / featured), categories, collections, inventory, reviews, hero banners, homepage CMS, admins and roles (super admin, manager, staff), and site settings (store, delivery, payment, courier, SMS, Pixel/CAPI, Google SEO, password).
+---
 
-## Speed & SEO
-- Lighthouse (local test): SEO 100, desktop performance 98, phone performance 86 before server compression.
-- `.htaccess` turns on gzip and browser caching; `sitemap.xml` and `robots.txt` are generated for your domain; share image `img/og.jpg`.
+## Live links
 
-## Install on cPanel
-1. Upload the files to `public_html` (or upload the zip and Extract). Keep the hidden `.htaccess` files.
-2. Open `yourdomain.com/admin` and create the main admin account (username + password, 8+ characters).
-3. Fill in Site Settings, then edit products and press **Save**.
+| | |
+|---|---|
+| 🛍️ **Shop** | https://abid2929.github.io/petverse/ |
+| 🔧 **Admin (demo)** | https://abid2929.github.io/petverse/admin/ |
+| 📞 **Call / WhatsApp** | 01880972500 (Bashundhara R/A branch) |
 
-Needs PHP 8 with cURL (standard on cPanel). No database: shop data is in `data/*.json`; orders, accounts and API keys are in `data/private/` (blocked from the web).
+> On GitHub Pages there is no server, so checkout sends the order on WhatsApp and the admin runs as a **demo** (no password; changes stay only in your own browser). Product and price changes for everyone are made in the `data/` files of this repo.
 
-## Notes
-- Food, litter and treat photos come from online pet shops as reference images. Replace them with your own shop photos from the admin when possible.
-- Prices are market reference prices; set your own prices in the admin.
+## Screenshots
 
-Designed & developed by Abid Islam · Boostnix Media
+<table>
+  <tr>
+    <td width="68%"><img src="docs/screens/food-pc.webp" alt="Products on PC"></td>
+    <td><img src="docs/screens/home-ph.webp" alt="Home page on phone"></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screens/adm-pc-dashboard.webp" alt="Admin dashboard"></td>
+    <td><img src="docs/screens/adm-ph-dashboard.webp" alt="Admin on phone"></td>
+  </tr>
+</table>
+
+<sub>Some product photos in these screenshots are samples. The live site shows each product's real photo.</sub>
+
+## Features
+
+**Storefront (English)**
+- Bold auto-sliding product banners and a colourful “What are you looking for?” category row right at the top
+- Smooth entrance animation, app-style phone layout with bottom tab bar
+- Cat Food by type (Dry, Wet Pouch, Canned, Creamy Treats, Dry Treats), Litter, Toys, Accessories, Dog, Bird & Small Pets, Shop by Brand
+- Quick view with gallery, sizes and colours · cart · wishlist · search
+- Checkout with delivery charge (inside / outside Dhaka), Cash on Delivery, bKash / Nagad with TrxID, and **Track Order**
+- Vet services, home service and appointment booking on WhatsApp
+
+**Admin panel (Bangla, with EN switch)**
+- Dashboard: greeting, today's orders and sales, one-tap actions, visitors, live activity, 7-day sales chart
+- Orders with invoice print and CSV export · manual orders (phone / Facebook) · Steadfast courier hub
+- Products: sizes, colours, multi-image gallery, AI description writer, New / Best Seller / Flash Sale tags, stock
+- Categories, collections, inventory, customer reviews, hero banners, homepage text
+- Admins and roles (super admin, manager, staff) · password eye button · forgot-login reset
+- Settings: store info, delivery, payment, courier, SMS, Facebook Pixel + Conversions API, Google SEO
+
+**Speed & SEO**
+- Google Lighthouse: SEO 100, desktop performance 98
+- Sitemap, robots.txt, share image, structured data
+
+## Tech
+
+Plain **HTML + CSS + JavaScript** storefront and a **PHP** admin/API with JSON file storage. No database or build step needed. Runs on GitHub Pages (demo mode) or any cPanel hosting with PHP 8 (full mode).
+
+```
+index.html        storefront
+admin/            admin panel (admin.js, admin2.js, bn.js Bangla layer)
+data/*.json       products, categories, banners, reviews, site settings
+shop-api.php      orders, order tracking, reviews (server mode)
+inc/store.php     storage helpers
+```
+
+## Setup on cPanel (full mode)
+
+1. Upload the files to `public_html` (or upload the zip and **Extract**). Keep the hidden `.htaccess` files.
+2. Open `yourdomain.com/admin` and create the main admin username and password.
+3. Fill in **Site settings** (phone, delivery, payment), then add or edit products and press **Save**.
+4. Forgot the login? Upload an empty file named `reset-admin.txt` to `public_html`, then open `/admin` and create a new one.
+
+---
+
+<p align="center"><sub>Designed &amp; developed by Abid Islam &amp; <a href="https://www.boostnixmedia.com">Boostnix Media</a></sub></p>
