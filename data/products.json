@@ -377,12 +377,23 @@
    "p": 95
   },
   {
-   "n": "Kandy Cat Pouch",
+   "n": "Kandy Omega 3 Pouch Salmon & Tuna in Jelly 70g",
    "b": "Kandy",
-   "t": "Wet Pouch"
+   "t": "Wet Pouch",
+   "i": "p/wet-kandy-kandy-omega-3-pouc.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Kandyomega3.jpg?v=1754926170&width=600",
+   "p": 80
   }
  ],
  "can": [
+  {
+   "n": "Me-O Tuna in Jelly Canned Cat Food 400g",
+   "b": "Me-O",
+   "t": "Canned Food",
+   "i": "p/can-me-o-me-o-tuna-in-jelly.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/me_o_can.jpg?v=1741275932&width=600",
+   "p": 260
+  },
   {
    "n": "Meow Meow Tuna Topping Chicken in Jelly 400g",
    "b": "Meow Meow",
@@ -875,121 +886,134 @@
  ],
  "dog": [
   {
-   "n": "PetVerse Adult Dog Food Chicken & Rice 3kg",
+   "n": "Pedigree Adult Dry Dog Food Chicken & Vegetables",
+   "b": "Pedigree",
+   "t": "Dog",
+   "i": "p/dog-pedigree-pedigree-adult-dry.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/PedigreeAdultDryDogFood_Chicken_VegetablesFlavour.jpg?v=1741102468&width=600",
+   "p": 950
+  },
+  {
+   "n": "Drools Puppy Dog Food Chicken & Egg",
+   "b": "Drools",
+   "t": "Dog",
+   "i": "p/dog-drools-drools-puppy-dog-f.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/drools-dog-food-puppy.jpg?v=1777911242&width=600",
+   "p": 630
+  },
+  {
+   "n": "Royal Canin Mini Puppy Dry Dog Food",
+   "b": "Royal Canin",
+   "t": "Dog",
+   "i": "p/dog-royal-canin-royal-canin-mini-p.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Royal-Canin-Mini-Puppy-Dog-Dry-Food_b30aa2d8-2bff-4dc6-99fb-99259054fd88.jpg?v=1771859443&width=600",
+   "p": 2550
+  },
+  {
+   "n": "SmartHeart Adult Dog Food Chicken & Egg",
+   "b": "SmartHeart",
+   "t": "Dog",
+   "i": "p/dog-smartheart-smartheart-adult-d.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/dogfood.jpg?v=1741148596&width=600",
+   "p": 1790
+  },
+  {
+   "n": "Drools Absolute Calcium Bone Dog Treat 300g",
+   "b": "Drools",
+   "t": "Dog",
+   "i": "p/dog-drools-drools-absolute-ca.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Drools-Absolute-Calcium-Bone-Dog-Supplement-Treat-300g-_20-Pieces_-_-Calcium-Rich-Dental-Chew-for-Dogs.jpg?v=1781176926&width=600",
+   "p": 650
+  },
+  {
+   "n": "Jerhigh Duo Stick Milky Banana Dog Treat 50g",
+   "b": "Jerhigh",
+   "t": "Dog",
+   "i": "p/dog-jerhigh-jerhigh-duo-stick.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Jerhigh-Duo-Stick-Milky-Banana-Dog-Treat-50gm.webp?v=1780407849&width=600",
+   "p": 290
+  },
+  {
+   "n": "Harness & Leash Set for Puppy",
    "b": "PetVerse",
-   "i": "dog-01.webp",
-   "p": 1650,
-   "o": 1900,
-   "nw": 1
+   "t": "Dog",
+   "i": "p/dog-petverse-harness-leash-se.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/res_297cde3260468d8b398c596ed55f2509.jpg?v=1770913309&width=600",
+   "p": 800
   },
   {
-   "n": "PetVerse Puppy Food Milk & Chicken 1.5kg",
-   "b": "PetVerse",
-   "i": "dog-02.webp",
-   "p": 1150,
-   "o": 1300
-  },
-  {
-   "n": "WhiskerWell Chicken Jerky Dog Treats 200g",
-   "b": "WhiskerWell",
-   "i": "dog-03.webp",
-   "p": 450,
-   "o": 550
-  },
-  {
-   "n": "PurrFect Large Breed Lamb & Brown Rice 3kg",
-   "b": "PurrFect",
-   "i": "dog-04.webp",
-   "p": 2350,
-   "o": 2650
-  },
-  {
-   "n": "Plush Squeaky Toy for Dogs",
-   "b": "PetVerse",
-   "u": "1591946614720-90a587da4a36",
-   "p": 350,
-   "o": 450
-  },
-  {
-   "n": "Blue Nylon Dog Collar",
-   "b": "PetVerse",
-   "u": "1600352712371-15fd49ca42b5",
-   "p": 390,
-   "o": 490
-  },
-  {
-   "n": "Stuffed Toy for Puppies",
-   "b": "PetVerse",
-   "u": "1774440865489-c7827c96aabc",
-   "p": 290,
-   "o": 380
-  },
-  {
-   "n": "Padded Dog Harness, Purple",
-   "b": "PetVerse",
-   "u": "1787561375245-efc541f1ee87",
-   "p": 890,
-   "o": 1100,
-   "nw": 1
+   "n": "Bioline Aloe Vera Dog Shampoo 250ml",
+   "b": "Bioline",
+   "t": "Dog",
+   "i": "p/dog-bioline-bioline-aloe-vera.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/BiolineAloeVeraShampoo250mlForDogs.jpg?v=1741272602&width=600",
+   "p": 680
   }
  ],
  "small": [
   {
-   "n": "PetVerse Budgie & Finch Seed Mix 1kg",
+   "n": "Quik Bird Food Parakeet Mix",
+   "b": "Quik",
+   "t": "Bird",
+   "i": "p/small-quik-quik-bird-food-par.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Quik-Bird-Food-Parakeet-Mix-Pack.jpg?v=1776612569&width=600",
+   "p": 430
+  },
+  {
+   "n": "Goldwings Premium Parrot Food Mix",
+   "b": "Goldwings",
+   "t": "Bird",
+   "i": "p/small-goldwings-goldwings-premium.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/parrot.jpg?v=1776534279&width=600",
+   "p": 750
+  },
+  {
+   "n": "Quik Triple Honey Cracker Stick for Budgies",
+   "b": "Quik",
+   "t": "Bird",
+   "i": "p/small-quik-quik-triple-honey.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Honey-Cracker-Stick-For-Budgies.jpg?v=1776611773&width=600",
+   "p": 280
+  },
+  {
+   "n": "Versele-Laga Complete Cuni Adult Rabbit Food",
+   "b": "Versele-Laga",
+   "t": "Rabbit",
+   "i": "p/small-versele-laga-versele-laga-compl.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/Cuni-Adult.jpg?v=1771777585&width=600",
+   "p": 690
+  },
+  {
+   "n": "SmartHeart Rabbit Food Veggies & Cereals 1kg",
+   "b": "SmartHeart",
+   "t": "Rabbit",
+   "i": "p/small-smartheart-smartheart-rabbit.jpg",
+   "r": "https://mikipetstore.com/cdn/shop/files/smartheartrabbitfood.jpg?v=1750946014&width=600",
+   "p": 590
+  },
+  {
+   "n": "Large Hamster Cage, Openable Top",
    "b": "PetVerse",
-   "i": "bird-01.webp",
-   "p": 320,
-   "o": 400
+   "t": "Hamster",
+   "i": "p/small-petverse-large-hamster-cage.jpg",
+   "r": "https://mail.shokhertola80taka.com/public/files/product/1878752177295522.jpg",
+   "p": 1650
   },
   {
-   "n": "PetVerse Parrot Food Fruit & Nut Mix 1kg",
-   "b": "PetVerse",
-   "i": "bird-02.webp",
-   "p": 650,
-   "o": 780,
-   "nw": 1
+   "n": "Taiyo SuperGold Fish Food 100g",
+   "b": "Taiyo",
+   "t": "Fish",
+   "i": "p/small-taiyo-taiyo-supergold-fi.jpg",
+   "r": "https://mail.shokhertola80taka.com/public/files/product/1840778878570213.png",
+   "p": 200
   },
   {
-   "n": "CleanPaws Rabbit Timothy Pellets 1kg",
-   "b": "CleanPaws",
-   "i": "rabbit-01.webp",
-   "p": 590,
-   "o": 700
-  },
-  {
-   "n": "CleanPaws Timothy Hay 500g",
-   "b": "CleanPaws",
-   "i": "rabbit-02.webp",
-   "p": 420,
-   "o": 500
-  },
-  {
-   "n": "CleanPaws Hamster Seed & Grain Mix 500g",
-   "b": "CleanPaws",
-   "i": "hamster-01.webp",
-   "p": 280,
-   "o": 350
-  },
-  {
-   "n": "PetVerse Goldfish Flakes 100g",
-   "b": "PetVerse",
-   "i": "fish-01.webp",
-   "p": 240,
-   "o": 300
-  },
-  {
-   "n": "Hamster Cage Starter Kit",
-   "b": "PetVerse",
-   "u": "1425082661705-1834bfd09dca",
-   "p": 2450,
-   "o": 2900
-  },
-  {
-   "n": "Hamster Wooden Hideout House",
-   "b": "PetVerse",
-   "u": "1584553421349-3557471bed79",
-   "p": 450,
-   "o": 550
+   "n": "Taiyo Ultima Betta Pellets 20g",
+   "b": "Taiyo",
+   "t": "Fish",
+   "i": "p/small-taiyo-taiyo-ultima-betta.jpg",
+   "r": "https://mail.shokhertola80taka.com/public/files/product/1840779222095899.png",
+   "p": 30
   }
  ]
 }
