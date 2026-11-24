@@ -109,6 +109,8 @@ const BN = {
 "Unknown data":"অজানা তথ্য","Upload failed (max 6 MB).":"আপলোড হয়নি (সর্বোচ্চ ৬ MB)।","Username 3+ letters (a-z, 0-9) and a role.":"ইউজারনেম ৩+ অক্ষর (a-z, 0-9) আর একটা রোল দিন।",
 "Username 3+ letters, password 8+ characters.":"ইউজারনেম ৩+ অক্ষর, পাসওয়ার্ড ৮+ অক্ষর।","Wrong username or password.":"ইউজারনেম বা পাসওয়ার্ড ভুল।","You cannot delete yourself.":"নিজেকে ডিলিট করা যাবে না।",
 "You do not have permission for this.":"এটার অনুমতি আপনার নেই।",
+"Good morning":"শুভ সকাল","Good afternoon":"শুভ দুপুর","Good evening":"শুভ সন্ধ্যা","Good night":"শুভ রাত্রি","new orders":"নতুন অর্ডার","sales":"বিক্রি","waiting":"অপেক্ষায়",
+"New product":"নতুন প্রোডাক্ট","Manual order":"নতুন অর্ডার লিখুন","Banners & offers":"ব্যানার ও অফার","View shop":"দোকান দেখুন","Home":"হোম","More":"আরও","Add":"যোগ",
 "Add an image":"একটা ছবি দিন","Admin saved ✓":"অ্যাডমিন সেভ হয়েছে ✓","Allow pop-ups to print the invoice":"ইনভয়েস প্রিন্ট করতে পপ-আপ চালু করুন","Browser storage is full":"ব্রাউজারের জায়গা ভরে গেছে","Category saved ✓":"ক্যাটাগরি সেভ হয়েছে ✓","Collection saved ✓":"কালেকশন সেভ হয়েছে ✓",
 "Copying photos to your server…":"ছবি সার্ভারে কপি হচ্ছে…","Deleted ✓":"ডিলিট হয়েছে ✓","Give it a name":"একটা নাম দিন","Homepage saved ✓":"হোমপেজ সেভ হয়েছে ✓","Image uploaded ✓":"ছবি আপলোড হয়েছে ✓","Move or delete its products first":"আগে এর প্রোডাক্টগুলো সরান বা ডিলিট করুন",
 "Name and a slug (2-20 letters/numbers) are needed":"নাম আর স্লাগ (২-২০ ইংরেজি অক্ষর/সংখ্যা) লাগবে","Name and review are needed":"নাম আর রিভিউ লাগবে","Order created ✓":"অর্ডার তৈরি হয়েছে ✓","Order not found":"অর্ডার পাওয়া যায়নি","Order updated ✓":"অর্ডার আপডেট হয়েছে ✓","Saved ✓":"সেভ হয়েছে ✓",

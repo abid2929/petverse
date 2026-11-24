@@ -8,7 +8,7 @@
 <link rel="icon" href="../favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="admin.css?v=2.1">
+<link rel="stylesheet" href="admin.css?v=2.2">
 </head>
 <body>
 <div class="demo" id="demoBar" hidden>DEMO ADMIN: opens without a password and uses sample orders. Changes are saved only in this browser. On your real site (cPanel) the admin needs a login.</div>
@@ -28,7 +28,7 @@
 
 <div id="app" class="app" hidden>
  <aside class="side" id="side">
-  <a class="brand notr" href="#dashboard"><img src="../img/logo-mark.webp" alt=""><span><b>Pet<em>Verse</em></b><small>Pet Shop Admin Panel</small></span></a>
+  <a class="brand" href="#dashboard"><img src="../img/logo-mark.webp" alt=""><span><b class="notr">Pet<em>Verse</em></b><small>Pet Shop Admin Panel</small></span></a>
   <nav id="nav"></nav>
   <div class="me"><div><b id="meName">Admin</b><small id="meRole">Super Admin</small></div><button class="ic" title="Log out" onclick="logout()"><svg viewBox="0 0 24 24"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/></svg></button></div>
  </aside>
@@ -46,11 +46,18 @@
  </div>
 </div>
 
+<nav class="tabbar" id="tabbar">
+ <a href="#dashboard" data-r="dashboard"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg><span>Home</span></a>
+ <a href="#orders" data-r="orders"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/></svg><span>Orders</span><b id="tbN" hidden></b></a>
+ <a href="#product/new" class="add" data-r="product"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>Add</span></a>
+ <a href="#products" data-r="products"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8M12 13v8"/></svg><span>Products</span></a>
+ <a href="#" onclick="document.body.classList.toggle('nav-open');return false"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>More</span></a>
+</nav>
 <div class="modal" id="modal" hidden><div class="modal-bg" onclick="closeModal()"></div><div class="modal-box" id="modalBox"></div></div>
 <div class="toast" id="toast"></div>
-<script src="bn.js?v=2.1"></script>
+<script src="bn.js?v=2.2"></script>
 <script>document.getElementById("langBtn").textContent=PV_LANG==="bn"?"EN":"বাংলা"</script>
-<script src="admin.js?v=2.1"></script>
-<script src="admin2.js?v=2.1"></script>
+<script src="admin.js?v=2.2"></script>
+<script src="admin2.js?v=2.2"></script>
 </body>
 </html>

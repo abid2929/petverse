@@ -141,6 +141,9 @@ function drawNav() {
   }
   h += `<a class="nv store" href="../" target="_blank">${ic("ext")}View Live Store</a>`;
   $("#nav").innerHTML = h;
+  $$("#tabbar a[data-r]").forEach(t => t.classList.toggle("on", route.split("/")[0] === t.dataset.r));
+  const tb = $("#tbN"); if (tb) { tb.hidden = !pend; tb.textContent = pend }
+  if (!can("orders")) { const o = $('#tabbar a[data-r="orders"]'); if (o) o.hidden = true }
 }
 async function start() {
   $("#app").hidden = false; $("#meName").textContent = ME.name || ME.u; $("#meRole").textContent = ROLE_NAME[ME.role] || ME.role;
@@ -172,6 +175,12 @@ function toggleBell() { $("#bellPop").hidden = !$("#bellPop").hidden }
 
 /* ---------- dashboard ---------- */
 function statusPill(s) { return `<span class="pill st-${s}">${STATUS[s] || s}</span>` }
+function quick(k) {
+  if (k === "neworder") return newOrder();
+  if (k === "pending") { try { sessionStorage.setItem("of", "pending") } catch (e) { } location.hash = "orders"; return }
+  if (k === "store") return window.open("../", "_blank");
+  location.hash = k;
+}
 async function Dash(V) {
   title("Dashboard Overview");
   const O = DB.orders || [], P = allProducts(), now = Date.now() / 1000, today = day(now);
@@ -185,7 +194,11 @@ async function Dash(V) {
   const days = [...Array(7)].map((_, i) => { const d = new Date(Date.now() - (6 - i) * 864e5); return d.toISOString().slice(0, 10) });
   const series = days.map(d => valid.filter(o => day(o.t) === d).reduce((a, o) => a + o.total, 0));
   const last = O[0];
+  const hr = new Date().getHours(), greet = hr < 12 ? "Good morning" : hr < 17 ? "Good afternoon" : hr < 21 ? "Good evening" : "Good night";
+  const qa = [["product/new", "plus", "New product", "#f0642a", can("products")], ["neworder", "cart", "Manual order", "#7c3aed", can("orders")], ["pending", "clock", "Pending orders", "#f59e0b", can("orders"), cnt("pending")], ["inventory", "stock", "Update stock", "#16a34a", can("inventory"), low || ""], ["banners", "image", "Banners & offers", "#2563eb", can("banners")], ["store", "ext", "View shop", "#c2185b", true]].filter(x => x[4]);
   V.innerHTML = `
+  <div class="hello"><div><h2><span>${greet}</span>, ${esc(ME.name || ME.u || "")} 👋</h2><p><span>Today</span>: <b>${todayOrders}</b> <span class="tl">new orders</span> · <b>${tk(todaySales)}</b> <span class="tl">sales</span> · <b>${cnt("pending")}</b> <span class="tl">waiting</span></p></div></div>
+  <div class="qa">${qa.map(x => `<button class="qa-b" onclick="quick('${x[0]}')" style="--c:${x[3]}"><i>${ic(x[1])}</i><span>${x[2]}</span>${x[5] ? `<em>${x[5]}</em>` : ""}</button>`).join("")}</div>
   <div class="card card-b" style="margin-bottom:16px"><div class="vis">
    <div style="background:#eef5ff"><div><b style="color:#2563eb">${todayVis.toLocaleString()}</b><small style="color:#2563eb">Unique visitors today</small></div>${ic("users", "color:#2563eb;width:26px;height:26px")}</div>
    <div style="background:#eafaf0"><div><b style="color:#16a34a">${st.live || 0}</b><small style="color:#16a34a">Browsing right now</small></div>${ic("eye", "color:#16a34a;width:26px;height:26px")}</div>
