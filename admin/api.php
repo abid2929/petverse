@@ -2,6 +2,11 @@
 /* PetVerse admin API (JSON). Storage helpers: ../inc/store.php */
 declare(strict_types=1);
 require dirname(__DIR__) . '/inc/store.php';
+// Forgot login: upload an empty reset-admin.txt to the site folder. The next /admin visit removes all admin logins and the file.
+foreach (['reset-admin.txt', 'RESET-ADMIN'] as $rf) if (is_file(PV_ROOT . '/' . $rf)) {
+  foreach (['users', 'rate'] as $c) @unlink(pv_path($c));
+  @unlink(PV_ROOT . '/' . $rf);
+}
 session_name('pvadmin');
 session_set_cookie_params(['httponly' => true, 'samesite' => 'Strict', 'secure' => !empty($_SERVER['HTTPS'])]);
 session_start();
