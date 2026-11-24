@@ -43,7 +43,8 @@ async function api(a, body, q = "", form) {
 async function load(c, force) { if (DB[c] && !force) return DB[c]; const j = await api("get", null, "&c=" + c); DB[c] = j.data ?? (c === "site" ? {} : (c === "products" ? {} : [])); return DB[c] }
 async function save(c) { const j = await api("put", { data: DB[c] }, "&c=" + c); if (j.error) { toast(j.error); return false } return true }
 const imgSrc = s => !s ? "" : (/^(https?:|data:)/.test(s) ? s : "../img/" + s.replace(/^img\//, ""));
-function thumb(x, cls = "th") { const s = x.i ? imgSrc(x.i) : (x.r || (x.g && x.g[0] && imgSrc(x.g[0].s)) || ""); return s ? `<img class="${cls}" src="${esc(s)}" data-r="${esc(x.r || "")}" onerror="if(this.dataset.r&&this.src!==this.dataset.r){this.src=this.dataset.r}else{this.outerHTML='<div class=ph0>${esc((x.b || "").slice(0, 14))}</div>'}" alt="">` : `<div class="ph0">${esc((x.b || "No photo").slice(0, 14))}</div>` }
+const GHP = /github\.io$/.test(location.hostname);
+function thumb(x, cls = "th") { const s = x.i && !(GHP && x.r && /^p\//.test(x.i)) ? imgSrc(x.i) : (x.r || (x.g && x.g[0] && imgSrc(x.g[0].s)) || ""); return s ? `<img class="${cls}" src="${esc(s)}" data-r="${esc(x.r || "")}" onerror="if(this.dataset.r&&this.src!==this.dataset.r){this.src=this.dataset.r}else{this.outerHTML='<div class=ph0>${esc((x.b || "").slice(0, 14))}</div>'}" alt="">` : `<div class="ph0">${esc((x.b || "No photo").slice(0, 14))}</div>` }
 function allProducts() { const out = []; const P = DB.products || {}; for (const k in P) (P[k] || []).forEach((x, j) => { if (!x.id) x.id = k + j; out.push({ ...x, _k: k, _j: j }) }); return out }
 function catName(k) { const c = (DB.categories || []).find(c => c.k === k); return c ? c.name : k }
 
