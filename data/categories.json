@@ -1,0 +1,82 @@
+[
+ {
+  "k": "dry",
+  "name": "Dry Cat Food",
+  "group": "catfood",
+  "img": "https://mikipetstore.com/cdn/shop/files/me_oadult_tuna.jpg?v=1741276245&width=600",
+  "order": 1,
+  "on": 1
+ },
+ {
+  "k": "wet",
+  "name": "Wet Pouch",
+  "group": "catfood",
+  "img": "https://mikipetstore.com/cdn/shop/files/sheba-Tuna_-Pumpkin-_-Carrot.jpg?v=1764083391&width=600",
+  "order": 2,
+  "on": 1
+ },
+ {
+  "k": "can",
+  "name": "Canned Food",
+  "group": "catfood",
+  "img": "https://mikipetstore.com/cdn/shop/files/me_o_can.jpg?v=1741275932&width=600",
+  "order": 3,
+  "on": 1
+ },
+ {
+  "k": "treat",
+  "name": "Creamy Treats",
+  "group": "catfood",
+  "img": "https://mikipetstore.com/cdn/shop/files/HaisenpetCreamyCatTreatChicken75gm.jpg?v=1748967924&width=600",
+  "order": 4,
+  "on": 1
+ },
+ {
+  "k": "dtreat",
+  "name": "Dry Treats",
+  "group": "catfood",
+  "img": "https://mikipetstore.com/cdn/shop/files/jungle-hair-ball-treat.jpg?v=1758036088&width=600",
+  "order": 5,
+  "on": 1
+ },
+ {
+  "k": "litter",
+  "name": "Cat Litter",
+  "group": "main",
+  "img": "https://mikipetstore.com/cdn/shop/files/pawslitte.jpg?v=1740926079&width=600",
+  "order": 6,
+  "on": 1
+ },
+ {
+  "k": "toy",
+  "name": "Cat Toys",
+  "group": "main",
+  "img": "img/ph-t1.webp",
+  "order": 7,
+  "on": 1
+ },
+ {
+  "k": "acc",
+  "name": "Cat Accessories",
+  "group": "main",
+  "img": "img/ph-a1.webp",
+  "order": 8,
+  "on": 1
+ },
+ {
+  "k": "dog",
+  "name": "Dog Food & Accessories",
+  "group": "main",
+  "img": "https://mikipetstore.com/cdn/shop/files/PedigreeAdultDryDogFood_Chicken_VegetablesFlavour.jpg?v=1741102468&width=600",
+  "order": 9,
+  "on": 1
+ },
+ {
+  "k": "small",
+  "name": "Bird, Rabbit & Small Pets",
+  "group": "main",
+  "img": "https://mikipetstore.com/cdn/shop/files/Quik-Bird-Food-Parakeet-Mix-Pack.jpg?v=1776612569&width=600",
+  "order": 10,
+  "on": 1
+ }
+]

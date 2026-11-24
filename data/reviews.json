@@ -1,0 +1,23 @@
+[
+ {
+  "name": "Customer, Mirpur",
+  "pet": "Cat parent",
+  "text": "I ordered cat food and litter together and got them the next day. Genuine packs.",
+  "stars": 5,
+  "on": 1
+ },
+ {
+  "name": "Customer, Uttara",
+  "pet": "Dog parent",
+  "text": "My dog's vaccine and deworming were done in one day. Very convenient.",
+  "stars": 5,
+  "on": 1
+ },
+ {
+  "name": "Customer, Dhanmondi",
+  "pet": "Cat parent",
+  "text": "After grooming and nail cutting my Persian cat looks brand new. Thank you PetVerse!",
+  "stars": 5,
+  "on": 1
+ }
+]

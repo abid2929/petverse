@@ -1,0 +1,47 @@
+{
+ "store": {
+  "name": "PetVerse",
+  "tagline": "Caring for Every Paw, Every Need!",
+  "phone": "01880972500",
+  "whatsapp": "8801880972500",
+  "email": "",
+  "address": "Bashundhara R/A, Dhaka",
+  "facebook": "",
+  "hours": "Open every day, 9am to 10pm"
+ },
+ "delivery": {
+  "inside": 70,
+  "outside": 130,
+  "free_over": 0,
+  "note": "Inside Dhaka 1-2 days, outside Dhaka 2-4 days."
+ },
+ "payment": {
+  "cod": 1,
+  "bkash": "",
+  "nagad": "",
+  "note": "Send money and write the transaction ID at checkout."
+ },
+ "cms": {
+  "ticker": [
+   "🚚 Fast home delivery inside Dhaka",
+   "💉 Vaccination, deworming & grooming: book today",
+   "🐱 All top cat food brands at our Bashundhara R/A branch"
+  ],
+  "about": "",
+  "deal": {
+   "id": "dry3",
+   "ends": ""
+  },
+  "announce": ""
+ },
+ "seo": {
+  "title": "PetVerse | Online Pet Shop in Bangladesh: Cat Food, Dog Food, Pet Accessories & Vet Care",
+  "desc": "",
+  "keys": "pet shop bangladesh, cat food, cat litter, dog food, pet accessories, vet care dhaka, petverse",
+  "ga": "",
+  "gsv": ""
+ },
+ "pixel": {
+  "id": ""
+ }
+}

@@ -399,7 +399,7 @@ nav.mn a.on:after,nav.mn a:hover:after{left:10px;right:10px}
 .pc:hover{border-color:transparent;box-shadow:0 0 0 1.5px #d9c7f3,var(--sh2)}
 .pc .bd{border-top:0}
 .add{background:linear-gradient(135deg,var(--pu2),var(--pu));color:#fff;border:0;box-shadow:0 8px 16px -8px rgba(74,14,122,.6)}
-.add:hover{filter:brightness(1.12)}.add.ok{background:linear-gradient(135deg,#1cc283,var(--gr2))}
+.add:hover{filter:brightness(1.12)}.add[disabled]{opacity:.45;cursor:not-allowed;filter:grayscale(1)}.add.ok{background:linear-gradient(135deg,#1cc283,var(--gr2))}
 .off{background:linear-gradient(135deg,#ff8a2a,#ff5a1f);border-radius:999px;padding:4px 10px}
 .pet .c{box-shadow:0 0 0 2px #efe7fa,var(--sh)}
 .svc{border-radius:20px}
@@ -498,6 +498,51 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
 .s1 .ha{position:absolute;right:0;bottom:0;width:112%;max-width:none;filter:drop-shadow(0 20px 30px rgba(60,20,110,.25))}
 .slide.on .ha{animation:zin 1.1s cubic-bezier(.2,.8,.2,1) both}
 @media (max-width:760px){.s1 .ha{width:100%;right:0}}
+[hidden]{display:none!important}
+.ann{background:var(--pu);color:#fff;text-align:center;font-weight:600;font-size:13px;padding:8px 12px}
+.pvm{position:fixed;inset:0;z-index:120;display:none;align-items:center;justify-content:center;padding:16px}
+.pvm.on{display:flex}.pvm-bg{position:absolute;inset:0;background:rgba(20,8,40,.55)}
+.pvm-box{position:relative;background:#fff;border-radius:20px;width:min(900px,100%);max-height:calc(100vh - 32px);overflow:auto;padding:22px;box-shadow:0 30px 80px -20px rgba(20,8,40,.5);animation:pvi .25s ease}
+.pvm-box.sm{width:min(440px,100%)}
+@keyframes pvi{from{transform:translateY(14px);opacity:0}}
+.pvm-x{position:absolute;right:12px;top:12px;width:36px;height:36px;border-radius:50%;border:0;background:#f3eefa;font-size:16px;cursor:pointer;z-index:2}
+.pvm-box.qv{display:grid;grid-template-columns:1fr 1.05fr;gap:24px}
+.qv-main{aspect-ratio:1;background:#fff;border:1px solid #eee6f5;border-radius:16px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.qv-main img{width:100%;height:100%;object-fit:contain}.qv-main .fbb{width:100%;height:100%}
+.qv-th{display:flex;gap:8px;margin-top:10px;overflow-x:auto}
+.qv-th button{flex:0 0 64px;height:64px;border:2px solid #eee6f5;border-radius:12px;padding:2px;background:#fff;cursor:pointer}
+.qv-th button.on{border-color:var(--pu2)}.qv-th img{width:100%;height:100%;object-fit:contain}
+.qv-i h3{margin:4px 0 8px;font-size:21px;line-height:1.3}.qv-i .br{color:var(--pu2);font-weight:600;font-size:13px}
+.qv-badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}.qv-badges span{background:var(--pu2);color:#fff;font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px}
+.qv-badges .r{background:#e23b3b}.qv-badges .g{background:#16a34a}
+.qv-i .pr b{font-size:24px;color:var(--pu)}.qv-i .pr s{color:#999;margin-left:8px}
+.qv-st{color:#16a34a;font-weight:600;font-size:13px;margin:6px 0}.qv-st.no{color:#e23b3b}
+.qv-sd{color:#555;font-size:14px;margin:8px 0}
+.qv-l{display:block;font-weight:600;font-size:13px;margin:12px 0 6px}
+.qv-ch{display:flex;gap:8px;flex-wrap:wrap}.qv-ch button{border:1.5px solid #e2d8ee;background:#fff;border-radius:10px;padding:7px 14px;font:500 13px Poppins,sans-serif;cursor:pointer}
+.qv-ch button.on{border-color:var(--pu2);background:#f3eaff;color:var(--pu)}
+.qv-buy{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 4px;align-items:center}.qv-buy .btn{flex:1;justify-content:center;min-width:130px}
+.qv-buy .btn[disabled]{opacity:.45;pointer-events:none}
+.qv-q{display:flex;align-items:center;border:1.5px solid #e2d8ee;border-radius:12px;overflow:hidden}.qv-q button{width:38px;height:42px;border:0;background:#f7f2fc;font-size:18px;cursor:pointer}.qv-q b{min-width:34px;text-align:center}
+.qv-t{width:100%;border-collapse:collapse;font-size:13px;margin-top:14px}.qv-t td{padding:7px 0;border-top:1px solid #f0e9f7}.qv-t td:first-child{color:#7a6a92;width:90px}
+.qv-d{border-top:1px solid #eee6f5;margin-top:14px;padding-top:12px;font-size:14px;color:#444}.qv-d p{margin:6px 0 0;line-height:1.6}
+.co{display:flex;flex-direction:column;gap:10px}.co h4{margin:6px 0 0;font-size:15px}
+.co label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600;color:#3a2a55}
+.co input:not([type=radio]),.co textarea{border:1.5px solid #e2d8ee;border-radius:10px;padding:10px 12px;font:400 14px Poppins,sans-serif;width:100%;box-sizing:border-box;outline:0}
+.co input:focus,.co textarea:focus{border-color:var(--pu2)}
+.co-r{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.co .co-o{flex-direction:row;align-items:center;gap:8px;border:1.5px solid #e2d8ee;border-radius:12px;padding:10px;cursor:pointer;font-weight:500}
+.co .co-o:has(input:checked){border-color:var(--pu2);background:#f7f0ff}.co-o span{display:flex;flex-direction:column}.co-o small{color:var(--pu2);font-weight:700}
+.co-n{font-size:12.5px;color:#6b5a85;margin:0;font-weight:400}.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.tot.sm{font-size:13px;color:#555;font-weight:500}
+.co-ok{text-align:center;padding:30px 10px}.co-ok .ck{width:64px;height:64px;border-radius:50%;background:#16a34a;color:#fff;font-size:32px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.co-ok h4{margin:0 0 6px;font-size:19px}.co-ok p{margin:4px 0}
+.trk{margin-top:14px;border-top:1px solid #eee6f5;padding-top:12px;font-size:14px}.trk ol{list-style:none;padding:0;margin:10px 0}
+.trk li{display:flex;align-items:center;gap:10px;padding:7px 0;color:#999;position:relative}.trk li i{width:14px;height:14px;border-radius:50%;border:2px solid #ccc;flex:none}
+.trk li.on{color:#1a1030;font-weight:600}.trk li.on i{background:#16a34a;border-color:#16a34a}
+.trk-e{color:#e23b3b;font-size:13.5px;margin-top:12px}
+.drawer .f .btn.w{background:#fff;color:var(--pu);border:1.5px solid #e2d8ee;box-shadow:none}
+@media(max-width:760px){.pvm{padding:0;align-items:flex-end}.pvm-box{border-radius:20px 20px 0 0;max-height:92vh;padding:18px 16px}.pvm-box.qv{grid-template-columns:1fr;gap:14px}.qv-i h3{font-size:18px}}
 </style>
 <script>function pf(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r}else el.style.visibility="hidden"}</script>
 </head>
@@ -506,7 +551,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
 <div class="strip"><div class="wrap">
   <a class="sp" href="tel:01880972500"><svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>01880972500</a>
   <div class="tick" aria-live="polite"><span class="on">🚚 Fast home delivery inside Dhaka</span><span>💉 Vaccination, deworming &amp; grooming: book today</span><span>🎁 Up to 25% off on cat food &amp; litter</span></div>
-  <div class="r"><a href="#home-service">Home Service</a><a href="#booking">Book Appointment</a><a href="#contact">Track Order</a></div>
+  <div class="r"><a href="#home-service">Home Service</a><a href="#booking">Book Appointment</a><a href="#" onclick="trackOrder();return false">Track Order</a></div>
 </div></div>
 
 <header class="top"><div class="wrap">
@@ -519,9 +564,9 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
     </form>
     <div class="acts">
       <a class="call" href="tel:01880972500"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><small>Call / WhatsApp</small><b>01880972500</b></div></a>
-      <a class="ib" href="#" onclick="toast('Wishlist e '+wish.size+' ta item');return false" aria-label="Wishlist"><svg class="i" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9a4.8 4.8 0 0 1 9-3 4.8 4.8 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg><span class="n" id="wn">0</span></a>
+      <a class="ib" href="#" onclick="toast(wish.size+' item(s) in your wishlist');return false" aria-label="Wishlist"><svg class="i" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9a4.8 4.8 0 0 1 9-3 4.8 4.8 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg><span class="n" id="wn">0</span></a>
       <a class="ib" href="#" onclick="openCart();return false" aria-label="Cart"><svg class="i" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg><span class="n" id="cn">0</span></a>
-      <a class="acc" href="#" onclick="toast('Account shiggiri asche');return false"><span class="ib" style="background:var(--bg)"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span>Hello, Sign in<b>My Account</b></span></a>
+      <a class="acc" href="#" onclick="toast('Customer accounts are coming soon');return false"><span class="ib" style="background:var(--bg)"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span>Hello, Sign in<b>My Account</b></span></a>
     </div>
   </div>
   <div class="mob-search">
@@ -564,7 +609,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
     <div class="slide on s1"><div class="sl">
       <div class="tx">
         <span class="kick">PetVerse Cat Store</span>
-        <h2>সেরা সব ব্র্যান্ডের <em>ক্যাট ফুড</em><br>এখন এক জায়গায়</h2>
+        <h2>All the top <em>cat food</em> brands<br>in one place</h2>
         <div class="big">CAT FOOD</div>
         <div class="badges"><span class="bdg"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></i>AUTHENTIC</span><span class="bdg"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="8" cy="8" r="1.6"/></svg></i>BEST PRICE</span><span class="bdg"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></i>FAST DELIVERY</span></div>
       </div>
@@ -576,7 +621,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
     <div class="slide s3"><div class="sl">
       <div class="tx">
         <span class="kick">For Happy Dogs</span>
-        <h2>আপনার প্রিয় কুকুরের জন্য<br>খাবার, খেলনা ও যত্ন</h2>
+        <h2>For your best friend:<br>food, toys &amp; care</h2>
         <div class="big">DOG ZONE</div>
         <p>Dry food, treats, chew toys, leashes and collars, picked for Bangladeshi weather and homes.</p>
         <a class="btn" href="#dog">Shop Dog Items →</a>
@@ -587,7 +632,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
     <div class="slide s4"><div class="sl">
       <div class="tx">
         <span class="kick">Clean Home Offer</span>
-        <h2>গন্ধমুক্ত ঘর, খুশি বিড়াল<br><em>ক্যাট লিটারে বিশেষ ছাড়</em></h2>
+        <h2>Fresh home, happy cat<br><em>Top cat litter brands</em></h2>
         <div class="big" style="color:var(--pu)">CAT LITTER</div>
         <p>Clumping sand, tofu, carbon and silica litter. Low dust, strong odour control.</p>
         <a class="btn g" href="#cat-litter">Shop Litter →</a>
@@ -598,7 +643,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
     <div class="slide s5"><div class="sl">
       <div class="tx">
         <span class="kick">Medical &amp; Vet Support</span>
-        <h2>ভ্যাকসিন, ডিওয়ার্মিং ও গ্রুমিং<br><em>পোষা প্রাণীর পূর্ণ যত্ন</em></h2>
+        <h2>Vaccination, deworming &amp; grooming<br><em>Complete pet care</em></h2>
         <p>Vaccination, deworming, grooming, blood &amp; FPV/FIP tests and assistant vet support. Book by phone.</p>
         <a class="phone" href="tel:01880972500"><i>✆</i><span><small>CALL FOR APPOINTMENT</small>01880972500</span></a>
       </div>
@@ -618,31 +663,31 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
     <div><i style="background:var(--or)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v3a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="12" r="2"/></svg></i><span><b>Vet Support</b><small>Vaccination &amp; grooming</small></span></div>
   </div>
   <div class="deal">
-    <div class="dl-l"><span class="kick2">Deal of the Day</span><h3 class="bn">আজকের অফার শেষ হবে</h3><div class="cd" id="cd"><span><b>00</b>Hours</span><span><b>00</b>Min</span><span><b>00</b>Sec</span></div></div>
+    <div class="dl-l"><span class="kick2">Deal of the Day</span><h3>Today's offer ends in</h3><div class="cd" id="cd"><span><b>00</b>Hours</span><span><b>00</b>Min</span><span><b>00</b>Sec</span></div></div>
     <div class="dl-p"><img class="rp" src="img/p/dry-royal-canin.jpg" data-r="https://mikipetstore.com/cdn/shop/files/ROYAL-CANIN-KITTEN-CAT-DRY-FOOD.jpg?v=1777191944&width=600" onerror="pf(this)" alt="Royal Canin Kitten"><div><small>ROYAL CANIN · KITTEN</small><h4>Royal Canin Kitten Dry Food</h4><div class="pr"><b>৳ 1,150</b></div><button class="btn" onclick="add('dry3',this)">Add to Cart</button></div></div>
   </div>
 </div>
 
 <section id="shop-by-pet"><div class="wrap">
-  <div class="sh"><h3>Shop by Pet <small>পোষা প্রাণী অনুযায়ী কিনুন</small></h3></div>
+  <div class="sh"><h3>Shop by Pet</h3></div>
   <div class="pets" id="pets"></div>
 </div></section>
 
-<section id="cat-food"><div class="wrap"><div class="sh"><h3>Cat Food <small>ক্যাট ফুড · Bashundhara R/A Branch</small></h3><a class="va" href="#cat-food" onclick="return va(this)">View All →</a></div>
+<section id="cat-food"><div class="wrap"><div class="sh"><h3>Cat Food <small>Bashundhara R/A Branch</small></h3><a class="va" href="#cat-food" onclick="return va(this)">View All →</a></div>
 <div class="tabs" role="tablist"><button class="on" data-k="dry">Dry Food</button><button data-k="wet">Wet Pouch</button><button data-k="can">Canned</button><button data-k="treat">Creamy Treats</button><button data-k="dtreat">Dry Treats</button></div>
 <div class="grid lim" data-cat="dry"></div></div></section>
 
 <section id="services"><div class="wrap">
-  <div class="sh"><h3>Medical &amp; Vet Support <small>আমাদের সেবা</small></h3><a class="va" href="tel:01880972500">Call 01880972500 →</a></div>
+  <div class="sh"><h3>Medical &amp; Vet Support <small>Our services</small></h3><a class="va" href="tel:01880972500">Call 01880972500 →</a></div>
   <div class="svcs" id="svcs"></div>
-  <div class="svc-cta"><div><h4>পোষা প্রাণীর যেকোনো প্রয়োজনে কল করুন</h4><p>Vaccination, grooming, tests or medicine delivery: one call does it all.</p></div><a class="btn w" href="tel:01880972500">✆ 01880972500</a></div>
+  <div class="svc-cta"><div><h4>Call us for anything your pet needs</h4><p>Vaccination, grooming, tests or medicine delivery: one call does it all.</p></div><a class="btn w" href="tel:01880972500">✆ 01880972500</a></div>
 </div></section>
 
 <section id="home-service"><div class="wrap">
   <div class="hs">
     <div class="hs-t">
       <span class="kick2">Medical &amp; Vet Support</span>
-      <h3 class="bn">পোষা প্রাণীর চিকিৎসা ও যত্ন, এক জায়গায়</h3>
+      <h3>Pet treatment and care, all in one place</h3>
       <p>Vaccination, deworming, grooming, tests and assistant vet support for your cat or dog, plus medicine delivered to your door. Call or book online.</p>
       <div class="hs-chips"><span>💉 Vaccination</span><span>💊 Deworming</span><span>✂️ Grooming</span><span>🧴 Medicated Bathing</span><span>✂️ Nail Cutting</span><span>👂 Ear Cleaning</span><span>💉 Injection (as per prescription)</span><span>🩸 Blood &amp; FPV/FIP Test</span></div>
       <ol class="steps">
@@ -658,21 +703,21 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
   </div>
 </div></section>
 
-<section id="cat-toy"><div class="wrap"><div class="sh"><h3>Cat Toy <small>খেলনা</small></h3><a class="va" href="#cat-toy" onclick="return va(this)">View All →</a></div><div class="grid" data-cat="toy"></div></div></section>
+<section id="cat-toy"><div class="wrap"><div class="sh"><h3>Cat Toy</h3><a class="va" href="#cat-toy" onclick="return va(this)">View All →</a></div><div class="grid" data-cat="toy"></div></div></section>
 
 <section id="offers"><div class="wrap"><div class="promos">
-  <div class="pt a"><div class="t"><small>NEW ARRIVAL</small><h4>গ্রেইন-ফ্রি ক্যাট ফুড</h4></div><a href="#cat-food">Shop now</a><img class="rp" src="img/p/dry-kitchen-flavor.jpg" data-r="https://mikipetstore.com/cdn/shop/files/grainfreeadultcatfood.jpg?v=1748077374&width=600" onerror="pf(this)" alt=""></div>
-  <div class="pt b"><div class="t"><small>NATURAL</small><h4>টোফু ক্যাট লিটার</h4></div><a href="#cat-litter">Shop now</a><img class="rp" src="img/p/litter-tofu.jpg" data-r="https://mikipetstore.com/cdn/shop/files/hosemlitter.jpg?v=1741342722&width=600" onerror="pf(this)" alt=""></div>
-  <div class="pt c"><div class="t"><small>WALK IN STYLE</small><h4>হারনেস ও কলার</h4></div><a href="#cat-accessories">Shop now</a><img class="ph" src="https://images.unsplash.com/photo-1786299115178-2e97574ef478?w=600&h=500&fit=crop&q=80&auto=format" onerror="this.remove()" alt=""></div>
+  <div class="pt a"><div class="t"><small>NEW ARRIVAL</small><h4>Grain-free cat food</h4></div><a href="#cat-food">Shop now</a><img class="rp" src="img/p/dry-kitchen-flavor.jpg" data-r="https://mikipetstore.com/cdn/shop/files/grainfreeadultcatfood.jpg?v=1748077374&width=600" onerror="pf(this)" alt=""></div>
+  <div class="pt b"><div class="t"><small>NATURAL</small><h4>Tofu cat litter</h4></div><a href="#cat-litter">Shop now</a><img class="rp" src="img/p/litter-tofu.jpg" data-r="https://mikipetstore.com/cdn/shop/files/hosemlitter.jpg?v=1741342722&width=600" onerror="pf(this)" alt=""></div>
+  <div class="pt c"><div class="t"><small>WALK IN STYLE</small><h4>Harness &amp; collars</h4></div><a href="#cat-accessories">Shop now</a><img class="ph" src="https://images.unsplash.com/photo-1786299115178-2e97574ef478?w=600&h=500&fit=crop&q=80&auto=format" onerror="this.remove()" alt=""></div>
 </div></div></section>
 
-<section id="cat-litter"><div class="wrap"><div class="sh"><h3>Cat Litter <small>ক্যাট লিটার</small></h3><a class="va" href="#cat-litter" onclick="return va(this)">View All →</a></div><div class="grid lim" data-cat="litter"></div></div></section>
+<section id="cat-litter"><div class="wrap"><div class="sh"><h3>Cat Litter</h3><a class="va" href="#cat-litter" onclick="return va(this)">View All →</a></div><div class="grid lim" data-cat="litter"></div></div></section>
 
-<section id="cat-accessories"><div class="wrap"><div class="sh"><h3>Cat Accessories <small>এক্সেসরিজ</small></h3><a class="va" href="#cat-accessories" onclick="return va(this)">View All →</a></div><div class="grid" data-cat="acc"></div></div></section>
+<section id="cat-accessories"><div class="wrap"><div class="sh"><h3>Cat Accessories</h3><a class="va" href="#cat-accessories" onclick="return va(this)">View All →</a></div><div class="grid" data-cat="acc"></div></div></section>
 
-<section id="dog"><div class="wrap"><div class="sh"><h3>Dog Food &amp; Accessories <small>কুকুরের জন্য</small></h3><a class="va" href="#dog" onclick="return va(this)">View All →</a></div><div class="grid" data-cat="dog"></div></div></section>
+<section id="dog"><div class="wrap"><div class="sh"><h3>Dog Food &amp; Accessories</h3><a class="va" href="#dog" onclick="return va(this)">View All →</a></div><div class="grid" data-cat="dog"></div></div></section>
 
-<section id="bird-small"><div class="wrap"><div class="sh"><h3>Bird, Rabbit &amp; Small Pets <small>পাখি, খরগোশ ও ছোট প্রাণী</small></h3><a class="va" href="#bird-small" onclick="return va(this)">View All →</a></div><div class="grid" data-cat="small"></div></div></section>
+<section id="bird-small"><div class="wrap"><div class="sh"><h3>Bird, Rabbit &amp; Small Pets</h3><a class="va" href="#bird-small" onclick="return va(this)">View All →</a></div><div class="grid" data-cat="small"></div></div></section>
 
 <section id="brands"><div class="wrap">
   <div class="sh"><h3>Shop by Brand</h3><a class="va" href="#brands">All Brands →</a></div>
@@ -682,7 +727,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
 </div></section>
 
 <section id="booking"><div class="wrap">
-  <div class="sh"><h3>Book an Appointment <small>অ্যাপয়েন্টমেন্ট বুক করুন</small></h3><a class="va" href="tel:01880972500">Or call 01880972500 →</a></div>
+  <div class="sh"><h3>Book an Appointment</h3><a class="va" href="tel:01880972500">Or call 01880972500 →</a></div>
   <div class="bk">
     <form class="bkf" id="bkf" onsubmit="return book(this)">
       <div class="row"><label>Your name<input name="name" required placeholder="e.g. Rahim"></label><label>Phone number<input name="phone" required type="tel" inputmode="tel" pattern="[0-9+ ]{11,15}" placeholder="01XXXXXXXXX"></label></div>
@@ -705,21 +750,21 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
 </div></section>
 
 <section id="about"><div class="wrap">
-  <div class="sh"><h3>About PetVerse <small>আমাদের সম্পর্কে</small></h3></div>
+  <div class="sh"><h3>About PetVerse</h3></div>
   <p class="about-tx"><b>PetVerse</b> is a pet shop and pet care service in Dhaka. We started with one simple idea: every pet deserves good food, the right medicine and gentle, regular care. Today we sell food, litter, toys and accessories for cats, dogs, birds and small pets, and offer medical and vet support: vaccination, deworming, grooming, medicated bathing, nail cutting, ear cleaning, injections as per prescription, blood and FPV/FIP tests, and pet medicine delivery. <i>Caring for Every Paw, Every Need!</i></p>
   <div class="why">
     <div class="ph"><img src="https://images.unsplash.com/photo-1761393031700-c6be1d6a87ec?w=1000&h=800&fit=crop&q=80&auto=format" onerror="this.remove()" alt="Calm grey cat"><div class="st"><div><b>8+</b><small>Pet services</small></div><div><b>500+</b><small>Products</small></div><div><b>24/7</b><small>Phone support</small></div></div></div>
     <div class="rv">
-      <div><span class="stars">★★★★★</span><p>Cat food ar litter ek shathe order dilam, porer din e pelam. Packet ekdom original.</p><b>Customer, Mirpur</b> <small>· Cat parent</small></div>
-      <div><span class="stars">★★★★★</span><p>Amar kukur er vaccine ar deworming ek din e hoye gelo. Onek shubidha.</p><b>Customer, Uttara</b> <small>· Dog parent</small></div>
-      <div><span class="stars">★★★★★</span><p>Grooming ar nail cutting er por amar Persian cat ke dekhte notun moto lagche. Thank you PetVerse!</p><b>Customer, Dhanmondi</b> <small>· Cat parent</small></div>
+      <div><span class="stars">★★★★★</span><p>I ordered cat food and litter together and got them the next day. Genuine packs.</p><b>Customer, Mirpur</b> <small>· Cat parent</small></div>
+      <div><span class="stars">★★★★★</span><p>My dog's vaccine and deworming were done in one day. Very convenient.</p><b>Customer, Uttara</b> <small>· Dog parent</small></div>
+      <div><span class="stars">★★★★★</span><p>After grooming and nail cutting my Persian cat looks brand new. Thank you PetVerse!</p><b>Customer, Dhanmondi</b> <small>· Cat parent</small></div>
       <p class="note">Sample reviews for the demo. Replace them with real customer reviews.</p>
     </div>
   </div>
 </div></section>
 
 <section id="contact"><div class="wrap">
-  <div class="sh"><h3>Contact Us <small>যোগাযোগ</small></h3></div>
+  <div class="sh"><h3>Contact Us</h3></div>
   <div class="cts">
     <a class="ctc" href="tel:01880972500"><i style="background:var(--pu2)">✆</i><b>Call us</b><span>01880972500</span></a>
     <a class="ctc" href="https://wa.me/8801880972500" target="_blank" rel="noopener"><i style="background:#25d366">💬</i><b>WhatsApp</b><span>01880972500</span></a>
@@ -750,7 +795,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
     <p>Our promise is in our name and our tagline: <b>Caring for Every Paw, Every Need!</b> From the first bag of kitten food to senior care, from a new harness to vaccination and grooming, PetVerse is here for every stage of your pet's life. Order today, or call <a href="tel:01880972500">01880972500</a> to talk to our team.</p>
   </div>
 
-  <div class="nl"><div><h4>অফার আর নতুন প্রোডাক্টের খবর পেতে</h4><p>Get offers and pet care tips. No spam.</p></div><form onsubmit="toast('Thank you! Apnake offer pathano hobe.');this.reset();return false"><input type="email" required placeholder="Your email address" aria-label="Email"><button class="btn">Subscribe</button></form></div>
+  <div class="nl"><div><h4>Get offers and new arrivals first</h4><p>Get offers and pet care tips. No spam.</p></div><form onsubmit="toast('Thank you! We will send you our offers.');this.reset();return false"><input type="email" required placeholder="Your email address" aria-label="Email"><button class="btn">Subscribe</button></form></div>
 </div></section>
 </main>
 
@@ -758,7 +803,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
   <div class="fg">
     <div class="fl"><img src="img/logo-full.png" alt="PetVerse: Caring for Every Paw, Every Need!" width="170"><p>PetVerse is an online pet shop and pet care service in Bangladesh. We sell food, litter, toys and accessories for cats, dogs, birds and small pets, and offer vaccination, grooming, deworming, tests, assistant vet support and pet medicine delivery.</p></div>
     <div><h5>Categories</h5><ul><li><a href="#cat-food">Cat Food</a></li><li><a href="#cat-toy">Cat Toy</a></li><li><a href="#cat-litter">Cat Litter</a></li><li><a href="#cat-accessories">Cat Accessories</a></li><li><a href="#dog">Dog Food &amp; Accessories</a></li><li><a href="#bird-small">Bird &amp; Small Pets</a></li><li><a href="#services">Pet Pharmacy</a></li></ul></div>
-    <div><h5>Quick Links</h5><ul><li><a href="#">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#contact">Contact Us</a></li><li><a href="#services">Our Services</a></li><li><a href="#" onclick="toast('Privacy Policy page asche');return false">Privacy Policy</a></li><li><a href="#" onclick="toast('Terms page asche');return false">Terms &amp; Conditions</a></li><li><a href="#" onclick="toast('Return policy page asche');return false">Return &amp; Refund</a></li></ul></div>
+    <div><h5>Quick Links</h5><ul><li><a href="#">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#contact">Contact Us</a></li><li><a href="#services">Our Services</a></li><li><a href="#" onclick="toast('Privacy policy page coming soon');return false">Privacy Policy</a></li><li><a href="#" onclick="toast('Terms page coming soon');return false">Terms &amp; Conditions</a></li><li><a href="#" onclick="toast('Return policy page coming soon');return false">Return &amp; Refund</a></li></ul></div>
     <div><h5>Contact</h5><ul class="ct">
       <li><svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:01880972500"><b>01880972500</b></a></li>
       <li><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span data-ph="email">info@petverse.example</span></li>
@@ -952,59 +997,55 @@ const PETS=[
  ["1522069169874-c58ec4b76be5","Fish","Flakes & care","#bird-small"]
 ];
 const SVC=[["💉", "Vaccination", "Core vaccines for cats and dogs on schedule.", "#f3e9ff", "1725409796872-8b41e8eca929"], ["✂️", "Grooming", "Bath, brushing and a neat, clean look.", "#ffe8f1", "1772437883387-8076cf660c65"], ["💊", "Deworming", "Regular deworming to keep your pet healthy.", "#e8fbe9", "1587854692152-cbe660dbde88"], ["🧑‍⚕️", "Assistant Vet Support", "Help with routine care, dressing and treatment.", "#e6f4ff", "1700665537604-412e89a285c3"], ["💉", "Injection", "Given as per your doctor’s prescription.", "#fff1de", "1770836037275-38b44e4b101f"], ["🩸", "Blood Test & FPV/FIP Test", "Sample collection and test reports.", "#ffe9e9", "1606206591513-adbfbdd7a177"], ["🧴", "Medicated Bathing", "For skin problems, ticks and fleas.", "#eafff5", "1647002380358-fc70ed2f04e0"], ["✂️", "Nail Cutting", "Safe, gentle nail trimming.", "#fff8d9", "1735463358600-b62899139262"], ["👂", "Ear Cleaning", "Clean ears to prevent infection.", "#f3e9ff", "1780378513719-ec354e38f1ad"], ["🍽️", "Pet Food & Accessories", "Food, litter, toys and daily care items.", "#ffefe4", "1558993457-4bc6ec2c3734"], ["💊", "Pet Medicine Delivery", "Medicine delivered to your door.", "#e6f4ff", "1471864190281-a93a3070b6de"], ["📞", "Book by Phone", "Call 01880972500 for any service.", "#e8fbe9", "1728013274420-ed02b1f58887"]];
-const WA="8801880972500";
+let WA="8801880972500";
 const tk=n=>"৳ "+n.toLocaleString("en-IN");
 let cart={},wish=new Set();
 try{cart=JSON.parse(localStorage.getItem("pv_cart")||"{}");wish=new Set(JSON.parse(localStorage.getItem("pv_wish")||"[]"))}catch(e){}
 const all={};
 const US=(id,w)=>`https://images.unsplash.com/photo-${id}?w=${w||600}&h=${w||600}&fit=crop&q=80&auto=format`;
-function pimg(x){if(!x.i&&!x.u&&!x.r)return `<div class="fbb"><b>${x.b||"PetVerse"}</b><small>${x.t||""}</small></div>`;if(x.r)return `<img src="img/${x.i}" data-r="${x.r}" alt="${x.n}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;return x.u?`<img class="ph" src="${US(x.u)}" alt="${x.n}" loading="lazy" width="600" height="600" onerror="fb(this)">`:`<img src="img/${x.i}" alt="${x.n}" loading="lazy" width="600" height="600">`}
+function pimg(x){if(!x.i&&!x.u&&!x.r)return `<div class="fbb"><b>${x.b||"PetVerse"}</b><small>${x.t||""}</small></div>`;if(x.r&&!x.i)return `<img src="${x.r}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;if(x.r)return `<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" data-r="${x.r}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;return x.u?`<img class="ph" src="${US(x.u)}" alt="${x.n}" loading="lazy" width="600" height="600" onerror="fb(this)">`:`<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff">`}
 function fr(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r;return}const x=all[el.closest("[data-id]")?.dataset.id]||{};const d=document.createElement("div");d.className="fbb";d.innerHTML=`<b>${x.b||"PetVerse"}</b><small>${x.t||"Cat Food"}</small>`;el.replaceWith(d)}
 function fb(el){const d=document.createElement("div");d.className="fb";d.innerHTML="<span>🐾</span><small>PetVerse</small>";el.replaceWith(d)}
-const thumb=x=>x.u?US(x.u,160):"img/"+x.i;
+const thumb=x=>x.u?US(x.u,160):x.i?(/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i):(x.r||"");
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function card(x,id){
  const off=x.o?Math.round((x.o-x.p)/x.o*100):0;
- return `<article class="pc rv-in" data-id="${id}"><div class="im">${off?`<span class="off">-${off}%</span>`:""}${x.nw?`<span class="new">NEW</span>`:""}
+ return `<article class="pc rv-in" data-id="${id}"><div class="im">${off?`<span class="off">-${off}%</span>`:""}${x.nw?`<span class="new">NEW</span>`:x.fs?`<span class="new" style="background:#e23b3b">FLASH SALE</span>`:x.bs?`<span class="new" style="background:#16a34a">BEST SELLER</span>`:""}
  <button class="wl${wish.has(id)?" on":""}" aria-label="Add to wishlist" onclick="tw(this,'${id}')"><svg class="i" viewBox="0 0 24 24" style="width:17px;height:17px"><path d="M12 20s-7-4.4-9-9a4.8 4.8 0 0 1 9-3 4.8 4.8 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
- ${pimg(x)}</div>
- <div class="bd"><span class="br">${x.b}</span><h4>${x.n}</h4><span class="stars">★★★★★<span>(${12+((id.length*7+(x.p||x.n.length))%40)})</span></span>
- <div class="pr">${x.p?`<b>${tk(x.p)}</b>${x.o?`<s>${tk(x.o)}</s>`:""}`:`<b style="font-size:13px">দাম জানতে WhatsApp করুন</b>`}</div>
- ${x.p?"":`<a class="add ask" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${encodeURIComponent("PetVerse, ei product er dam koto? "+x.n)}">WhatsApp e Jiggesh Korun</a>`}<button class="add" ${x.p?"":'style="display:none"'} onclick="add('${id}',this)"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/></svg>Add to Cart</button></div></article>`;
+ <a class="qv" href="#" onclick="quickView('${id}');return false" aria-label="View ${esc(x.n)}">${pimg(x)}</a></div>
+ <div class="bd"><span class="br">${esc(x.b)}</span><h4><a href="#" onclick="quickView('${id}');return false">${esc(x.n)}</a></h4>${x.sz?`<select class="szs" aria-label="Size">${x.sz.split(",").map(v=>`<option>${esc(v.trim())}</option>`).join("")}</select>`:""}<span class="stars">★★★★★<span>(${12+((id.length*7+(x.p||x.n.length))%40)})</span></span>
+ <div class="pr">${x.p?`<b>${tk(x.p)}</b>${x.o?`<s>${tk(x.o)}</s>`:""}`:`<b style="font-size:13px">Price on request</b>`}</div>
+ ${x.p?"":`<a class="add ask" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${encodeURIComponent("Hello PetVerse, what is the price of: "+x.n)}">Ask price on WhatsApp</a>`}<button class="add" ${x.p?"":'style="display:none"'} ${x.st===0?'disabled title="Out of stock"':""} onclick="add('${id}',this)"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/></svg>Add to Cart</button></div></article>`;
 }
 function render(){
  document.querySelectorAll(".grid[data-cat]").forEach(fillGrid);
- for(const k in P)P[k].forEach((x,j)=>all[k+j]=x);
+ for(const k in P)P[k].forEach((x,j)=>all[x.id||k+j]=x);
  document.getElementById("pets").innerHTML=PETS.map(p=>`<a class="pet rv-in" href="${p[3]}"><div class="c"><img src="${US(p[0],300)}" alt="${p[1]}" loading="lazy" onerror="fb(this)"></div><b>${p[1]}</b><small>${p[2]}</small></a>`).join("");
  document.getElementById("svcs").innerHTML=SVC.map(s=>`<a class="svc rv-in" href="#booking" onclick="pick('${s[1]}')">${s[4]?`<span class="sp"><img src="${s[4].includes('/')?s[4]:US(s[4],400)}" alt="${s[1]}" loading="lazy" onerror="fb(this)"></span>`:`<i class="si" style="background:${s[3]}">${s[0]}</i>`}<span><b>${s[1]}</b><small>${s[2]}</small></span></a>`).join("");
  counts();
 }
-function fillGrid(g){const k=g.dataset.cat;g.innerHTML=(P[k]||[]).map((x,j)=>{const id=k+j;all[id]=x;return card(x,id)}).join("");g.classList.remove("all");g.scrollLeft=0;const v=g.closest(".wrap").querySelector(".va");if(v)v.textContent=(P[k]||[]).length>12||innerWidth<=760?"View All ("+(P[k]||[]).length+") →":"";}
+function fillGrid(g){const k=g.dataset.cat;g.innerHTML=(P[k]||[]).map((x,j)=>{const id=x.id||k+j;all[id]=x;return card(x,id)}).join("");g.classList.remove("all");g.scrollLeft=0;const v=g.closest(".wrap").querySelector(".va");if(v)v.textContent=(P[k]||[]).length>12||innerWidth<=760?"View All ("+(P[k]||[]).length+") →":"";}
 function tabCounts(){document.querySelectorAll(".tabs button").forEach(b=>{let c=b.querySelector("small");if(!c){c=document.createElement("small");b.append(c)}c.textContent=(P[b.dataset.k]||[]).length})}
 tabCounts();
-if(/github\.io$/.test(location.hostname)){const d=document.createElement("div");d.style.cssText="background:#ffd54a;color:#3a2a00;text-align:center;font:600 13px Poppins,sans-serif;padding:7px 10px";d.innerHTML='DEMO PREVIEW · <a href="admin/" style="color:#5b2a86">Admin panel dekhun</a> (demo te password lagbe na)';document.body.prepend(d)}
-/* products saved from the admin panel (data/products.json) replace the built-in list above */
-(async()=>{await 0;let d=null;try{d=JSON.parse(localStorage.getItem("pv_demo_products")||"null")}catch(e){}
- if(!d){try{const r=await fetch("data/products.json",{cache:"no-cache"});if(r.ok)d=await r.json()}catch(e){}}
- if(!d||typeof d!="object")return;for(const k in d)if(Array.isArray(d[k]))P[k]=d[k].filter(x=>!x.off);
- render();tabCounts();document.querySelectorAll(".grid .rv-in").forEach(e=>e.classList.add("vis"))})();
+if(/github\.io$/.test(location.hostname)){const d=document.createElement("div");d.style.cssText="background:#ffd54a;color:#3a2a00;text-align:center;font:600 13px Poppins,sans-serif;padding:7px 10px";d.innerHTML='DEMO PREVIEW · <a href="admin/" style="color:#5b2a86">Open the admin panel</a> (no password needed in the demo)';document.body.prepend(d)}
 document.querySelectorAll(".tabs").forEach(t=>{t.querySelectorAll("button").forEach(b=>{b.onclick=()=>{t.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x==b));const g=t.parentNode.querySelector(".grid");g.dataset.cat=b.dataset.k;fillGrid(g);g.querySelectorAll(".rv-in").forEach(e=>e.classList.add("vis"))}})});
 function save(){try{localStorage.setItem("pv_cart",JSON.stringify(cart));localStorage.setItem("pv_wish",JSON.stringify([...wish]))}catch(e){}}
 function counts(){const c=Object.values(cart).reduce((a,b)=>a+b,0);document.getElementById("cn").textContent=c;document.getElementById("tn").textContent=c;document.getElementById("wn").textContent=wish.size}
-function add(id,b){cart[id]=(cart[id]||0)+1;save();counts();toast("Cart e add hoyeche ✓");if(b){b.classList.add("ok");b.lastChild.textContent="Added";setTimeout(()=>{b.classList.remove("ok");b.lastChild.textContent="Add to Cart"},1400)}}
-function tw(b,id){wish.has(id)?wish.delete(id):wish.add(id);b.classList.toggle("on");save();counts();toast(wish.has(id)?"Wishlist e rakha holo ♥":"Wishlist theke shoranu holo")}
+function add(id,b,v){if(v===undefined){const sel=b&&b.closest(".pc")?.querySelector(".szs");v=sel?sel.value:""}const key=v?id+"|"+v:id;cart[key]=(cart[key]||0)+1;track("AddToCart",all[id]);save();counts();toast("Added to cart ✓");if(b){b.classList.add("ok");b.lastChild.textContent="Added";setTimeout(()=>{b.classList.remove("ok");b.lastChild.textContent="Add to Cart"},1400)}}
+function tw(b,id){wish.has(id)?wish.delete(id):wish.add(id);b.classList.toggle("on");save();counts();toast(wish.has(id)?"Saved to wishlist ♥":"Removed from wishlist")}
 function q(id,d){cart[id]=(cart[id]||0)+d;if(cart[id]<=0)delete cart[id];save();counts();drawCart()}
 function drawCart(){
- const ids=Object.keys(cart).filter(id=>all[id]);let t=0;
- document.getElementById("cl").innerHTML=ids.length?ids.map(id=>{const x=all[id];t+=x.p*cart[id];return `<div class="ci">${x.i||x.u?`<img src="${thumb(x)}" data-r="${x.r||""}" onerror="pf(this)" alt="">`:`<img alt="" style="visibility:hidden">`}<div><b>${x.n}</b><small>${tk(x.p)}</small></div><div class="q"><button onclick="q('${id}',-1)">−</button><span>${cart[id]}</span><button onclick="q('${id}',1)">+</button></div></div>`}).join(""):`<div class="empty">🐾<br>Cart ekhono khali.<br>Pochhonder product add korun.</div>`;
- const msg="Hello PetVerse, ami order korte chai:%0A"+ids.map(id=>`- ${encodeURIComponent(all[id].n)} x${cart[id]}`).join("%0A")+"%0ATotal: "+encodeURIComponent(tk(t));
- document.getElementById("cf").innerHTML=ids.length?`<div class="tot"><span>Subtotal</span><span>${tk(t)}</span></div><a class="btn g" style="justify-content:center" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${msg}">WhatsApp e Order Korun</a><a class="btn w" style="justify-content:center" href="tel:01880972500">✆ Call: 01880972500</a>`:"";
+ const ids=Object.keys(cart).filter(k=>all[k.split("|")[0]]);let t=0;
+ document.getElementById("cl").innerHTML=ids.length?ids.map(k=>{const [id,v]=k.split("|"),x=all[id];t+=(x.p||0)*cart[k];return `<div class="ci">${x.i||x.u||x.r?`<img src="${thumb(x)}" data-r="${x.r||""}" onerror="pf(this)" alt="">`:`<img alt="" style="visibility:hidden">`}<div><b>${esc(x.n)}</b><small>${v?esc(v)+" · ":""}${tk(x.p||0)}</small></div><div class="q"><button onclick="q('${k}',-1)" aria-label="Less">−</button><span>${cart[k]}</span><button onclick="q('${k}',1)" aria-label="More">+</button></div></div>`}).join(""):`<div class="empty">🐾<br>Your cart is empty.<br>Add something your pet will love.</div>`;
+ document.getElementById("cf").innerHTML=ids.length?`<div class="tot"><span>Subtotal</span><span>${tk(t)}</span></div><button class="btn" style="justify-content:center;width:100%" onclick="checkout()">Checkout →</button><a class="btn g" style="justify-content:center" target="_blank" rel="noopener" href="${waCartLink(ids,t)}" onclick="track('Contact')">Order on WhatsApp</a>`:"";
 }
+function waCartLink(ids,t){return "https://wa.me/"+WA+"?text="+encodeURIComponent("Hello PetVerse, I want to order:\n"+ids.map(k=>{const [id,v]=k.split("|");return "- "+all[id].n+(v?" ("+v+")":"")+" x"+cart[k]}).join("\n")+"\nTotal: "+tk(t))}
 function openCart(){drawCart();document.getElementById("drawer").classList.add("on")}
 function closeCart(){document.getElementById("drawer").classList.remove("on")}
 let tt;function toast(m){const e=document.getElementById("toast");e.textContent=m;e.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>e.classList.remove("on"),1800)}
 function doSearch(f){const v=f.q.value.trim().toLowerCase();if(!v)return false;
  const hit=Object.entries(all).find(([id,x])=>x.n.toLowerCase().includes(v)||x.b.toLowerCase().includes(v));
- if(hit){const el=[...document.querySelectorAll(".pc")].find(c=>c.querySelector("h4").textContent===hit[1].n);el.scrollIntoView({behavior:"smooth",block:"center"});el.style.boxShadow="0 0 0 3px var(--pu2)";setTimeout(()=>el.style.boxShadow="",2200)}else toast("'"+v+"' paoa jayni. Call korun 01880972500");return false}
+ if(hit){const el=[...document.querySelectorAll(".pc")].find(c=>c.querySelector("h4").textContent===hit[1].n);el.scrollIntoView({behavior:"smooth",block:"center"});el.style.boxShadow="0 0 0 3px var(--pu2)";setTimeout(()=>el.style.boxShadow="",2200)}else toast("No match for '"+v+"'. Call us: 01880972500");return false}
 /* slider */
 const sl=[...document.querySelectorAll("#slider .slide")],dt=document.getElementById("dots");let cur=0,timer;
 dt.innerHTML=sl.map((_,i)=>`<button aria-label="Slide ${i+1}" onclick="show(${i},1)"></button>`).join("");
@@ -1015,12 +1056,12 @@ show(0);auto();
 const sd=document.getElementById("slider");sd.addEventListener("mouseenter",()=>clearInterval(timer));sd.addEventListener("mouseleave",auto);
 let sx=0;sd.addEventListener("touchstart",e=>{sx=e.touches[0].clientX},{passive:true});sd.addEventListener("touchend",e=>{const d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>40)go(d<0?1:-1)});
 function book(f){const d=Object.fromEntries(new FormData(f));
- const m=`Hello PetVerse, ami appointment chai:\nName: ${d.name}\nPhone: ${d.phone}\nPet: ${d.pet}\nService: ${d.service}\nDate: ${d.date}, ${d.time}\nArea: ${d.area}`+(d.note?`\nNote: ${d.note}`:"");
- window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank");toast("Booking WhatsApp e pathano hocche ✓");return false}
+ const m=`Hello PetVerse, I want to book an appointment:\nName: ${d.name}\nPhone: ${d.phone}\nPet: ${d.pet}\nService: ${d.service}\nDate: ${d.date}, ${d.time}\nArea: ${d.area}`+(d.note?`\nNote: ${d.note}`:"");
+ window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank");toast("Opening WhatsApp to send your booking ✓");return false}
 function sendMsg(f){const d=Object.fromEntries(new FormData(f));window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(`Hello PetVerse,\nName: ${d.name}\nPhone: ${d.phone}\n${d.msg}`),"_blank");f.reset();return false}
-(function(){const s=document.querySelectorAll(".tick span");let k=0;if(s.length<2)return;setInterval(()=>{s[k].classList.remove("on");s[k].classList.add("out");const p=s[k];setTimeout(()=>p.classList.remove("out"),600);k=(k+1)%s.length;s[k].classList.add("on")},3500)})();
+(function(){let k=0;setInterval(()=>{const s=document.querySelectorAll(".tick span");if(s.length<2)return;if(k>=s.length)k=0;s[k].classList.remove("on");s[k].classList.add("out");const p=s[k];setTimeout(()=>p.classList.remove("out"),600);k=(k+1)%s.length;s[k].classList.add("on")},3500)})();
 const bd=document.querySelector('#bkf input[type=date]');if(bd){const n=new Date();bd.min=n.toISOString().slice(0,10)}
-(function(){const c=document.getElementById("cd");if(!c)return;const b=c.querySelectorAll("b");const tick=()=>{const n=new Date(),e=new Date(n);e.setHours(24,0,0,0);let s=Math.max(0,(e-n)/1000|0);const h=s/3600|0,m=(s%3600)/60|0,x=s%60;[h,m,x].forEach((v,i)=>b[i].textContent=String(v).padStart(2,"0"))};tick();setInterval(tick,1000)})();
+(function(){const c=document.getElementById("cd");if(!c)return;const b=c.querySelectorAll("b");const tick=()=>{const n=new Date();let e=new Date(n);e.setHours(24,0,0,0);if(window.DEAL_END&&new Date(window.DEAL_END)>n)e=new Date(window.DEAL_END);let s=Math.max(0,(e-n)/1000|0);const h=s/3600|0,m=(s%3600)/60|0,x=s%60;[h,m,x].forEach((v,i)=>b[i].textContent=String(v).padStart(2,"0"))};tick();setInterval(tick,1000)})();
 function va(a){const g0=a.closest(".wrap").querySelector(".grid.lim");if(innerWidth>760){if(!g0)return true;const on=g0.classList.toggle("all");a.textContent=on?"Show less ↑":"View All →";return false}const g=a.closest(".wrap").querySelector(".grid");const on=g.classList.toggle("all");a.textContent=on?"Show less ↑":"View All →";if(!on)g.scrollLeft=0;return false}
 function pick(n){const s=document.querySelector('#bkf select[name=service]');if(!s)return;for(const o of s.options)if(o.text.toLowerCase().startsWith(n.toLowerCase().slice(0,10)))s.value=o.value}
 render();
@@ -1028,6 +1069,146 @@ const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEac
 document.querySelectorAll(".rv-in").forEach(el=>io?io.observe(el):el.classList.add("vis"));
 document.getElementById("yr").textContent=new Date().getFullYear();
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCart()});
+</script>
+<script>
+/* ===== PetVerse shop: live data from the admin panel, checkout, quick view, order tracking, Pixel/GA ===== */
+let SITE={},SRV=false;
+const isrc=s=>!s?"":/^(https?:|data:)/.test(s)?s:"img/"+String(s).replace(/^img\//,"");
+const LSG=k=>{try{const v=localStorage.getItem("pvd_"+k);return v?JSON.parse(v):null}catch(e){return null}};
+function track(ev,x,extra){try{const d=x?{content_ids:[x.id||""],content_name:x.n,content_type:"product",value:x.p||0,currency:"BDT"}:{};Object.assign(d,extra||{});const eid=d.eventID;delete d.eventID;
+ if(window.fbq)eid?fbq("track",ev,d,{eventID:eid}):fbq("track",ev,d);
+ if(window.gtag)gtag("event",{AddToCart:"add_to_cart",ViewContent:"view_item",Purchase:"purchase",InitiateCheckout:"begin_checkout",Contact:"contact"}[ev]||ev,{value:d.value,currency:"BDT",transaction_id:eid})}catch(e){}}
+
+/* ---------- modal ---------- */
+function pvModal(html,cls){let m=document.getElementById("pvm");if(!m){m=document.createElement("div");m.id="pvm";m.className="pvm";m.innerHTML='<div class="pvm-bg" onclick="pvClose()"></div><div class="pvm-box" role="dialog" aria-modal="true"></div>';document.body.append(m)}
+ const b=m.querySelector(".pvm-box");b.className="pvm-box "+(cls||"");b.innerHTML='<button class="pvm-x" onclick="pvClose()" aria-label="Close">✕</button>'+html;m.classList.add("on");document.body.style.overflow="hidden"}
+function pvClose(){const m=document.getElementById("pvm");if(m)m.classList.remove("on");document.body.style.overflow=""}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")pvClose()});
+
+/* ---------- quick view ---------- */
+function quickView(id){const x=all[id];if(!x)return;
+ const imgs=[];if(x.i||x.r)imgs.push({s:x.i?isrc(x.i):x.r,r:x.r||"",c:""});(x.g||[]).forEach(g=>g&&g.s&&imgs.push({s:isrc(g.s),r:"",c:g.c||""}));
+ const off=x.o&&x.p?Math.round((x.o-x.p)/x.o*100):0,out=x.st===0;
+ const cols=(x.cl||"").split(",").map(v=>v.trim()).filter(Boolean),szs=(x.sz||"").split(",").map(v=>v.trim()).filter(Boolean);
+ pvModal(`<div class="qv-g"><div class="qv-main" data-id="${id}">${imgs.length?`<img id="qvImg" src="${esc(imgs[0].s)}" data-r="${esc(imgs[0].r)}" onerror="fr(this)" alt="${esc(x.n)}">`:`<div class="fbb"><b>${esc(x.b||"PetVerse")}</b><small>${esc(x.t||"")}</small></div>`}</div>
+ ${imgs.length>1?`<div class="qv-th">${imgs.map((m,k)=>`<button class="${k?"":"on"}" data-c="${esc(m.c)}" onclick="qvPick(this,'${esc(m.s)}')"><img src="${esc(m.s)}" alt="" onerror="this.style.visibility='hidden'"></button>`).join("")}</div>`:""}</div>
+ <div class="qv-i"><span class="br">${esc(x.b||"")}</span><h3>${esc(x.n)}</h3>
+ <div class="qv-badges">${x.nw?'<span>NEW</span>':""}${x.fs?'<span class="r">FLASH SALE</span>':""}${x.bs?'<span class="g">BEST SELLER</span>':""}${off?`<span class="r">-${off}%</span>`:""}</div>
+ <div class="pr">${x.p?`<b>${tk(x.p)}</b>${x.o?`<s>${tk(x.o)}</s>`:""}`:`<b>Price on request</b>`}</div>
+ <p class="qv-st ${out?"no":""}">${out?"Out of stock":x.st>0&&x.st<10?"Only "+x.st+" left":"In stock"}</p>
+ ${x.sd?`<p class="qv-sd">${esc(x.sd)}</p>`:""}
+ ${szs.length?`<label class="qv-l">Size</label><div class="qv-ch" id="qvSz">${szs.map((v,k)=>`<button class="${k?"":"on"}" onclick="qvSel(this)">${esc(v)}</button>`).join("")}</div>`:""}
+ ${cols.length?`<label class="qv-l">Colour</label><div class="qv-ch" id="qvCl">${cols.map((v,k)=>`<button class="${k?"":"on"}" onclick="qvSel(this);qvColor('${esc(v)}')">${esc(v)}</button>`).join("")}</div>`:""}
+ <div class="qv-buy">${x.p?`<div class="qv-q"><button onclick="qvQ(-1)" aria-label="Less">−</button><b id="qvN">1</b><button onclick="qvQ(1)" aria-label="More">+</button></div><button class="btn" ${out?"disabled":""} onclick="qvAdd('${id}',0)">Add to Cart</button><button class="btn g" ${out?"disabled":""} onclick="qvAdd('${id}',1)">Buy Now</button>`:`<a class="btn g" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${encodeURIComponent("Hello PetVerse, what is the price of: "+x.n)}">Ask price on WhatsApp</a>`}</div>
+ <table class="qv-t"><tr><td>Brand</td><td>${esc(x.b||"PetVerse")}</td></tr>${x.t?`<tr><td>Category</td><td>${esc(x.t)}</td></tr>`:""}<tr><td>Delivery</td><td>Inside Dhaka ${tk(+(SITE.delivery?.inside??70))} · Outside ${tk(+(SITE.delivery?.outside??130))}</td></tr><tr><td>Payment</td><td>Cash on Delivery${SITE.payment?.bkash?", bKash":""}${SITE.payment?.nagad?", Nagad":""}</td></tr></table>
+ ${x.d?`<div class="qv-d"><b>Description</b><p>${esc(x.d).replace(/\n/g,"<br>")}</p></div>`:""}</div>`,"qv");
+ track("ViewContent",x)}
+function qvPick(b,s){const m=document.getElementById("qvImg");if(m){m.removeAttribute("data-r");m.src=s}b.parentNode.querySelectorAll("button").forEach(e=>e.classList.toggle("on",e==b))}
+function qvSel(b){b.parentNode.querySelectorAll("button").forEach(e=>e.classList.toggle("on",e==b))}
+function qvColor(c){const t=[...document.querySelectorAll(".qv-th button")].find(b=>b.dataset.c&&b.dataset.c.toLowerCase()===c.toLowerCase());if(t)t.click()}
+function qvQ(d){const n=document.getElementById("qvN");n.textContent=Math.max(1,Math.min(50,+n.textContent+d))}
+function qvAdd(id,now){const sz=document.querySelector("#qvSz .on"),cl=document.querySelector("#qvCl .on");const v=[sz&&sz.textContent,cl&&cl.textContent].filter(Boolean).join(" / ");
+ const n=+(document.getElementById("qvN")||{textContent:1}).textContent;for(let k=0;k<n;k++)add(id,null,v);pvClose();if(now){openCart();checkout()}}
+
+/* ---------- checkout ---------- */
+function cartLines(){return Object.keys(cart).filter(k=>all[k.split("|")[0]]&&all[k.split("|")[0]].p).map(k=>{const [id,v]=k.split("|");return {k,id,v:v||"",q:cart[k],x:all[id]}})}
+function shipFor(area,sub){const d=SITE.delivery||{};let s=area==="out"?+(d.outside??130):+(d.inside??70);if(+d.free_over&&sub>=+d.free_over)s=0;return s}
+function checkout(){const L=cartLines();if(!L.length){toast("Your cart is empty");return}
+ const sub=L.reduce((a,l)=>a+l.x.p*l.q,0),pay=SITE.payment||{},d=SITE.delivery||{};
+ track("InitiateCheckout",null,{value:sub,num_items:L.length});
+ document.getElementById("cl").innerHTML=`<form class="co" id="cof" onsubmit="placeOrder(this);return false">
+ <h4>Delivery details</h4>
+ <label>Your name *<input name="name" required maxlength="80" autocomplete="name"></label>
+ <label>Phone number *<input name="phone" required inputmode="tel" placeholder="01XXXXXXXXX" pattern="(\\+?88)?01[3-9][0-9]{8}" autocomplete="tel"></label>
+ <label>Full address *<textarea name="address" required maxlength="300" rows="2" placeholder="House, road, area, city"></textarea></label>
+ <div class="co-r"><label class="co-o"><input type="radio" name="area" value="in" checked onchange="coSum()"><span>Inside Dhaka<small>${tk(+(d.inside??70))}</small></span></label><label class="co-o"><input type="radio" name="area" value="out" onchange="coSum()"><span>Outside Dhaka<small>${tk(+(d.outside??130))}</small></span></label></div>
+ ${+d.free_over?`<p class="co-n">Free delivery on orders over ${tk(+d.free_over)}</p>`:""}${d.note?`<p class="co-n">${esc(d.note)}</p>`:""}
+ <h4>Payment</h4>
+ <div class="co-r"><label class="co-o"><input type="radio" name="pay" value="cod" checked onchange="coSum()"><span>Cash on Delivery</span></label>${pay.bkash?`<label class="co-o"><input type="radio" name="pay" value="bkash" onchange="coSum()"><span>bKash</span></label>`:""}${pay.nagad?`<label class="co-o"><input type="radio" name="pay" value="nagad" onchange="coSum()"><span>Nagad</span></label>`:""}</div>
+ <div id="coTrx" hidden><p class="co-n" id="coPayTx"></p><label>Transaction ID<input name="trx" maxlength="40"></label></div>
+ <label>Note (optional)<input name="note" maxlength="300"></label>
+ <input name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+ </form>`;
+ document.getElementById("cf").innerHTML=`<div id="coSum"></div><button class="btn" style="justify-content:center;width:100%" form="cof" id="coBtn">Confirm Order</button><button class="btn w" style="justify-content:center;width:100%" onclick="drawCart()">← Back to cart</button>`;
+ coSum()}
+function coSum(){const f=document.getElementById("cof");if(!f)return;const L=cartLines(),sub=L.reduce((a,l)=>a+l.x.p*l.q,0),ship=shipFor(f.area.value,sub),p=f.pay.value,pay=SITE.payment||{};
+ document.getElementById("coSum").innerHTML=`<div class="tot sm"><span>Subtotal (${L.reduce((a,l)=>a+l.q,0)} items)</span><span>${tk(sub)}</span></div><div class="tot sm"><span>Delivery</span><span>${ship?tk(ship):"Free"}</span></div><div class="tot"><span>Total</span><span>${tk(sub+ship)}</span></div>`;
+ const t=document.getElementById("coTrx");t.hidden=p==="cod";if(p!=="cod")document.getElementById("coPayTx").textContent=`Send ${tk(sub+ship)} to ${p==="bkash"?"bKash":"Nagad"} ${pay[p]} (Send Money), then write the transaction ID below. ${pay.note||""}`}
+async function placeOrder(f){const D=Object.fromEntries(new FormData(f)),L=cartLines(),btn=document.getElementById("coBtn");
+ const ph=D.phone.replace(/[^\d]/g,"").replace(/^88/,"");if(!/^01[3-9]\d{8}$/.test(ph)){toast("Please enter a valid 11-digit phone number");return false}
+ const sub=L.reduce((a,l)=>a+l.x.p*l.q,0),ship=shipFor(D.area,sub);
+ btn.disabled=true;btn.textContent="Placing order…";
+ const body={...D,phone:ph,items:L.map(l=>({id:l.id,q:l.q,v:l.v}))};let r=null;
+ if(SRV){try{r=await(await fetch("shop-api.php?a=order",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)})).json()}catch(e){r=null}}
+ if(r&&r.error){toast(r.error);btn.disabled=false;btn.textContent="Confirm Order";return false}
+ let no=r&&r.no,total=r?r.total:sub+ship;
+ if(!r){/* no server (demo / static): keep it in the demo admin if it is open in this browser, and send on WhatsApp */
+  no="PV-"+Math.random().toString(36).slice(2,8).toUpperCase();
+  try{const O=LSG("orders");if(O){O.unshift({no,t:Date.now()/1000|0,name:D.name,phone:ph,address:D.address,area:D.area,note:D.note||"",pay:D.pay,trx:D.trx||"",items:L.map(l=>({id:l.id,n:l.x.n,b:l.x.b||"",q:l.q,p:l.x.p,i:l.x.i||"",v:l.v})),sub,ship,total,status:"pending",src:"website"});localStorage.setItem("pvd_orders",JSON.stringify(O))}}catch(e){}
+  const m=`Hello PetVerse, new order ${no}\n`+L.map(l=>`- ${l.x.n}${l.v?" ("+l.v+")":""} x${l.q} = ${tk(l.x.p*l.q)}`).join("\n")+`\nDelivery: ${tk(ship)}\nTotal: ${tk(total)}\nName: ${D.name}\nPhone: ${ph}\nAddress: ${D.address} (${D.area==="out"?"Outside":"Inside"} Dhaka)\nPayment: ${D.pay.toUpperCase()}${D.trx?" TrxID "+D.trx:""}`+(D.note?`\nNote: ${D.note}`:"");
+  window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank")}
+ track("Purchase",null,{value:total,content_ids:L.map(l=>l.id),num_items:L.length,eventID:no});
+ cart={};save();counts();
+ document.getElementById("cl").innerHTML=`<div class="co-ok"><div class="ck">✓</div><h4>Thank you, ${esc(D.name)}!</h4><p>Your order <b>${esc(no)}</b> is placed.</p><p>Total <b>${tk(total)}</b> · ${D.pay==="cod"?"Cash on Delivery":D.pay}</p><p class="co-n">We will call you on ${esc(ph)} to confirm. Keep your order number to track it.</p></div>`;
+ document.getElementById("cf").innerHTML=`<button class="btn" style="justify-content:center;width:100%" onclick="closeCart();trackOrder('${esc(no)}','${ph}')">Track this order</button><button class="btn w" style="justify-content:center;width:100%" onclick="closeCart()">Continue shopping</button>`;
+ return false}
+
+/* ---------- track order ---------- */
+function trackOrder(no,ph){pvModal(`<h3 style="margin:0 0 4px">Track your order</h3><p class="co-n" style="margin:0 0 12px">Enter the order number and the phone number you used.</p>
+ <form class="co" onsubmit="doTrack(this);return false"><label>Order number<input name="no" required placeholder="PV-XXXXXX" value="${esc(no||"")}"></label><label>Phone number<input name="phone" required inputmode="tel" value="${esc(ph||"")}"></label><button class="btn" style="justify-content:center;width:100%">Track</button></form><div id="trk"></div>`,"sm");
+ if(no&&ph)doTrack(document.querySelector("#pvm form"))}
+async function doTrack(f){const o=document.getElementById("trk"),no=f.no.value.trim().toUpperCase(),ph=f.phone.value.replace(/[^\d]/g,"").replace(/^88/,"");o.innerHTML='<p class="co-n">Checking…</p>';
+ let r=null;if(SRV){try{r=await(await fetch(`shop-api.php?a=track&no=${encodeURIComponent(no)}&phone=${encodeURIComponent(ph)}`)).json()}catch(e){}}
+ else{const x=(LSG("orders")||[]).find(z=>z.no===no&&z.phone===ph);r=x?{ok:1,no:x.no,status:x.status,t:x.t,total:x.total,items:x.items.length,track:x.courier&&x.courier.code}:{error:"No order found with this number and phone."}}
+ if(!r){o.innerHTML=`<p class="co-n">Tracking is not available right now. Call <a href="tel:${esc(SITE.store?.phone||"01880972500")}">${esc(SITE.store?.phone||"01880972500")}</a>.</p>`;return false}
+ if(r.error){o.innerHTML=`<p class="trk-e">${esc(r.error)}</p>`;return false}
+ const steps=["pending","processing","shipped","delivered"],i=steps.indexOf(r.status);
+ o.innerHTML=`<div class="trk"><p><b>${esc(r.no)}</b> · ${new Date(r.t*1000).toLocaleDateString("en-GB")} · ${r.items} item(s) · ${tk(r.total)}</p>${r.status==="cancelled"||r.status==="returned"?`<p class="trk-e">This order was ${esc(r.status)}.</p>`:`<ol>${steps.map((s,k)=>`<li class="${k<=i?"on":""}"><i></i>${["Order placed","Confirmed & packing","On the way","Delivered"][k]}</li>`).join("")}</ol>`}${r.track?`<p class="co-n">Courier tracking code: <b>${esc(r.track)}</b></p>`:""}</div>`;return false}
+
+/* ---------- live data from the admin ---------- */
+async function getData(c){if(!SRV){const l=LSG(c);if(l!=null)return l}try{const r=await fetch("data/"+c+".json?v="+Date.now());if(r.ok)return await r.json()}catch(e){}return null}
+function secGrid(id,title,items){return `<section id="${id}"><div class="wrap"><div class="sh"><h3>${esc(title)}</h3><a class="va" href="#${id}" onclick="return va(this)">View All →</a></div><div class="grid">${items.map(([k,x])=>card(x,k)).join("")}</div></div></section>`}
+function revealNew(root){root.querySelectorAll(".rv-in").forEach(el=>io?io.observe(el):el.classList.add("vis"))}
+function applyProducts(prods,cats){
+ if(prods&&typeof prods==="object"&&Object.keys(prods).length){for(const k in P)delete P[k];for(const k in prods){P[k]=(prods[k]||[]).map((x,j)=>({...x,id:x.id||k+j})).filter(x=>!x.off)}}
+ for(const k in P)P[k].forEach((x,j)=>{x.id=x.id||k+j;all[x.id]=x});
+ const C=(Array.isArray(cats)?cats:[]).slice().sort((a,b)=>(+a.order||0)-(+b.order||0));
+ if(C.length){/* cat food tabs */
+  const tabs=document.querySelector("#cat-food .tabs"),tc=C.filter(c=>c.group==="catfood"&&c.on!==0);
+  if(tabs&&tc.length){tabs.innerHTML=tc.map((c,k)=>`<button class="${k?"":"on"}" data-k="${esc(c.k)}">${esc(c.name)}</button>`).join("");const g=document.querySelector("#cat-food .grid");g.dataset.cat=tc[0].k;
+   tabs.querySelectorAll("button").forEach(b=>{b.onclick=()=>{tabs.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x==b));g.dataset.cat=b.dataset.k;fillGrid(g);g.querySelectorAll(".rv-in").forEach(e=>e.classList.add("vis"))}})}
+  else if(tabs&&!tc.length)document.getElementById("cat-food").hidden=true;
+  C.filter(c=>c.group!=="catfood").forEach(c=>{let g=document.querySelector(`.grid[data-cat="${CSS.escape(c.k)}"]`);
+   if(!g&&c.on!==0&&(P[c.k]||[]).length){document.getElementById("brands").insertAdjacentHTML("beforebegin",`<section id="c-${esc(c.k)}"><div class="wrap"><div class="sh"><h3>${esc(c.name)}</h3><a class="va" href="#c-${esc(c.k)}" onclick="return va(this)">View All →</a></div><div class="grid" data-cat="${esc(c.k)}"></div></div></section>`);g=document.querySelector(`.grid[data-cat="${CSS.escape(c.k)}"]`)}
+   if(!g)return;const sec=g.closest("section");if(c.on===0||!(P[c.k]||[]).length){sec.hidden=true;return}sec.hidden=false;const h=sec.querySelector(".sh h3");if(h&&c.name)h.firstChild.textContent=c.name})}
+ document.querySelectorAll(".grid[data-cat]").forEach(fillGrid);tabCounts();revealNew(document)}
+function applyCollections(cols){document.querySelectorAll("section[data-col]").forEach(s=>s.remove());let after=document.getElementById("cat-food");
+ (Array.isArray(cols)?cols:[]).filter(c=>c.on!==0).forEach((c,n)=>{const items=(c.ids||[]).filter(id=>all[id]).map(id=>[id,all[id]]);if(!items.length)return;
+  after.insertAdjacentHTML("afterend",secGrid("col-"+(c.slug||n),c.name||"Collection",items));after=after.nextElementSibling;after.dataset.col=1;revealNew(after)})}
+function applyReviews(R){R=(Array.isArray(R)?R:[]).filter(r=>r.on!==0&&r.text);const box=document.querySelector("#about .rv");if(!box||!R.length)return;
+ box.innerHTML=R.slice(0,6).map(r=>`<div><span class="stars">${"★".repeat(Math.max(1,Math.min(5,+r.stars||5)))}</span><p>${esc(r.text)}</p><b>${esc(r.name||"Customer")}</b> <small>· ${esc(r.pet||"Pet parent")}</small></div>`).join("")}
+function applyBanners(B){B=(Array.isArray(B)?B:[]).filter(b=>b.on!==0&&b.img);if(!B.length)return;const sd=document.getElementById("slider");
+ B.slice().reverse().forEach(b=>{const d=document.createElement("div");d.className="slide";d.innerHTML=`<a href="${esc(b.link||"#cat-food")}"><img class="full" src="${esc(isrc(b.img))}" alt="${esc(b.title||"PetVerse offer")}"></a>`;sd.prepend(d)});
+ sl.forEach(e=>e.classList.remove("on"));sl.splice(0,sl.length,...sd.querySelectorAll(".slide"));dt.innerHTML=sl.map((_,i)=>`<button aria-label="Slide ${i+1}" onclick="show(${i},1)"></button>`).join("");cur=0;sl[0].classList.add("on");dt.children[0].classList.add("on");auto()}
+function applySite(S){if(!S||typeof S!=="object")return;SITE=S;const st=S.store||{},cms=S.cms||{};
+ const oldPh="01880972500",ph=(st.phone||"").trim();
+ if(ph&&ph!==oldPh){document.querySelectorAll('a[href^="tel:"]').forEach(a=>{a.href="tel:"+ph;a.childNodes.forEach(n=>{if(n.nodeType===3)n.textContent=n.textContent.replace(oldPh,ph)})});document.querySelectorAll("img[alt*='"+oldPh+"']").forEach(i=>i.alt=i.alt.replace(oldPh,ph))}
+ const wa=(st.whatsapp||"").replace(/\D/g,"");if(wa&&wa!==WA){document.querySelectorAll('a[href*="wa.me/'+WA+'"]').forEach(a=>a.href=a.href.replace(WA,wa));WA=wa}
+ const set=(k,v,href)=>document.querySelectorAll(`[data-ph="${k}"]`).forEach(e=>{if(!v){(e.closest("li")||e).hidden=true;return}if(e.tagName==="A"){e.href=href;e.target="_blank";const s=e.querySelector("span");if(s)s.textContent=v}else e.textContent=v});
+ set("email",st.email,"mailto:"+st.email);set("address",st.address,st.map||"https://maps.google.com/?q="+encodeURIComponent(st.address||""));set("facebook",st.facebook,st.facebook);set("youtube",st.youtube,st.youtube);set("instagram",st.instagram,st.instagram);
+ if(Array.isArray(cms.ticker)&&cms.ticker.length){const t=document.querySelector(".tick");if(t)t.innerHTML=cms.ticker.map((m,k)=>`<span class="${k?"":"on"}">${esc(m)}</span>`).join("")}
+ if(cms.announce){const a=document.createElement("div");a.className="ann";a.textContent=cms.announce;document.body.prepend(a)}
+ if(cms.about){const a=document.querySelector(".about-tx");if(a)a.innerHTML=esc(cms.about).replace(/\n/g,"<br>")}
+ const dl=cms.deal||{},x=dl.id&&all[dl.id];if(dl.ends)window.DEAL_END=dl.ends;
+ if(x){const p=document.querySelector(".dl-p");if(p){const im=x.i||x.r?`<img class="rp" src="${esc(x.i?isrc(x.i):x.r)}" data-r="${esc(x.r||"")}" onerror="pf(this)" alt="${esc(x.n)}">`:"";p.innerHTML=`${im}<div><small>${esc((x.b||"").toUpperCase())}${x.t?" · "+esc(x.t.toUpperCase()):""}</small><h4>${esc(x.n)}</h4><div class="pr"><b>${tk(x.p||0)}</b>${x.o?` <s>${tk(x.o)}</s>`:""}</div><button class="btn" onclick="add('${dl.id}',this)">Add to Cart</button></div>`}}
+ if(!window.PV_SSR){const px=(S.pixel||{}).id,ga=(S.seo||{}).ga;
+  if(px&&/^\d{6,20}$/.test(px)){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",px);fbq("track","PageView")}
+  if(ga&&/^G-[A-Z0-9]{4,15}$/i.test(ga)){const s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+ga;document.head.append(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config",ga)}}}
+(async function(){
+ try{const r=await fetch("shop-api.php?a=hit&p="+encodeURIComponent(location.pathname),{cache:"no-store"});SRV=!!(r.ok&&(r.headers.get("content-type")||"").includes("json")&&(await r.json()).ok)}catch(e){SRV=false}
+ const [prods,cats,cols,revs,bans,site]=await Promise.all(["products","categories","collections","reviews","banners","site"].map(getData));
+ applyProducts(prods,cats);applyCollections(cols);applyReviews(revs);applyBanners(bans);applySite(site);counts();
+ if(new URLSearchParams(location.search).get("track")!=null)trackOrder()})();
 </script>
 </body>
 </html>
