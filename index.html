@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@500;600;700&display=swap"></noscript>
-<link rel="preload" as="image" href="img/hero-art-820.webp" imagesrcset="img/hero-art-820.webp 820w, img/hero-art.webp 1625w" imagesizes="(max-width:760px) 100vw, 610px" fetchpriority="high">
+<link rel="preload" as="image" href="https://mikipetstore.com/cdn/shop/files/ROYAL-CANIN-KITTEN-CAT-DRY-FOOD.jpg?v=1777191944&amp;width=600" fetchpriority="high">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"PetStore","name":"PetVerse","slogan":"Caring for Every Paw, Every Need!","telephone":"+8801880972500","image":"https://abid2929.github.io/petverse/img/logo-full.webp","url":"https://abid2929.github.io/petverse/","address":{"@type":"PostalAddress","addressLocality":"Dhaka","addressCountry":"BD"},"priceRange":"৳৳"}
 </script>
@@ -335,7 +335,7 @@ footer .fl img{width:170px;margin-bottom:10px}
   .hero{padding:10px 0 0}
   .slider{aspect-ratio:auto;height:440px;border-radius:18px}
   .slide>img.full{height:100%;object-fit:contain;background:linear-gradient(#bfe9ff,#e8f7ff)}
-  .slide:nth-child(2) a{display:flex;align-items:center;height:100%;background:linear-gradient(#bfe9ff,#e8f7ff)}
+  .slide a:has(>img.full){display:flex;align-items:center;height:100%;background:linear-gradient(#bfe9ff,#e8f7ff)}
   .sl{grid-template-columns:1fr;height:100%;padding:20px 18px 0;align-content:start;grid-template-rows:auto 1fr}
   .sl .kick{font-size:10px;padding:5px 10px;letter-spacing:1.5px}
   .sl h2{font-size:25px;margin:10px 0 2px}.sl .big{font-size:32px;margin:2px 0 10px}
@@ -550,6 +550,64 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
 .drawer .f .btn.w{background:#fff;color:var(--pu);border:1.5px solid #e2d8ee;box-shadow:none}
 @media(max-width:760px){.pvm{padding:0;align-items:flex-end}.pvm-box{border-radius:20px 20px 0 0;max-height:92vh;padding:18px 16px}.pvm-box.qv{grid-template-columns:1fr;gap:14px}.qv-i h3{font-size:18px}}
 @media(max-width:760px){.hero .feat{margin-left:0;margin-right:0}}
+
+/* ---- bold product banners + "What are you looking for?" tiles ---- */
+.pb{background:radial-gradient(120% 140% at 85% 20%,color-mix(in srgb,var(--b) 70%,#fff) 0,transparent 45%),linear-gradient(115deg,var(--a),var(--b))}
+.pb:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 110%,rgba(255,255,255,.18) 0 18%,transparent 18.2%),radial-gradient(circle at 96% -10%,rgba(255,255,255,.14) 0 22%,transparent 22.2%);pointer-events:none}
+.pbx{position:relative;display:grid;grid-template-columns:1fr 1.1fr;align-items:center;height:100%;padding:0 6%;color:#fff}
+.pbt{position:relative;z-index:2}
+.pbk{display:inline-block;font:600 12px Poppins;letter-spacing:1.6px;text-transform:uppercase;padding:6px 12px;border-radius:99px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3)}
+.pb h1,.pb h2{font:800 clamp(30px,5vw,72px)/.98 Poppins;letter-spacing:-1.5px;margin:14px 0 16px;color:#fff;text-shadow:0 6px 24px rgba(0,0,0,.18)}
+.pill{display:table;background:#fff;color:var(--a);font:800 clamp(13px,1.3vw,18px) Poppins;letter-spacing:.5px;padding:8px 18px;border-radius:99px;box-shadow:0 10px 24px -10px rgba(0,0,0,.45)}
+.pill:empty{display:none}
+.go{display:inline-flex;margin-top:16px;font-weight:700;font-size:clamp(13px,1.2vw,16px);border-bottom:2px solid rgba(255,255,255,.6);padding-bottom:2px}
+.pbi{position:relative;height:100%}
+.pi{position:absolute;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 24px 50px -18px rgba(0,0,0,.5);aspect-ratio:1}
+.pi img{width:100%;height:100%;object-fit:contain;padding:8%}
+.pi .fbb{border-radius:0}
+.pi.m{width:44%;left:28%;top:14%;z-index:3}
+.pi.l{width:34%;left:4%;top:30%;rotate:-8deg;z-index:2}
+.pi.r{width:34%;right:2%;top:24%;rotate:7deg;z-index:1}
+.slide.pb.on .pi.m{animation:zin 1s cubic-bezier(.2,.8,.2,1) both}
+.slide.pb.on .pi.l,.slide.pb.on .pi.r{animation:up .9s .12s cubic-bezier(.2,.8,.2,1) both}
+.pb h1,.pb h2,.pb .pill,.pb .go{animation:none}
+.slide.pb.on h1,.slide.pb.on h2,.slide.pb.on .pill,.slide.pb.on .go{animation:up .8s cubic-bezier(.2,.8,.2,1) both}
+.slide.pb.on .pill{animation-delay:.08s}.slide.pb.on .go{animation-delay:.14s}
+.pb~.dots button,.dots button{background:rgba(255,255,255,.55);box-shadow:0 0 0 1px rgba(74,14,122,.25)}
+.dots button.on{background:#fff;box-shadow:0 0 0 1px rgba(74,14,122,.35)}
+.lf{margin:22px 0 4px}
+.lf h3{margin:0 0 14px;font-size:21px;position:relative;padding-bottom:8px}
+.lf h3:after{content:"";position:absolute;left:0;bottom:0;width:44px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--pu2),var(--pk))}
+.cts{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}
+.ct{position:relative;display:flex;flex-direction:column;border-radius:18px;padding:10px 10px 12px;color:#fff;background:linear-gradient(150deg,var(--a),var(--b));box-shadow:0 12px 24px -14px var(--a);transition:.2s;overflow:hidden}
+.ct:hover{transform:translateY(-3px);box-shadow:0 18px 30px -14px var(--a)}
+.ct:after{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.16)}
+.ci{display:block;aspect-ratio:1;background:#fff;border-radius:13px;overflow:hidden;position:relative;z-index:1}
+.ci img{width:100%;height:100%;object-fit:contain;padding:8%;transition:.4s}.ct:hover .ci img{transform:scale(1.07)}
+.ci .fbb b{font-size:14px}
+.ct b{margin-top:9px;font-size:14px;line-height:1.2;position:relative;z-index:1}
+.ct small{font-size:11.5px;opacity:.95;font-weight:600;position:relative;z-index:1}
+@media (max-width:1100px){.cts{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:760px){
+ .appcats{display:none!important}
+ .pbx{grid-template-columns:1fr;grid-template-rows:auto 1fr;padding:22px 18px 0;align-content:start}
+ .pb h1,.pb h2{font-size:34px;margin:10px 0 12px}
+ .pbk{font-size:9.5px;letter-spacing:1.2px;padding:5px 10px}
+ .pill{font-size:13px;padding:6px 14px}
+ .go{margin-top:10px;font-size:13px}
+ .pbt{max-width:62%}
+ .pbi{position:absolute;inset:0}
+ .pi{border-radius:18px}
+ .pi.m{width:46%;left:auto;right:5%;top:auto;bottom:34px}
+ .pi.l{width:34%;left:6%;top:auto;bottom:30px;rotate:-7deg}
+ .pi.r{width:30%;right:4%;top:70px;rotate:8deg;z-index:1}
+ .pbk{max-width:100%}
+ .lf{margin:18px 0 2px}.lf h3{font-size:18px;margin-bottom:12px}
+ .cts{display:flex;overflow-x:auto;gap:10px;margin:0;padding:0 0 8px;scrollbar-width:none;scroll-snap-type:x mandatory}
+ .cts::-webkit-scrollbar{display:none}
+ .ct{flex:0 0 30%;scroll-snap-align:start;border-radius:16px;padding:8px 8px 10px}
+ .ct b{font-size:12.5px;margin-top:7px}.ct small{font-size:10.5px}
+}
 </style>
 <script>function pf(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r}else el.style.visibility="hidden"}</script>
 </head>
@@ -612,40 +670,35 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
 <main>
 <div class="wrap hero">
   <div class="slider" id="slider" aria-roledescription="carousel">
+    <!-- product banners (bold, like the Jutar Bazar top) -->
+    <div class="slide pb on" style="--a:#5b1a9e;--b:#c2188f"><a class="pbx" href="#cat-food">
+      <div class="pbt"><span class="pbk">Royal Canin · Reflex · Nature Bridge</span><h1>PREMIUM<br>CAT FOOD</h1><span class="pill" data-k="dry" data-m="from"></span><span class="go">Shop now →</span></div>
+      <div class="pbi"><span class="pi l" data-id="dry3"><img src="https://mikipetstore.com/cdn/shop/files/ROYAL-CANIN-KITTEN-CAT-DRY-FOOD.jpg?v=1777191944&amp;width=600" alt="Royal Canin Kitten Cat Dry Food" onerror="fr(this)"></span><span class="pi r" data-id="dry17"><img src="https://mikipetstore.com/cdn/shop/files/NatureBridge-Classic-Complete-Food-for-Adult-Cat-600x680_png.webp?v=1791021184&amp;width=600" alt="Nature Bridge Classic Complete Food for Adult Cat" onerror="fr(this)"></span><span class="pi m" data-id="dry6"><img src="https://mikipetstore.com/cdn/shop/files/kitten-salmon-re.jpg?v=1779173516&amp;width=600" alt="Reflex Plus Kitten Salmon Super Premium Dry Food" onerror="fr(this)"></span></div>
+    </a></div>
+    <div class="slide pb" style="--a:#ff6a13;--b:#e8418d"><a class="pbx" href="#cat-toy">
+      <div class="pbt"><span class="pbk">Scratchers · Teasers · Balls</span><h2>CAT TOYS<br>&amp; FUN</h2><span class="pill" data-k="toy" data-m="off"></span><span class="go">Shop now →</span></div>
+      <div class="pbi"><span class="pi l" data-id="toy0"><img src="img/ph-t1.webp" alt="Plush Toy with Catnip" onerror="fr(this)"></span><span class="pi r" data-id="toy4"><img src="img/ph-t2.webp" alt="Feather Wand Teaser" onerror="fr(this)"></span><span class="pi m" data-id="toy2"><img src="img/ph-t11.webp" alt="Sisal Scratching Post with Pom Pom" onerror="fr(this)"></span></div>
+    </a></div>
+    <div class="slide pb" style="--a:#0d8f6a;--b:#14b8a6"><a class="pbx" href="#cat-litter">
+      <div class="pbt"><span class="pbk">Clumping · Tofu · Low Dust</span><h2>CAT<br>LITTER</h2><span class="pill" data-k="litter" data-m="from"></span><span class="go">Shop now →</span></div>
+      <div class="pbi"><span class="pi l" data-id="litter0"><img src="https://mikipetstore.com/cdn/shop/files/pawslitte.jpg?v=1740926079&amp;width=600" alt="Paws Clumping Bentonite Cat Litter" onerror="fr(this)"></span><span class="pi r" data-id="litter1"><img src="https://mikipetstore.com/cdn/shop/files/cozziecat.jpg?v=1740925542&amp;width=600" alt="Cozie Cat Clumping Cat Litter 5L" onerror="fr(this)"></span><span class="pi m" data-id="litter3"><img src="https://mikipetstore.com/cdn/shop/files/lazylady.jpg?v=1740925865&amp;width=600" alt="Lazy Lady Premium Bentonite Cat Litter 5L" onerror="fr(this)"></span></div>
+    </a></div>
+    <div class="slide pb" style="--a:#1d4ed8;--b:#7c3aed"><a class="pbx" href="#dog">
+      <div class="pbt"><span class="pbk">Pedigree · Royal Canin · Drools</span><h2>DOG FOOD<br>&amp; CARE</h2><span class="pill" data-k="dog" data-m="from"></span><span class="go">Shop now →</span></div>
+      <div class="pbi"><span class="pi l" data-id="dog0"><img src="https://mikipetstore.com/cdn/shop/files/PedigreeAdultDryDogFood_Chicken_VegetablesFlavour.jpg?v=1741102468&amp;width=600" alt="Pedigree Adult Dry Dog Food Chicken &amp; Vegetables" onerror="fr(this)"></span><span class="pi r" data-id="dog1"><img src="https://mikipetstore.com/cdn/shop/files/drools-dog-food-puppy.jpg?v=1777911242&amp;width=600" alt="Drools Puppy Dog Food Chicken &amp; Egg" onerror="fr(this)"></span><span class="pi m" data-id="dog2"><img src="https://mikipetstore.com/cdn/shop/files/Royal-Canin-Mini-Puppy-Dog-Dry-Food_b30aa2d8-2bff-4dc6-99fb-99259054fd88.jpg?v=1771859443&amp;width=600" alt="Royal Canin Mini Puppy Dry Dog Food" onerror="fr(this)"></span></div>
+    </a></div>
     <!-- 1: cat food -->
-    <div class="slide on s1"><div class="sl">
+    <div class="slide s1"><div class="sl">
       <div class="tx">
         <span class="kick">PetVerse Cat Store</span>
-        <h1>All the top <em>cat food</em> brands<br>in one place</h1>
+        <h2>All the top <em>cat food</em> brands<br>in one place</h2>
         <div class="big">CAT FOOD</div>
         <div class="badges"><span class="bdg"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></i>AUTHENTIC</span><span class="bdg"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="8" cy="8" r="1.6"/></svg></i>BEST PRICE</span><span class="bdg"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></i>FAST DELIVERY</span></div>
       </div>
-      <div class="art"><img class="ha" src="img/hero-art.webp" srcset="img/hero-art-820.webp 820w, img/hero-art.webp 1625w" sizes="(max-width:760px) 100vw, 610px" fetchpriority="high" alt="PetVerse cat food packs with cats"></div>
+      <div class="art"><img class="ha" src="img/hero-art.webp" srcset="img/hero-art-820.webp 820w, img/hero-art.webp 1625w" sizes="(max-width:760px) 100vw, 610px" loading="lazy" alt="PetVerse cat food packs with cats"></div>
     </div></div>
     <!-- 2: services banner (from PetVerse) -->
     <div class="slide"><a href="#services"><img class="full" src="img/banner-services.webp" srcset="img/banner-services-1024.webp 1024w, img/banner-services.webp 2048w" sizes="(max-width:760px) 100vw, 1280px" loading="lazy" alt="PetVerse services banner. Call 01880972500"></a></div>
-    <!-- 3: dog -->
-    <div class="slide s3"><div class="sl">
-      <div class="tx">
-        <span class="kick">For Happy Dogs</span>
-        <h2>For your best friend:<br>food, toys &amp; care</h2>
-        <div class="big">DOG ZONE</div>
-        <p>Dry food, treats, chew toys, leashes and collars, picked for Bangladeshi weather and homes.</p>
-        <a class="btn" href="#dog">Shop Dog Items →</a>
-      </div>
-      <div class="art"><img class="ph" src="https://images.unsplash.com/photo-1633722715463-d30f4f325e24?w=1400&h=1050&fit=crop&q=80&auto=format" onerror="this.src='img/dog-01.webp';this.style.objectFit='contain';this.style.background='#fff'" alt="Happy dog"><div class="tag">UP TO<br>25%<br>OFF</div></div>
-    </div></div>
-    <!-- 4: litter -->
-    <div class="slide s4"><div class="sl">
-      <div class="tx">
-        <span class="kick">Clean Home Offer</span>
-        <h2>Fresh home, happy cat<br><em>Top cat litter brands</em></h2>
-        <div class="big" style="color:var(--pu)">CAT LITTER</div>
-        <p>Clumping sand, tofu, carbon and silica litter. Low dust, strong odour control.</p>
-        <a class="btn g" href="#cat-litter">Shop Litter →</a>
-      </div>
-      <div class="art"><img class="pk c rp" src="img/p/litter-lazy-lady.jpg" data-r="https://mikipetstore.com/cdn/shop/files/lazylady.jpg?v=1740925865&width=1200" onerror="pf(this)" alt="Lazy Lady cat litter"><img class="pk a rp" src="img/p/litter-paws.jpg" data-r="https://mikipetstore.com/cdn/shop/files/pawslitte.jpg?v=1740926079&width=1200" onerror="pf(this)" alt="Paws cat litter"><img class="pk b rp" src="img/p/litter-cozie-cats.jpg" data-r="https://mikipetstore.com/cdn/shop/files/cozziecat.jpg?v=1740925542&width=1200" onerror="pf(this)" alt="Cozie Cat litter"></div>
-    </div></div>
     <!-- 5: vet home call -->
     <div class="slide s5"><div class="sl">
       <div class="tx">
@@ -662,6 +715,8 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
     <button class="sbtn n" aria-label="Next" onclick="go(1)"><svg class="i" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
     <div class="dots" id="dots"></div>
   </div>
+
+  <div class="lf"><h3>What are you looking for?</h3><div class="cts" id="cts"><a class="ct" href="#cat-food" data-k="dry" onclick="ctGo('dry')" style="--a:#7c3aed;--b:#a855f7"><span class="ci" data-id="dry3"><img src="https://mikipetstore.com/cdn/shop/files/ROYAL-CANIN-KITTEN-CAT-DRY-FOOD.jpg?v=1777191944&amp;width=600" alt="Royal Canin Kitten Cat Dry Food" onerror="fr(this)"></span><b>Dry Food</b><small data-k="dry"></small></a><a class="ct" href="#cat-food" data-k="wet" onclick="ctGo('wet')" style="--a:#e11d48;--b:#fb7185"><span class="ci" data-id="wet0"><img src="https://mikipetstore.com/cdn/shop/files/sheba-Tuna_-Pumpkin-_-Carrot.jpg?v=1764083391&amp;width=600" alt="Sheba Tuna, Pumpkin &amp; Carrot Cat Pouch 70g" onerror="fr(this)"></span><b>Wet Food</b><small data-k="wet"></small></a><a class="ct" href="#cat-food" data-k="treat" onclick="ctGo('treat')" style="--a:#f97316;--b:#fbbf24"><span class="ci" data-id="treat4"><img src="https://mikipetstore.com/cdn/shop/files/Wanpy_Creamy_Treats_for_Cats_with_Chicken_70g.jpg?v=1759416765&amp;width=600" alt="Wanpy Creamy Lickable Treat Chicken 5×14g" onerror="fr(this)"></span><b>Treats</b><small data-k="treat"></small></a><a class="ct" href="#cat-litter" data-k="litter" onclick="ctGo('litter')" style="--a:#0d9488;--b:#2dd4bf"><span class="ci" data-id="litter3"><img src="https://mikipetstore.com/cdn/shop/files/lazylady.jpg?v=1740925865&amp;width=600" alt="Lazy Lady Premium Bentonite Cat Litter 5L" onerror="fr(this)"></span><b>Cat Litter</b><small data-k="litter"></small></a><a class="ct" href="#cat-toy" data-k="toy" onclick="ctGo('toy')" style="--a:#db2777;--b:#f472b6"><span class="ci" data-id="toy2"><img src="img/ph-t11.webp" alt="Sisal Scratching Post with Pom Pom" onerror="fr(this)"></span><b>Cat Toys</b><small data-k="toy"></small></a><a class="ct" href="#cat-accessories" data-k="acc" onclick="ctGo('acc')" style="--a:#2563eb;--b:#60a5fa"><span class="ci" data-id="acc1"><img src="img/ph-a2.webp" alt="Pink Padded Harness &amp; Leash" onerror="fr(this)"></span><b>Accessories</b><small data-k="acc"></small></a><a class="ct" href="#dog" data-k="dog" onclick="ctGo('dog')" style="--a:#ca8a04;--b:#facc15"><span class="ci" data-id="dog0"><img src="https://mikipetstore.com/cdn/shop/files/PedigreeAdultDryDogFood_Chicken_VegetablesFlavour.jpg?v=1741102468&amp;width=600" alt="Pedigree Adult Dry Dog Food Chicken &amp; Vegetables" onerror="fr(this)"></span><b>Dog</b><small data-k="dog"></small></a><a class="ct" href="#bird-small" data-k="small" onclick="ctGo('small')" style="--a:#16a34a;--b:#4ade80"><span class="ci" data-id="small1"><img src="https://mikipetstore.com/cdn/shop/files/parrot.jpg?v=1776534279&amp;width=600" alt="Goldwings Premium Parrot Food Mix" onerror="fr(this)"></span><b>Bird &amp; Small Pet</b><small data-k="small"></small></a></div></div>
 
   <div class="feat">
     <div><i style="background:var(--gr)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></i><span><b>100% Authentic</b><small>Original products only</small></span></div>
@@ -1074,6 +1129,14 @@ const bd=document.querySelector('#bkf input[type=date]');if(bd){const n=new Date
 function va(a){const g0=a.closest(".wrap").querySelector(".grid.lim");if(innerWidth>760){if(!g0)return true;const on=g0.classList.toggle("all");a.textContent=on?"Show less ↑":"View All →";return false}const g=a.closest(".wrap").querySelector(".grid");const on=g.classList.toggle("all");a.textContent=on?"Show less ↑":"View All →";if(!on)g.scrollLeft=0;return false}
 function pick(n){const s=document.querySelector('#bkf select[name=service]');if(!s)return;for(const o of s.options)if(o.text.toLowerCase().startsWith(n.toLowerCase().slice(0,10)))s.value=o.value}
 render();
+
+/* banner pills + tile prices from live product data */
+function drawTop(){const L=k=>(P[k]||[]).filter(x=>x.p>0&&!x.off);
+ const txt=(k,m)=>{const a=L(k);if(!a.length)return"";if(m==="off"){const d=Math.max(...a.map(x=>x.o>x.p?Math.round((x.o-x.p)/x.o*100):0));if(d>=5)return"UP TO "+d+"% OFF"}return"FROM "+tk(Math.min(...a.map(x=>x.p)))};
+ document.querySelectorAll(".pill[data-k]").forEach(e=>e.textContent=txt(e.dataset.k,e.dataset.m));
+ document.querySelectorAll(".ct small[data-k]").forEach(e=>{const a=L(e.dataset.k);e.textContent=a.length?"From "+tk(Math.min(...a.map(x=>x.p))):"";e.closest(".ct").hidden=!(P[e.dataset.k]||[]).length})}
+function ctGo(k){const b=document.querySelector(`#cat-food .tabs button[data-k="${k}"]`);if(b)b.click()}
+drawTop();
 const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("vis");io.unobserve(e.target)}}),{rootMargin:"0px 0px -40px 0px"}):null;
 document.querySelectorAll(".rv-in").forEach(el=>io?io.observe(el):el.classList.add("vis"));
 document.getElementById("yr").textContent=new Date().getFullYear();
@@ -1217,7 +1280,7 @@ function applySite(S){if(!S||typeof S!=="object")return;SITE=S;const st=S.store|
 (async function(){
  try{const r=await fetch("shop-api.php?a=hit&p="+encodeURIComponent(location.pathname),{cache:"no-store"});SRV=!!(r.ok&&(r.headers.get("content-type")||"").includes("json")&&(await r.json()).ok)}catch(e){SRV=false}
  const [prods,cats,cols,revs,bans,site]=await Promise.all(["products","categories","collections","reviews","banners","site"].map(getData));
- applyProducts(prods,cats);applyCollections(cols);applyReviews(revs);applyBanners(bans);applySite(site);counts();
+ applyProducts(prods,cats);drawTop();applyCollections(cols);applyReviews(revs);applyBanners(bans);applySite(site);counts();
  if(new URLSearchParams(location.search).get("track")!=null)trackOrder()})();
 </script>
 </body>
