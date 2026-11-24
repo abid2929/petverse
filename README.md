@@ -89,4 +89,4 @@ inc/store.php     storage helpers
 
 ---
 
-<p align="center"><sub>Designed &amp; developed by Abid Islam &amp; <a href="https://www.boostnixmedia.com">Boostnix Media</a></sub></p>
+<p align="center"><sub>Designed &amp; developed by <a href="https://www.linkedin.com/in/abid-islam-a926ab2b5/">Abid Islam</a> &amp; <a href="https://boostnixmedia.com/">Boostnix Media</a></sub></p>

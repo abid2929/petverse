@@ -119,3 +119,8 @@ html[lang=bn] button,html[lang=bn] input,html[lang=bn] select,html[lang=bn] text
 @media(max-width:640px){.qa{grid-template-columns:repeat(3,1fr);gap:8px}.qa-b{padding:12px 4px;font-size:12px}.qa-b i{width:40px;height:40px}.hello{padding:16px}.hello h2{font-size:18px}}
 html[lang=bn] body{font-size:14.5px}html[lang=bn] .nv{font-size:14.5px}
 @media(max-width:640px){.vis{grid-template-columns:repeat(3,1fr)!important;gap:8px}.vis>div{flex-direction:column;align-items:flex-start;gap:4px;padding:10px}.vis>div svg{display:none}.vis b{font-size:20px}.vis small{font-size:11px;line-height:1.3}}
+
+.sig{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.3rem .7rem}
+.sig a{display:inline-flex;align-items:center;gap:.3rem;font-weight:600;color:inherit;text-decoration:none}.sig a:hover{text-decoration:underline}
+.sig .sg-i{width:15px;height:15px;border-radius:3px;display:grid;place-items:center;flex-shrink:0;color:#fff;font:700 9.5px/1 system-ui,sans-serif}
+.sig .sg-li{background:#0a66c2}.sig .sg-bx{background:linear-gradient(135deg,#ff8a3d,#f04e23)}
