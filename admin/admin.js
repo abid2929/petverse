@@ -110,7 +110,7 @@ async function boot() {
   $("#yr").textContent = new Date().getFullYear();
   let s = null;
   try { const r = await fetch("api.php?a=state", { cache: "no-store", credentials: "same-origin" }); if (r.ok && (r.headers.get("content-type") || "").includes("json")) s = await r.json() } catch (e) { }
-  if (!s) { DEMO = true; $("#demoBar").hidden = false; document.body.classList.add("is-demo"); await Mock.seed(); s = await Mock.call("state", null, "") }
+  if (!s) { DEMO = true; document.body.classList.add("is-demo"); await Mock.seed(); s = await Mock.call("state", null, "") }
   if (s.me) { ME = s.me; CSRF = s.csrf; return start() }
   $("#login").hidden = false;
   if (s.setup) { $("#loginHint").textContent = "First time: create the main (super) admin account. Password 8+ characters."; $("#setupName").hidden = false; $("#loginForm button").textContent = "Create admin & sign in" }
