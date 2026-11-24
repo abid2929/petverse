@@ -33,11 +33,15 @@ if ($a === 'order' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = (string)($it['id'] ?? ''); $q = max(1, min(50, (int)($it['q'] ?? 1)));
     if (!isset($prods[$id]) || !empty($prods[$id]['off']) || empty($prods[$id]['p'])) continue;
     $x = $prods[$id];
+    if (isset($x['st']) && $x['st'] !== '' && $x['st'] !== null && $q > (int)$x['st']) out(['error' => (int)$x['st'] > 0 ? $x['n'] . ': only ' . (int)$x['st'] . ' left in stock' : $x['n'] . ': out of stock'], 400);
     $items[] = ['id' => $id, 'n' => $x['n'], 'b' => $x['b'] ?? '', 'q' => $q, 'p' => (int)$x['p'], 'i' => $x['i'] ?? '', 'v' => mb_substr((string)($it['v'] ?? ''), 0, 40)];
     $sub += $q * (int)$x['p'];
   }
   if (!$items) out(['error' => 'Your cart is empty.'], 400);
-  $site = pv_read('site'); $d = $site['delivery'] ?? [];
+  $site = pv_read('site'); $pm = $site['payment'] ?? [];
+  if ($pay !== 'cod' && trim((string)($pm[$pay] ?? '')) === '') out(['error' => 'This payment method is not available now.'], 400);
+  if ($pay !== 'cod' && mb_strlen(trim((string)($b['trx'] ?? ''))) < 6) out(['error' => 'Please write the transaction ID.'], 400);
+  $d = $site['delivery'] ?? [];
   $ship = $area === 'out' ? (int)($d['outside'] ?? 130) : (int)($d['inside'] ?? 70);
   if (!empty($d['free_over']) && $sub >= (int)$d['free_over']) $ship = 0;
   $order = ['no' => 'PV-' . strtoupper(substr(bin2hex(random_bytes(4)), 0, 6)), 't' => time(), 'name' => $name, 'phone' => $phone, 'address' => $addr, 'area' => $area,
@@ -68,6 +72,19 @@ if ($a === 'track') {
   foreach (pv_read('orders') as $o) if ($o['no'] === $no && $o['phone'] === $ph)
     out(['ok' => 1, 'no' => $o['no'], 'status' => $o['status'], 't' => $o['t'], 'total' => $o['total'], 'items' => count($o['items']), 'track' => $o['courier']['code'] ?? null]);
   out(['error' => 'No order found with this number and phone.'], 404);
+}
+
+if ($a === 'review' && $_SERVER['REQUEST_METHOD'] === 'POST') {   // customer review: saved hidden until the admin turns it on
+  $b = body();
+  if (!empty($b['website'])) out(['ok' => 1]);
+  $name = trim(mb_substr((string)($b['name'] ?? ''), 0, 60)); $text = trim(mb_substr((string)($b['body'] ?? ''), 0, 1000));
+  if ($name === '' || $text === '') out(['error' => 'Please write your name and review.'], 400);
+  $prods = pv_all_products(); $pid = (string)($b['pid'] ?? '');
+  if (!isset($prods[$pid])) out(['error' => 'Product not found.'], 400);
+  if (limited('review', 3, 3600)) out(['error' => 'Too many reviews. Please try later.'], 429);
+  $r = ['name' => $name, 'pet' => $prods[$pid]['n'], 'text' => $text, 'stars' => max(1, min(5, (int)($b['rating'] ?? 5))), 'on' => 0, 'pid' => $pid, 't' => time()];
+  pv_update('reviews', function ($R) use ($r) { array_unshift($R, $r); return $R; });
+  out(['ok' => 1]);
 }
 
 if ($a === 'hit') {   // privacy-friendly visit counter (no cookies, hashed IP)

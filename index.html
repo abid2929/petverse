@@ -1083,7 +1083,8 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCart()});
 /* ===== PetVerse shop: live data from the admin panel, checkout, quick view, order tracking, Pixel/GA ===== */
 let SITE={},SRV=false;
 const isrc=s=>!s?"":/^(https?:|data:)/.test(s)?s:"img/"+String(s).replace(/^img\//,"");
-const LSG=k=>{try{const v=localStorage.getItem("pvd_"+k);return v?JSON.parse(v):null}catch(e){return null}};
+const PVP=(window.PV_PREFIX||"pvd")+"_";
+const LSG=k=>{try{const v=localStorage.getItem(PVP+k);return v?JSON.parse(v):null}catch(e){return null}};
 function track(ev,x,extra){try{const d=x?{content_ids:[x.id||""],content_name:x.n,content_type:"product",value:x.p||0,currency:"BDT"}:{};Object.assign(d,extra||{});const eid=d.eventID;delete d.eventID;
  if(window.fbq)eid?fbq("track",ev,d,{eventID:eid}):fbq("track",ev,d);
  if(window.gtag)gtag("event",{AddToCart:"add_to_cart",ViewContent:"view_item",Purchase:"purchase",InitiateCheckout:"begin_checkout",Contact:"contact"}[ev]||ev,{value:d.value,currency:"BDT",transaction_id:eid})}catch(e){}}
@@ -1153,7 +1154,7 @@ async function placeOrder(f){const D=Object.fromEntries(new FormData(f)),L=cartL
  let no=r&&r.no,total=r?r.total:sub+ship;
  if(!r){/* no server (demo / static): keep it in the demo admin if it is open in this browser, and send on WhatsApp */
   no="PV-"+Math.random().toString(36).slice(2,8).toUpperCase();
-  try{const O=LSG("orders");if(O){O.unshift({no,t:Date.now()/1000|0,name:D.name,phone:ph,address:D.address,area:D.area,note:D.note||"",pay:D.pay,trx:D.trx||"",items:L.map(l=>({id:l.id,n:l.x.n,b:l.x.b||"",q:l.q,p:l.x.p,i:l.x.i||"",v:l.v})),sub,ship,total,status:"pending",src:"website"});localStorage.setItem("pvd_orders",JSON.stringify(O))}}catch(e){}
+  try{const O=LSG("orders");if(O){O.unshift({no,t:Date.now()/1000|0,name:D.name,phone:ph,address:D.address,area:D.area,note:D.note||"",pay:D.pay,trx:D.trx||"",items:L.map(l=>({id:l.id,n:l.x.n,b:l.x.b||"",q:l.q,p:l.x.p,i:l.x.i||"",v:l.v})),sub,ship,total,status:"pending",src:"website"});localStorage.setItem(PVP+"orders",JSON.stringify(O))}}catch(e){}
   const m=`Hello PetVerse, new order ${no}\n`+L.map(l=>`- ${l.x.n}${l.v?" ("+l.v+")":""} x${l.q} = ${tk(l.x.p*l.q)}`).join("\n")+`\nDelivery: ${tk(ship)}\nTotal: ${tk(total)}\nName: ${D.name}\nPhone: ${ph}\nAddress: ${D.address} (${D.area==="out"?"Outside":"Inside"} Dhaka)\nPayment: ${D.pay.toUpperCase()}${D.trx?" TrxID "+D.trx:""}`+(D.note?`\nNote: ${D.note}`:"");
   window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank")}
  track("Purchase",null,{value:total,content_ids:L.map(l=>l.id),num_items:L.length,eventID:no});

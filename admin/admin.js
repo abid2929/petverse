@@ -49,7 +49,7 @@ function catName(k) { const c = (DB.categories || []).find(c => c.k === k); retu
 
 /* ---------- demo (GitHub Pages / preview): everything in localStorage with sample orders ---------- */
 const Mock = {
-  key: k => "pvd_" + k,
+  key: k => (window.PV_PREFIX || "pvd") + "_" + k,
   get(k, d) { try { const v = localStorage.getItem(this.key(k)); return v ? JSON.parse(v) : d } catch (e) { return d } },
   set(k, v) { try { localStorage.setItem(this.key(k), JSON.stringify(v)) } catch (e) { toast("Browser storage is full") } },
   async seed() {
@@ -99,7 +99,7 @@ const Mock = {
     if (a === "pass") return { ok: 1 };
     if (a === "pull") return { ok: 1, new: 0, have: 0, fail: 0 };
     if (a === "ai") return { error: "nokey" };
-    if (a === "logout") { localStorage.removeItem("pvd_orders"); return { ok: 1 } }
+    if (a === "logout") { localStorage.removeItem(Mock.key("orders")); return { ok: 1 } }
     return { error: "Not available in demo" };
   }
 };
