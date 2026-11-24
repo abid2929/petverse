@@ -1,0 +1,162 @@
+/* PetVerse admin: Bangla language layer. Default is Bangla; the EN button in the top bar switches to English. */
+const PV_LANG = (() => { try { return localStorage.getItem("pv_lang") || "bn" } catch (e) { return "bn" } })();
+const BN = {
+"\"Cat food tab\" categories show as tabs inside Cat Food; others get their own section.":"\"ক্যাট ফুড ট্যাব\" ক্যাটাগরি Cat Food এর ভেতরে ট্যাব হিসেবে দেখায়; বাকিগুলো হোমপেজে আলাদা সেকশন পায়।",
+"#cat-food or https://…":"#cat-food অথবা https://…",
+"(0 = never)":"(০ = কখনো না)","(change only if Steadfast tells you)":"(Steadfast না বললে বদলাবেন না)",
+"(empty = hide Nagad)":"(খালি = Nagad দেখাবে না)","(empty = hide bKash)":"(খালি = bKash দেখাবে না)",
+"(empty = keep the current text)":"(খালি = এখনকার লেখা থাকবে)","(empty = midnight every day)":"(খালি = প্রতিদিন রাত ১২টা)",
+"(empty = no change)":"(খালি = কোনো পরিবর্তন নেই)","(for toys, collars, beds)":"(খেলনা, কলার, বেডের জন্য)",
+"(optional)":"(ঐচ্ছিক)","(optional, shows above the header)":"(ঐচ্ছিক, হেডারের উপরে দেখায়)","(with 880)":"(880 সহ)",
+"+ Add":"+ যোগ করুন","+ Add more image":"+ আরও ছবি যোগ করুন",
+"+ Beige":"+ বেইজ","+ Black":"+ কালো","+ Blue":"+ নীল","+ Brown":"+ বাদামি","+ Green":"+ সবুজ","+ Grey":"+ ধূসর","+ Orange":"+ কমলা","+ Pink":"+ গোলাপি","+ Purple":"+ বেগুনি","+ Red":"+ লাল","+ White":"+ সাদা","+ Yellow":"+ হলুদ",
+". All rights reserved.":"। সর্বস্বত্ব সংরক্ষিত।",
+"API base URL":"API বেস URL","API key":"API কী","About text":"About লেখা","About us":"আমাদের সম্পর্কে","Action":"অ্যাকশন","Active":"চালু","Active in stock":"স্টকে আছে",
+"Add admin":"অ্যাডমিন যোগ করুন","Add banner":"ব্যানার যোগ করুন","Add manual order":"নিজে অর্ডার যোগ করুন","Add new category":"নতুন ক্যাটাগরি","Add new product":"নতুন প্রোডাক্ট যোগ করুন","Add product":"প্রোডাক্ট যোগ করুন","Add review":"রিভিউ যোগ করুন",
+"Address":"ঠিকানা","Address *":"ঠিকানা *","Admin & Roles":"অ্যাডমিন ও রোল","Admins & roles":"অ্যাডমিন ও রোল",
+"All":"সব","All badges":"সব ব্যাজ","All categories":"সব ক্যাটাগরি","All orders":"সব অর্ডার","All orders by status":"স্ট্যাটাস অনুযায়ী সব অর্ডার","All products & catalogue":"সব প্রোডাক্ট ও ক্যাটালগ","All stock":"সব স্টক",
+"Also alerts your number above":"উপরের আপনার নাম্বারেও জানাবে","Amount & payment":"টাকা ও পেমেন্ট","Announcement bar":"ঘোষণা বার","Area":"এলাকা",
+"Ask AI":"AI কে জিজ্ঞেস করুন","Ask anything about your shop…":"দোকান নিয়ে যেকোনো কিছু জিজ্ঞেস করুন…","Ask on WhatsApp":"WhatsApp এ জিজ্ঞেস",
+"Available sizes / weights":"সাইজ / ওজন","Average order":"গড় অর্ডার","Badges":"ব্যাজ","Banner image *":"ব্যানারের ছবি *","Best Sellers":"বেস্ট সেলার","Best seller":"বেস্ট সেলার",
+"Best under 60 characters.":"৬০ অক্ষরের মধ্যে রাখা ভালো।","Brand":"ব্র্যান্ড","Browsing right now":"এখন সাইটে আছে",
+"CONVERSIONS API ACCESS TOKEN":"CONVERSIONS API অ্যাক্সেস টোকেন","Call":"কল","Cancel":"বাতিল","Cancelled":"বাতিল","Cancelled:":"বাতিল:",
+"Cash on delivery":"ক্যাশ অন ডেলিভারি","Cat food tab":"ক্যাট ফুড ট্যাব","Catalog collections":"ক্যাটালগ কালেকশন","Catalog Collections":"ক্যাটালগ কালেকশন","Categories":"ক্যাটাগরি","Category":"ক্যাটাগরি","Category list":"ক্যাটাগরি তালিকা",
+"Category name":"ক্যাটাগরির নাম","Category name *":"ক্যাটাগরির নাম *","Change my password":"আমার পাসওয়ার্ড বদলান","Change password":"পাসওয়ার্ড বদলান",
+"Change stock quickly. Low-stock items (under 10) show in red and in the bell.":"দ্রুত স্টক বদলান। ১০টার কম থাকলে লাল দেখায় এবং বেলে নোটিফিকেশন আসে।",
+"Charges are added at checkout automatically":"চেকআউটে চার্জ নিজে থেকেই যোগ হয়","Check balance":"ব্যালেন্স দেখুন","Choices the customer sees at checkout":"চেকআউটে কাস্টমার যা দেখবে",
+"Collection":"কালেকশন","Colours":"কালার","Copy online product photos to your own server":"অনলাইনের প্রোডাক্ট ছবি আপনার সার্ভারে কপি করুন","Copy photos to server":"ছবি সার্ভারে কপি করুন",
+"Courier automation (Steadfast)":"কুরিয়ার অটোমেশন (Steadfast)","Courier settings":"কুরিয়ার সেটিং","Courier Hub":"কুরিয়ার হাব","Courier Automation":"কুরিয়ার অটোমেশন","Create order":"অর্ডার তৈরি করুন","Current password":"বর্তমান পাসওয়ার্ড",
+"Customer":"কাস্টমার","Customer name & area":"কাস্টমারের নাম ও এলাকা","Customer name *":"কাস্টমারের নাম *","Customer pays the rider":"কাস্টমার রাইডারকে টাকা দেবে","Customer reviews":"কাস্টমার রিভিউ","Customer Reviews":"কাস্টমার রিভিউ","Customers":"কাস্টমার",
+"DEMO ADMIN: opens without a password and uses sample orders. Changes are saved only in this browser. On your real site (cPanel) the admin needs a login.":"ডেমো অ্যাডমিন: পাসওয়ার্ড ছাড়া খোলে, নমুনা অর্ডার দেখায়। পরিবর্তন শুধু এই ব্রাউজারে থাকে। আসল সাইটে (cPanel) লগইন লাগবে।",
+"Daily sales trend (last 7 days)":"দৈনিক বিক্রি (শেষ ৭ দিন)","Dashboard":"ড্যাশবোর্ড","Dashboard Overview":"ড্যাশবোর্ড","Dashboard › Site settings ›":"ড্যাশবোর্ড › সাইট সেটিং ›","Date":"তারিখ","Deal of the Day":"আজকের অফার","Deduplication:":"ডুপ্লিকেট এড়ানো:",
+"Default meta description":"মেটা ডেসক্রিপশন","Default meta title (SEO title)":"মেটা টাইটেল (SEO টাইটেল)","Delete":"ডিলিট","Delivered":"ডেলিভারড","Delivered by courier":"কুরিয়ারে ডেলিভারড","Delivered rate":"ডেলিভারির হার",
+"Delivery":"ডেলিভারি","Delivery & Shipping":"ডেলিভারি ও শিপিং","Delivery & shipping":"ডেলিভারি ও শিপিং","Delivery address":"ডেলিভারির ঠিকানা","Delivery charge (৳)":"ডেলিভারি চার্জ (৳)","Delivery time note":"ডেলিভারির সময়ের নোট",
+"Details, photos, size options and price":"বিস্তারিত, ছবি, সাইজ আর দাম","Developed by":"তৈরি করেছেন","Dog parent":"কুকুরের মালিক","Cat parent":"বিড়ালের মালিক",
+"Edit":"এডিট","Edit admin":"অ্যাডমিন এডিট","Edit category":"ক্যাটাগরি এডিট","Edit collection":"কালেকশন এডিট","Edit product":"প্রোডাক্ট এডিট","Edit review":"রিভিউ এডিট","Edit the words and offers on your homepage":"হোমপেজের লেখা আর অফার বদলান",
+"Email":"ইমেইল","Enter your Meta Pixel ID to enable tracking on the website.":"ওয়েবসাইটে ট্র্যাকিং চালু করতে Meta Pixel ID দিন।","Everything, including admins, keys and passwords":"সবকিছু, অ্যাডমিন, কী আর পাসওয়ার্ড সহ",
+"Existing categories":"বর্তমান ক্যাটাগরি","Export CSV":"CSV ডাউনলোড","Facebook page link":"Facebook পেজের লিংক","Featured":"ফিচার্ড",
+"First image is the main photo. Add as many as you like; tag a colour to show the right photo.":"প্রথম ছবিটাই মূল ছবি। যত খুশি ছবি দিন; কালার ট্যাগ দিলে সেই কালারে ক্লিক করলে সেই ছবি দেখাবে।",
+"Flash sale":"ফ্ল্যাশ সেল","Flash sale offer":"ফ্ল্যাশ সেল অফার","For Google search and social media previews":"Google সার্চ আর সোশ্যাল মিডিয়া প্রিভিউর জন্য","Free delivery over (৳)":"এর বেশি হলে ফ্রি ডেলিভারি (৳)",
+"From Events Manager → Test events. Remove after testing.":"Events Manager → Test events থেকে। টেস্ট শেষে মুছে দিন।","From orders placed, in Taka":"অর্ডার থেকে, টাকায়","Full description & specification":"পুরো বিবরণ ও স্পেসিফিকেশন",
+"Gateway URL":"গেটওয়ে URL","General store information":"দোকানের সাধারণ তথ্য","General Store":"দোকানের তথ্য",
+"Get your API key and secret from the Steadfast merchant panel (API section). Test with one order first.":"Steadfast মার্চেন্ট প্যানেলের API সেকশন থেকে API key আর secret নিন। আগে একটা অর্ডার দিয়ে টেস্ট করুন।",
+"Give staff their own login with limited access":"স্টাফদের আলাদা লগইন দিন, সীমিত অ্যাক্সেস সহ","Google Analytics 4 ID":"Google Analytics 4 আইডি","Google Gemini API key":"Google Gemini API কী","Google Map link":"Google ম্যাপ লিংক",
+"Google SEO & meta tags":"Google SEO ও মেটা ট্যাগ","Google SEO Meta":"Google SEO মেটা","Google Search Console verification code":"Google Search Console ভেরিফিকেশন কোড",
+"Hand-picked groups (Best Sellers, Eid Offer, Kitten Corner…) that show as their own section on the homepage":"বাছাই করা প্রোডাক্টের গ্রুপ (বেস্ট সেলার, ঈদ অফার, কিটেন কর্নার…), হোমপেজে আলাদা সেকশন হিসেবে দেখায়",
+"Hero banners":"হিরো ব্যানার","Hero Banners":"হিরো ব্যানার","Hidden":"লুকানো","Hide from website":"ওয়েবসাইট থেকে লুকান","Homepage CMS":"হোমপেজ CMS","Homepage content":"হোমপেজের কনটেন্ট",
+"Ideas to sell more cat litter this month":"এই মাসে বেশি ক্যাট লিটার বিক্রির আইডিয়া","Image":"ছবি","Image 1 required · unlimited gallery":"১ম ছবি লাগবেই · যত খুশি ছবি","In stock":"স্টকে আছে",
+"Ingredients, feeding guide, size, age, how to use…":"উপাদান, খাওয়ানোর নিয়ম, সাইজ, বয়স, ব্যবহারবিধি…","Inside Dhaka (৳)":"ঢাকার ভেতরে (৳)","Instructions for mobile payment":"মোবাইল পেমেন্টের নির্দেশনা","Internal note":"ভেতরের নোট",
+"Inventory & Stock":"ইনভেন্টরি ও স্টক","Inventory & stock":"ইনভেন্টরি ও স্টক","Invoice":"ইনভয়েস","LIVE":"লাইভ","Label under name":"নামের নিচের লেবেল",
+"Last 30 days":"শেষ ৩০ দিন","Last 30 days:":"শেষ ৩০ দিন:","Last 7 days":"শেষ ৭ দিন","Last 90 days":"শেষ ৯০ দিন","Last login":"শেষ লগইন","Last order":"শেষ অর্ডার","Latest order":"সর্বশেষ অর্ডার",
+"Leave both prices empty to show \"Ask price on WhatsApp\".":"দুটো দামই খালি রাখলে সাইটে \"Ask price on WhatsApp\" দেখাবে।","Link when clicked":"ক্লিক করলে যে লিংকে যাবে","Log out":"লগ আউট",
+"Low stock":"কম স্টক","Low stock (<10)":"কম স্টক (<১০)","Low stock alert (< 10)":"কম স্টক সতর্কতা (< ১০)","Loyal":"নিয়মিত","Main benefits in one or two lines":"এক-দুই লাইনে মূল সুবিধা","Main image":"মূল ছবি","Manager":"ম্যানেজার","Menu":"মেনু",
+"Meta keywords":"মেটা কিওয়ার্ড","Nagad number":"Nagad নাম্বার","Name":"নাম","Name & brand":"নাম ও ব্র্যান্ড","Name *":"নাম *",
+"Needed for server-side tracking (works even with ad blockers). Make it in Meta Events Manager → Settings → Conversions API.":"সার্ভার-সাইড ট্র্যাকিংয়ের জন্য লাগে (অ্যাড ব্লকার থাকলেও কাজ করে)। Meta Events Manager → Settings → Conversions API থেকে বানান।",
+"New":"নতুন","New arrival":"নতুন এসেছে","New collection":"নতুন কালেকশন","New password":"নতুন পাসওয়ার্ড","New password (8+)":"নতুন পাসওয়ার্ড (৮+)","No colours (fine for food and litter)":"কালার নেই (খাবার আর লিটারের জন্য ঠিক আছে)",
+"No custom banners. The homepage shows its 5 built-in slides. Add your own sale or product banners here.":"নিজের কোনো ব্যানার নেই। হোমপেজে ৫টা বিল্ট-ইন স্লাইড দেখাচ্ছে। এখানে নিজের অফার বা প্রোডাক্ট ব্যানার যোগ করুন।",
+"No image":"ছবি নেই","No price":"দাম নেই","Not tracked":"ট্র্যাক হয় না","Note":"নোট","Nothing sent yet.":"এখনো কিছু পাঠানো হয়নি।","Notifications":"নোটিফিকেশন","OPTIONAL":"ঐচ্ছিক",
+"Offer ends":"অফার শেষ হবে","On the way":"পথে আছে","Only admins see this":"শুধু অ্যাডমিন দেখবে","Opening hours":"খোলার সময়","Order":"অর্ডার","Order date":"অর্ডারের তারিখ","Order from":"অর্ডার এসেছে","Order no":"অর্ডার নং",
+"Order status":"অর্ডার স্ট্যাটাস","Order status ratio":"অর্ডার স্ট্যাটাসের অনুপাত","Orders":"অর্ডার","Orders from the website and manual orders (phone / Facebook)":"ওয়েবসাইটের অর্ডার আর নিজে যোগ করা অর্ডার (ফোন / Facebook)",
+"Orders, courier, customers, products and stock only":"শুধু অর্ডার, কুরিয়ার, কাস্টমার, প্রোডাক্ট আর স্টক","Other colour":"অন্য কালার","Out of stock":"স্টক শেষ","Own section":"আলাদা সেকশন","Own section on homepage":"হোমপেজে আলাদা সেকশন",
+"Password":"পাসওয়ার্ড","Password & Security":"পাসওয়ার্ড ও নিরাপত্তা","Password (8+)":"পাসওয়ার্ড (৮+)","Paste your gateway's \"send SMS\" link. Put":"আপনার গেটওয়ের \"send SMS\" লিংক দিন। বসান",
+"Payment":"পেমেন্ট","Payment received":"পেমেন্ট পাওয়া গেছে","Payment settings":"পেমেন্ট সেটিং","Payment Settings":"পেমেন্ট সেটিং","Pending":"পেন্ডিং","Pending + processing":"পেন্ডিং + প্রসেসিং","Pending orders":"পেন্ডিং অর্ডার",
+"Pet":"পোষা প্রাণী","Pet / note":"পোষা প্রাণী / নোট","Pet Shop Admin Panel":"পেট শপ অ্যাডমিন প্যানেল","Phone":"ফোন","Phone *":"ফোন *","Photo":"ছবি","Price":"দাম","Price (sale / regular)":"দাম (সেল / রেগুলার)",
+"Prices, stock, badges and photos":"দাম, স্টক, ব্যাজ আর ছবি","Print invoice":"ইনভয়েস প্রিন্ট","Processing":"প্রসেসিং","Processing:":"প্রসেসিং:","Product":"প্রোডাক্ট","Product descriptions and SEO text":"প্রোডাক্ট ডেসক্রিপশন আর SEO লেখা",
+"Product images & colour gallery":"প্রোডাক্টের ছবি ও কালার গ্যালারি","Product list":"প্রোডাক্ট তালিকা","Product Management":"প্রোডাক্ট ম্যানেজমেন্ট","Product title *":"প্রোডাক্টের নাম *","Products":"প্রোডাক্ট",
+"Products, orders, banners, homepage, reports and settings (not admins or API keys)":"প্রোডাক্ট, অর্ডার, ব্যানার, হোমপেজ, রিপোর্ট আর সেটিং (অ্যাডমিন বা API কী না)","Publish product":"প্রোডাক্ট পাবলিশ করুন","Qty":"পরিমাণ","Quick add:":"দ্রুত যোগ:","Quick go:":"দ্রুত যান:",
+"Quick help for your shop. With a Gemini key (Site Settings › Google SEO) it uses Google AI; otherwise it gives built-in tips.":"দোকানের জন্য দ্রুত সাহায্য। Gemini কী দিলে (সাইট সেটিং › Google SEO) Google AI ব্যবহার করে; না দিলে বিল্ট-ইন টিপস দেয়।",
+"Rating":"রেটিং","Ready to send":"পাঠানোর জন্য তৈরি","Recent customer orders":"সাম্প্রতিক অর্ডার","Regular price (৳)":"রেগুলার দাম (৳)","Repeat buyers":"বারবার কেনেন","Reply to a customer asking about delivery time":"ডেলিভারির সময় জানতে চাওয়া কাস্টমারকে উত্তর",
+"Reports & Analytics":"রিপোর্ট ও অ্যানালিটিক্স","Returned":"ফেরত","Revenue":"আয়","Review":"রিভিউ","Reviews shown on the homepage":"হোমপেজে দেখানো রিভিউ","Role":"রোল","Rotating messages (one per line)":"ঘুরে ঘুরে দেখানো লেখা (প্রতি লাইনে একটা)",
+"SMS Notifications":"SMS নোটিফিকেশন","SMS notifications":"SMS নোটিফিকেশন","SMS customer when an order is placed":"অর্ডার হলে কাস্টমারকে SMS","SMS customer when the order status changes":"স্ট্যাটাস বদলালে কাস্টমারকে SMS",
+"Sale price (৳)":"সেল দাম (৳)","Sales":"বিক্রি","Sales by category":"ক্যাটাগরি অনুযায়ী বিক্রি","Sales by day":"দিন অনুযায়ী বিক্রি","Sales, best sellers and categories":"বিক্রি, বেস্ট সেলার আর ক্যাটাগরি",
+"Save":"সেভ","Save changes":"সেভ করুন","Save homepage":"হোমপেজ সেভ","Save product":"প্রোডাক্ট সেভ","Save stock":"স্টক সেভ","Search name or brand":"নাম বা ব্র্যান্ড দিয়ে খুঁজুন","Search name or phone":"নাম বা ফোন দিয়ে খুঁজুন","Search order, name, phone":"অর্ডার, নাম, ফোন দিয়ে খুঁজুন","Search…":"খুঁজুন…",
+"Secret key":"সিক্রেট কী",
+"Security built in: passwords are stored encrypted (bcrypt), login is locked after 8 wrong tries, every change needs a session token, and order data cannot be opened from the web. Forgot the super admin password? Delete":"নিরাপত্তা: পাসওয়ার্ড এনক্রিপ্ট করে রাখা হয় (bcrypt), ৮ বার ভুল দিলে লগইন লক হয়, প্রতিটা পরিবর্তনে সেশন টোকেন লাগে, আর অর্ডারের তথ্য ওয়েব থেকে খোলা যায় না। সুপার অ্যাডমিন পাসওয়ার্ড ভুলে গেলে cPanel এ এই ফাইল ডিলিট করুন:",
+"in cPanel and set up again.":"তারপর আবার সেটআপ করুন।",
+"Send orders to Steadfast from Orders or Courier Hub":"অর্ডার বা কুরিয়ার হাব থেকে Steadfast এ অর্ডার পাঠান","Send orders to the courier in one click and follow their delivery status":"এক ক্লিকে কুরিয়ারে অর্ডার পাঠান আর ডেলিভারি স্ট্যাটাস দেখুন",
+"Send selected":"বাছাইগুলো পাঠান","Send test SMS":"টেস্ট SMS পাঠান","Sent to courier":"কুরিয়ারে পাঠানো","Separate with commas. Customers choose one when ordering.":"কমা দিয়ে আলাদা করুন। অর্ডারের সময় কাস্টমার একটা বেছে নেবে।",
+"Shipped":"শিপড","Shipping":"শিপিং","Shop address":"দোকানের ঠিকানা","Short description":"ছোট বিবরণ","Shown in the header, footer, contact section and invoices":"হেডার, ফুটার, কন্টাক্ট সেকশন আর ইনভয়েসে দেখায়","Shows as":"যেভাবে দেখায়",
+"Shows on the homepage in this category.":"হোমপেজে এই ক্যাটাগরিতে দেখাবে।","Sign in":"লগইন","Sign in to manage your shop":"দোকান চালাতে লগইন করুন","Site Settings":"সাইট সেটিং","Sizes / options":"সাইজ / অপশন","Slug (URL)":"স্লাগ (URL)","Slug (letters/numbers)":"স্লাগ (ইংরেজি অক্ষর/সংখ্যা)",
+"Sold":"বিক্রি হয়েছে","Source":"উৎস","Staff":"স্টাফ","Status":"স্ট্যাটাস","Stock":"স্টক","Stock now":"এখনকার স্টক","Store name":"দোকানের নাম","Subtotal":"সাবটোটাল","Super Admin":"সুপার অ্যাডমিন","TEST EVENT CODE":"টেস্ট ইভেন্ট কোড","Tab inside Cat Food":"Cat Food এর ভেতরে ট্যাব",
+"Tagline":"ট্যাগলাইন","Test connection":"কানেকশন টেস্ট","Test number 01XXXXXXXXX":"টেস্ট নাম্বার 01XXXXXXXXX",
+"The built-in writer always works without a key. Add a free Google Gemini API key (from Google AI Studio) for smarter AI writing.":"বিল্ট-ইন লেখক কী ছাড়াই কাজ করে। আরও ভালো AI লেখার জন্য ফ্রি Google Gemini API কী দিন (Google AI Studio থেকে)।",
+"Tick orders and send them to Steadfast together":"অর্ডারগুলো টিক দিয়ে একসাথে Steadfast এ পাঠান","Title (for you)":"টাইটেল (আপনার জন্য)","Today:":"আজ:","Top bar messages":"টপ বারের লেখা","Top products":"সেরা প্রোডাক্ট",
+"Total":"মোট","Total orders":"মোট অর্ডার","Total products":"মোট প্রোডাক্ট","Total sales":"মোট বিক্রি","Total spent":"মোট খরচ","Tracked events:":"যে ইভেন্টগুলো ট্র্যাক হয়:","Tracking codes and live status":"ট্র্যাকিং কোড আর লাইভ স্ট্যাটাস","Type":"ধরন",
+"Unique visitors today":"আজকের ভিজিটর","Update stock":"স্টক আপডেট","Use the action buttons to edit or delete":"এডিট বা ডিলিট করতে অ্যাকশন বাটন ব্যবহার করুন","User matching:":"ইউজার ম্যাচিং:","Username":"ইউজারনেম",
+"View":"দেখুন","View Live Store":"লাইভ সাইট দেখুন","View an order, change status or print the invoice":"অর্ডার দেখুন, স্ট্যাটাস বদলান বা ইনভয়েস প্রিন্ট করুন","Visible":"দেখাবে","WhatsApp number":"WhatsApp নাম্বার",
+"Where should this product show? *":"প্রোডাক্টটা কোথায় দেখাবে? *","Works with any Bangladeshi SMS gateway (BulkSMSBD, Alpha SMS, SSL Wireless…)":"যেকোনো বাংলাদেশি SMS গেটওয়েতে চলে (BulkSMSBD, Alpha SMS, SSL Wireless…)",
+"Write a Facebook post for a cat food offer":"ক্যাট ফুড অফারের জন্য Facebook পোস্ট লিখুন","Write an SEO description for my pet shop":"আমার পেট শপের জন্য SEO ডেসক্রিপশন লিখুন","Writes the short and full description from the title, brand and category in one click":"এক ক্লিকে নাম, ব্র্যান্ড আর ক্যাটাগরি থেকে ছোট ও পুরো বিবরণ লিখে দেয়",
+"Yes":"হ্যাঁ","You":"আপনি","Your name":"আপনার নাম","Your number for new-order alerts":"নতুন অর্ডারের খবর পেতে আপনার নাম্বার",
+"Your own image banners slide first on the homepage. Best size: 1600 × 700 px (PC) — keep text in the middle for phones.":"আপনার ব্যানারগুলো হোমপেজে সবার আগে স্লাইড হবে। ভালো সাইজ: 1600 × 700 px। ফোনের জন্য লেখা মাঝখানে রাখুন।",
+"browser and server Purchase share the order number as event ID.":"ব্রাউজার আর সার্ভারের Purchase একই অর্ডার নাম্বারকে event ID হিসেবে ব্যবহার করে।",
+"e.g. 1950 if discounted":"যেমন ছাড় থাকলে 1950","e.g. 400g, 1.2kg, 3kg, 7kg":"যেমন 400g, 1.2kg, 3kg, 7kg","e.g. 50 (empty = not tracked)":"যেমন 50 (খালি = ট্র্যাক হবে না)","e.g. Cat parent":"যেমন বিড়ালের মালিক","e.g. Dry Cat Food":"যেমন Dry Cat Food",
+"e.g. Free delivery on orders over ৳2000 this week!":"যেমন এই সপ্তাহে ৳2000 এর বেশি অর্ডারে ফ্রি ডেলিভারি!","e.g. Nusrat, Bashundhara":"যেমন নুসরাত, বসুন্ধরা","e.g. Royal Canin":"যেমন Royal Canin","e.g. Royal Canin Kitten Dry Food 2kg":"যেমন Royal Canin Kitten Dry Food 2kg",
+"or image link https://":"অথবা ছবির লিংক https://","…or paste an image link (https://)":"…অথবা ছবির লিংক দিন (https://)","phone (hashed, BD format), IP, browser, fbp/fbc cookies.":"ফোন (হ্যাশ করা), IP, ব্রাউজার, fbp/fbc কুকি।",
+"where the phone goes and":"যেখানে ফোন নাম্বার বসবে আর","where the text goes.":"যেখানে মেসেজ বসবে।","the content=":"content=",
+"← All products":"← সব প্রোডাক্ট","← Cancel and go back":"← বাতিল করে ফিরে যান","● SHOP ACTIVITY":"● দোকানের অ্যাক্টিভিটি","● Server-side tracking not set up yet":"● সার্ভার-সাইড ট্র্যাকিং এখনো সেট করা হয়নি",
+"✦ AI copilot & copywriter":"✦ AI সহকারী ও লেখক","✦ AI product copywriter":"✦ AI প্রোডাক্ট লেখক","✦ Ask":"✦ জিজ্ঞেস করুন","✦ Ask AI":"✦ AI কে জিজ্ঞেস করুন","✦ Write with AI":"✦ AI দিয়ে লিখুন",
+"Loading…":"লোড হচ্ছে…","No orders yet.":"এখনো কোনো অর্ডার নেই।","Hello, ":"হ্যালো, ","Your name":"আপনার নাম","First time: create the main (super) admin account. Password 8+ characters.":"প্রথমবার: মূল (সুপার) অ্যাডমিন অ্যাকাউন্ট বানান। পাসওয়ার্ড ৮+ অক্ষর।",
+"Create account":"অ্যাকাউন্ট বানান","Wrong username or password":"ইউজারনেম বা পাসওয়ার্ড ভুল","Today":"আজ","Yesterday":"গতকাল","Cash on Delivery":"ক্যাশ অন ডেলিভারি","Inside Dhaka":"ঢাকার ভেতরে","Outside Dhaka":"ঢাকার বাইরে","Outside Dhaka (৳)":"ঢাকার বাইরে (৳)",
+"pending":"পেন্ডিং","processing":"প্রসেসিং","shipped":"শিপড","delivered":"ডেলিভারড","cancelled":"বাতিল","returned":"ফেরত","Paid":"পেইড","Unpaid":"বাকি","Manual":"ম্যানুয়াল","Website":"ওয়েবসাইট","No notifications":"কোনো নোটিফিকেশন নেই","Close":"বন্ধ","orders":"অর্ডার",
+/* toasts & confirms */
+"AI did not answer. Check the Gemini key.":"AI উত্তর দেয়নি। Gemini কী চেক করুন।",
+"Add your Steadfast API key and secret in Site Settings > Courier.":"সাইট সেটিং > কুরিয়ার এ Steadfast এর API key আর secret দিন।",
+"Already sent to courier.":"আগেই কুরিয়ারে পাঠানো হয়েছে।","Bad data":"ভুল তথ্য","Could not save the image.":"ছবি সেভ করা যায়নি।",
+"Current password is wrong.":"বর্তমান পাসওয়ার্ড ভুল।","Give an 11-digit number":"১১ ডিজিটের নাম্বার দিন","Name and an 11-digit phone are needed.":"নাম আর ১১ ডিজিটের ফোন নাম্বার লাগবে।",
+"New admin needs an 8+ character password.":"নতুন অ্যাডমিনের পাসওয়ার্ড ৮+ অক্ষরের হতে হবে।","New password must be 8+ characters.":"নতুন পাসওয়ার্ড ৮+ অক্ষরের হতে হবে।","No permission":"অনুমতি নেই",
+"Only JPG, PNG, WEBP or GIF images.":"শুধু JPG, PNG, WEBP বা GIF ছবি।","Only the super admin can change keys.":"শুধু সুপার অ্যাডমিন কী বদলাতে পারবে।","Password must be 8+ characters.":"পাসওয়ার্ড ৮+ অক্ষরের হতে হবে।",
+"Session expired. Please log in again.":"সেশন শেষ। আবার লগইন করুন।","Too big":"অনেক বড়","Too many tries. Close the browser and try again later.":"অনেকবার চেষ্টা হয়েছে। ব্রাউজার বন্ধ করে পরে চেষ্টা করুন।",
+"Unknown data":"অজানা তথ্য","Upload failed (max 6 MB).":"আপলোড হয়নি (সর্বোচ্চ ৬ MB)।","Username 3+ letters (a-z, 0-9) and a role.":"ইউজারনেম ৩+ অক্ষর (a-z, 0-9) আর একটা রোল দিন।",
+"Username 3+ letters, password 8+ characters.":"ইউজারনেম ৩+ অক্ষর, পাসওয়ার্ড ৮+ অক্ষর।","Wrong username or password.":"ইউজারনেম বা পাসওয়ার্ড ভুল।","You cannot delete yourself.":"নিজেকে ডিলিট করা যাবে না।",
+"You do not have permission for this.":"এটার অনুমতি আপনার নেই।",
+"Add an image":"একটা ছবি দিন","Admin saved ✓":"অ্যাডমিন সেভ হয়েছে ✓","Allow pop-ups to print the invoice":"ইনভয়েস প্রিন্ট করতে পপ-আপ চালু করুন","Browser storage is full":"ব্রাউজারের জায়গা ভরে গেছে","Category saved ✓":"ক্যাটাগরি সেভ হয়েছে ✓","Collection saved ✓":"কালেকশন সেভ হয়েছে ✓",
+"Copying photos to your server…":"ছবি সার্ভারে কপি হচ্ছে…","Deleted ✓":"ডিলিট হয়েছে ✓","Give it a name":"একটা নাম দিন","Homepage saved ✓":"হোমপেজ সেভ হয়েছে ✓","Image uploaded ✓":"ছবি আপলোড হয়েছে ✓","Move or delete its products first":"আগে এর প্রোডাক্টগুলো সরান বা ডিলিট করুন",
+"Name and a slug (2-20 letters/numbers) are needed":"নাম আর স্লাগ (২-২০ ইংরেজি অক্ষর/সংখ্যা) লাগবে","Name and review are needed":"নাম আর রিভিউ লাগবে","Order created ✓":"অর্ডার তৈরি হয়েছে ✓","Order not found":"অর্ডার পাওয়া যায়নি","Order updated ✓":"অর্ডার আপডেট হয়েছে ✓","Saved ✓":"সেভ হয়েছে ✓",
+"Stock saved ✓":"স্টক সেভ হয়েছে ✓","That slug already exists":"এই স্লাগ আগেই আছে","Tick at least one order":"অন্তত একটা অর্ডার টিক দিন","Uploading…":"আপলোড হচ্ছে…","Use an https:// link":"https:// লিংক দিন","Write the product title first":"আগে প্রোডাক্টের নাম লিখুন",
+"Demo: please use an image under 500 KB":"ডেমো: ৫০০ KB এর ছোট ছবি দিন","Network error":"নেটওয়ার্ক সমস্যা","Not available in demo":"ডেমোতে এটা চলে না","Not found":"পাওয়া যায়নি",
+"FACEBOOK PIXEL ID":"FACEBOOK PIXEL আইডি","bKash number":"bKash নাম্বার","Meta Pixel & CAPI":"Meta Pixel ও CAPI","Delete banner?":"ব্যানার ডিলিট করবেন?","Delete review?":"রিভিউ ডিলিট করবেন?","Delete this category?":"এই ক্যাটাগরি ডিলিট করবেন?","Delete this collection? Products stay in the shop.":"এই কালেকশন ডিলিট করবেন? প্রোডাক্টগুলো দোকানে থাকবে।"
+};
+const BNR = [
+  [/^(.+?) \((\d+)\)$/, (m, a, n) => BN[a] ? BN[a] + " (" + n + ")" : null],
+  [/^All orders \((\d+)\) →$/, (m, n) => "সব অর্ডার (" + n + ") →"],
+  [/^Products \((\d+) chosen\)$/, (m, n) => "প্রোডাক্ট (" + n + "টা বাছাই)"],
+  [/^Total: (.+)$/, (m, a) => "মোট: " + a],
+  [/^New order (PV-\S+)$/, (m, a) => "নতুন অর্ডার " + a],
+  [/^Order (PV-\S+)$/, (m, a) => "অর্ডার " + a],
+  [/^Site Settings · (.+)$/, (m, a) => "সাইট সেটিং · " + (BN[a] || a)],
+  [/^Sent to Steadfast ✓ Tracking: (.*)$/, (m, a) => "Steadfast এ পাঠানো হয়েছে ✓ ট্র্যাকিং: " + a],
+  [/^Delete "(.+)"\?$/, (m, a) => "\"" + a + "\" ডিলিট করবেন?"],
+  [/^Delete order (.+)\?$/, (m, a) => "অর্ডার " + a + " ডিলিট করবেন?"],
+  [/^Remove admin (.+)\?$/, (m, a) => "অ্যাডমিন " + a + " সরাবেন?"],
+  [/^Save (.+)$/, (m, a) => BN[a] ? BN[a] + " সেভ করুন" : null],
+  [/^(\d+) products?$/, (m, n) => n + "টা প্রোডাক্ট"],
+  [/^(\d+) orders$/, (m, n) => n + "টা অর্ডার"],
+  [/^(\d+) delivered$/, (m, n) => n + "টা ডেলিভারড"],
+  [/^(\d+) outside Dhaka$/, (m, n) => n + "টা ঢাকার বাইরে"],
+  [/^events, (\d+) accepted by Meta$/, (m, n) => "টা ইভেন্ট, Meta গ্রহণ করেছে " + n + "টা"],
+  [/^Courier did not answer \((.*)$/, (m, a) => "কুরিয়ার উত্তর দেয়নি (" + a],
+  [/^Server error (.*)$/, (m, a) => "সার্ভার সমস্যা " + a]
+];
+function trS(s) {
+  if (PV_LANG !== "bn" || !s) return s;
+  const t = s.trim(); if (!t) return s;
+  let r = BN[t];
+  if (r == null) for (const [re, f] of BNR) { const m = t.match(re); if (m) { r = f(...m); if (r != null) break } }
+  return r == null ? s : s.replace(t, r);
+}
+function trNode(root) {
+  if (PV_LANG !== "bn" || !root) return;
+  if (root.nodeType === 3) { const v = trS(root.nodeValue); if (v !== root.nodeValue) root.nodeValue = v; return }
+  if (root.nodeType !== 1 || root.closest && root.closest("script,style,textarea")) return;
+  const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT); let n;
+  while ((n = w.nextNode())) { if (n.parentElement && n.parentElement.closest("script,style,textarea,.notr")) continue; const v = trS(n.nodeValue); if (v !== n.nodeValue) n.nodeValue = v }
+  const els = root.querySelectorAll ? [root, ...root.querySelectorAll("[placeholder],[title],[aria-label]")] : [];
+  els.forEach(e => ["placeholder", "title", "aria-label"].forEach(a => { const v = e.getAttribute && e.getAttribute(a); if (v) { const t = trS(v); if (t !== v) e.setAttribute(a, t) } }));
+}
+if (PV_LANG === "bn") {
+  document.documentElement.lang = "bn";
+  trNode(document.body);
+  new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(trNode))).observe(document.body, { childList: true, subtree: true });
+  const oc = window.confirm.bind(window); window.confirm = m => oc(trS(String(m)));
+}
+function setLang(l) { try { localStorage.setItem("pv_lang", l) } catch (e) { } location.reload() }

@@ -14,7 +14,11 @@ A fast, phone-first pet shop website for PetVerse, with an admin panel.
 - Product quick view (gallery, sizes, colours, description), cart, wishlist.
 - **Checkout** that saves the order on the server (delivery charge inside / outside Dhaka, Cash on Delivery, bKash, Nagad with TrxID), order number and **Track Order**. WhatsApp ordering is still there.
 - Facebook Pixel + Conversions API (deduplicated Purchase), Google Analytics, SEO settings.
-- **Admin panel** (`/admin`): dashboard (visitors, live activity, sales, orders, stock, 7-day chart, status donut), orders with invoice print and CSV export, Steadfast courier hub, customers, reports, products (sizes, colours, multi-image gallery, AI copywriter, flash sale / new / best seller / featured), categories, collections, inventory, reviews, hero banners, homepage CMS, admins and roles (super admin, manager, staff), and site settings (store, delivery, payment, courier, SMS, Pixel/CAPI, Google SEO, password).
+- **Admin panel** (`/admin`, in Bangla with an EN switch): dashboard (visitors, live activity, sales, orders, stock, 7-day chart, status donut), orders with invoice print and CSV export, Steadfast courier hub, customers, reports, products (sizes, colours, multi-image gallery, AI copywriter, flash sale / new / best seller / featured), categories, collections, inventory, reviews, hero banners, homepage CMS, admins and roles (super admin, manager, staff), and site settings (store, delivery, payment, courier, SMS, Pixel/CAPI, Google SEO, password).
+
+## Speed & SEO
+- Lighthouse (local test): SEO 100, desktop performance 98, phone performance 86 before server compression.
+- `.htaccess` turns on gzip and browser caching; `sitemap.xml` and `robots.txt` are generated for your domain; share image `img/og.jpg`.
 
 ## Install on cPanel
 1. Upload the files to `public_html` (or upload the zip and Extract). Keep the hidden `.htaccess` files.

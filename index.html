@@ -8,16 +8,22 @@
 <meta name="theme-color" content="#4a0e7a">
 <meta property="og:title" content="PetVerse | Caring for Every Paw, Every Need!">
 <meta property="og:description" content="Pet food, accessories, vaccination, grooming, deworming, vet support and medicine delivery in Bangladesh.">
-<meta property="og:image" content="img/banner-services.webp">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="PetVerse">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="./">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@500;600;700&display=swap"></noscript>
+<link rel="preload" as="image" href="img/hero-art-820.webp" imagesrcset="img/hero-art-820.webp 820w, img/hero-art.webp 1625w" imagesizes="(max-width:760px) 100vw, 610px" fetchpriority="high">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"PetStore","name":"PetVerse","slogan":"Caring for Every Paw, Every Need!","telephone":"+8801880972500","image":"img/logo-full.png","address":{"@type":"PostalAddress","addressLocality":"Dhaka","addressCountry":"BD"},"priceRange":"৳৳"}
+{"@context":"https://schema.org","@type":"PetStore","name":"PetVerse","slogan":"Caring for Every Paw, Every Need!","telephone":"+8801880972500","image":"img/logo-full.webp","address":{"@type":"PostalAddress","addressLocality":"Dhaka","addressCountry":"BD"},"priceRange":"৳৳"}
 </script>
 <style>
 :root{
@@ -81,8 +87,8 @@ nav.mn .cats:after{display:none!important}nav.mn .cats:hover{color:#fff;backgrou
 .sl{display:grid;grid-template-columns:1.05fr 1fr;height:100%;align-items:center;padding:0 5%;position:relative;overflow:hidden}
 .sl .tx{position:relative;z-index:2}
 .sl .kick{display:inline-block;font:600 12px Poppins;letter-spacing:2px;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.75);color:var(--pu)}
-.sl h2{font-family:var(--bn);font-weight:700;font-size:clamp(22px,3.6vw,50px);line-height:1.15;margin:12px 0 4px;color:var(--pu)}
-.sl h2 em{font-style:normal;color:var(--pk)}
+.sl h1,.sl h2{font-family:var(--bn);font-weight:700;font-size:clamp(22px,3.6vw,50px);line-height:1.15;margin:12px 0 4px;color:var(--pu)}
+.sl h1 em,.sl h2 em{font-style:normal;color:var(--pk)}
 .sl .big{font:800 clamp(26px,4.4vw,64px)/1 Poppins;letter-spacing:-1px;color:var(--gr);margin:4px 0 14px}
 .sl p{margin:0 0 16px;color:#3d3552;font-size:clamp(12px,1.1vw,15.5px);max-width:460px}
 .badges{display:flex;gap:10px;flex-wrap:wrap}
@@ -112,11 +118,11 @@ nav.mn .cats:after{display:none!important}nav.mn .cats:hover{color:#fff;backgrou
 .s5 .doc3{position:absolute;right:38%;top:6%;width:14%;aspect-ratio:1;border-radius:50%;border:5px solid #fff;box-shadow:var(--sh2)}
 .phone{display:inline-flex;align-items:center;gap:10px;background:#e0262f;color:#fff;border-radius:14px;padding:8px 16px 8px 8px;font-weight:700;font-size:clamp(14px,1.6vw,22px);box-shadow:0 10px 24px rgba(224,38,47,.3)}
 .phone i{width:36px;height:36px;border-radius:50%;background:#fff;color:#e0262f;display:grid;place-items:center;font-style:normal}
-.phone small{display:block;font-size:10px;font-weight:600;letter-spacing:1px;opacity:.9}
+.phone small{display:block;font-size:10px;font-weight:600;letter-spacing:1px}
 .sbtn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.9);box-shadow:var(--sh);display:grid;place-items:center;color:var(--pu);z-index:5;opacity:0;transition:.25s}
 .slider:hover .sbtn{opacity:1}.sbtn.p{left:14px}.sbtn.n{right:14px}
 .dots{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:7px;z-index:5}
-.dots button{width:9px;height:9px;border-radius:9px;border:0;background:rgba(74,14,122,.25);padding:0;transition:.3s}
+.dots button{width:9px;height:9px;border-radius:9px;border:0;background:rgba(74,14,122,.25);padding:0;transition:.3s;position:relative}.dots button:after{content:"";position:absolute;inset:-8px -5px}
 .dots button.on{width:28px;background:var(--pu2)}
 /* features */
 .feat{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0 6px}
@@ -228,7 +234,7 @@ img.rp{background:#fff;border-radius:16px;object-fit:contain;box-shadow:0 10px 3
 .brands div:hover{box-shadow:var(--sh2);transform:translateY(-3px)}
 /* why + reviews */
 .why{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:stretch}
-.why .ph{border-radius:20px;overflow:hidden;position:relative;min-height:320px;background:url(img/logo-mark.png) center 38%/150px no-repeat,linear-gradient(135deg,#f3e9ff,#e8fff4)}
+.why .ph{border-radius:20px;overflow:hidden;position:relative;min-height:320px;background:url(img/logo-mark.webp) center 38%/150px no-repeat,linear-gradient(135deg,#f3e9ff,#e8fff4)}
 .why .ph img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
 .why .ph .st{position:absolute;left:16px;bottom:16px;right:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .why .ph .st div{background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-radius:14px;padding:10px;text-align:center}
@@ -261,7 +267,7 @@ footer .fl img{width:170px;margin-bottom:10px}
 .ct li{display:flex;gap:10px;align-items:flex-start}.ct svg{flex:none;margin-top:2px;color:var(--pu2)}
 .soc{display:flex;gap:10px;margin-top:14px}.soc a{width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--pu);box-shadow:var(--sh);transition:.2s}
 .soc a:hover{background:var(--pu2);color:#fff}
-.pay{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.pay span{background:#fff;border-radius:8px;padding:5px 10px;font-weight:700;font-size:12px;box-shadow:var(--sh)}
+.pay{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.pay span{background:#fff;border-radius:8px;padding:5px 10px;font-weight:700;font-size:12px;box-shadow:var(--sh);color:#1d1630}
 .cp{border-top:1px solid #e1dee8;margin-top:34px;padding:16px 0;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12.5px}
 .cp a{color:var(--pu2);font-weight:600}
 /* floating + cart */
@@ -543,6 +549,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
 .trk-e{color:#e23b3b;font-size:13.5px;margin-top:12px}
 .drawer .f .btn.w{background:#fff;color:var(--pu);border:1.5px solid #e2d8ee;box-shadow:none}
 @media(max-width:760px){.pvm{padding:0;align-items:flex-end}.pvm-box{border-radius:20px 20px 0 0;max-height:92vh;padding:18px 16px}.pvm-box.qv{grid-template-columns:1fr;gap:14px}.qv-i h3{font-size:18px}}
+@media(max-width:760px){.hero .feat{margin-left:0;margin-right:0}}
 </style>
 <script>function pf(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r}else el.style.visibility="hidden"}</script>
 </head>
@@ -556,7 +563,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
 
 <header class="top"><div class="wrap">
   <div class="hd">
-    <a class="logo" href="#" aria-label="PetVerse home"><img class="m" src="img/logo-mark.png" alt="PetVerse logo" width="54" height="51"><div><img class="w" src="img/logo-word.png" alt="PetVerse" width="101" height="30"><small>Caring for Every Paw, Every Need!</small></div></a>
+    <a class="logo" href="#" aria-label="PetVerse home"><img class="m" src="img/logo-mark.webp" alt="PetVerse logo" width="54" height="51"><div><img class="w" src="img/logo-word.webp" alt="PetVerse" width="101" height="30"><small>Caring for Every Paw, Every Need!</small></div></a>
     <form class="search" role="search" onsubmit="return doSearch(this)">
       <select aria-label="Category"><option>All</option><option>Cat</option><option>Dog</option><option>Bird</option><option>Rabbit</option><option>Small Pet</option><option>Pharmacy</option></select>
       <input name="q" placeholder="Search for cat food, toys, litter, harness..." aria-label="Search products">
@@ -609,14 +616,14 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
     <div class="slide on s1"><div class="sl">
       <div class="tx">
         <span class="kick">PetVerse Cat Store</span>
-        <h2>All the top <em>cat food</em> brands<br>in one place</h2>
+        <h1>All the top <em>cat food</em> brands<br>in one place</h1>
         <div class="big">CAT FOOD</div>
         <div class="badges"><span class="bdg"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></i>AUTHENTIC</span><span class="bdg"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="8" cy="8" r="1.6"/></svg></i>BEST PRICE</span><span class="bdg"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></i>FAST DELIVERY</span></div>
       </div>
-      <div class="art"><img class="ha" src="img/hero-art.webp" alt="PetVerse cat food packs with cats"></div>
+      <div class="art"><img class="ha" src="img/hero-art.webp" srcset="img/hero-art-820.webp 820w, img/hero-art.webp 1625w" sizes="(max-width:760px) 100vw, 610px" fetchpriority="high" alt="PetVerse cat food packs with cats"></div>
     </div></div>
     <!-- 2: services banner (from PetVerse) -->
-    <div class="slide"><a href="#services"><img class="full" src="img/banner-services.webp" alt="PetVerse services banner. Call 01880972500"></a></div>
+    <div class="slide"><a href="#services"><img class="full" src="img/banner-services.webp" srcset="img/banner-services-1024.webp 1024w, img/banner-services.webp 2048w" sizes="(max-width:760px) 100vw, 1280px" loading="lazy" alt="PetVerse services banner. Call 01880972500"></a></div>
     <!-- 3: dog -->
     <div class="slide s3"><div class="sl">
       <div class="tx">
@@ -626,7 +633,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
         <p>Dry food, treats, chew toys, leashes and collars, picked for Bangladeshi weather and homes.</p>
         <a class="btn" href="#dog">Shop Dog Items →</a>
       </div>
-      <div class="art"><img class="ph" src="https://images.unsplash.com/photo-1633722715463-d30f4f325e24?w=900&h=675&fit=crop&q=80&auto=format" onerror="this.src='img/dog-01.webp';this.style.objectFit='contain';this.style.background='#fff'" alt="Happy dog"><div class="tag">UP TO<br>25%<br>OFF</div></div>
+      <div class="art"><img class="ph" src="https://images.unsplash.com/photo-1633722715463-d30f4f325e24?w=1400&h=1050&fit=crop&q=80&auto=format" onerror="this.src='img/dog-01.webp';this.style.objectFit='contain';this.style.background='#fff'" alt="Happy dog"><div class="tag">UP TO<br>25%<br>OFF</div></div>
     </div></div>
     <!-- 4: litter -->
     <div class="slide s4"><div class="sl">
@@ -637,7 +644,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
         <p>Clumping sand, tofu, carbon and silica litter. Low dust, strong odour control.</p>
         <a class="btn g" href="#cat-litter">Shop Litter →</a>
       </div>
-      <div class="art"><img class="pk c rp" src="img/p/litter-lazy-lady.jpg" data-r="https://mikipetstore.com/cdn/shop/files/lazylady.jpg?v=1740925865&width=600" onerror="pf(this)" alt="Lazy Lady cat litter"><img class="pk a rp" src="img/p/litter-paws.jpg" data-r="https://mikipetstore.com/cdn/shop/files/pawslitte.jpg?v=1740926079&width=600" onerror="pf(this)" alt="Paws cat litter"><img class="pk b rp" src="img/p/litter-cozie-cats.jpg" data-r="https://mikipetstore.com/cdn/shop/files/cozziecat.jpg?v=1740925542&width=600" onerror="pf(this)" alt="Cozie Cat litter"></div>
+      <div class="art"><img class="pk c rp" src="img/p/litter-lazy-lady.jpg" data-r="https://mikipetstore.com/cdn/shop/files/lazylady.jpg?v=1740925865&width=1200" onerror="pf(this)" alt="Lazy Lady cat litter"><img class="pk a rp" src="img/p/litter-paws.jpg" data-r="https://mikipetstore.com/cdn/shop/files/pawslitte.jpg?v=1740926079&width=1200" onerror="pf(this)" alt="Paws cat litter"><img class="pk b rp" src="img/p/litter-cozie-cats.jpg" data-r="https://mikipetstore.com/cdn/shop/files/cozziecat.jpg?v=1740925542&width=1200" onerror="pf(this)" alt="Cozie Cat litter"></div>
     </div></div>
     <!-- 5: vet home call -->
     <div class="slide s5"><div class="sl">
@@ -647,7 +654,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
         <p>Vaccination, deworming, grooming, blood &amp; FPV/FIP tests and assistant vet support. Book by phone.</p>
         <a class="phone" href="tel:01880972500"><i>✆</i><span><small>CALL FOR APPOINTMENT</small>01880972500</span></a>
       </div>
-      <div class="art"><div class="orb"><div class="core"><img src="img/logo-mark.png" alt="PetVerse"></div>
+      <div class="art"><div class="orb"><div class="core"><img src="img/logo-mark.webp" width="480" height="455" loading="lazy" alt="PetVerse"></div>
   <span class="o1">💉<b>Vaccination</b></span><span class="o2">✂️<b>Grooming</b></span><span class="o3">💊<b>Deworming</b></span>
   <span class="o4">🩸<b>FPV/FIP Test</b></span><span class="o5">🧴<b>Medicated Bath</b></span><span class="o6">👂<b>Ear Cleaning</b></span></div></div>
     </div></div>
@@ -664,7 +671,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
   </div>
   <div class="deal">
     <div class="dl-l"><span class="kick2">Deal of the Day</span><h3>Today's offer ends in</h3><div class="cd" id="cd"><span><b>00</b>Hours</span><span><b>00</b>Min</span><span><b>00</b>Sec</span></div></div>
-    <div class="dl-p"><img class="rp" src="img/p/dry-royal-canin.jpg" data-r="https://mikipetstore.com/cdn/shop/files/ROYAL-CANIN-KITTEN-CAT-DRY-FOOD.jpg?v=1777191944&width=600" onerror="pf(this)" alt="Royal Canin Kitten"><div><small>ROYAL CANIN · KITTEN</small><h4>Royal Canin Kitten Dry Food</h4><div class="pr"><b>৳ 1,150</b></div><button class="btn" onclick="add('dry3',this)">Add to Cart</button></div></div>
+    <div class="dl-p"><img class="rp" width="300" height="300" loading="lazy" src="img/p/dry-royal-canin.jpg" data-r="https://mikipetstore.com/cdn/shop/files/ROYAL-CANIN-KITTEN-CAT-DRY-FOOD.jpg?v=1777191944&width=1200" onerror="pf(this)" alt="Royal Canin Kitten"><div><small>ROYAL CANIN · KITTEN</small><h4>Royal Canin Kitten Dry Food</h4><div class="pr"><b>৳ 1,150</b></div><button class="btn" onclick="add('dry3',this)">Add to Cart</button></div></div>
   </div>
 </div>
 
@@ -674,7 +681,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
 </div></section>
 
 <section id="cat-food"><div class="wrap"><div class="sh"><h3>Cat Food <small>Bashundhara R/A Branch</small></h3><a class="va" href="#cat-food" onclick="return va(this)">View All →</a></div>
-<div class="tabs" role="tablist"><button class="on" data-k="dry">Dry Food</button><button data-k="wet">Wet Pouch</button><button data-k="can">Canned</button><button data-k="treat">Creamy Treats</button><button data-k="dtreat">Dry Treats</button></div>
+<div class="tabs"><button class="on" data-k="dry">Dry Food</button><button data-k="wet">Wet Pouch</button><button data-k="can">Canned</button><button data-k="treat">Creamy Treats</button><button data-k="dtreat">Dry Treats</button></div>
 <div class="grid lim" data-cat="dry"></div></div></section>
 
 <section id="services"><div class="wrap">
@@ -697,7 +704,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
       </ol>
       <div class="hs-b"><a class="btn" href="#booking">Book a Service →</a><a class="btn w" href="tel:01880972500">✆ Call Now</a></div>
     </div>
-    <div class="hs-art"><div class="orb"><div class="core"><img src="img/logo-mark.png" alt="PetVerse"></div>
+    <div class="hs-art"><div class="orb"><div class="core"><img src="img/logo-mark.webp" width="480" height="455" loading="lazy" alt="PetVerse"></div>
   <span class="o1">💉<b>Vaccination</b></span><span class="o2">✂️<b>Grooming</b></span><span class="o3">💊<b>Deworming</b></span>
   <span class="o4">🩸<b>FPV/FIP Test</b></span><span class="o5">🧴<b>Medicated Bath</b></span><span class="o6">👂<b>Ear Cleaning</b></span></div></div>
   </div>
@@ -706,9 +713,9 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
 <section id="cat-toy"><div class="wrap"><div class="sh"><h3>Cat Toy</h3><a class="va" href="#cat-toy" onclick="return va(this)">View All →</a></div><div class="grid" data-cat="toy"></div></div></section>
 
 <section id="offers"><div class="wrap"><div class="promos">
-  <div class="pt a"><div class="t"><small>NEW ARRIVAL</small><h4>Grain-free cat food</h4></div><a href="#cat-food">Shop now</a><img class="rp" src="img/p/dry-kitchen-flavor.jpg" data-r="https://mikipetstore.com/cdn/shop/files/grainfreeadultcatfood.jpg?v=1748077374&width=600" onerror="pf(this)" alt=""></div>
-  <div class="pt b"><div class="t"><small>NATURAL</small><h4>Tofu cat litter</h4></div><a href="#cat-litter">Shop now</a><img class="rp" src="img/p/litter-tofu.jpg" data-r="https://mikipetstore.com/cdn/shop/files/hosemlitter.jpg?v=1741342722&width=600" onerror="pf(this)" alt=""></div>
-  <div class="pt c"><div class="t"><small>WALK IN STYLE</small><h4>Harness &amp; collars</h4></div><a href="#cat-accessories">Shop now</a><img class="ph" src="https://images.unsplash.com/photo-1786299115178-2e97574ef478?w=600&h=500&fit=crop&q=80&auto=format" onerror="this.remove()" alt=""></div>
+  <div class="pt a"><div class="t"><small>NEW ARRIVAL</small><h4>Grain-free cat food</h4></div><a href="#cat-food">Shop now</a><img class="rp" src="img/p/dry-kitchen-flavor.jpg" data-r="https://mikipetstore.com/cdn/shop/files/grainfreeadultcatfood.jpg?v=1748077374&width=1200" onerror="pf(this)" alt=""></div>
+  <div class="pt b"><div class="t"><small>NATURAL</small><h4>Tofu cat litter</h4></div><a href="#cat-litter">Shop now</a><img class="rp" src="img/p/litter-tofu.jpg" data-r="https://mikipetstore.com/cdn/shop/files/hosemlitter.jpg?v=1741342722&width=1200" onerror="pf(this)" alt=""></div>
+  <div class="pt c"><div class="t"><small>WALK IN STYLE</small><h4>Harness &amp; collars</h4></div><a href="#cat-accessories">Shop now</a><img class="ph" src="https://images.unsplash.com/photo-1786299115178-2e97574ef478?w=1000&h=830&fit=crop&q=80&auto=format" onerror="this.remove()" alt=""></div>
 </div></div></section>
 
 <section id="cat-litter"><div class="wrap"><div class="sh"><h3>Cat Litter</h3><a class="va" href="#cat-litter" onclick="return va(this)">View All →</a></div><div class="grid lim" data-cat="litter"></div></div></section>
@@ -740,7 +747,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
       <small class="fine">Booking is sent to PetVerse on WhatsApp. We confirm the time and fee by phone.</small>
     </form>
     <aside class="bk-side">
-      <img src="img/logo-mark.png" alt="" width="96" height="96" style="background:#fff;padding:6px;object-fit:contain">
+      <img src="img/logo-mark.webp" alt="" width="96" height="96" style="background:#fff;padding:6px;object-fit:contain">
       <h4>Need help fast?</h4>
       <p>For an emergency, call us directly. We will guide you on the phone.</p>
       <a class="phone" href="tel:01880972500"><i>✆</i><span><small>CALL FOR APPOINTMENT</small>01880972500</span></a>
@@ -801,7 +808,7 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
 
 <footer><div class="wrap">
   <div class="fg">
-    <div class="fl"><img src="img/logo-full.png" alt="PetVerse: Caring for Every Paw, Every Need!" width="170"><p>PetVerse is an online pet shop and pet care service in Bangladesh. We sell food, litter, toys and accessories for cats, dogs, birds and small pets, and offer vaccination, grooming, deworming, tests, assistant vet support and pet medicine delivery.</p></div>
+    <div class="fl"><img src="img/logo-full.webp" alt="PetVerse: Caring for Every Paw, Every Need!" width="170" height="234" loading="lazy"><p>PetVerse is an online pet shop and pet care service in Bangladesh. We sell food, litter, toys and accessories for cats, dogs, birds and small pets, and offer vaccination, grooming, deworming, tests, assistant vet support and pet medicine delivery.</p></div>
     <div><h5>Categories</h5><ul><li><a href="#cat-food">Cat Food</a></li><li><a href="#cat-toy">Cat Toy</a></li><li><a href="#cat-litter">Cat Litter</a></li><li><a href="#cat-accessories">Cat Accessories</a></li><li><a href="#dog">Dog Food &amp; Accessories</a></li><li><a href="#bird-small">Bird &amp; Small Pets</a></li><li><a href="#services">Pet Pharmacy</a></li></ul></div>
     <div><h5>Quick Links</h5><ul><li><a href="#">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#contact">Contact Us</a></li><li><a href="#services">Our Services</a></li><li><a href="#" onclick="toast('Privacy policy page coming soon');return false">Privacy Policy</a></li><li><a href="#" onclick="toast('Terms page coming soon');return false">Terms &amp; Conditions</a></li><li><a href="#" onclick="toast('Return policy page coming soon');return false">Return &amp; Refund</a></li></ul></div>
     <div><h5>Contact</h5><ul class="ct">
@@ -838,105 +845,105 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
    Easier: use the admin panel at /admin (it saves data/products.json, which overrides this list) */
 const P={
 dry:[
- {"n": "Me-O Adult Dry Cat Food Tuna Flavour (1.1kg)", "b": "Me-O", "t": "Dry Cat Food", "i": "p/dry-me-o.jpg", "r": "https://mikipetstore.com/cdn/shop/files/me_oadult_tuna.jpg?v=1741276245&width=600", "p": 800},
- {"n": "Kitchen Flavor Grain Free Cat Food With Real Meat Cubes, Adult", "b": "Kitchen Flavor", "t": "Dry Cat Food", "i": "p/dry-kitchen-flavor.jpg", "r": "https://mikipetstore.com/cdn/shop/files/grainfreeadultcatfood.jpg?v=1748077374&width=600", "p": 390},
- {"n": "Whiskas Adult Tuna Dry Cat Food", "b": "Whiskas", "t": "Dry Cat Food", "i": "p/dry-whiskas.jpg", "r": "https://mikipetstore.com/cdn/shop/files/WhiskasTunaAdult.jpg?v=1740932352&width=600", "p": 420},
- {"n": "Royal Canin Kitten Cat Dry Food", "b": "Royal Canin", "t": "Dry Cat Food", "i": "p/dry-royal-canin.jpg", "r": "https://mikipetstore.com/cdn/shop/files/ROYAL-CANIN-KITTEN-CAT-DRY-FOOD.jpg?v=1777191944&width=600", "p": 1150},
- {"n": "Purina Friskies Seafood Sensations Dry Cat Food", "b": "Friskies", "t": "Dry Cat Food", "i": "p/dry-friskies.jpg", "r": "https://mikipetstore.com/cdn/shop/files/PurinaFriskiesSeafoodSensationsCatFood.jpg?v=1741254754&width=600", "p": 430},
- {"n": "SmartHeart Adult Cat Food Chicken & Tuna", "b": "SmartHeart", "t": "Dry Cat Food", "i": "p/dry-smartheart.jpg", "r": "https://mikipetstore.com/cdn/shop/files/smartheartAdult_Chicken_Tuna_1.jpg?v=1740929263&width=600", "p": 370},
- {"n": "Reflex Plus Kitten Salmon Super Premium Dry Food", "b": "Reflex", "t": "Dry Cat Food", "i": "p/dry-reflex.jpg", "r": "https://mikipetstore.com/cdn/shop/files/kitten-salmon-re.jpg?v=1779173516&width=600", "p": 1090},
- {"n": "BonaCibo Adult Cat Food Chicken with Anchovy & Rice", "b": "Bonacibo", "t": "Dry Cat Food", "i": "p/dry-bonacibo.jpg", "r": "https://mikipetstore.com/cdn/shop/files/BonaciboAdultChickenwithAnchovy_RiceCatDryfood.jpg?v=1741014547&width=600", "p": 1290},
- {"n": "Kaniva Chicken, Tuna & Rice Cat Food", "b": "Kaniva", "t": "Dry Cat Food", "i": "p/dry-kaniva.jpg", "r": "https://mikipetstore.com/cdn/shop/files/KANIVA-Cat-Food-Chicken-Tuna-and-Rice.jpg?v=1762614669&width=600", "p": 320},
- {"n": "Lara Adult Dry Cat Food Fish with Salmon", "b": "Lara", "t": "Dry Cat Food", "i": "p/dry-lara.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Versele-Laga-Lara-Adult-Dry-Cat-Food-Fish-with-Salmon.jpg?v=1778684464&width=600", "p": 749},
+ {"n": "Me-O Adult Dry Cat Food Tuna Flavour (1.1kg)", "b": "Me-O", "t": "Dry Cat Food", "i": "p/dry-me-o.jpg", "r": "https://mikipetstore.com/cdn/shop/files/me_oadult_tuna.jpg?v=1741276245&width=1200", "p": 800},
+ {"n": "Kitchen Flavor Grain Free Cat Food With Real Meat Cubes, Adult", "b": "Kitchen Flavor", "t": "Dry Cat Food", "i": "p/dry-kitchen-flavor.jpg", "r": "https://mikipetstore.com/cdn/shop/files/grainfreeadultcatfood.jpg?v=1748077374&width=1200", "p": 390},
+ {"n": "Whiskas Adult Tuna Dry Cat Food", "b": "Whiskas", "t": "Dry Cat Food", "i": "p/dry-whiskas.jpg", "r": "https://mikipetstore.com/cdn/shop/files/WhiskasTunaAdult.jpg?v=1740932352&width=1200", "p": 420},
+ {"n": "Royal Canin Kitten Cat Dry Food", "b": "Royal Canin", "t": "Dry Cat Food", "i": "p/dry-royal-canin.jpg", "r": "https://mikipetstore.com/cdn/shop/files/ROYAL-CANIN-KITTEN-CAT-DRY-FOOD.jpg?v=1777191944&width=1200", "p": 1150},
+ {"n": "Purina Friskies Seafood Sensations Dry Cat Food", "b": "Friskies", "t": "Dry Cat Food", "i": "p/dry-friskies.jpg", "r": "https://mikipetstore.com/cdn/shop/files/PurinaFriskiesSeafoodSensationsCatFood.jpg?v=1741254754&width=1200", "p": 430},
+ {"n": "SmartHeart Adult Cat Food Chicken & Tuna", "b": "SmartHeart", "t": "Dry Cat Food", "i": "p/dry-smartheart.jpg", "r": "https://mikipetstore.com/cdn/shop/files/smartheartAdult_Chicken_Tuna_1.jpg?v=1740929263&width=1200", "p": 370},
+ {"n": "Reflex Plus Kitten Salmon Super Premium Dry Food", "b": "Reflex", "t": "Dry Cat Food", "i": "p/dry-reflex.jpg", "r": "https://mikipetstore.com/cdn/shop/files/kitten-salmon-re.jpg?v=1779173516&width=1200", "p": 1090},
+ {"n": "BonaCibo Adult Cat Food Chicken with Anchovy & Rice", "b": "Bonacibo", "t": "Dry Cat Food", "i": "p/dry-bonacibo.jpg", "r": "https://mikipetstore.com/cdn/shop/files/BonaciboAdultChickenwithAnchovy_RiceCatDryfood.jpg?v=1741014547&width=1200", "p": 1290},
+ {"n": "Kaniva Chicken, Tuna & Rice Cat Food", "b": "Kaniva", "t": "Dry Cat Food", "i": "p/dry-kaniva.jpg", "r": "https://mikipetstore.com/cdn/shop/files/KANIVA-Cat-Food-Chicken-Tuna-and-Rice.jpg?v=1762614669&width=1200", "p": 320},
+ {"n": "Lara Adult Dry Cat Food Fish with Salmon", "b": "Lara", "t": "Dry Cat Food", "i": "p/dry-lara.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Versele-Laga-Lara-Adult-Dry-Cat-Food-Fish-with-Salmon.jpg?v=1778684464&width=1200", "p": 749},
  {"n": "Gibo Dry Cat Food", "b": "Gibo", "t": "Dry Cat Food"},
- {"n": "Zoi Cat Food All Breed Mixed Flavor 1kg", "b": "Zoi Cat", "t": "Dry Cat Food", "i": "p/dry-zoi-cat.jpg", "r": "https://mikipetstore.com/cdn/shop/files/zoicatfod.jpg?v=1740997035&width=600", "p": 420},
- {"n": "Enjoy Adult Cat Food Premium Nutrition", "b": "Enjoy", "t": "Dry Cat Food", "i": "p/dry-enjoy.jpg", "r": "https://mikipetstore.com/cdn/shop/files/enjoycatfood.jpg?v=1741257632&width=600", "p": 480},
+ {"n": "Zoi Cat Food All Breed Mixed Flavor 1kg", "b": "Zoi Cat", "t": "Dry Cat Food", "i": "p/dry-zoi-cat.jpg", "r": "https://mikipetstore.com/cdn/shop/files/zoicatfod.jpg?v=1740997035&width=1200", "p": 420},
+ {"n": "Enjoy Adult Cat Food Premium Nutrition", "b": "Enjoy", "t": "Dry Cat Food", "i": "p/dry-enjoy.jpg", "r": "https://mikipetstore.com/cdn/shop/files/enjoycatfood.jpg?v=1741257632&width=1200", "p": 480},
  {"n": "CLEO Cat Food Chicken Flavor 1.2kg", "b": "Cleo", "t": "Dry Cat Food", "i": "p/dry-cleo.jpg", "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83MDgyN1wvNzA4MjctVW50aXRsZWQtZGVzaWduLTIwMjQtMTAtMTlUMjE0NjQyLXRnZTkzNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMCwiZml0Ijoib3V0c2lkZSJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtaXNjXC93bS5wbmciLCJhbHBoYSI6OTB9fX0=", "p": 675},
- {"n": "Jungle Adult Cat Food With Chicken and Fish", "b": "Jungle", "t": "Dry Cat Food", "i": "p/dry-jungle.jpg", "r": "https://mikipetstore.com/cdn/shop/files/jungleadultchicken_fish1.jpg?v=1740991979&width=600", "p": 320},
- {"n": "ProDiet Mackerel Dry Cat Food 1.2kg", "b": "ProDiet", "t": "Dry Cat Food", "i": "p/dry-prodiet.jpg", "r": "https://zigly.com/cdn/shop/files/OTRFO2635.jpg?v=1790171964"},
+ {"n": "Jungle Adult Cat Food With Chicken and Fish", "b": "Jungle", "t": "Dry Cat Food", "i": "p/dry-jungle.jpg", "r": "https://mikipetstore.com/cdn/shop/files/jungleadultchicken_fish1.jpg?v=1740991979&width=1200", "p": 320},
+ {"n": "ProDiet Mackerel Dry Cat Food 1.2kg", "b": "ProDiet", "t": "Dry Cat Food", "i": "p/dry-prodiet.jpg", "r": "https://zigly.com/cdn/shop/files/OTRFO2635.jpg?v=1790171964&width=1200"},
  {"n": "Oskies Adult Cat Food 1kg", "b": "Oskies", "t": "Dry Cat Food", "i": "p/dry-oskies.jpg", "r": "https://images.othoba.com/images/thumbs/2472673_oskies-adult-cat-food-1kg.jpeg", "p": 364},
- {"n": "Nature Bridge Classic Complete Food for Adult Cat", "b": "Nature Bridge", "t": "Dry Cat Food", "i": "p/dry-nature-bridge.jpg", "r": "https://mikipetstore.com/cdn/shop/files/NatureBridge-Classic-Complete-Food-for-Adult-Cat-600x680_png.webp?v=1791021184&width=600", "p": 1850},
- {"n": "Drools Adult Cat Food Ocean Fish Flavour", "b": "Drools", "t": "Dry Cat Food", "i": "p/dry-drools.jpg", "r": "https://mikipetstore.com/cdn/shop/files/drools-ocen.jpg?v=1765720788&width=600", "p": 280},
+ {"n": "Nature Bridge Classic Complete Food for Adult Cat", "b": "Nature Bridge", "t": "Dry Cat Food", "i": "p/dry-nature-bridge.jpg", "r": "https://mikipetstore.com/cdn/shop/files/NatureBridge-Classic-Complete-Food-for-Adult-Cat-600x680_png.webp?v=1791021184&width=1200", "p": 1850},
+ {"n": "Drools Adult Cat Food Ocean Fish Flavour", "b": "Drools", "t": "Dry Cat Food", "i": "p/dry-drools.jpg", "r": "https://mikipetstore.com/cdn/shop/files/drools-ocen.jpg?v=1765720788&width=1200", "p": 280},
  {"n": "Captain Dry Cat Food", "b": "Captain", "t": "Dry Cat Food"},
- {"n": "Haisenpet Premium Cat Food Chicken, Tuna & Turkey", "b": "Haisenpet", "t": "Dry Cat Food", "i": "p/dry-haisenpet.jpg", "r": "https://mikipetstore.com/cdn/shop/files/haisenpetchickenandturkey.jpg?v=1743955966&width=600", "p": 280},
- {"n": "Micho Dry Cat Food (Adult)", "b": "Micho", "t": "Dry Cat Food", "i": "p/dry-micho.jpg", "r": "https://mikipetstore.com/cdn/shop/files/MichoDryCatFood_adult.jpg?v=1740927331&width=600", "p": 790},
- {"n": "Mito Adult Cat Food with Chicken", "b": "Mito", "t": "Dry Cat Food", "i": "p/dry-mito.jpg", "r": "https://mikipetstore.com/cdn/shop/files/mito-chicken.jpg?v=1764167266&width=600", "p": 520},
+ {"n": "Haisenpet Premium Cat Food Chicken, Tuna & Turkey", "b": "Haisenpet", "t": "Dry Cat Food", "i": "p/dry-haisenpet.jpg", "r": "https://mikipetstore.com/cdn/shop/files/haisenpetchickenandturkey.jpg?v=1743955966&width=1200", "p": 280},
+ {"n": "Micho Dry Cat Food (Adult)", "b": "Micho", "t": "Dry Cat Food", "i": "p/dry-micho.jpg", "r": "https://mikipetstore.com/cdn/shop/files/MichoDryCatFood_adult.jpg?v=1740927331&width=1200", "p": 790},
+ {"n": "Mito Adult Cat Food with Chicken", "b": "Mito", "t": "Dry Cat Food", "i": "p/dry-mito.jpg", "r": "https://mikipetstore.com/cdn/shop/files/mito-chicken.jpg?v=1764167266&width=1200", "p": 520},
  {"n": "Dr. Petz Adult Cat Chicken & Tuna Flavor 1kg", "b": "Dr. Petz", "t": "Dry Cat Food", "i": "p/dry-dr-petz.jpg", "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83Mzk5MFwvNzM5OTAtRFItN25kbXdjLndlYnAiLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMCwiZml0Ijoib3V0c2lkZSJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtaXNjXC93bS5wbmciLCJhbHBoYSI6OTB9fX0=", "p": 463},
- {"n": "Taipet Premium Chicken & Tuna Dry Cat Food (Adult)", "b": "Taipet", "t": "Dry Cat Food", "i": "p/dry-taipet.jpg", "r": "https://mikipetstore.com/cdn/shop/files/6ffaf2fc-d147-4326-95c3-993f2785da5b_jpg.webp?v=1775633208&width=600", "p": 200},
- {"n": "Paw Paw Adult Cat Food Chicken", "b": "Paw Paw", "t": "Dry Cat Food", "i": "p/dry-paw-paw.jpg", "r": "https://mikipetstore.com/cdn/shop/files/pawadult.jpg?v=1744817636&width=600", "p": 480},
+ {"n": "Taipet Premium Chicken & Tuna Dry Cat Food (Adult)", "b": "Taipet", "t": "Dry Cat Food", "i": "p/dry-taipet.jpg", "r": "https://mikipetstore.com/cdn/shop/files/6ffaf2fc-d147-4326-95c3-993f2785da5b_jpg.webp?v=1775633208&width=1200", "p": 200},
+ {"n": "Paw Paw Adult Cat Food Chicken", "b": "Paw Paw", "t": "Dry Cat Food", "i": "p/dry-paw-paw.jpg", "r": "https://mikipetstore.com/cdn/shop/files/pawadult.jpg?v=1744817636&width=1200", "p": 480},
  {"n": "Petmetro Dry Cat Food", "b": "Petmetro", "t": "Dry Cat Food"},
- {"n": "Felicia Low Grain Starter Care Kitten Chicken Dry Cat Food", "b": "Felicia", "t": "Dry Cat Food", "i": "p/dry-felicia.jpg", "r": "https://mikipetstore.com/cdn/shop/files/feliciakittenchicken.jpg?v=1742225819&width=600", "p": 400}
+ {"n": "Felicia Low Grain Starter Care Kitten Chicken Dry Cat Food", "b": "Felicia", "t": "Dry Cat Food", "i": "p/dry-felicia.jpg", "r": "https://mikipetstore.com/cdn/shop/files/feliciakittenchicken.jpg?v=1742225819&width=1200", "p": 400}
 ],
 wet:[
- {"n": "Sheba Tuna, Pumpkin & Carrot Cat Pouch 70g", "b": "Sheba", "t": "Wet Pouch", "i": "p/wet-sheba.jpg", "r": "https://mikipetstore.com/cdn/shop/files/sheba-Tuna_-Pumpkin-_-Carrot.jpg?v=1764083391&width=600", "p": 115},
- {"n": "Purina Felix Adult Cat Pouch Chicken in Jelly 85g", "b": "Felix", "t": "Wet Pouch", "i": "p/wet-felix.jpg", "r": "https://mikipetstore.com/cdn/shop/files/purina-chicken-in-jelly_b7bc841e-cb9d-4f51-b4b5-63646be69da4.jpg?v=1758637984&width=600", "p": 110},
- {"n": "Nekko Pouch Real Tuna in Jelly 70g", "b": "Nekko", "t": "Wet Pouch", "i": "p/wet-nekko.jpg", "r": "https://mikipetstore.com/cdn/shop/files/NekkoPouchRealTunaInJelly.jpg?v=1740974604&width=600", "p": 85},
- {"n": "Pramy Carnivore Pouch Tuna in Gravy 70g", "b": "Pramy", "t": "Wet Pouch", "i": "p/wet-pramy.jpg", "r": "https://mikipetstore.com/cdn/shop/files/pramytunaingravy.jpg?v=1754892529&width=600", "p": 85},
- {"n": "Bellotta Adult Pouch Tuna & Salmon 85g", "b": "Bellotta", "t": "Wet Pouch", "i": "p/wet-bellotta.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Bellotta-Adult-Pouch-Tuna-_-Salmon-85gm.jpg?v=1762270160&width=600", "p": 75},
- {"n": "SmartHeart Adult Cat Pouch Tuna in Jelly 85g", "b": "SmartHeart", "t": "Wet Pouch", "i": "p/wet-smartheart.jpg", "r": "https://mikipetstore.com/cdn/shop/files/smartheartpouchtunaadult1.jpg?v=1741015420&width=600", "p": 89},
+ {"n": "Sheba Tuna, Pumpkin & Carrot Cat Pouch 70g", "b": "Sheba", "t": "Wet Pouch", "i": "p/wet-sheba.jpg", "r": "https://mikipetstore.com/cdn/shop/files/sheba-Tuna_-Pumpkin-_-Carrot.jpg?v=1764083391&width=1200", "p": 115},
+ {"n": "Purina Felix Adult Cat Pouch Chicken in Jelly 85g", "b": "Felix", "t": "Wet Pouch", "i": "p/wet-felix.jpg", "r": "https://mikipetstore.com/cdn/shop/files/purina-chicken-in-jelly_b7bc841e-cb9d-4f51-b4b5-63646be69da4.jpg?v=1758637984&width=1200", "p": 110},
+ {"n": "Nekko Pouch Real Tuna in Jelly 70g", "b": "Nekko", "t": "Wet Pouch", "i": "p/wet-nekko.jpg", "r": "https://mikipetstore.com/cdn/shop/files/NekkoPouchRealTunaInJelly.jpg?v=1740974604&width=1200", "p": 85},
+ {"n": "Pramy Carnivore Pouch Tuna in Gravy 70g", "b": "Pramy", "t": "Wet Pouch", "i": "p/wet-pramy.jpg", "r": "https://mikipetstore.com/cdn/shop/files/pramytunaingravy.jpg?v=1754892529&width=1200", "p": 85},
+ {"n": "Bellotta Adult Pouch Tuna & Salmon 85g", "b": "Bellotta", "t": "Wet Pouch", "i": "p/wet-bellotta.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Bellotta-Adult-Pouch-Tuna-_-Salmon-85gm.jpg?v=1762270160&width=1200", "p": 75},
+ {"n": "SmartHeart Adult Cat Pouch Tuna in Jelly 85g", "b": "SmartHeart", "t": "Wet Pouch", "i": "p/wet-smartheart.jpg", "r": "https://mikipetstore.com/cdn/shop/files/smartheartpouchtunaadult1.jpg?v=1741015420&width=1200", "p": 89},
  {"n": "Me-O Delite Tuna with Chicken Flake in Jelly 70g", "b": "Me-O", "t": "Wet Pouch", "p": 120},
- {"n": "Whiskas Adult Pouch Grilled Saba 80g", "b": "Whiskas", "t": "Wet Pouch", "i": "p/wet-whiskas.jpg", "r": "https://mikipetstore.com/cdn/shop/files/WhiskasPouchAdult1_YearsGrilledSabaFlavourCatFood85g.jpg?v=1740933445&width=600", "p": 89},
+ {"n": "Whiskas Adult Pouch Grilled Saba 80g", "b": "Whiskas", "t": "Wet Pouch", "i": "p/wet-whiskas.jpg", "r": "https://mikipetstore.com/cdn/shop/files/WhiskasPouchAdult1_YearsGrilledSabaFlavourCatFood85g.jpg?v=1740933445&width=1200", "p": 89},
  {"n": "Ciao Cat Pouch", "b": "Ciao", "t": "Wet Pouch"},
- {"n": "Wanpy Kitten Pouch Salmon & Tuna in Gravy 70g", "b": "Wanpy", "t": "Wet Pouch", "i": "p/wet-wanpy.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Kitten-Salmon-_-Tuna-wanpy-pouch.jpg?v=1762009885&width=600", "p": 75},
- {"n": "Royal Canin Hairball Care Pouch in Gravy 85g", "b": "Royal Canin", "t": "Wet Pouch", "i": "p/wet-royal-canin.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Royal_Canin_Hairball_Care_Cat_Pouch_in_Gravy.jpg?v=1741339247&width=600", "p": 190},
+ {"n": "Wanpy Kitten Pouch Salmon & Tuna in Gravy 70g", "b": "Wanpy", "t": "Wet Pouch", "i": "p/wet-wanpy.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Kitten-Salmon-_-Tuna-wanpy-pouch.jpg?v=1762009885&width=1200", "p": 75},
+ {"n": "Royal Canin Hairball Care Pouch in Gravy 85g", "b": "Royal Canin", "t": "Wet Pouch", "i": "p/wet-royal-canin.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Royal_Canin_Hairball_Care_Cat_Pouch_in_Gravy.jpg?v=1741339247&width=1200", "p": 190},
  {"n": "Taipet Pouch Chicken & Tuna in Jelly 70g", "b": "Taipet", "t": "Wet Pouch", "i": "p/wet-taipet.jpg", "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC84MTA4OVwvODEwODktY2hja2VuLXR1bmFzLXQybjV6dS5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19", "p": 75},
- {"n": "Kaniva Cat Pouch Tuna & Chicken in Gravy 70g", "b": "Kaniva", "t": "Wet Pouch", "i": "p/wet-kaniva.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Kaniva-Cat-Pouch-Tuna-_-Chicken-In-Gravy-Pouch-70g.jpg?v=1762613387&width=600", "p": 100},
+ {"n": "Kaniva Cat Pouch Tuna & Chicken in Gravy 70g", "b": "Kaniva", "t": "Wet Pouch", "i": "p/wet-kaniva.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Kaniva-Cat-Pouch-Tuna-_-Chicken-In-Gravy-Pouch-70g.jpg?v=1762613387&width=1200", "p": 100},
  {"n": "Gibo Cat Pouch Tuna & Chicken Shreds in Gravy 85g", "b": "Gibo", "t": "Wet Pouch", "i": "p/wet-gibo.jpg", "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC84NTgzNlwvODU4MzYtTWFsaWhhLTIwLXVkcXd2Zy5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19", "p": 90},
  {"n": "Moochie Cat Pouch", "b": "Moochie", "t": "Wet Pouch"},
  {"n": "Paw Paw Pouch Adult Chicken 85g", "b": "Paw Paw", "t": "Wet Pouch", "i": "p/wet-paw-paw.jpg", "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83NDk5MVwvNzQ5OTEtUGF3cGF3LXRhdnVrbHUtY2hpY2tlcm4tMS15ZWFyLWkzb29nYy5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19", "p": 90},
  {"n": "PetMetro Balance Nutrition Pouch Tuna & Salmon 85g", "b": "Petmetro", "t": "Wet Pouch", "i": "p/wet-petmetro.jpg", "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83NjYyOVwvNzY2MjktQmFsYW5jZS1OdXRyaXRpb24tVHVuYS1TYWxtb25pbi1qZWxseS04NWdtLWNvcHktbmZ2enY3LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMCwiZml0Ijoib3V0c2lkZSJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtaXNjXC93bS5wbmciLCJhbHBoYSI6OTB9fX0=", "p": 90},
  {"n": "Cuties Catz Pouch Adult Tuna 75g", "b": "Cuties Catz", "t": "Wet Pouch", "i": "p/wet-cuties-catz.jpg", "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83NDQzMlwvNzQ0MzItUENHLUN1dGllcy1DYXR6LVR1bmEtRmxhdm91ci1Ja2FuLVR1bmEtNzVnLWNvcHktaGN3Y2NhLmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMCwiZml0Ijoib3V0c2lkZSJ9LCJvdmVybGF5V2l0aCI6eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtaXNjXC93bS5wbmciLCJhbHBoYSI6OTB9fX0=", "p": 90},
- {"n": "Bonacibo Adult Sterilised Chicken Chunks in Jelly 85g", "b": "Bonacibo", "t": "Wet Pouch", "i": "p/wet-bonacibo.jpg", "r": "https://mikipetstore.com/cdn/shop/files/BonaciboAdultCatSterilisedChicken-ChunksInJelly85GPouch_medium_02bd796d-8d8e-4092-a39c-112135b3ae4a.avif?v=1776698795&width=600", "p": 90},
- {"n": "Lola & Co Mobility Pouch Tuna & Chicken with Sardine 80g", "b": "Lola & Co", "t": "Wet Pouch", "i": "p/wet-lola-co.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Tuna-_-Chicken-Topping-Sardine-in-Jelly--lola-co.jpg?v=1761494147&width=600", "p": 75},
- {"n": "Felicia Kitten Pouch Chicken 85g", "b": "Felicia", "t": "Wet Pouch", "i": "p/wet-felicia.jpg", "r": "https://mikipetstore.com/cdn/shop/files/kitten-chicken_648de9f4-967a-470d-b975-f0bfd80ed422.jpg?v=1782127950&width=600", "p": 95},
- {"n": "Kandy Omega 3 Pouch Salmon & Tuna in Jelly 70g", "b": "Kandy", "t": "Wet Pouch", "i": "p/wet-kandy-kandy-omega-3-pouc.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Kandyomega3.jpg?v=1754926170&width=600", "p": 80}
+ {"n": "Bonacibo Adult Sterilised Chicken Chunks in Jelly 85g", "b": "Bonacibo", "t": "Wet Pouch", "i": "p/wet-bonacibo.jpg", "r": "https://mikipetstore.com/cdn/shop/files/BonaciboAdultCatSterilisedChicken-ChunksInJelly85GPouch_medium_02bd796d-8d8e-4092-a39c-112135b3ae4a.avif?v=1776698795&width=1200", "p": 90},
+ {"n": "Lola & Co Mobility Pouch Tuna & Chicken with Sardine 80g", "b": "Lola & Co", "t": "Wet Pouch", "i": "p/wet-lola-co.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Tuna-_-Chicken-Topping-Sardine-in-Jelly--lola-co.jpg?v=1761494147&width=1200", "p": 75},
+ {"n": "Felicia Kitten Pouch Chicken 85g", "b": "Felicia", "t": "Wet Pouch", "i": "p/wet-felicia.jpg", "r": "https://mikipetstore.com/cdn/shop/files/kitten-chicken_648de9f4-967a-470d-b975-f0bfd80ed422.jpg?v=1782127950&width=1200", "p": 95},
+ {"n": "Kandy Omega 3 Pouch Salmon & Tuna in Jelly 70g", "b": "Kandy", "t": "Wet Pouch", "i": "p/wet-kandy-kandy-omega-3-pouc.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Kandyomega3.jpg?v=1754926170&width=1200", "p": 80}
 ],
 can:[
- {"n": "Me-O Tuna in Jelly Canned Cat Food 400g", "b": "Me-O", "t": "Canned Food", "i": "p/can-me-o-me-o-tuna-in-jelly.jpg", "r": "https://mikipetstore.com/cdn/shop/files/me_o_can.jpg?v=1741275932&width=600", "p": 260},
+ {"n": "Me-O Tuna in Jelly Canned Cat Food 400g", "b": "Me-O", "t": "Canned Food", "i": "p/can-me-o-me-o-tuna-in-jelly.jpg", "r": "https://mikipetstore.com/cdn/shop/files/me_o_can.jpg?v=1741275932&width=1200", "p": 260},
  {"n": "Meow Meow Tuna Topping Chicken in Jelly 400g", "b": "Meow Meow", "t": "Canned Food", "i": "p/can-meow-meow.jpg", "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC81Njk0MlwvNTY5NDItMS0yMDI2LTA5LTEwVDEwMTYxMi1kbGxsb2cucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19", "p": 200},
  {"n": "Gibo Cat Canned Food Tuna Meat Paste 375g", "b": "Gibo", "t": "Canned Food", "i": "p/can-gibo.jpg", "r": "https://decent.com.bd/wp-content/uploads/2025/10/gibo-tuna-meat-paste.webp", "p": 180},
- {"n": "Whiskas Can Tuna in Jelly 400g", "b": "Whiskas", "t": "Canned Food", "i": "p/can-whiskas.jpg", "r": "https://mikipetstore.com/cdn/shop/files/WhiskasCanCatFoodTunaInJelly400gm.jpg?v=1740995284&width=600", "p": 320},
+ {"n": "Whiskas Can Tuna in Jelly 400g", "b": "Whiskas", "t": "Canned Food", "i": "p/can-whiskas.jpg", "r": "https://mikipetstore.com/cdn/shop/files/WhiskasCanCatFoodTunaInJelly400gm.jpg?v=1740995284&width=1200", "p": 320},
  {"n": "Snacky Chunk Salmon Canned Food 400g", "b": "Snacky", "t": "Canned Food", "i": "p/can-snacky.jpg", "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC81Njc0MlwvNTY3NDItU05BQ0tZLXdpdGgtU2FsbW9uLXBvdC1jb3B5LWFpZ3h4Yy5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19", "p": 235},
- {"n": "Bioline Natural Feast Pate Salmon 170g", "b": "Bioline", "t": "Canned Food", "i": "p/can-bioline.jpg", "r": "https://mikipetstore.com/cdn/shop/files/170g-2-150x150.png?v=1784742633&width=600", "p": 190},
- {"n": "Sheba Deluxe Tuna in Gravy Can 85g", "b": "Sheba", "t": "Canned Food", "i": "p/can-sheba.jpg", "r": "https://mikipetstore.com/cdn/shop/files/SHEBA-TUNA-GRAVY.jpg?v=1779035134&width=600", "p": 240},
+ {"n": "Bioline Natural Feast Pate Salmon 170g", "b": "Bioline", "t": "Canned Food", "i": "p/can-bioline.jpg", "r": "https://mikipetstore.com/cdn/shop/files/170g-2-150x150.png?v=1784742633&width=1200", "p": 190},
+ {"n": "Sheba Deluxe Tuna in Gravy Can 85g", "b": "Sheba", "t": "Canned Food", "i": "p/can-sheba.jpg", "r": "https://mikipetstore.com/cdn/shop/files/SHEBA-TUNA-GRAVY.jpg?v=1779035134&width=1200", "p": 240},
  {"n": "Cuties Catz Adult Canned Chicken 400g", "b": "Cuties Catz", "t": "Canned Food", "i": "p/can-cuties-catz.jpg", "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83NDYxN1wvNzQ2MTctQ3V0aWVzLUNhdHotQ2hpY2tlbi1BeWFtLTQwMGdtLXVxMDY4ZS5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6Im91dHNpZGUifSwib3ZlcmxheVdpdGgiOnsiYnVja2V0IjoiYXJvZ2dhIiwia2V5IjoibWlzY1wvd20ucG5nIiwiYWxwaGEiOjkwfX19", "p": 250},
- {"n": "SmartHeart Can Tuna in Jelly 400g", "b": "SmartHeart", "t": "Canned Food", "i": "p/can-smartheart.jpg", "r": "https://mikipetstore.com/cdn/shop/files/smartheartcantunainjelly1.jpg?v=1740994334&width=600", "p": 260},
- {"n": "Wanpy Holistic Cat Can Tuna 375g", "b": "Wanpy", "t": "Canned Food", "i": "p/can-wanpy.jpg", "r": "https://mikipetstore.com/cdn/shop/files/wanpy-can.jpg?v=1770397176&width=600", "p": 200},
- {"n": "Jungle Canned Cat Wet Food 400g", "b": "Jungle", "t": "Canned Food", "i": "p/can-jungle.jpg", "r": "https://mikipetstore.com/cdn/shop/files/jungleacn.jpg?v=1741016065&width=600", "p": 220},
+ {"n": "SmartHeart Can Tuna in Jelly 400g", "b": "SmartHeart", "t": "Canned Food", "i": "p/can-smartheart.jpg", "r": "https://mikipetstore.com/cdn/shop/files/smartheartcantunainjelly1.jpg?v=1740994334&width=1200", "p": 260},
+ {"n": "Wanpy Holistic Cat Can Tuna 375g", "b": "Wanpy", "t": "Canned Food", "i": "p/can-wanpy.jpg", "r": "https://mikipetstore.com/cdn/shop/files/wanpy-can.jpg?v=1770397176&width=1200", "p": 200},
+ {"n": "Jungle Canned Cat Wet Food 400g", "b": "Jungle", "t": "Canned Food", "i": "p/can-jungle.jpg", "r": "https://mikipetstore.com/cdn/shop/files/jungleacn.jpg?v=1741016065&width=1200", "p": 220},
  {"n": "Pet Metro Can Tuna & Chicken in Jelly 430g", "b": "Petmetro", "t": "Canned Food", "i": "p/can-petmetro.jpg", "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC82ODc1OVwvNjg3NTktUGhvdG8tMS1wM3E1Z3guanBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MTAwMCwiaGVpZ2h0IjoxMDAwLCJmaXQiOiJvdXRzaWRlIn0sIm92ZXJsYXlXaXRoIjp7ImJ1Y2tldCI6ImFyb2dnYSIsImtleSI6Im1pc2NcL3dtLnBuZyIsImFscGhhIjo5MH19fQ==", "p": 300}
 ],
 treat:[
- {"n": "Haisenpet Creamy Cat Treat Chicken 5×15g", "b": "Haisenpet", "t": "Creamy Treat", "i": "p/treat-haisenpet.jpg", "r": "https://mikipetstore.com/cdn/shop/files/HaisenpetCreamyCatTreatChicken75gm.jpg?v=1748967924&width=600", "p": 149},
- {"n": "Taipet Creamy Treat Chicken 5×15g", "b": "Taipet", "t": "Creamy Treat", "i": "p/treat-taipet.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Taipet-Cat-Creamy-Treat-Chicken-Recipe-5_15g.webp?v=1782316378&width=600", "p": 150},
- {"n": "SmartHeart Creamy Treat Chicken 4×15g", "b": "SmartHeart", "t": "Creamy Treat", "i": "p/treat-smartheart.jpg", "r": "https://mikipetstore.com/cdn/shop/files/smarthearttreatchickenshopify.jpg?v=1740930299&width=600", "p": 230},
+ {"n": "Haisenpet Creamy Cat Treat Chicken 5×15g", "b": "Haisenpet", "t": "Creamy Treat", "i": "p/treat-haisenpet.jpg", "r": "https://mikipetstore.com/cdn/shop/files/HaisenpetCreamyCatTreatChicken75gm.jpg?v=1748967924&width=1200", "p": 149},
+ {"n": "Taipet Creamy Treat Chicken 5×15g", "b": "Taipet", "t": "Creamy Treat", "i": "p/treat-taipet.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Taipet-Cat-Creamy-Treat-Chicken-Recipe-5_15g.webp?v=1782316378&width=1200", "p": 150},
+ {"n": "SmartHeart Creamy Treat Chicken 4×15g", "b": "SmartHeart", "t": "Creamy Treat", "i": "p/treat-smartheart.jpg", "r": "https://mikipetstore.com/cdn/shop/files/smarthearttreatchickenshopify.jpg?v=1740930299&width=1200", "p": 230},
  {"n": "PetMetro Milk Cat Treat", "b": "PetMetro", "t": "Creamy Treat"},
- {"n": "Wanpy Creamy Lickable Treat Chicken 5×14g", "b": "Wanpy", "t": "Creamy Treat", "i": "p/treat-wanpy.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Wanpy_Creamy_Treats_for_Cats_with_Chicken_70g.jpg?v=1759416765&width=600", "p": 220},
+ {"n": "Wanpy Creamy Lickable Treat Chicken 5×14g", "b": "Wanpy", "t": "Creamy Treat", "i": "p/treat-wanpy.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Wanpy_Creamy_Treats_for_Cats_with_Chicken_70g.jpg?v=1759416765&width=1200", "p": 220},
  {"n": "Amna Cat Treat", "b": "Amna", "t": "Creamy Treat"},
  {"n": "GOODIES Lickable Cat Treat", "b": "Goodies", "t": "Creamy Treat"},
  {"n": "Gibo Cat Treat", "b": "Gibo", "t": "Creamy Treat"},
- {"n": "Drools Real Chicken Creamy Cat Treat 75g", "b": "Drools", "t": "Creamy Treat", "i": "p/treat-drools.jpg", "r": "https://mikipetstore.com/cdn/shop/files/drools-real-chicken.jpg?v=1758708662&width=600", "p": 200},
+ {"n": "Drools Real Chicken Creamy Cat Treat 75g", "b": "Drools", "t": "Creamy Treat", "i": "p/treat-drools.jpg", "r": "https://mikipetstore.com/cdn/shop/files/drools-real-chicken.jpg?v=1758708662&width=1200", "p": 200},
  {"n": "PetMetro Creamy Treat Tuna 5×15g", "b": "Pet Metro", "t": "Creamy Treat", "p": 240},
- {"n": "Bioline Natural Feast Pate Treat Tuna 5×15g", "b": "Bioline", "t": "Creamy Treat", "i": "p/treat-bioline.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Untitled-design-3-768x960.png?v=1785169277&width=600", "p": 190},
+ {"n": "Bioline Natural Feast Pate Treat Tuna 5×15g", "b": "Bioline", "t": "Creamy Treat", "i": "p/treat-bioline.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Untitled-design-3-768x960.png?v=1785169277&width=1200", "p": 190},
  {"n": "4 Paws Cat Treat", "b": "4 Paws", "t": "Creamy Treat"},
  {"n": "Truly Cat Treat Shrimp & Codfish 5×14g", "b": "Truly", "t": "Creamy Treat", "i": "p/treat-truly.jpg", "r": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC83MDcxMVwvNzA3MTEtVHJ1bHktQ3JlYW15LUxpY2thYmxlLUNhdC1UcmVhdC1TYWxvbW9uLUFuZC1DcmFuYmVycnktaW4tamFycy0zMFBjcy0xNGcteC0zMC0yNC0xYXNvZXUuanBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MTAwMCwiaGVpZ2h0IjoxMDAwLCJmaXQiOiJvdXRzaWRlIn0sIm92ZXJsYXlXaXRoIjp7ImJ1Y2tldCI6ImFyb2dnYSIsImtleSI6Im1pc2NcL3dtLnBuZyIsImFscGhhIjo5MH19fQ==", "p": 228}
 ],
 dtreat:[
- {"n": "Jungle Crunch Dry Treat Hair & Skin Chicken 60g", "b": "Jungle", "t": "Dry Treat", "i": "p/dtreat-jungle.jpg", "r": "https://mikipetstore.com/cdn/shop/files/jungle-hair-ball-treat.jpg?v=1758036088&width=600", "p": 270},
- {"n": "Friskies Party Mix Mixed Grill Treats 60g", "b": "Party Mix", "t": "Dry Treat", "i": "p/dtreat-party-mix.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Grill-Crunch-party-mix.jpg?v=1762352356&width=600", "p": 300},
- {"n": "Lara Pillows with Salmon Cat Treats 60g", "b": "Lara", "t": "Dry Treat", "i": "p/dtreat-lara.jpg", "r": "https://mikipetstore.com/cdn/shop/files/FISH-LARA.jpg?v=1778687840&width=600", "p": 320},
- {"n": "Wanpy Chicken Jerky Bites Cat Treat 80g", "b": "Wanpy", "t": "Dry Treat", "i": "p/dtreat-wanpy.jpg", "r": "https://mikipetstore.com/cdn/shop/files/WanpyChickenJerkyBitesCat.jpg?v=1746686401&width=600", "p": 350},
+ {"n": "Jungle Crunch Dry Treat Hair & Skin Chicken 60g", "b": "Jungle", "t": "Dry Treat", "i": "p/dtreat-jungle.jpg", "r": "https://mikipetstore.com/cdn/shop/files/jungle-hair-ball-treat.jpg?v=1758036088&width=1200", "p": 270},
+ {"n": "Friskies Party Mix Mixed Grill Treats 60g", "b": "Party Mix", "t": "Dry Treat", "i": "p/dtreat-party-mix.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Grill-Crunch-party-mix.jpg?v=1762352356&width=1200", "p": 300},
+ {"n": "Lara Pillows with Salmon Cat Treats 60g", "b": "Lara", "t": "Dry Treat", "i": "p/dtreat-lara.jpg", "r": "https://mikipetstore.com/cdn/shop/files/FISH-LARA.jpg?v=1778687840&width=1200", "p": 320},
+ {"n": "Wanpy Chicken Jerky Bites Cat Treat 80g", "b": "Wanpy", "t": "Dry Treat", "i": "p/dtreat-wanpy.jpg", "r": "https://mikipetstore.com/cdn/shop/files/WanpyChickenJerkyBitesCat.jpg?v=1746686401&width=1200", "p": 350},
  {"n": "Taipet Freeze-Dried Chicken Treat", "b": "Taipet", "t": "Dry Treat"},
  {"n": "Petmetro Dry Cat Treat", "b": "Petmetro", "t": "Dry Treat"}
 ],
 litter:[
- {"n": "Paws Clumping Bentonite Cat Litter", "b": "Paws", "t": "Cat Litter", "i": "p/litter-paws.jpg", "r": "https://mikipetstore.com/cdn/shop/files/pawslitte.jpg?v=1740926079&width=600", "p": 300},
- {"n": "Cozie Cat Clumping Cat Litter 5L", "b": "Cozie Cats", "t": "Cat Litter", "i": "p/litter-cozie-cats.jpg", "r": "https://mikipetstore.com/cdn/shop/files/cozziecat.jpg?v=1740925542&width=600", "p": 320},
- {"n": "Kitty Choice Natural Bentonite Cat Litter", "b": "Kitty Choice", "t": "Cat Litter", "i": "p/litter-kitty-choice.jpg", "r": "https://mikipetstore.com/cdn/shop/files/KittyChoicePureNaturalBentoniteCatLitter.jpg?v=1741104061&width=600", "p": 300},
- {"n": "Lazy Lady Premium Bentonite Cat Litter 5L", "b": "Lazy Lady", "t": "Cat Litter", "i": "p/litter-lazy-lady.jpg", "r": "https://mikipetstore.com/cdn/shop/files/lazylady.jpg?v=1740925865&width=600", "p": 300},
- {"n": "Haisenpet Bentonite Cat Litter", "b": "Haisenpet", "t": "Cat Litter", "i": "p/litter-haisenpet.jpg", "r": "https://mikipetstore.com/cdn/shop/files/hasienpet.jpg?v=1741011063&width=600", "p": 320},
- {"n": "Captain Meow Clumping Cat Litter", "b": "Captain Mew", "t": "Cat Litter", "i": "p/litter-captain-mew.jpg", "r": "https://mikipetstore.com/cdn/shop/files/captain-meow.jpg?v=1785577936&width=600", "p": 250},
+ {"n": "Paws Clumping Bentonite Cat Litter", "b": "Paws", "t": "Cat Litter", "i": "p/litter-paws.jpg", "r": "https://mikipetstore.com/cdn/shop/files/pawslitte.jpg?v=1740926079&width=1200", "p": 300},
+ {"n": "Cozie Cat Clumping Cat Litter 5L", "b": "Cozie Cats", "t": "Cat Litter", "i": "p/litter-cozie-cats.jpg", "r": "https://mikipetstore.com/cdn/shop/files/cozziecat.jpg?v=1740925542&width=1200", "p": 320},
+ {"n": "Kitty Choice Natural Bentonite Cat Litter", "b": "Kitty Choice", "t": "Cat Litter", "i": "p/litter-kitty-choice.jpg", "r": "https://mikipetstore.com/cdn/shop/files/KittyChoicePureNaturalBentoniteCatLitter.jpg?v=1741104061&width=1200", "p": 300},
+ {"n": "Lazy Lady Premium Bentonite Cat Litter 5L", "b": "Lazy Lady", "t": "Cat Litter", "i": "p/litter-lazy-lady.jpg", "r": "https://mikipetstore.com/cdn/shop/files/lazylady.jpg?v=1740925865&width=1200", "p": 300},
+ {"n": "Haisenpet Bentonite Cat Litter", "b": "Haisenpet", "t": "Cat Litter", "i": "p/litter-haisenpet.jpg", "r": "https://mikipetstore.com/cdn/shop/files/hasienpet.jpg?v=1741011063&width=1200", "p": 320},
+ {"n": "Captain Meow Clumping Cat Litter", "b": "Captain Mew", "t": "Cat Litter", "i": "p/litter-captain-mew.jpg", "r": "https://mikipetstore.com/cdn/shop/files/captain-meow.jpg?v=1785577936&width=1200", "p": 250},
  {"n": "Petmetro Cat Litter", "b": "Petmetro", "t": "Cat Litter"},
- {"n": "Natural Tofu Cat Litter 6L", "b": "Tofu", "t": "Cat Litter", "i": "p/litter-tofu.jpg", "r": "https://mikipetstore.com/cdn/shop/files/hosemlitter.jpg?v=1741342722&width=600", "p": 690},
+ {"n": "Natural Tofu Cat Litter 6L", "b": "Tofu", "t": "Cat Litter", "i": "p/litter-tofu.jpg", "r": "https://mikipetstore.com/cdn/shop/files/hosemlitter.jpg?v=1741342722&width=1200", "p": 690},
  {"n": "Cature Odor Control Pellet Litter 8kg", "b": "Cature", "t": "Cat Litter", "p": 1499}
 ],
 toy:[
@@ -968,21 +975,21 @@ acc:[
  {"n": "Self-Cleaning Litter Box", "b": "PetVerse", "i": "ph-a12.webp", "ph": 1, "p": 18500, "o": 21000}
 ],
 dog:[
- {"n": "Pedigree Adult Dry Dog Food Chicken & Vegetables", "b": "Pedigree", "t": "Dog", "i": "p/dog-pedigree-pedigree-adult-dry.jpg", "r": "https://mikipetstore.com/cdn/shop/files/PedigreeAdultDryDogFood_Chicken_VegetablesFlavour.jpg?v=1741102468&width=600", "p": 950},
- {"n": "Drools Puppy Dog Food Chicken & Egg", "b": "Drools", "t": "Dog", "i": "p/dog-drools-drools-puppy-dog-f.jpg", "r": "https://mikipetstore.com/cdn/shop/files/drools-dog-food-puppy.jpg?v=1777911242&width=600", "p": 630},
- {"n": "Royal Canin Mini Puppy Dry Dog Food", "b": "Royal Canin", "t": "Dog", "i": "p/dog-royal-canin-royal-canin-mini-p.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Royal-Canin-Mini-Puppy-Dog-Dry-Food_b30aa2d8-2bff-4dc6-99fb-99259054fd88.jpg?v=1771859443&width=600", "p": 2550},
- {"n": "SmartHeart Adult Dog Food Chicken & Egg", "b": "SmartHeart", "t": "Dog", "i": "p/dog-smartheart-smartheart-adult-d.jpg", "r": "https://mikipetstore.com/cdn/shop/files/dogfood.jpg?v=1741148596&width=600", "p": 1790},
- {"n": "Drools Absolute Calcium Bone Dog Treat 300g", "b": "Drools", "t": "Dog", "i": "p/dog-drools-drools-absolute-ca.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Drools-Absolute-Calcium-Bone-Dog-Supplement-Treat-300g-_20-Pieces_-_-Calcium-Rich-Dental-Chew-for-Dogs.jpg?v=1781176926&width=600", "p": 650},
- {"n": "Jerhigh Duo Stick Milky Banana Dog Treat 50g", "b": "Jerhigh", "t": "Dog", "i": "p/dog-jerhigh-jerhigh-duo-stick.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Jerhigh-Duo-Stick-Milky-Banana-Dog-Treat-50gm.webp?v=1780407849&width=600", "p": 290},
- {"n": "Harness & Leash Set for Puppy", "b": "PetVerse", "t": "Dog", "i": "p/dog-petverse-harness-leash-se.jpg", "r": "https://mikipetstore.com/cdn/shop/files/res_297cde3260468d8b398c596ed55f2509.jpg?v=1770913309&width=600", "p": 800},
- {"n": "Bioline Aloe Vera Dog Shampoo 250ml", "b": "Bioline", "t": "Dog", "i": "p/dog-bioline-bioline-aloe-vera.jpg", "r": "https://mikipetstore.com/cdn/shop/files/BiolineAloeVeraShampoo250mlForDogs.jpg?v=1741272602&width=600", "p": 680}
+ {"n": "Pedigree Adult Dry Dog Food Chicken & Vegetables", "b": "Pedigree", "t": "Dog", "i": "p/dog-pedigree-pedigree-adult-dry.jpg", "r": "https://mikipetstore.com/cdn/shop/files/PedigreeAdultDryDogFood_Chicken_VegetablesFlavour.jpg?v=1741102468&width=1200", "p": 950},
+ {"n": "Drools Puppy Dog Food Chicken & Egg", "b": "Drools", "t": "Dog", "i": "p/dog-drools-drools-puppy-dog-f.jpg", "r": "https://mikipetstore.com/cdn/shop/files/drools-dog-food-puppy.jpg?v=1777911242&width=1200", "p": 630},
+ {"n": "Royal Canin Mini Puppy Dry Dog Food", "b": "Royal Canin", "t": "Dog", "i": "p/dog-royal-canin-royal-canin-mini-p.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Royal-Canin-Mini-Puppy-Dog-Dry-Food_b30aa2d8-2bff-4dc6-99fb-99259054fd88.jpg?v=1771859443&width=1200", "p": 2550},
+ {"n": "SmartHeart Adult Dog Food Chicken & Egg", "b": "SmartHeart", "t": "Dog", "i": "p/dog-smartheart-smartheart-adult-d.jpg", "r": "https://mikipetstore.com/cdn/shop/files/dogfood.jpg?v=1741148596&width=1200", "p": 1790},
+ {"n": "Drools Absolute Calcium Bone Dog Treat 300g", "b": "Drools", "t": "Dog", "i": "p/dog-drools-drools-absolute-ca.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Drools-Absolute-Calcium-Bone-Dog-Supplement-Treat-300g-_20-Pieces_-_-Calcium-Rich-Dental-Chew-for-Dogs.jpg?v=1781176926&width=1200", "p": 650},
+ {"n": "Jerhigh Duo Stick Milky Banana Dog Treat 50g", "b": "Jerhigh", "t": "Dog", "i": "p/dog-jerhigh-jerhigh-duo-stick.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Jerhigh-Duo-Stick-Milky-Banana-Dog-Treat-50gm.webp?v=1780407849&width=1200", "p": 290},
+ {"n": "Harness & Leash Set for Puppy", "b": "PetVerse", "t": "Dog", "i": "p/dog-petverse-harness-leash-se.jpg", "r": "https://mikipetstore.com/cdn/shop/files/res_297cde3260468d8b398c596ed55f2509.jpg?v=1770913309&width=1200", "p": 800},
+ {"n": "Bioline Aloe Vera Dog Shampoo 250ml", "b": "Bioline", "t": "Dog", "i": "p/dog-bioline-bioline-aloe-vera.jpg", "r": "https://mikipetstore.com/cdn/shop/files/BiolineAloeVeraShampoo250mlForDogs.jpg?v=1741272602&width=1200", "p": 680}
 ],
 small:[
- {"n": "Quik Bird Food Parakeet Mix", "b": "Quik", "t": "Bird", "i": "p/small-quik-quik-bird-food-par.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Quik-Bird-Food-Parakeet-Mix-Pack.jpg?v=1776612569&width=600", "p": 430},
- {"n": "Goldwings Premium Parrot Food Mix", "b": "Goldwings", "t": "Bird", "i": "p/small-goldwings-goldwings-premium.jpg", "r": "https://mikipetstore.com/cdn/shop/files/parrot.jpg?v=1776534279&width=600", "p": 750},
- {"n": "Quik Triple Honey Cracker Stick for Budgies", "b": "Quik", "t": "Bird", "i": "p/small-quik-quik-triple-honey.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Honey-Cracker-Stick-For-Budgies.jpg?v=1776611773&width=600", "p": 280},
- {"n": "Versele-Laga Complete Cuni Adult Rabbit Food", "b": "Versele-Laga", "t": "Rabbit", "i": "p/small-versele-laga-versele-laga-compl.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Cuni-Adult.jpg?v=1771777585&width=600", "p": 690},
- {"n": "SmartHeart Rabbit Food Veggies & Cereals 1kg", "b": "SmartHeart", "t": "Rabbit", "i": "p/small-smartheart-smartheart-rabbit.jpg", "r": "https://mikipetstore.com/cdn/shop/files/smartheartrabbitfood.jpg?v=1750946014&width=600", "p": 590},
+ {"n": "Quik Bird Food Parakeet Mix", "b": "Quik", "t": "Bird", "i": "p/small-quik-quik-bird-food-par.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Quik-Bird-Food-Parakeet-Mix-Pack.jpg?v=1776612569&width=1200", "p": 430},
+ {"n": "Goldwings Premium Parrot Food Mix", "b": "Goldwings", "t": "Bird", "i": "p/small-goldwings-goldwings-premium.jpg", "r": "https://mikipetstore.com/cdn/shop/files/parrot.jpg?v=1776534279&width=1200", "p": 750},
+ {"n": "Quik Triple Honey Cracker Stick for Budgies", "b": "Quik", "t": "Bird", "i": "p/small-quik-quik-triple-honey.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Honey-Cracker-Stick-For-Budgies.jpg?v=1776611773&width=1200", "p": 280},
+ {"n": "Versele-Laga Complete Cuni Adult Rabbit Food", "b": "Versele-Laga", "t": "Rabbit", "i": "p/small-versele-laga-versele-laga-compl.jpg", "r": "https://mikipetstore.com/cdn/shop/files/Cuni-Adult.jpg?v=1771777585&width=1200", "p": 690},
+ {"n": "SmartHeart Rabbit Food Veggies & Cereals 1kg", "b": "SmartHeart", "t": "Rabbit", "i": "p/small-smartheart-smartheart-rabbit.jpg", "r": "https://mikipetstore.com/cdn/shop/files/smartheartrabbitfood.jpg?v=1750946014&width=1200", "p": 590},
  {"n": "Large Hamster Cage, Openable Top", "b": "PetVerse", "t": "Hamster", "i": "p/small-petverse-large-hamster-cage.jpg", "r": "https://mail.shokhertola80taka.com/public/files/product/1878752177295522.jpg", "p": 1650},
  {"n": "Taiyo SuperGold Fish Food 100g", "b": "Taiyo", "t": "Fish", "i": "p/small-taiyo-taiyo-supergold-fi.jpg", "r": "https://mail.shokhertola80taka.com/public/files/product/1840778878570213.png", "p": 200},
  {"n": "Taiyo Ultima Betta Pellets 20g", "b": "Taiyo", "t": "Fish", "i": "p/small-taiyo-taiyo-ultima-betta.jpg", "r": "https://mail.shokhertola80taka.com/public/files/product/1840779222095899.png", "p": 30}
@@ -1002,8 +1009,9 @@ const tk=n=>"৳ "+n.toLocaleString("en-IN");
 let cart={},wish=new Set();
 try{cart=JSON.parse(localStorage.getItem("pv_cart")||"{}");wish=new Set(JSON.parse(localStorage.getItem("pv_wish")||"[]"))}catch(e){}
 const all={};
-const US=(id,w)=>`https://images.unsplash.com/photo-${id}?w=${w||600}&h=${w||600}&fit=crop&q=80&auto=format`;
-function pimg(x){if(!x.i&&!x.u&&!x.r)return `<div class="fbb"><b>${x.b||"PetVerse"}</b><small>${x.t||""}</small></div>`;if(x.r&&!x.i)return `<img src="${x.r}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;if(x.r)return `<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" data-r="${x.r}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;return x.u?`<img class="ph" src="${US(x.u)}" alt="${x.n}" loading="lazy" width="600" height="600" onerror="fb(this)">`:`<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff">`}
+const US=(id,w)=>`https://images.unsplash.com/photo-${id}?w=${w||800}&h=${w||800}&fit=crop&q=80&auto=format`;
+const cw=u=>String(u||"").replace("&width=1200","&width=600");
+function pimg(x){if(!x.i&&!x.u&&!x.r)return `<div class="fbb"><b>${x.b||"PetVerse"}</b><small>${x.t||""}</small></div>`;if(x.r&&!x.i)return `<img src="${cw(x.r)}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;if(x.r)return `<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" data-r="${cw(x.r)}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;return x.u?`<img class="ph" src="${US(x.u)}" alt="${x.n}" loading="lazy" width="600" height="600" onerror="fb(this)">`:`<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff">`}
 function fr(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r;return}const x=all[el.closest("[data-id]")?.dataset.id]||{};const d=document.createElement("div");d.className="fbb";d.innerHTML=`<b>${x.b||"PetVerse"}</b><small>${x.t||"Cat Food"}</small>`;el.replaceWith(d)}
 function fb(el){const d=document.createElement("div");d.className="fb";d.innerHTML="<span>🐾</span><small>PetVerse</small>";el.replaceWith(d)}
 const thumb=x=>x.u?US(x.u,160):x.i?(/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i):(x.r||"");
@@ -1020,8 +1028,8 @@ function card(x,id){
 function render(){
  document.querySelectorAll(".grid[data-cat]").forEach(fillGrid);
  for(const k in P)P[k].forEach((x,j)=>all[x.id||k+j]=x);
- document.getElementById("pets").innerHTML=PETS.map(p=>`<a class="pet rv-in" href="${p[3]}"><div class="c"><img src="${US(p[0],300)}" alt="${p[1]}" loading="lazy" onerror="fb(this)"></div><b>${p[1]}</b><small>${p[2]}</small></a>`).join("");
- document.getElementById("svcs").innerHTML=SVC.map(s=>`<a class="svc rv-in" href="#booking" onclick="pick('${s[1]}')">${s[4]?`<span class="sp"><img src="${s[4].includes('/')?s[4]:US(s[4],400)}" alt="${s[1]}" loading="lazy" onerror="fb(this)"></span>`:`<i class="si" style="background:${s[3]}">${s[0]}</i>`}<span><b>${s[1]}</b><small>${s[2]}</small></span></a>`).join("");
+ document.getElementById("pets").innerHTML=PETS.map(p=>`<a class="pet rv-in" href="${p[3]}"><div class="c"><img src="${US(p[0],400)}" alt="${p[1]}" loading="lazy" onerror="fb(this)"></div><b>${p[1]}</b><small>${p[2]}</small></a>`).join("");
+ document.getElementById("svcs").innerHTML=SVC.map(s=>`<a class="svc rv-in" href="#booking" onclick="pick('${s[1]}')">${s[4]?`<span class="sp"><img src="${s[4].includes('/')?s[4]:US(s[4],500)}" alt="${s[1]}" loading="lazy" onerror="fb(this)"></span>`:`<i class="si" style="background:${s[3]}">${s[0]}</i>`}<span><b>${s[1]}</b><small>${s[2]}</small></span></a>`).join("");
  counts();
 }
 function fillGrid(g){const k=g.dataset.cat;g.innerHTML=(P[k]||[]).map((x,j)=>{const id=x.id||k+j;all[id]=x;return card(x,id)}).join("");g.classList.remove("all");g.scrollLeft=0;const v=g.closest(".wrap").querySelector(".va");if(v)v.textContent=(P[k]||[]).length>12||innerWidth<=760?"View All ("+(P[k]||[]).length+") →":"";}

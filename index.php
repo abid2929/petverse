@@ -2,10 +2,13 @@
 /* PetVerse homepage: serves index.html with the SEO, Facebook Pixel and Google Analytics settings from the admin panel. */
 $html = (string)@file_get_contents(__DIR__ . '/index.html');
 $site = json_decode((string)@file_get_contents(__DIR__ . '/data/site.json'), true);
-if (!is_array($site)) { echo $html; exit; }
+$base = (((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https') ? 'https' : 'http') . '://' . preg_replace('/[^a-z0-9.\-:]/i', '', $_SERVER['HTTP_HOST'] ?? 'localhost') . rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'])), '/') . '/';
+$html = str_replace(['<link rel="canonical" href="./">', 'content="img/', '"image":"img/'], ['<link rel="canonical" href="' . $base . '"><meta property="og:url" content="' . $base . '">', 'content="' . $base . 'img/', '"image":"' . $base . 'img/'], $html);
+if (!is_array($site)) $site = [];
 $h = fn($v) => htmlspecialchars((string)$v, ENT_QUOTES, 'UTF-8');
 $seo = $site['seo'] ?? []; $px = trim((string)($site['pixel']['id'] ?? '')); $ga = trim((string)($seo['ga'] ?? ''));
 if (!empty($seo['title'])) $html = preg_replace('~<title>.*?</title>~s', '<title>' . $h($seo['title']) . '</title>', $html, 1);
+if (!empty($seo['desc'])) $html = preg_replace('~<meta property="og:description" content="[^"]*">~', '<meta property="og:description" content="' . $h($seo['desc']) . '">', $html, 1);
 if (!empty($seo['desc'])) $html = preg_replace('~<meta name="description" content="[^"]*">~', '<meta name="description" content="' . $h($seo['desc']) . '">', $html, 1);
 $add = '<script>window.PV_SSR=1</script>';
 if (!empty($seo['keys'])) $add .= '<meta name="keywords" content="' . $h($seo['keys']) . '">';

@@ -90,3 +90,8 @@ input:focus,select:focus,textarea:focus{border-color:var(--ac);box-shadow:0 0 0 
 .is-demo .side{top:33px}.is-demo .topbar{top:0}
 .stat em b{display:inline;font-size:inherit;line-height:inherit}.stat em{display:block}.row{align-items:start}
 .tbl td:first-child a,.tbl td:first-child b{white-space:nowrap}
+
+.lang-btn{border:1.5px solid #e6dff0;background:#fff;border-radius:999px;padding:7px 13px;font:600 13px "Hind Siliguri",Poppins,sans-serif;cursor:pointer;color:#3a2a55;margin-left:auto}
+.lang-btn+.ai-btn{margin-left:0}
+html[lang=bn] body{font-family:Poppins,"Hind Siliguri",sans-serif}
+html[lang=bn] button,html[lang=bn] input,html[lang=bn] select,html[lang=bn] textarea{font-family:inherit}
