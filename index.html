@@ -176,7 +176,7 @@ img.rp{background:#fff;border-radius:16px;object-fit:contain;box-shadow:0 10px 3
 .wl{position:absolute;top:44px;right:10px;width:32px;height:32px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--mu);opacity:0;transform:translateX(8px);transition:.25s;z-index:2}
 .pc:hover .wl{opacity:1;transform:none}.wl.on{color:var(--pk);opacity:1;transform:none}.wl.on svg{fill:var(--pk)}
 .pc .bd{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1;border-top:1px solid var(--line)}
-.pc .br{font-size:11px;font-weight:600;color:var(--gr2);letter-spacing:.6px;text-transform:uppercase}
+.pc,.dl-p{cursor:pointer}.dl-p h4 a{color:inherit}.pc a.br:hover{text-decoration:underline}.pc .br{font-size:11px;font-weight:600;color:var(--gr2);letter-spacing:.6px;text-transform:uppercase}
 .pc h4{margin:0;font-size:14px;font-weight:500;line-height:1.4;color:#2a2340;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:39px}
 .pc:hover h4{color:var(--pu2)}
 .stars{color:#ffb400;font-size:12px;letter-spacing:1px}.stars span{color:var(--mu);letter-spacing:0;margin-left:4px}
@@ -916,7 +916,7 @@ body.sec-on .sec-show .sh{justify-content:flex-end}
   </div>
   <div class="deal">
     <div class="dl-l"><span class="kick2">Deal of the Day</span><h3>Today's offer ends in</h3><div class="cd" id="cd"><span><b>00</b>Hours</span><span><b>00</b>Min</span><span><b>00</b>Sec</span></div></div>
-    <div class="dl-p"><img class="rp" width="300" height="300" loading="lazy" src="https://mikipetstore.com/cdn/shop/files/ROYAL-CANIN-KITTEN-CAT-DRY-FOOD.jpg?v=1777191944&width=600" data-r="" onerror="pf(this)" alt="Royal Canin Kitten"><div><small>ROYAL CANIN · KITTEN</small><h4>Royal Canin Kitten Dry Food</h4><div class="pr"><b>৳ 1,150</b></div><button class="btn" onclick="add('dry3',this)">Add to Cart</button></div></div>
+    <div class="dl-p" data-id="dry3"><img class="rp" width="300" height="300" loading="lazy" src="https://mikipetstore.com/cdn/shop/files/ROYAL-CANIN-KITTEN-CAT-DRY-FOOD.jpg?v=1777191944&width=600" data-r="" onerror="pf(this)" alt="Royal Canin Kitten"><div><small>ROYAL CANIN · KITTEN</small><h4><a href="#p/dry3">Royal Canin Kitten Dry Food</a></h4><div class="pr"><b>৳ 1,150</b></div><button class="btn" onclick="add('dry3',this)">Add to Cart</button></div></div>
   </div>
 </div>
 
@@ -1268,7 +1268,7 @@ function card(x,id){
  return `<article class="pc rv-in" data-id="${id}"><div class="im">${off?`<span class="off">-${off}%</span>`:""}${x.nw?`<span class="new">NEW</span>`:x.fs?`<span class="new" style="background:#e23b3b">FLASH SALE</span>`:x.bs?`<span class="new" style="background:#16a34a">BEST SELLER</span>`:""}
  <button class="wl${wish.has(id)?" on":""}" aria-label="Add to wishlist" onclick="tw(this,'${id}')"><svg class="i" viewBox="0 0 24 24" style="width:17px;height:17px"><path d="M12 20s-7-4.4-9-9a4.8 4.8 0 0 1 9-3 4.8 4.8 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></button>
  <a class="qv" href="#p/${id}" aria-label="View ${esc(x.n)}">${pimg(x)}</a></div>
- <div class="bd"><span class="br">${esc(x.b)}</span><h4><a href="#p/${id}">${esc(x.n)}</a></h4>${x.sz?`<select class="szs" aria-label="Size">${x.sz.split(",").map(v=>`<option>${esc(v.trim())}</option>`).join("")}</select>`:""}<span class="stars">★★★★★<span>(${12+((id.length*7+(x.p||x.n.length))%40)})</span></span>
+ <div class="bd">${x.b?`<a class="br" href="#shop/brand/${encodeURIComponent(x.b)}">${esc(x.b)}</a>`:`<span class="br"></span>`}<h4><a href="#p/${id}">${esc(x.n)}</a></h4>${x.sz?`<select class="szs" aria-label="Size">${x.sz.split(",").map(v=>`<option>${esc(v.trim())}</option>`).join("")}</select>`:""}<span class="stars">★★★★★<span>(${12+((id.length*7+(x.p||x.n.length))%40)})</span></span>
  <div class="pr">${x.p?`<b>${tk(x.p)}</b>${x.o?`<s>${tk(x.o)}</s>`:""}`:`<b style="font-size:13px">Price on request</b>`}</div>
  ${x.p?"":`<a class="add ask" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${encodeURIComponent("Hello PetVerse, what is the price of: "+x.n)}">Ask price on WhatsApp</a>`}<button class="add" ${x.p?"":'style="display:none"'} ${x.st===0?'disabled title="Out of stock"':""} onclick="add('${id}',this)"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/></svg>Add to Cart</button></div></article>`;
 }
@@ -1464,7 +1464,7 @@ function applySite(S){if(!S||typeof S!=="object")return;SITE=S;const st=S.store|
  
  if(cms.about){const a=document.querySelector(".about-tx");if(a)a.innerHTML=esc(cms.about).replace(/\n/g,"<br>")}
  const dl=cms.deal||{},x=dl.id&&all[dl.id];if(dl.ends)window.DEAL_END=dl.ends;
- if(x){const p=document.querySelector(".dl-p");if(p){const im=x.i||x.r?`<img class="rp" src="${esc(x.i&&!(PAGES&&x.r&&/^p\//.test(x.i))?isrc(x.i):x.r)}" data-r="${esc(x.r||"")}" onerror="pf(this)" alt="${esc(x.n)}">`:"";p.innerHTML=`${im}<div><small>${esc((x.b||"").toUpperCase())}${x.t?" · "+esc(x.t.toUpperCase()):""}</small><h4>${esc(x.n)}</h4><div class="pr"><b>${tk(x.p||0)}</b>${x.o?` <s>${tk(x.o)}</s>`:""}</div><button class="btn" onclick="add('${dl.id}',this)">Add to Cart</button></div>`}}
+ if(x){const p=document.querySelector(".dl-p");if(p){p.dataset.id=dl.id;const im=x.i||x.r?`<img class="rp" src="${esc(x.i&&!(PAGES&&x.r&&/^p\//.test(x.i))?isrc(x.i):x.r)}" data-r="${esc(x.r||"")}" onerror="pf(this)" alt="${esc(x.n)}">`:"";p.innerHTML=`${im}<div><small>${esc((x.b||"").toUpperCase())}${x.t?" · "+esc(x.t.toUpperCase()):""}</small><h4><a href="#p/${dl.id}">${esc(x.n)}</a></h4><div class="pr"><b>${tk(x.p||0)}</b>${x.o?` <s>${tk(x.o)}</s>`:""}</div><button class="btn" onclick="add('${dl.id}',this)">Add to Cart</button></div>`}}
  if(!window.PV_SSR){const px=(S.pixel||{}).id,ga=(S.seo||{}).ga;
   if(px&&/^\d{6,20}$/.test(px)){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",px);fbq("track","PageView")}
   if(ga&&/^G-[A-Z0-9]{4,15}$/i.test(ga)){const s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+ga;document.head.append(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config",ga)}}}
@@ -1593,6 +1593,8 @@ addEventListener("hashchange",()=>{closeCart&&closeCart();pvClose&&pvClose();svR
 document.querySelectorAll('header .ib[onclick*="wishlist"]').forEach(a=>{a.removeAttribute("onclick");a.href="#wishlist"});
 /* nav: "Cat" and "Dog" etc. map to shop pages through OLD; keep them pointing at the real route */
 document.querySelectorAll('a[href^="#"]').forEach(a=>{const r=a.getAttribute("href").slice(1);if(OLD[r])a.setAttribute("href","#"+OLD[r]);if(r==="brands")a.setAttribute("href","#shop/brands")});
+/* whole card opens the product page (buttons, links and the size box keep their own job) */
+document.addEventListener("click",e=>{const c=e.target.closest(".pc[data-id],.dl-p[data-id]");if(!c||e.target.closest("a,button,select,input,label"))return;location.hash="#p/"+c.dataset.id});
 svRoute();
 })();
 
