@@ -52,7 +52,9 @@
 - Bold auto-sliding product banners and a colourful “What are you looking for?” category row right at the top
 - Smooth entrance animation, app-style phone layout with bottom tab bar
 - Cat Food by type (Dry, Wet Pouch, Canned, Creamy Treats, Dry Treats), Litter, Toys, Accessories, Dog, Bird & Small Pets, Shop by Brand
-- Quick view with gallery, sizes and colours · cart · wishlist · search
+- A shop page for every category and brand (filter by brand, sort by price or discount), search results page and wishlist page
+- Full product page with photo gallery, sizes and colours, Buy Now, WhatsApp order and “You may also like”
+- Cart · wishlist · search
 - Checkout with delivery charge (inside / outside Dhaka), Cash on Delivery, bKash / Nagad with TrxID, and **Track Order**
 - Vet services, home service and appointment booking on WhatsApp
 
