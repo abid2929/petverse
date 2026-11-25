@@ -641,6 +641,38 @@ nav.mn{animation:pvDown .7s .08s cubic-bezier(.2,.8,.2,1) both}
 .sigrow{max-width:1200px;margin:14px auto 0;padding:12px 0 6px;border-top:1px solid rgba(74,14,122,.16);display:flex;justify-content:center;text-align:center;font-size:12.5px;color:var(--mu)}
 .sigrow .sig{justify-content:center}
 @media(max-width:760px){.sigrow .sig>span:first-child{flex-basis:100%}}
+
+/* ---- phone: wide horizontal banners (owner Nov 25) ---- */
+@media (max-width:760px){
+ .hero .slider{height:auto!important;aspect-ratio:16/9.2}
+ .slide{overflow:hidden}
+ .pbx{grid-template-columns:1.08fr .92fr;grid-template-rows:1fr;align-content:center;padding:0 0 0 16px}
+ .pbt{max-width:none}
+ .pbk{display:none}
+ .pb h1,.pb h2{font-size:clamp(21px,6.4vw,28px);margin:0 0 8px;letter-spacing:-.5px}
+ .pill{font-size:11px;padding:4px 10px}
+ .go{margin-top:8px;font-size:12px}
+ .pbi{position:relative;inset:auto;height:100%}
+ .pi.m{width:78%;left:auto;right:10%;top:50%;bottom:auto;transform:translateY(-55%);border-radius:14px}
+ .pi.l{display:none}
+ .pi.r{width:42%;right:-6%;top:auto;bottom:8%;border-radius:12px;rotate:8deg}
+ .slide.pb.on .pi.m{animation:none}
+ .s1 .sl,.s5 .sl{grid-template-columns:1.1fr .9fr;grid-template-rows:1fr;padding:0 0 0 16px;align-content:center}
+ .s1 .badges,.s1 h2,.s5 p{display:none}
+ .s1 .kick,.s5 .kick{font-size:9px;padding:4px 8px;letter-spacing:1px}
+ .s1 .big{font-size:clamp(24px,7.4vw,32px);margin:8px 0 0}
+ .s1 .tx:after{content:"All top brands in one place";display:block;font:600 12px/1.3 Poppins;color:var(--pu);margin-top:6px}
+ .sl .art{position:relative!important;left:auto;right:auto;bottom:auto;height:100%!important;display:flex;align-items:center;justify-content:center}
+ .s1 .art .ha{position:absolute;right:-6%;bottom:-4%;width:128%;max-width:none;height:auto;margin:0}
+ .s5 h2{font-size:15px!important;line-height:1.25;margin:6px 0 8px}
+ .s5 h2 em{display:block}
+ .s5 .phone{font-size:13px;padding:4px 10px 4px 4px}.s5 .phone i{width:24px;height:24px}.s5 .phone small{font-size:8px}
+ .s5 .art .orb{width:92%!important}
+ .s5 .orb span{display:none}
+ .slide>a:has(>img.full){height:100%}
+ .slide>img.full,.slide a>img.full{object-fit:cover!important;height:100%}
+ .dots{bottom:2px}
+}
 </style>
 <script>function pf(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r}else el.style.visibility="hidden"}</script>
 </head>
