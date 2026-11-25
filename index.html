@@ -781,6 +781,28 @@ body.sv-on main{display:none}
 .pd-sb .btn{flex:none;padding:10px 14px;font-size:13px;margin:0}
 body.sv-pd #shopv{padding-bottom:90px}
 
+
+/* section pages + brand page */
+body.sec-on #shopv{display:block;min-height:0;padding-bottom:0}
+body.sec-on main>*:not(.sec-show){display:none!important}
+body.sec-on main>.sec-show{padding-top:22px;animation:pvRise .45s both}
+body.sec-on .sec-show .sh h3{display:none}
+body.sec-on .sec-show .sh{justify-content:flex-end}
+.sv-sec{min-height:150px}
+.sv-ic{width:120px;height:120px;border-radius:32px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;font-size:58px;box-shadow:0 18px 40px -16px rgba(0,0,0,.4);transform:rotate(-6deg);margin-right:20px}
+.bgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:22px}
+.bcard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px 14px 16px;display:flex;flex-direction:column;gap:4px;transition:.25s;animation:pvRise .45s both;animation-delay:var(--d)}
+.bcard:hover{box-shadow:var(--sh2);transform:translateY(-4px);border-color:#e2d7f3}
+.bim{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:linear-gradient(135deg,#faf6ff,#f2ebfb);border-radius:14px;padding:8px;margin-bottom:8px;aspect-ratio:3/1.25}
+.bim i{background:#fff;border-radius:10px;overflow:hidden;display:grid;place-items:center;font-style:normal}
+.bim img{width:100%;height:100%;object-fit:contain;padding:3px}
+.bim .fbb{width:100%;height:100%;font-size:9px}
+.bim .nb{grid-column:1/-1;font-size:28px}
+.bcard b{font-size:16px;color:var(--ink);letter-spacing:-.2px}
+.bcard small{color:var(--pu2);font-weight:600;font-size:12.5px}
+@media(max-width:1100px){.bgrid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:900px){.bgrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.bgrid{grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.bcard{padding:10px 10px 12px;border-radius:16px}.bcard b{font-size:14px}.sv-ic{width:72px;height:72px;font-size:36px;border-radius:22px;margin-right:4px}body.sec-on main>.sec-show{padding-top:10px}}
 </style>
 <script>function pf(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r}else el.style.visibility="hidden"}</script>
 </head>
@@ -1473,7 +1495,8 @@ const INFO={
  small:["Bird & Small Pet","Food and care for birds, rabbits, hamsters and more.","#15803d","#4ade80"],
  offers:["Offers & Deals","The best discounts in the shop right now.","#b91c1c","#f43f5e"],
  wish:["My Wishlist","The products you saved for later.","#9d174d","#ec4899"]};
-const OLD={"cat-food":"shop/cat","cat-toy":"shop/toy","cat-litter":"shop/litter","cat-accessories":"shop/acc","dog":"shop/dog","bird-small":"shop/small"};
+const SECS={services:["Pharmacy & Vet Support","Vaccination, deworming, grooming and medicine for your pet.","#0e7490","#22d3ee","💊"],"home-service":["Home Vet Service","Our vet team comes to your home in Dhaka.","#047857","#34d399","🩺"],booking:["Book an Appointment","Pick a service, date and time. We confirm on WhatsApp.","#6d28d9","#a78bfa","📅"],about:["About PetVerse","Caring for every paw, every need, in Dhaka.","#4a0e7a","#9b4dff","🐾"],contact:["Contact Us","Call, WhatsApp or visit our Bashundhara R/A branch.","#be185d","#f472b6","📞"],"shop-by-pet":["Shop by Pet","Choose your pet and see everything for them.","#b45309","#fbbf24","🐶"]};
+const OLD={"offers":"shop/offers","cat-food":"shop/cat","cat-toy":"shop/toy","cat-litter":"shop/litter","cat-accessories":"shop/acc","dog":"shop/dog","bird-small":"shop/small"};
 const HOME_T=document.title;
 const catName=k=>{const c=(window.PVCATS||[]).find(c=>c.k===k);return c&&c.name||(INFO[k]||[])[0]||(DEF.find(d=>d[0]===k)||[])[1]||k};
 const keyOf=id=>{for(const k in P)if((P[k]||[]).some(x=>(x.id)===id))return k;return ""};
@@ -1493,7 +1516,7 @@ function grid(items){return items.length?`<div class="sgrid">${items.map(([id,x]
 function shopPage(key,brand,q){
  let items,info,crumb=[];
  if(q!=null){const v=q.toLowerCase();items=every().filter(([i,x])=>(x.n+" "+(x.b||"")+" "+(x.t||"")).toLowerCase().includes(v));info=["Search: “"+q+"”",items.length?"Here is what we found for you.":"Try another word, or ask us on WhatsApp.","#4a0e7a","#9b4dff"];crumb=["Search"]}
- else if(brand){items=every().filter(([i,x])=>(x.b||"").toLowerCase()===brand.toLowerCase());info=[brand,"All "+brand+" products available at PetVerse.","#312e81","#818cf8"];crumb=[`<a href="#brands">Brands</a>`,esc(brand)]}
+ else if(brand){items=every().filter(([i,x])=>(x.b||"").toLowerCase()===brand.toLowerCase());info=[brand,"All "+brand+" products available at PetVerse.","#312e81","#818cf8"];crumb=[`<a href="#shop/brands">Brands</a>`,esc(brand)]}
  else if(key==="wish"){items=every().filter(([i])=>wish.has(i));info=INFO.wish;crumb=["Wishlist"]}
  else if(key==="offers"){items=every().filter(([i,x])=>x.o>x.p&&x.p||x.fs);info=INFO.offers;crumb=["Offers"]}
  else if(key==="cat"){items=[];CATFOOD.forEach(k=>items.push(...list(k)));info=INFO.cat;crumb=[`<a href="#shop">Shop</a>`,"Cat Food"]}
@@ -1509,6 +1532,16 @@ function shopPage(key,brand,q){
  document.title=info[0]+" | PetVerse";
  const on=SV.querySelector(".sv-pills a.on");if(on)on.scrollIntoView({block:"nearest",inline:"center"})}
 window.svSet=(k,v)=>{st[k]=v;svRoute(1)};
+function brandPage(){const B={};every().forEach(([i,x])=>{const b=(x.b||"").trim();if(!b)return;(B[b]=B[b]||{n:0,items:[]}).n++;if(B[b].items.length<3&&(x.i||x.r||x.u))B[b].items.push([i,x])});
+ const L=Object.entries(B).sort((a,b)=>b[1].n-a[1].n||a[0].localeCompare(b[0]));
+ const tops=L.slice(0,3).map(([b,v])=>v.items[0]).filter(Boolean);
+ SV.innerHTML=hero("Shop by Brand","Original products from "+L.length+" trusted pet brands.","#312e81","#818cf8",["Brands"],tops,null)+
+ `<div class="bgrid">${L.map(([b,v],k)=>`<a class="bcard" href="#shop/brand/${encodeURIComponent(b)}" style="--d:${Math.min(k,20)*25}ms"><span class="bim">${v.items.map(([i,x])=>`<i data-id="${i}">${pimg(x)}</i>`).join("")||`<i class="nb">🐾</i>`}</span><b>${esc(b)}</b><small>${v.n} product${v.n==1?"":"s"} →</small></a>`).join("")}</div>
+ <div class="sv-empty" style="margin-top:22px;padding:26px"><b style="font-size:28px">💬</b>Can’t find your brand? Ask us, we can arrange it.<br><a class="btn g" target="_blank" rel="noopener" href="https://wa.me/${WA}">WhatsApp ${esc(WA.replace(/^88/,""))}</a></div>`;
+ document.title="Shop by Brand | PetVerse"}
+function secPage(id){const i=SECS[id];
+ SV.innerHTML=`<section class="sv-hero sv-sec" style="--a:${i[2]};--b:${i[3]}"><div><div class="sv-bc"><a href="#">Home</a><i>›</i>${esc(i[0])}</div><h1>${esc(i[0])}</h1><p>${esc(i[1])}</p></div><div class="sv-ic" aria-hidden="true">${i[4]}</div></section>`;
+ document.querySelectorAll("main>*").forEach(e=>e.classList.toggle("sec-show",e.id===id));document.title=i[0]+" | PetVerse"}
 function productPage(id,again){const x=all[id];if(!x){SV.innerHTML=`<div class="sv-empty" style="margin-top:20px"><b>🐾</b>This product is not available now.<br><a class="btn" href="#shop">Browse all products</a></div>`;return}
  const k=keyOf(id),cn=k?catName(k):(x.t||"Shop");
  const imgs=[];if(x.i||x.r)imgs.push({s:x.i&&!(PAGES&&x.r&&/^p\//.test(x.i))?isrc(x.i):cw(x.r),r:cw(x.r||""),c:""});else if(x.u)imgs.push({s:US(x.u),r:"",c:""});(x.g||[]).forEach(g=>g&&g.s&&imgs.push({s:isrc(g.s),r:"",c:g.c||""}));
@@ -1542,21 +1575,24 @@ function navOn(h){document.querySelectorAll("nav.mn a,.tabbar a").forEach(a=>{co
 window.svRoute=function(again){
  let h=decodeURIComponent(location.hash.slice(1));
  if(OLD[h]){history.replaceState(null,"","#"+OLD[h]);h=OLD[h]}
+ if(h==="brands")h="shop/brands";
+ if(SECS[h]){document.body.classList.remove("sv-on","sv-pd");document.body.classList.add("sec-on");secPage(h);navOn(h);if(h!==last){const top=()=>scrollTo({top:0,behavior:"instant"});top();requestAnimationFrame(top);setTimeout(top,60)}last=h;return}
+ if(document.body.classList.contains("sec-on")){document.body.classList.remove("sec-on");document.querySelectorAll("main>.sec-show").forEach(e=>e.classList.remove("sec-show"));if(!/^(shop|search|p|wishlist)/.test(h)){document.title=HOME_T;SV.innerHTML="";}}
  const m=h.match(/^(shop|search|p|wishlist)(?:\/(.*))?$/);
- if(!m){document.body.classList.remove("sv-pd");if(document.body.classList.contains("sv-on")){document.body.classList.remove("sv-on");document.title=HOME_T;SV.innerHTML="";const t=h&&document.getElementById(h);if(t)setTimeout(()=>t.scrollIntoView({behavior:"instant"}),30);else scrollTo(0,0)}last="";navOn(h);return}
+ if(!m){document.body.classList.remove("sv-pd");if(document.body.classList.contains("sv-on")){document.body.classList.remove("sv-on");document.title=HOME_T;SV.innerHTML="";const t=h&&document.getElementById(h);if(t)setTimeout(()=>t.scrollIntoView({behavior:"instant"}),30);else scrollTo(0,0)}else if(last&&!h)scrollTo(0,0);last="";navOn(h);return}
  const changed=h!==last;if(changed&&!again){st.brand=""}
  document.body.classList.add("sv-on");document.body.classList.toggle("sv-pd",m[1]==="p");
  if(m[1]==="p")productPage(m[2],again);
  else if(m[1]==="search")shopPage("",null,m[2]||"");
  else if(m[1]==="wishlist")shopPage("wish");
- else{const r=m[2]||"";r.startsWith("brand/")?shopPage("",r.slice(6)):shopPage(r)}
- navOn(h.startsWith("shop/brand")?"brands":h);
+ else{const r=m[2]||"";r==="brands"?brandPage():r.startsWith("brand/")?shopPage("",r.slice(6)):shopPage(r)}
+ navOn(h.startsWith("shop/brand")?"shop/brands":h);
  if(changed&&!again)scrollTo(0,0);last=h};
 addEventListener("hashchange",()=>{closeCart&&closeCart();pvClose&&pvClose();svRoute()});
 /* header wishlist opens the wishlist page */
 document.querySelectorAll('header .ib[onclick*="wishlist"]').forEach(a=>{a.removeAttribute("onclick");a.href="#wishlist"});
 /* nav: "Cat" and "Dog" etc. map to shop pages through OLD; keep them pointing at the real route */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{const r=a.getAttribute("href").slice(1);if(OLD[r])a.setAttribute("href","#"+OLD[r])});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{const r=a.getAttribute("href").slice(1);if(OLD[r])a.setAttribute("href","#"+OLD[r]);if(r==="brands")a.setAttribute("href","#shop/brands")});
 svRoute();
 })();
 
