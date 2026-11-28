@@ -803,6 +803,11 @@ body.sec-on .sec-show .sh{justify-content:flex-end}
 @media(max-width:1100px){.bgrid{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:900px){.bgrid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:760px){.bgrid{grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.bcard{padding:10px 10px 12px;border-radius:16px}.bcard b{font-size:14px}.sv-ic{width:72px;height:72px;font-size:36px;border-radius:22px;margin-right:4px}body.sec-on main>.sec-show{padding-top:10px}}
+
+/* horizontal rows: side scroll only, never up/down */
+.pets,.grid,.tabs,.appcats,.feat,.svcs,.promos,.brands,.cts,.sv-pills,.qv-th,.bgrid{overflow-y:hidden}
+@media(max-width:760px){.pets,.grid:not(.all),.tabs,.appcats,.feat,.svcs,.promos,.brands,.cts,.sv-pills{overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x pan-y}
+ .pets{padding-top:6px!important;padding-bottom:10px!important}.pet{flex:0 0 96px}.pet small{display:block;line-height:1.35}}
 </style>
 <script>function pf(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r}else el.style.visibility="hidden"}</script>
 </head>
