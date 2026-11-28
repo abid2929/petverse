@@ -591,9 +591,9 @@ footer{background:linear-gradient(180deg,#f4f2f8,#eeebf4)}
 .ct{position:relative;display:flex;flex-direction:column;border-radius:18px;padding:10px 10px 12px;color:#fff;background:linear-gradient(150deg,var(--a),var(--b));box-shadow:0 12px 24px -14px var(--a);transition:.2s;overflow:hidden}
 .ct:hover{transform:translateY(-3px);box-shadow:0 18px 30px -14px var(--a)}
 .ct:after{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.16)}
-.ci{display:block;aspect-ratio:1;background:#fff;border-radius:13px;overflow:hidden;position:relative;z-index:1}
-.ci img{width:100%;height:100%;object-fit:contain;padding:8%;transition:.4s}.ct:hover .ci img{transform:scale(1.07)}
-.ci .fbb b{font-size:14px}
+.ct .ci{display:block;aspect-ratio:1;background:#fff;border-radius:13px;overflow:hidden;position:relative;z-index:1;padding:0;border:0;grid-template-columns:none}
+.ct .ci img{width:100%;height:100%;object-fit:contain;padding:8%;transition:.4s;border:0;border-radius:0}.ct:hover .ci img{transform:scale(1.07)}
+.ct .ci .fbb b{font-size:14px}
 .ct b{margin-top:9px;font-size:14px;line-height:1.2;position:relative;z-index:1}
 .ct small{font-size:11.5px;opacity:.95;font-weight:600;position:relative;z-index:1}
 @media (max-width:1100px){.cts{grid-template-columns:repeat(4,1fr)}}
@@ -857,7 +857,32 @@ body.sec-on .sec-show .sh{justify-content:flex-end}
  .slide.pb[style*="ff6a13"] .pi img{object-fit:cover;padding:0!important}
 }
 input,select,textarea,button{font-family:inherit}
-html,body{overflow-x:clip;max-width:100%}.hs-t,.hs>*{min-width:0}.tabbar{overflow:hidden}
+html,body{overflow-x:clip;max-width:100%}.hs-t,.hs>*{min-width:0}.tabbar a{-webkit-tap-highlight-color:transparent}.tabbar a:focus:not(:focus-visible),nav.mn a:focus:not(:focus-visible),.appcats a:focus:not(:focus-visible){outline:none}
+
+/* audit fixes Nov 28 */
+.pt img,.pt img.ph{right:14px;top:50%;bottom:auto;transform:translateY(-50%) rotate(4deg);height:80%;width:auto;aspect-ratio:1;max-width:40%;object-fit:contain;background:#fff;border-radius:18px;padding:6px;box-shadow:0 0 0 4px rgba(255,255,255,.25),0 14px 26px -10px rgba(0,0,0,.45);filter:none;-webkit-mask-image:none;mask-image:none}
+.pt .t{max-width:56%}
+@media(max-width:760px){.pt h4{font-size:19px}}
+.grid,.svcs,.feat,.promos,.cts,.appcats,.tabs,.pets,.brands{scroll-padding-inline:14px}
+#contact .cts{display:grid!important;grid-template-columns:repeat(3,1fr);gap:16px;overflow:visible;margin:0 0 18px;padding:0;scroll-snap-type:none}
+#contact .ctc{grid-template-columns:auto 1fr;column-gap:14px;align-items:center;padding:18px 20px}
+#contact .ctc i{grid-row:span 2;margin:0}
+#contact .ctc span{font-size:14px;word-break:normal}
+.seo{position:relative}
+.seo.clip{max-height:260px;overflow:hidden}
+.seo.clip:after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(rgba(247,245,251,0),var(--bg));pointer-events:none}
+.seo-more{display:flex;margin:-6px auto 0;position:relative;z-index:2}
+.drawer.on~.toast{top:74px;bottom:auto}
+@media(min-width:761px){main section .grid:not(.sgrid):not(.all)>*:nth-child(n+9){display:none}}
+@media(max-width:760px){
+ .lf h3{padding:0 14px}
+ .cts{padding:0 14px 8px!important}
+ #contact .cts{grid-template-columns:1fr;gap:10px}
+ #contact .ctc{padding:14px 16px}
+ .sh{flex-wrap:wrap;row-gap:6px}
+ .seo{padding:22px 18px}
+ .seo.clip{max-height:220px}
+}
 </style>
 <script>function pf(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r}else el.style.visibility="hidden"}</script>
 </head>
@@ -1060,7 +1085,7 @@ html,body{overflow-x:clip;max-width:100%}.hs-t,.hs>*{min-width:0}.tabbar{overflo
   <div class="sh"><h3>About PetVerse</h3></div>
   <p class="about-tx"><b>PetVerse</b> is a pet shop and pet care service in Dhaka. We started with one simple idea: every pet deserves good food, the right medicine and gentle, regular care. Today we sell food, litter, toys and accessories for cats, dogs, birds and small pets, and offer medical and vet support: vaccination, deworming, grooming, medicated bathing, nail cutting, ear cleaning, injections as per prescription, blood and FPV/FIP tests, and pet medicine delivery. <i>Caring for Every Paw, Every Need!</i></p>
   <div class="why">
-    <div class="ph"><img src="https://images.unsplash.com/photo-1761393031700-c6be1d6a87ec?w=1000&h=800&fit=crop&q=80&auto=format" onerror="this.remove()" alt="Calm grey cat"><div class="st"><div><b>8+</b><small>Pet services</small></div><div><b>500+</b><small>Products</small></div><div><b>24/7</b><small>Phone support</small></div></div></div>
+    <div class="ph"><img src="https://images.unsplash.com/photo-1761393031700-c6be1d6a87ec?w=1000&h=800&fit=crop&q=80&auto=format" onerror="this.remove()" alt="Calm grey cat"><div class="st"><div><b>8+</b><small>Pet services</small></div><div><b>100+</b><small>Products</small></div><div><b>24/7</b><small>Phone support</small></div></div></div>
     <div class="rv">
       <div><span class="stars">★★★★★</span><p>I ordered cat food and litter together and got them the next day. Genuine packs.</p><b>Customer, Mirpur</b> <small>· Cat parent</small></div>
       <div><span class="stars">★★★★★</span><p>My dog's vaccine and deworming were done in one day. Very convenient.</p><b>Customer, Uttara</b> <small>· Dog parent</small></div>
@@ -1334,7 +1359,7 @@ function render(){
  document.getElementById("svcs").innerHTML=SVC.map(s=>`<a class="svc rv-in" href="#booking" onclick="pick('${s[1]}')">${s[4]?`<span class="sp"><img src="${s[4].includes('/')?s[4]:US(s[4],500)}" alt="${s[1]}" loading="lazy" onerror="fb(this)"></span>`:`<i class="si" style="background:${s[3]}">${s[0]}</i>`}<span><b>${s[1]}</b><small>${s[2]}</small></span></a>`).join("");
  counts();
 }
-function fillGrid(g){const k=g.dataset.cat;g.innerHTML=(P[k]||[]).map((x,j)=>{const id=x.id||k+j;all[id]=x;return card(x,id)}).join("");g.classList.remove("all");g.scrollLeft=0;const v=g.closest(".wrap").querySelector(".va");if(v)v.textContent=(P[k]||[]).length>12||innerWidth<=760?"View All ("+(P[k]||[]).length+") →":"";v.hidden=!v.textContent;}
+function fillGrid(g){const k=g.dataset.cat;g.innerHTML=(P[k]||[]).map((x,j)=>{const id=x.id||k+j;all[id]=x;return card(x,id)}).join("");g.classList.remove("all");g.scrollLeft=0;const v=g.closest(".wrap").querySelector(".va");if(v)v.textContent=(P[k]||[]).length>8||innerWidth<=760?"View All ("+(P[k]||[]).length+") →":"";v.hidden=!v.textContent;}
 function tabCounts(){document.querySelectorAll(".tabs button").forEach(b=>{let c=b.querySelector("small");if(!c){c=document.createElement("small");b.append(c)}c.textContent=(P[b.dataset.k]||[]).length})}
 tabCounts();
 if(PAGES){document.querySelectorAll("img.rp[data-r]").forEach(i=>{if(/img\/p\//.test(i.getAttribute("src")))i.src=i.dataset.r});}
@@ -1372,7 +1397,7 @@ function sendMsg(f){const d=Object.fromEntries(new FormData(f));window.open("htt
 (function(){let k=0;setInterval(()=>{const s=document.querySelectorAll(".tick span");if(s.length<2)return;if(k>=s.length)k=0;s[k].classList.remove("on");s[k].classList.add("out");const p=s[k];setTimeout(()=>p.classList.remove("out"),600);k=(k+1)%s.length;s[k].classList.add("on")},3500)})();
 const bd=document.querySelector('#bkf input[type=date]');if(bd){const n=new Date();bd.min=n.toISOString().slice(0,10)}
 (function(){const c=document.getElementById("cd");if(!c)return;const b=c.querySelectorAll("b");const tick=()=>{const n=new Date();let e=new Date(n);e.setHours(24,0,0,0);if(window.DEAL_END&&new Date(window.DEAL_END)>n)e=new Date(window.DEAL_END);let s=Math.max(0,(e-n)/1000|0);const h=s/3600|0,m=(s%3600)/60|0,x=s%60;[h,m,x].forEach((v,i)=>b[i].textContent=String(v).padStart(2,"0"))};tick();setInterval(tick,1000)})();
-function va(a){const sec=a.closest("section"),gg=sec&&sec.querySelector(".grid[data-cat]");if(gg){location.hash="#shop/"+(sec.id==="cat-food"?"cat":gg.dataset.cat);return false}const g0=a.closest(".wrap").querySelector(".grid.lim");if(innerWidth>760){if(!g0)return true;const on=g0.classList.toggle("all");a.textContent=on?"Show less ↑":"View All →";return false}const g=a.closest(".wrap").querySelector(".grid");const on=g.classList.toggle("all");a.textContent=on?"Show less ↑":"View All →";if(!on)g.scrollLeft=0;return false}
+function va(a){const sec=a.closest("section"),gg=sec&&sec.querySelector(".grid[data-cat]");if(gg){location.hash="#shop/"+(sec.id==="cat-food"?"cat":gg.dataset.cat);return false}const g0=a.closest(".wrap").querySelector(".grid.lim");if(innerWidth>760){const g1=a.closest(".wrap").querySelector(".grid");if(!g0&&g1){const on=g1.classList.toggle("all");a.textContent=on?"Show less ↑":"View All →";return false}if(!g0)return true;const on=g0.classList.toggle("all");a.textContent=on?"Show less ↑":"View All →";return false}const g=a.closest(".wrap").querySelector(".grid");const on=g.classList.toggle("all");a.textContent=on?"Show less ↑":"View All →";if(!on)g.scrollLeft=0;return false}
 function pick(n){const s=document.querySelector('#bkf select[name=service]');if(!s)return;for(const o of s.options)if(o.text.toLowerCase().startsWith(n.toLowerCase().slice(0,10)))s.value=o.value}
 render();
 
@@ -1628,7 +1653,7 @@ function productPage(id,again){const x=all[id];if(!x){SV.innerHTML=`<div class="
  ${rel.length?`<section class="sv-rel"><div class="sh"><h2>You may also like</h2><a class="va" href="#shop/${k}">View all →</a></div>${grid(rel)}</section>`:""}`;
  document.title=x.n+" | PetVerse";if(!again)track("ViewContent",x)}
 let last="";
-function navOn(h){document.querySelectorAll("nav.mn a,.tabbar a").forEach(a=>{const r=a.getAttribute("href")||"";a.classList.toggle("on",r==="#"+h||(h===""&&r==="#"&&!a.onclick&&!a.getAttribute("onclick"))||(/^(shop|search)/.test(h)&&r==="#shop"&&a.closest(".tabbar")))})}
+function navOn(h){document.querySelectorAll("nav.mn a,.tabbar a").forEach(a=>{const r=a.getAttribute("href")||"";a.classList.toggle("on",(h&&r==="#"+h)||(h===""&&r==="#"&&/^\s*Home\s*$/.test(a.textContent))||(/^(shop|search)/.test(h)&&r==="#shop"&&a.closest(".tabbar")))})}
 window.svRoute=function(again){
  let h=decodeURIComponent(location.hash.slice(1));
  if(OLD[h]){history.replaceState(null,"","#"+OLD[h]);h=OLD[h]}
@@ -1655,6 +1680,10 @@ document.addEventListener("click",e=>{const c=e.target.closest(".pc[data-id],.dl
 svRoute();
 })();
 
+</script>
+<script>
+/* long SEO text: show a short part with "Read more" */
+(function(){const s=document.getElementById("seo");if(!s)return;s.classList.add("clip");const b=document.createElement("button");b.className="btn w seo-more";b.type="button";b.textContent="Read more ↓";b.onclick=()=>{const c=s.classList.toggle("clip");b.textContent=c?"Read more ↓":"Show less ↑";if(c)s.scrollIntoView({block:"start"})};s.after(b)})();
 </script>
 </body>
 </html>
