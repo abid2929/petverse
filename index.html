@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PetVerse Pet Shop in Bashundhara &amp; Baridhara, Dhaka | Cat Food, Vet &amp; Grooming</title>
 <meta name="description" content="PetVerse pet shop in Bashundhara R/A, Dhaka. Cat food, dog food, litter and accessories with fast home delivery to Bashundhara, Baridhara, Gulshan and Badda. Vaccination, grooming and home vet service. Call 01880972500.">
-<meta name="keywords" content="pet shop Bashundhara, pet shop Baridhara, cat food Bashundhara, vet service Bashundhara, pet grooming Baridhara, home vet service Dhaka, cat food Dhaka, pet shop Dhaka, PetVerse">
 <meta name="geo.region" content="BD-13">
 <meta name="geo.placename" content="Bashundhara R/A, Dhaka">
 <meta name="theme-color" content="#4a0e7a">
@@ -19,6 +18,7 @@
 <meta property="og:site_name" content="PetVerse">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://petversebd.com/"><meta property="og:url" content="https://petversebd.com/">
+<script>window.NL=i=>/^p\/(?!up-)/.test(i||"")&&!window.PV_LOC</script>
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
 <link rel="icon" type="image/png" sizes="96x96" href="img/icon-96.png">
@@ -1362,10 +1362,10 @@ const US=(id,w)=>`https://images.unsplash.com/photo-${id}?w=${w||800}&h=${w||800
 const PAGES=/github\.io$/.test(location.hostname);
 const IMW=(u,w)=>{u=String(u||"");if(!u||!/^https:\/\//.test(u))return u;if(/^https:\/\/mikipetstore\.com\/cdn\/shop\//.test(u))return /[?&]width=\d+/.test(u)?u.replace(/([?&]width=)\d+/,"$1"+w):u+(u.includes("?")?"&":"?")+"width="+w;if(window.PV_SSR&&!/images\.unsplash\.com|wa\.me/.test(u))return "img.php?w="+w+"&u="+encodeURIComponent(u);return u};
 const cw=u=>IMW(u,480);
-function pimg(x){if(!x.i&&!x.u&&!x.r)return `<div class="fbb"><b>${x.b||"PetVerse"}</b><small>${x.t||""}</small></div>`;if(x.r&&(!x.i||(/^p\/(?!up-)/.test(x.i))))return `<img src="${cw(x.r)}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;if(x.r)return `<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" data-r="${cw(x.r)}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;return x.u?`<img class="ph" src="${US(x.u)}" alt="${x.n}" loading="lazy" width="600" height="600" onerror="fb(this)">`:`<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff">`}
+function pimg(x){if(!x.i&&!x.u&&!x.r)return `<div class="fbb"><b>${x.b||"PetVerse"}</b><small>${x.t||""}</small></div>`;if(x.r&&(!x.i||(NL(x.i))))return `<img src="${cw(x.r)}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;if(x.r)return `<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" data-r="${cw(x.r)}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff" onerror="fr(this)">`;return x.u?`<img class="ph" src="${US(x.u)}" alt="${x.n}" loading="lazy" width="600" height="600" onerror="fb(this)">`:`<img src="${/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i}" alt="${esc(x.n)}" loading="lazy" width="600" height="600" style="object-fit:contain;background:#fff">`}
 function fr(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r;return}const x=all[el.closest("[data-id]")?.dataset.id]||{};const d=document.createElement("div");d.className="fbb";d.innerHTML=`<b>${x.b||"PetVerse"}</b><small>${x.t||"Cat Food"}</small>`;el.replaceWith(d)}
 function fb(el){const d=document.createElement("div");d.className="fb";d.innerHTML="<span>🐾</span><small>PetVerse</small>";el.replaceWith(d)}
-const thumb=x=>x.u?US(x.u,160):(x.r&&/^p\/(?!up-)/.test(x.i||""))?cw(x.r):x.i?(/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i):(x.r||"");
+const thumb=x=>x.u?US(x.u,160):(x.r&&NL(x.i))?cw(x.r):x.i?(/^(https?:|data:)/.test(x.i)?x.i:"img/"+x.i):(x.r||"");
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function card(x,id){
  const off=x.o?Math.round((x.o-x.p)/x.o*100):0;
@@ -1456,7 +1456,7 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")pvClose()});
 
 /* ---------- quick view ---------- */
 function quickView(id){const x=all[id];if(!x)return;
- const imgs=[];if(x.i||x.r)imgs.push({s:x.i&&!(x.r&&/^p\/(?!up-)/.test(x.i))?isrc(x.i):IMW(x.r,800),r:IMW(x.r||"",800),c:""});(x.g||[]).forEach(g=>g&&g.s&&imgs.push({s:isrc(g.s),r:"",c:g.c||""}));
+ const imgs=[];if(x.i||x.r)imgs.push({s:x.i&&!(x.r&&NL(x.i))?isrc(x.i):IMW(x.r,800),r:IMW(x.r||"",800),c:""});(x.g||[]).forEach(g=>g&&g.s&&imgs.push({s:isrc(g.s),r:"",c:g.c||""}));
  const off=x.o&&x.p?Math.round((x.o-x.p)/x.o*100):0,out=x.st===0;
  const cols=(x.cl||"").split(",").map(v=>v.trim()).filter(Boolean),szs=(x.sz||"").split(",").map(v=>v.trim()).filter(Boolean);
  pvModal(`<div class="qv-g"><div class="qv-main" data-id="${id}">${imgs.length?`<img id="qvImg" src="${esc(imgs[0].s)}" data-r="${esc(imgs[0].r)}" onerror="fr(this)" alt="${esc(x.n)}">`:`<div class="fbb"><b>${esc(x.b||"PetVerse")}</b><small>${esc(x.t||"")}</small></div>`}</div>
@@ -1569,7 +1569,7 @@ function applySite(S){if(!S||typeof S!=="object")return;SITE=S;const st=S.store|
  
  if(cms.about){const a=document.querySelector(".about-tx");if(a)a.innerHTML=esc(cms.about).replace(/\n/g,"<br>")}
  const dl=cms.deal||{},x=dl.id&&all[dl.id];if(dl.ends)window.DEAL_END=dl.ends;
- if(x){const p=document.querySelector(".dl-p");if(p){p.dataset.id=dl.id;const im=x.i||x.r?`<img class="rp" src="${esc(x.i&&!(x.r&&/^p\/(?!up-)/.test(x.i))?isrc(x.i):cw(x.r))}" data-r="${esc(cw(x.r||""))}" onerror="pf(this)" alt="${esc(x.n)}">`:"";p.innerHTML=`${im}<div><small>${esc((x.b||"").toUpperCase())}${x.t?" · "+esc(x.t.toUpperCase()):""}</small><h4><a href="#p/${dl.id}">${esc(x.n)}</a></h4><div class="pr"><b>${tk(x.p||0)}</b>${x.o?` <s>${tk(x.o)}</s>`:""}</div><button class="btn" onclick="add('${dl.id}',this)">Add to Cart</button></div>`}}
+ if(x){const p=document.querySelector(".dl-p");if(p){p.dataset.id=dl.id;const im=x.i||x.r?`<img class="rp" src="${esc(x.i&&!(x.r&&NL(x.i))?isrc(x.i):cw(x.r))}" data-r="${esc(cw(x.r||""))}" onerror="pf(this)" alt="${esc(x.n)}">`:"";p.innerHTML=`${im}<div><small>${esc((x.b||"").toUpperCase())}${x.t?" · "+esc(x.t.toUpperCase()):""}</small><h4><a href="#p/${dl.id}">${esc(x.n)}</a></h4><div class="pr"><b>${tk(x.p||0)}</b>${x.o?` <s>${tk(x.o)}</s>`:""}</div><button class="btn" onclick="add('${dl.id}',this)">Add to Cart</button></div>`}}
  if(!window.PV_SSR){const px=(S.pixel||{}).id,ga=(S.seo||{}).ga;
   if(px&&/^\d{6,20}$/.test(px)){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",px);fbq("track","PageView")}
   if(ga&&/^G-[A-Z0-9]{4,15}$/i.test(ga)){const s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+ga;document.head.append(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config",ga)}}}
@@ -1651,7 +1651,7 @@ function secPage(id){const i=SECS[id];
  document.querySelectorAll("main>*").forEach(e=>e.classList.toggle("sec-show",e.id===id));document.title=i[0]+" | PetVerse"}
 function productPage(id,again){const x=all[id];if(!x){SV.innerHTML=`<div class="sv-empty" style="margin-top:20px"><b>🐾</b>This product is not available now.<br><a class="btn" href="#shop">Browse all products</a></div>`;return}
  const k=keyOf(id),cn=k?catName(k):(x.t||"Shop");
- const imgs=[];if(x.i||x.r)imgs.push({s:x.i&&!(x.r&&/^p\/(?!up-)/.test(x.i))?isrc(x.i):IMW(x.r,800),r:IMW(x.r||"",800),c:""});else if(x.u)imgs.push({s:US(x.u),r:"",c:""});(x.g||[]).forEach(g=>g&&g.s&&imgs.push({s:isrc(g.s),r:"",c:g.c||""}));
+ const imgs=[];if(x.i||x.r)imgs.push({s:x.i&&!(x.r&&NL(x.i))?isrc(x.i):IMW(x.r,800),r:IMW(x.r||"",800),c:""});else if(x.u)imgs.push({s:US(x.u),r:"",c:""});(x.g||[]).forEach(g=>g&&g.s&&imgs.push({s:isrc(g.s),r:"",c:g.c||""}));
  const off=x.o&&x.p?Math.round((x.o-x.p)/x.o*100):0,out=x.st===0;
  const cols=(x.cl||"").split(",").map(v=>v.trim()).filter(Boolean),szs=(x.sz||"").split(",").map(v=>v.trim()).filter(Boolean);
  const rc=12+((id.length*7+(x.p||x.n.length))%40),d=SITE.delivery||{},pay=SITE.payment||{};

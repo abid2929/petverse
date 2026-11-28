@@ -10,7 +10,8 @@ $seo = $site['seo'] ?? []; $px = trim((string)($site['pixel']['id'] ?? '')); $ga
 if (!empty($seo['title'])) $html = preg_replace('~<title>.*?</title>~s', '<title>' . $h($seo['title']) . '</title>', $html, 1);
 if (!empty($seo['desc'])) $html = preg_replace('~<meta property="og:description" content="[^"]*">~', '<meta property="og:description" content="' . $h($seo['desc']) . '">', $html, 1);
 if (!empty($seo['desc'])) $html = preg_replace('~<meta name="description" content="[^"]*">~', '<meta name="description" content="' . $h($seo['desc']) . '">', $html, 1);
-$add = '<script>window.PV_SSR=1</script>';
+$loc = false; foreach ((array)@glob(__DIR__ . '/img/p/*') as $lf) if (strpos(basename((string)$lf), 'up-') !== 0) { $loc = true; break; }   // photos copied to this server
+$add = '<script>window.PV_SSR=1' . ($loc ? ';window.PV_LOC=1' : '') . '</script>';
 if (!empty($seo['keys'])) $add .= '<meta name="keywords" content="' . $h($seo['keys']) . '">';
 if (!empty($seo['gsv'])) $add .= '<meta name="google-site-verification" content="' . $h(preg_replace('/[^A-Za-z0-9_\-]/', '', (string)$seo['gsv'])) . '">';
 if (preg_match('/^\d{6,20}$/', $px)) $add .= "<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','$px');fbq('track','PageView');</script>";

@@ -105,6 +105,13 @@ if ($a === 'upload') {
   out(['ok' => 1, 'i' => "p/$name"]);
 }
 
+function pv_shrink(string $file, int $max = 700): void {   // keep copied photos small and fast
+  if (!function_exists('imagecreatefromstring')) return; $im = @imagecreatefromstring((string)file_get_contents($file)); if (!$im) return;
+  $w = imagesx($im); $h = imagesy($im); if (max($w, $h) <= $max) return; $s = $max / max($w, $h);
+  $o = imagecreatetruecolor((int)round($w * $s), (int)round($h * $s)); imagefill($o, 0, 0, imagecolorallocate($o, 255, 255, 255));
+  imagecopyresampled($o, $im, 0, 0, 0, 0, imagesx($o), imagesy($o), $w, $h);
+  if (preg_match('/\.png$/i', $file)) @imagepng($o, $file, 8); elseif (preg_match('/\.webp$/i', $file) && function_exists('imagewebp')) @imagewebp($o, $file, 80); else @imagejpeg($o, $file, 82);
+}
 if ($a === 'pull') {   // copy online product photos to this server
   need('products'); @set_time_limit(300);
   $ok = 0; $fail = 0; $have = 0;
@@ -113,7 +120,7 @@ if ($a === 'pull') {   // copy online product photos to this server
     $file = PV_ROOT . '/img/' . $x['i'];
     if (is_file($file) && filesize($file) > 2000) { $have++; continue; }
     $r = pv_http($x['r'], ['timeout' => 25, 'headers' => ['User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120 Safari/537.36']]);
-    if ($r['code'] === 200 && strlen($r['body']) > 1000 && strlen($r['body']) < 8000000 && @getimagesizefromstring($r['body'])) { @mkdir(dirname($file), 0755, true); file_put_contents($file, $r['body']); $ok++; } else $fail++;
+    if ($r['code'] === 200 && strlen($r['body']) > 1000 && strlen($r['body']) < 8000000 && @getimagesizefromstring($r['body'])) { @mkdir(dirname($file), 0755, true); file_put_contents($file, $r['body']); pv_shrink($file); $ok++; } else $fail++;
   }
   out(['ok' => 1, 'new' => $ok, 'have' => $have, 'fail' => $fail]);
 }
