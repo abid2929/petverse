@@ -831,9 +831,9 @@ body.sec-on .sec-show .sh{justify-content:flex-end}
 <div class="appcats" aria-label="Categories">
   <a href="#cat-food"><span style="--c:#f3e9ff">🐱</span>Cat</a>
   <a href="#dog"><span style="--c:#fff1de">🐶</span>Dog</a>
-  <a href="#bird-small"><span style="--c:#e8fbe9">🦜</span>Bird</a>
-  <a href="#bird-small"><span style="--c:#ffe8f1">🐰</span>Rabbit</a>
-  <a href="#bird-small"><span style="--c:#fff8d9">🐹</span>Small Pet</a>
+  <a href="#shop/pet/bird"><span style="--c:#e8fbe9">🦜</span>Bird</a>
+  <a href="#shop/pet/rabbit"><span style="--c:#ffe8f1">🐰</span>Rabbit</a>
+  <a href="#shop/pet/hamster"><span style="--c:#fff8d9">🐹</span>Small Pet</a>
   <a href="#services"><span style="--c:#e6f4ff">💊</span>Pharmacy</a>
   <a href="#home-service"><span style="--c:#eafff5">🩺</span>Home Vet</a>
   <a href="#booking"><span style="--c:#f3e9ff">📅</span>Booking</a>
@@ -844,9 +844,9 @@ body.sec-on .sec-show .sh{justify-content:flex-end}
   <a class="on" href="#">Home</a>
   <a href="#cat-food">Cat</a>
   <a href="#dog">Dog</a>
-  <a href="#bird-small">Bird</a>
-  <a href="#shop/small">Rabbit</a>
-  <a href="#shop/small">Small Pet</a>
+  <a href="#shop/pet/bird">Bird</a>
+  <a href="#shop/pet/rabbit">Rabbit</a>
+  <a href="#shop/pet/hamster">Small Pet</a>
   <a href="#brands">Shop by Brand</a>
   <a href="#services">Pharmacy</a>
   <a href="#home-service">Home Service</a>
@@ -1244,10 +1244,10 @@ small:[
 const PETS=[
  ["1592194996308-7b43878e84a6","Cat","Food, litter, toys","#cat-food"],
  ["1633722715463-d30f4f325e24","Dog","Food, treats, leash","#dog"],
- ["1552728089-57bdde30beb3","Bird","Seed & parrot food","#bird-small"],
- ["1585110396000-c9ffd4e4b308","Rabbit","Pellets & hay","#bird-small"],
- ["1425082661705-1834bfd09dca","Small Pet","Hamster & more","#bird-small"],
- ["1522069169874-c58ec4b76be5","Fish","Flakes & care","#bird-small"]
+ ["1552728089-57bdde30beb3","Bird","Seed & parrot food","#shop/pet/bird"],
+ ["1585110396000-c9ffd4e4b308","Rabbit","Pellets & hay","#shop/pet/rabbit"],
+ ["1425082661705-1834bfd09dca","Small Pet","Hamster & more","#shop/pet/hamster"],
+ ["1522069169874-c58ec4b76be5","Fish","Flakes & care","#shop/pet/fish"]
 ];
 const SVC=[["💉", "Vaccination", "Core vaccines for cats and dogs on schedule.", "#f3e9ff", "1725409796872-8b41e8eca929"], ["✂️", "Grooming", "Bath, brushing and a neat, clean look.", "#ffe8f1", "1772437883387-8076cf660c65"], ["💊", "Deworming", "Regular deworming to keep your pet healthy.", "#e8fbe9", "1587854692152-cbe660dbde88"], ["🧑‍⚕️", "Assistant Vet Support", "Help with routine care, dressing and treatment.", "#e6f4ff", "1700665537604-412e89a285c3"], ["💉", "Injection", "Given as per your doctor’s prescription.", "#fff1de", "1770836037275-38b44e4b101f"], ["🩸", "Blood Test & FPV/FIP Test", "Sample collection and test reports.", "#ffe9e9", "1606206591513-adbfbdd7a177"], ["🧴", "Medicated Bathing", "For skin problems, ticks and fleas.", "#eafff5", "1647002380358-fc70ed2f04e0"], ["✂️", "Nail Cutting", "Safe, gentle nail trimming.", "#fff8d9", "1735463358600-b62899139262"], ["👂", "Ear Cleaning", "Clean ears to prevent infection.", "#f3e9ff", "1780378513719-ec354e38f1ad"], ["🍽️", "Pet Food & Accessories", "Food, litter, toys and daily care items.", "#ffefe4", "1558993457-4bc6ec2c3734"], ["💊", "Pet Medicine Delivery", "Medicine delivered to your door.", "#e6f4ff", "1471864190281-a93a3070b6de"], ["📞", "Book by Phone", "Call 01880972500 for any service.", "#e8fbe9", "1728013274420-ed02b1f58887"]];
 let WA="8801880972500";
@@ -1496,6 +1496,7 @@ const INFO={
  offers:["Offers & Deals","The best discounts in the shop right now.","#b91c1c","#f43f5e"],
  wish:["My Wishlist","The products you saved for later.","#9d174d","#ec4899"]};
 const SECS={services:["Pharmacy & Vet Support","Vaccination, deworming, grooming and medicine for your pet.","#0e7490","#22d3ee","💊"],"home-service":["Home Vet Service","Our vet team comes to your home in Dhaka.","#047857","#34d399","🩺"],booking:["Book an Appointment","Pick a service, date and time. We confirm on WhatsApp.","#6d28d9","#a78bfa","📅"],about:["About PetVerse","Caring for every paw, every need, in Dhaka.","#4a0e7a","#9b4dff","🐾"],contact:["Contact Us","Call, WhatsApp or visit our Bashundhara R/A branch.","#be185d","#f472b6","📞"],"shop-by-pet":["Shop by Pet","Choose your pet and see everything for them.","#b45309","#fbbf24","🐶"]};
+const PETP={"pet/bird":["bird","Bird Food & Care","Seed mixes, parrot food and treats for happy birds.","#15803d","#4ade80"],"pet/rabbit":["rabbit","Rabbit Food & Care","Pellets, hay and veggies for healthy rabbits.","#be185d","#f9a8d4"],"pet/hamster":["hamster","Hamster & Small Pet","Cages, food and care for hamsters and small pets.","#b45309","#fcd34d"],"pet/fish":["fish","Fish Food & Care","Flakes and pellets for goldfish, betta and more.","#0369a1","#38bdf8"]};
 const OLD={"offers":"shop/offers","cat-food":"shop/cat","cat-toy":"shop/toy","cat-litter":"shop/litter","cat-accessories":"shop/acc","dog":"shop/dog","bird-small":"shop/small"};
 const HOME_T=document.title;
 const catName=k=>{const c=(window.PVCATS||[]).find(c=>c.k===k);return c&&c.name||(INFO[k]||[])[0]||(DEF.find(d=>d[0]===k)||[])[1]||k};
@@ -1519,13 +1520,14 @@ function shopPage(key,brand,q){
  else if(brand){items=every().filter(([i,x])=>(x.b||"").toLowerCase()===brand.toLowerCase());info=[brand,"All "+brand+" products available at PetVerse.","#312e81","#818cf8"];crumb=[`<a href="#shop/brands">Brands</a>`,esc(brand)]}
  else if(key==="wish"){items=every().filter(([i])=>wish.has(i));info=INFO.wish;crumb=["Wishlist"]}
  else if(key==="offers"){items=every().filter(([i,x])=>x.o>x.p&&x.p||x.fs);info=INFO.offers;crumb=["Offers"]}
+ else if(PETP[key]){const q=PETP[key];items=every().filter(([i,x])=>(x.t||"").toLowerCase()===q[0]);if(!items.length)items=list("small");info=[q[1],q[2],q[3],q[4]];crumb=[`<a href="#shop">Shop</a>`,`<a href="#shop/small">Bird & Small Pet</a>`,esc(q[1])]}
  else if(key==="cat"){items=[];CATFOOD.forEach(k=>items.push(...list(k)));info=INFO.cat;crumb=[`<a href="#shop">Shop</a>`,"Cat Food"]}
  else if(key&&P[key]){items=list(key);const i=INFO[key]||[catName(key),"","#4a0e7a","#9b4dff"];info=[catName(key),i[1],i[2],i[3]];crumb=CATFOOD.includes(key)?[`<a href="#shop/cat">Cat Food</a>`,esc(info[0])]:[`<a href="#shop">Shop</a>`,esc(info[0])]}
  else{items=every();info=INFO.all;crumb=["Shop"]}
  const brands=[...new Set(items.map(([i,x])=>x.b).filter(Boolean))].sort();
  if(st.brand&&!brands.includes(st.brand))st.brand="";
  const shown=sortIt(st.brand?items.filter(([i,x])=>x.b===st.brand):items);
- const pk=q!=null||brand||key==="wish"?null:(key||"");
+ const pk=q!=null||brand||key==="wish"?null:PETP[key]?"small":(key||"");
  SV.innerHTML=hero(info[0],info[1],info[2],info[3],crumb,items,items.length)+(pk!=null?pills(pk):"")+
   `<div class="sv-bar"><b>${shown.length} item${shown.length==1?"":"s"} <small>${st.brand?"· "+esc(st.brand):""}</small></b><div class="f">${brands.length>1?`<select aria-label="Brand" onchange="svSet('brand',this.value)"><option value="">All brands</option>${brands.map(b=>`<option${b===st.brand?" selected":""}>${esc(b)}</option>`).join("")}</select>`:""}<select aria-label="Sort" onchange="svSet('sort',this.value)">${[["pop","Popular"],["low","Price: low to high"],["high","Price: high to low"],["off","Biggest discount"],["new","New arrivals"]].map(([v,n])=>`<option value="${v}"${v===st.sort?" selected":""}>${n}</option>`).join("")}</select></div></div>`+grid(shown)+
   `<div class="sv-more"><a class="btn w" href="#">← Back to home</a></div>`;
