@@ -827,6 +827,28 @@ body.sec-on .sec-show .sh{justify-content:flex-end}
  .dots{bottom:4px}
  .dots button.on{width:30px}.dots button.on:before{width:20px}
 }
+
+/* phone product banners v3 (premium) */
+@media(max-width:760px){
+ .slide.pb .pbx{grid-template-columns:minmax(0,1fr) 46%;padding:0 0 0 18px}.slide.pb .pbt{min-width:0}
+ .slide.pb .pbx:before{content:"";position:absolute;right:-30px;top:-40px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),rgba(255,255,255,0) 70%);pointer-events:none}
+ .slide.pb .pbx:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(rgba(255,255,255,.9) 1px,transparent 1.4px);background-size:14px 14px;-webkit-mask-image:linear-gradient(90deg,transparent 35%,#000 75%);mask-image:linear-gradient(90deg,transparent 35%,#000 75%)}
+ .slide.pb .pbk{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:8px;letter-spacing:1.3px;padding:0;border:0;background:none;opacity:.85;margin:0 0 6px}
+ .slide.pb h1,.slide.pb h2{font-size:clamp(22px,6.6vw,28px);letter-spacing:-.6px;margin:0 0 10px}
+ .slide.pb .pill{box-shadow:0 8px 18px -8px rgba(0,0,0,.5)}
+ .slide.pb .go{background:rgba(0,0,0,.14);border-color:rgba(255,255,255,.55);backdrop-filter:blur(4px)}
+ .slide.pb .pbi:before{width:92%;background:radial-gradient(circle,rgba(255,255,255,.45),rgba(255,255,255,0) 66%)}
+ .slide.pb .pbi:after{content:"🐾";position:absolute;left:6%;top:9%;font-size:15px;opacity:.55;rotate:-18deg;filter:grayscale(1) brightness(3)}
+ .slide.pb .pi{border-radius:50%!important;background:#fff}
+ .slide.pb .pi.m{width:70%;right:9%;rotate:0deg;transform:translateY(-52%);box-shadow:0 0 0 5px rgba(255,255,255,.28),0 0 0 11px rgba(255,255,255,.12),0 20px 34px -12px rgba(0,0,0,.55)}
+ .slide.pb .pi.m img{padding:15%}
+ .slide.pb .pi.r{width:34%;left:0;bottom:11%;rotate:0deg;box-shadow:0 0 0 4px rgba(255,255,255,.35),0 12px 22px -8px rgba(0,0,0,.5)}
+ .slide.pb .pi.r img{padding:14%}
+ .slide.pb.on .pi.m{animation:zin 1s cubic-bezier(.2,.8,.2,1) both}
+ .slide.pb .pi.m{width:68%;right:9%;transform:translateY(-56%)}
+ .slide.pb .pi.r{width:34%;left:0;bottom:15%}
+ .slide.pb[style*="ff6a13"] .pi img{object-fit:cover;padding:0!important}
+}
 </style>
 <script>function pf(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r}else el.style.visibility="hidden"}</script>
 </head>
