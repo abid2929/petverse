@@ -808,6 +808,25 @@ body.sec-on .sec-show .sh{justify-content:flex-end}
 .pets,.grid,.tabs,.appcats,.feat,.svcs,.promos,.brands,.cts,.sv-pills,.qv-th,.bgrid{overflow-y:hidden}
 @media(max-width:760px){.pets,.grid:not(.all),.tabs,.appcats,.feat,.svcs,.promos,.brands,.cts,.sv-pills{overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x pan-y}
  .pets{padding-top:6px!important;padding-bottom:10px!important}.pet{flex:0 0 96px}.pet small{display:block;line-height:1.35}}
+
+/* phone product banners v2 */
+@media(max-width:760px){
+ .slide.pb .pbx{grid-template-columns:1fr 47%;padding:0 0 0 18px;gap:4px}
+ .slide.pb .pbt{padding:6px 0 14px}
+ .slide.pb h1,.slide.pb h2{font-size:clamp(21px,6.2vw,27px);line-height:1.02;margin:0 0 9px;text-shadow:0 2px 14px rgba(0,0,0,.18)}
+ .slide.pb .pill{font-size:11px;padding:5px 11px}
+ .slide.pb .go{display:inline-flex;align-items:center;margin-top:9px;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.45);font-size:11.5px;font-weight:600;text-decoration:none}
+ .slide.pb .pbi{position:relative;height:100%}
+ .slide.pb .pbi:before{content:"";position:absolute;width:96%;aspect-ratio:1;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,255,255,.38),rgba(255,255,255,0) 68%)}
+ .slide.pb .pi{box-shadow:0 16px 30px -12px rgba(0,0,0,.45)}
+ .slide.pb .pi.m{width:64%;left:auto;right:11%;top:50%;bottom:auto;transform:translateY(-54%);rotate:4deg;border-radius:16px;z-index:3}
+ .slide.pb .pi.r{display:block;width:36%;right:auto;left:2%;top:auto;bottom:15%;rotate:-9deg;border-radius:12px;z-index:4}
+ .slide.pb .pi.l{display:none}
+ .slide.pb .pi img{padding:7%}
+ .slide.pb.on .pi.r{animation:up .9s .15s cubic-bezier(.2,.8,.2,1) both}
+ .dots{bottom:4px}
+ .dots button.on{width:30px}.dots button.on:before{width:20px}
+}
 </style>
 <script>function pf(el){const r=el.dataset.r;if(r){el.removeAttribute("data-r");el.src=r}else el.style.visibility="hidden"}</script>
 </head>
