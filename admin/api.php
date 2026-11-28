@@ -19,8 +19,8 @@ function body(): array { static $b = null; if ($b === null) { $j = json_decode((
 function me(): ?array { return $_SESSION['u'] ?? null; }
 const ROLES = [
   'super'   => ['*'],
-  'manager' => ['dashboard', 'products', 'inventory', 'categories', 'collections', 'orders', 'courier', 'customers', 'reviews', 'banners', 'cms', 'reports', 'settings'],
-  'staff'   => ['dashboard', 'products', 'inventory', 'orders', 'courier', 'customers'],
+  'manager' => ['dashboard', 'products', 'inventory', 'categories', 'collections', 'orders', 'bookings', 'courier', 'customers', 'reviews', 'banners', 'cms', 'reports', 'settings'],
+  'staff'   => ['dashboard', 'products', 'inventory', 'orders', 'bookings', 'courier', 'customers'],
 ];
 function can(string $perm): bool { $u = me(); if (!$u) return false; $p = ROLES[$u['role']] ?? []; return in_array('*', $p, true) || in_array($perm, $p, true); }
 function need(string $perm): void { if (!me()) out(['error' => 'login'], 401); if (!can($perm)) out(['error' => 'You do not have permission for this.'], 403); }
@@ -57,7 +57,7 @@ if ($a === 'logout') { $_SESSION = []; session_destroy(); out(['ok' => 1]); }
 if (!me()) out(['error' => 'login'], 401);
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !hash_equals($_SESSION['csrf'] ?? '', (string)($_SERVER['HTTP_X_PV'] ?? ''))) out(['error' => 'Session expired. Please log in again.'], 403);
 
-$READ = ['products' => 'products', 'categories' => 'products', 'collections' => 'products', 'reviews' => 'reviews', 'banners' => 'banners', 'site' => 'dashboard', 'orders' => 'orders'];
+$READ = ['products' => 'products', 'categories' => 'products', 'collections' => 'products', 'reviews' => 'reviews', 'banners' => 'banners', 'site' => 'dashboard', 'orders' => 'orders', 'bookings' => 'bookings'];
 $WRITE = ['products' => 'products', 'categories' => 'categories', 'collections' => 'collections', 'reviews' => 'reviews', 'banners' => 'banners', 'site' => 'settings'];
 
 if ($a === 'get') {
@@ -119,6 +119,32 @@ if ($a === 'pull') {   // copy online product photos to this server
 }
 
 const STATUSES = ['pending', 'processing', 'shipped', 'delivered', 'cancelled', 'returned'];
+const BK_STATUSES = ['new', 'confirmed', 'done', 'cancelled'];
+if ($a === 'booking_add') {   // booking taken by phone / Facebook
+  need('bookings'); $k = pv_booking_clean(body());
+  if ($k['name'] === '' || $k['service'] === '') out(['error' => 'Name and service are needed.'], 400);
+  $k = ['no' => 'BK-' . strtoupper(substr(bin2hex(random_bytes(3)), 0, 5)), 't' => time()] + $k + ['status' => 'confirmed', 'src' => 'admin'];
+  pv_update('bookings', function ($l) use ($k) { array_unshift($l, $k); return $l; }); audit("booking {$k['no']} added"); out(['ok' => 1, 'no' => $k['no']]);
+}
+if ($a === 'booking_update') {
+  need('bookings'); $b = body(); $no = (string)($b['no'] ?? ''); $found = false;
+  pv_update('bookings', function ($l) use ($b, $no, &$found) {
+    foreach ($l as &$k) if (($k['no'] ?? '') === $no) { $found = true;
+      if (isset($b['status']) && in_array($b['status'], BK_STATUSES, true)) $k['status'] = $b['status'];
+      if (isset($b['admin_note'])) $k['admin_note'] = clean_str($b['admin_note'], 500);
+      if (isset($b['fee'])) $k['fee'] = max(0, (int)$b['fee']);
+      if (isset($b['date']) && preg_match('/^\d{4}-\d{2}-\d{2}$/', (string)$b['date'])) $k['date'] = (string)$b['date'];
+      if (isset($b['time'])) $k['time'] = clean_str($b['time'], 40);
+    }
+    return $l;
+  });
+  if (!$found) out(['error' => 'Booking not found'], 404);
+  audit("booking $no updated"); out(['ok' => 1]);
+}
+if ($a === 'booking_del') {
+  need('bookings'); $no = (string)(body()['no'] ?? '');
+  pv_update('bookings', fn($l) => array_values(array_filter($l, fn($k) => ($k['no'] ?? '') !== $no))); audit("deleted booking $no"); out(['ok' => 1]);
+}
 if ($a === 'order_add') {   // manual order (phone / Facebook)
   need('orders'); $b = body()['order'] ?? [];
   $phone = pv_phone((string)($b['phone'] ?? ''));

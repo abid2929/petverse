@@ -3,7 +3,7 @@
 declare(strict_types=1);
 if (!defined('PV_ROOT')) define('PV_ROOT', dirname(__DIR__));
 const PV_PUBLIC = ['products', 'categories', 'collections', 'reviews', 'banners', 'site'];
-const PV_PRIVATE = ['orders', 'users', 'secrets', 'rate', 'log', 'visits'];
+const PV_PRIVATE = ['orders', 'bookings', 'users', 'secrets', 'rate', 'log', 'visits'];
 const PV_GUARD = "<?php http_response_code(404); exit; ?>\n";
 
 function pv_path(string $name): string {
@@ -38,6 +38,12 @@ function pv_update(string $name, callable $fn, $default = []) {
 }
 function pv_ip(): string { return (string)($_SERVER['REMOTE_ADDR'] ?? ''); }
 function pv_phone(string $p): string { $d = preg_replace('/\D+/', '', $p); if (strpos($d, '880') === 0) $d = substr($d, 2); return $d; }
+function pv_booking_clean(array $b): array {   // one service booking (grooming, vaccine, vet...)
+  $c = fn($k, $n) => trim(mb_substr((string)($b[$k] ?? ''), 0, $n));
+  $date = preg_match('/^\d{4}-\d{2}-\d{2}$/', (string)($b['date'] ?? '')) ? (string)$b['date'] : '';
+  return ['name' => $c('name', 80), 'phone' => pv_phone((string)($b['phone'] ?? '')), 'pet' => $c('pet', 40), 'service' => $c('service', 80),
+    'date' => $date, 'time' => $c('time', 40), 'area' => $c('area', 200), 'note' => $c('note', 600)];
+}
 function pv_valid_phone(string $p): bool { return (bool)preg_match('/^01[3-9]\d{8}$/', $p); }
 function pv_all_products(): array {
   $out = [];

@@ -123,7 +123,7 @@ async function boot() {
   };
 }
 async function logout() { await api("logout", {}); location.hash = ""; location.reload() }
-function can(p) { if (!ME) return false; if (ME.role === "super") return true; const R = { manager: ["dashboard", "products", "inventory", "categories", "collections", "orders", "courier", "customers", "reviews", "banners", "cms", "reports", "settings"], staff: ["dashboard", "products", "inventory", "orders", "courier", "customers"] }; return (R[ME.role] || []).includes(p) }
+function can(p) { if (!ME) return false; if (ME.role === "super") return true; const R = { manager: ["dashboard", "products", "inventory", "categories", "collections", "orders", "bookings", "courier", "customers", "reviews", "banners", "cms", "reports", "settings"], staff: ["dashboard", "products", "inventory", "orders", "bookings", "courier", "customers"] }; return (R[ME.role] || []).includes(p) }
 
 /* ---------- navigation ---------- */
 const NAV = [
@@ -135,7 +135,7 @@ const SETTINGS = [["store", "General Store", "store"], ["delivery", "Delivery & 
 function drawNav() {
   const pend = (DB.orders || []).filter(o => o.status === "pending").length;
   const route = location.hash.slice(1) || "dashboard";
-  let h = NAV.filter(n => can(n[3])).map(n => `<a class="nv${route.split("/")[0] === n[0] || (n[0] === "products" && route.startsWith("product")) ? " on" : ""}" href="#${n[0]}">${ic(n[2])}${n[1]}${n[0] === "orders" && pend ? `<span class="bd">${pend}</span>` : ""}${n[0] === "courier" ? '<span class="live">LIVE</span>' : ""}</a>`).join("");
+  let h = NAV.filter(n => can(n[3])).map(n => `<a class="nv${route.split("/")[0] === n[0] || (n[0] === "products" && route.startsWith("product")) ? " on" : ""}" href="#${n[0]}">${ic(n[2])}${n[1]}${n[0] === "orders" && pend ? `<span class="bd">${pend}</span>` : ""}${n[0] === "bookings" && typeof bkNew === "function" && bkNew().length ? `<span class="bd">${bkNew().length}</span>` : ""}${n[0] === "courier" ? '<span class="live">LIVE</span>' : ""}</a>`).join("");
   if (can("settings") || true) {
     const open = route.startsWith("settings");
     h += `<div class="grp${open ? " open" : ""}"><button class="nv${open ? " on" : ""}" onclick="this.parentNode.classList.toggle('open')">${ic("gear")}Site Settings<span class="chev">${ic("down", "width:15px;height:15px")}</span></button><div class="sub">${SETTINGS.filter(s => s[0] === "security" || can("settings")).map(s => `<a class="nv${route === "settings/" + s[0] ? " on" : ""}" href="#settings/${s[0]}">${ic(s[2], "width:16px;height:16px")}${s[1]}${s[0] === "pixel" ? '<span class="live" style="background:#14532d">CAPI</span>' : ""}</a>`).join("")}</div></div>`;
@@ -150,6 +150,7 @@ async function start() {
   $("#app").hidden = false; $("#meName").textContent = ME.name || ME.u; $("#meRole").textContent = ROLE_NAME[ME.role] || ME.role;
   await Promise.all(["products", "categories", "site"].map(c => load(c)));
   if (can("orders")) await load("orders");
+  if (can("bookings")) await load("bookings");
   window.onhashchange = route; route(); bell();
 }
 async function route() {
@@ -157,7 +158,7 @@ async function route() {
   const [p, a, b] = (location.hash.slice(1) || "dashboard").split("/");
   drawNav(); window.scrollTo(0, 0);
   const V = $("#view"); V.innerHTML = '<div class="empty">Loading…</div>';
-  const map = { dashboard: Dash, products: Products, product: ProductEdit, categories: Categories, collections: Collections, inventory: Inventory, orders: Orders, courier: Courier, customers: Customers, reviews: Reviews, banners: Banners, cms: CMS, reports: Reports, admins: Admins, settings: Settings };
+  const map = { dashboard: Dash, products: Products, product: ProductEdit, categories: Categories, collections: Collections, inventory: Inventory, orders: Orders, bookings: Bookings, courier: Courier, customers: Customers, reviews: Reviews, banners: Banners, cms: CMS, reports: Reports, admins: Admins, settings: Settings };
   const fn = map[p] || Dash; try { await fn(V, a, b) } catch (e) { console.error(e); V.innerHTML = `<div class="card card-b">Something went wrong: ${esc(e.message)}</div>` }
 }
 function title(t) { $("#pageTitle").textContent = t; document.title = t + " · PetVerse Admin" }
@@ -169,8 +170,9 @@ function sw(name, on, extra = "") { return `<label class="sw"><input type="check
 /* ---------- notifications ---------- */
 function bell() {
   const pend = (DB.orders || []).filter(o => o.status === "pending"), low = allProducts().filter(x => x.st !== undefined && x.st !== "" && x.st < 10);
-  const n = pend.length + (low.length ? 1 : 0); $("#bellN").hidden = !n; $("#bellN").textContent = n;
-  $("#bellPop").innerHTML = (pend.slice(0, 8).map(o => `<a href="#orders/${o.no}">${ic("cart", "color:#f0642a")}<span><b>New order ${esc(o.no)}</b><small>${esc(o.name)} · ${tk(o.total)} · ${dt(o.t)}</small></span></a>`).join("") + (low.length ? `<a href="#inventory/low">${ic("alert", "color:#e23b3b")}<span><b>${low.length} products low in stock</b><small>Less than 10 left</small></span></a>` : "")) || '<div class="empty" style="padding:20px">No new notifications</div>';
+  const bkn = typeof bkNew === "function" ? bkNew() : [];
+  const n = pend.length + bkn.length + (low.length ? 1 : 0); $("#bellN").hidden = !n; $("#bellN").textContent = n;
+  $("#bellPop").innerHTML = (pend.slice(0, 8).map(o => `<a href="#orders/${o.no}">${ic("cart", "color:#f0642a")}<span><b>New order ${esc(o.no)}</b><small>${esc(o.name)} · ${tk(o.total)} · ${dt(o.t)}</small></span></a>`).join("") + bkn.slice(0, 6).map(k => `<a href="#bookings/${esc(k.no)}">${ic("cal", "color:#7c3aed")}<span><b>New booking: ${esc(k.service)}</b><small>${esc(k.name)} · ${esc(k.pet || "")} · ${esc(k.date || "")}</small></span></a>`).join("") + (low.length ? `<a href="#inventory/low">${ic("alert", "color:#e23b3b")}<span><b>${low.length} products low in stock</b><small>Less than 10 left</small></span></a>` : "")) || '<div class="empty" style="padding:20px">No new notifications</div>';
 }
 function toggleBell() { $("#bellPop").hidden = !$("#bellPop").hidden }
 
@@ -196,7 +198,7 @@ async function Dash(V) {
   const series = days.map(d => valid.filter(o => day(o.t) === d).reduce((a, o) => a + o.total, 0));
   const last = O[0];
   const hr = new Date().getHours(), greet = hr < 12 ? "Good morning" : hr < 17 ? "Good afternoon" : hr < 21 ? "Good evening" : "Good night";
-  const qa = [["product/new", "plus", "New product", "#f0642a", can("products")], ["neworder", "cart", "Manual order", "#7c3aed", can("orders")], ["pending", "clock", "Pending orders", "#f59e0b", can("orders"), cnt("pending")], ["inventory", "stock", "Update stock", "#16a34a", can("inventory"), low || ""], ["banners", "image", "Banners & offers", "#2563eb", can("banners")], ["store", "ext", "View shop", "#c2185b", true]].filter(x => x[4]);
+  const qa = [["product/new", "plus", "New product", "#f0642a", can("products")], ["neworder", "cart", "Manual order", "#7c3aed", can("orders")], ["pending", "clock", "Pending orders", "#f59e0b", can("orders"), cnt("pending")], ["bookings", "cal", "Service bookings", "#0e7490", can("bookings"), (DB.bookings || []).filter(k => k.status === "new").length || ""], ["inventory", "stock", "Update stock", "#16a34a", can("inventory"), low || ""], ["banners", "image", "Banners & offers", "#2563eb", can("banners")], ["store", "ext", "View shop", "#c2185b", true]].filter(x => x[4]);
   V.innerHTML = `
   <div class="hello"><div><h2><span>${greet}</span>, ${esc(ME.name || ME.u || "")} 👋</h2><p><span>Today</span>: <b>${todayOrders}</b> <span class="tl">new orders</span> · <b>${tk(todaySales)}</b> <span class="tl">sales</span> · <b>${cnt("pending")}</b> <span class="tl">waiting</span></p></div></div>
   <div class="qa">${qa.map(x => `<button class="qa-b" onclick="quick('${x[0]}')" style="--c:${x[3]}"><i>${ic(x[1])}</i><span>${x[2]}</span>${x[5] ? `<em>${x[5]}</em>` : ""}</button>`).join("")}</div>

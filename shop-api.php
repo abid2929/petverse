@@ -74,6 +74,19 @@ if ($a === 'track') {
   out(['error' => 'No order found with this number and phone.'], 404);
 }
 
+if ($a === 'booking' && $_SERVER['REQUEST_METHOD'] === 'POST') {   // service booking from the website (also sent on WhatsApp)
+  $b = body();
+  if (!empty($b['website'])) out(['ok' => 1]);
+  if (limited('booking', 5, 600)) out(['error' => 'Too many bookings. Please call us.'], 429);
+  $k = pv_booking_clean($b);
+  if ($k['name'] === '' || !pv_valid_phone($k['phone']) || $k['service'] === '') out(['error' => 'Please give your name, phone and service.'], 400);
+  $k = ['no' => 'BK-' . strtoupper(substr(bin2hex(random_bytes(3)), 0, 5)), 't' => time()] + $k + ['status' => 'new', 'src' => 'website'];
+  pv_update('bookings', function ($l) use ($k) { array_unshift($l, $k); return array_slice($l, 0, 3000); });
+  $sec = pv_read('secrets');
+  if (!empty($sec['sms_on_order']) && !empty($sec['sms_admin'])) pv_sms((string)$sec['sms_admin'], "New booking {$k['no']}: {$k['service']} ({$k['pet']}) {$k['date']}, {$k['name']} {$k['phone']}");
+  out(['ok' => 1, 'no' => $k['no']]);
+}
+
 if ($a === 'review' && $_SERVER['REQUEST_METHOD'] === 'POST') {   // customer review: saved hidden until the admin turns it on
   $b = body();
   if (!empty($b['website'])) out(['ok' => 1]);

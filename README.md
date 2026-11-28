@@ -92,3 +92,6 @@ inc/store.php     storage helpers
 ---
 
 <p align="center"><sub>Designed &amp; developed by <a href="https://www.linkedin.com/in/abid-islam-a926ab2b5/">Abid Islam</a> &amp; <a href="https://boostnixmedia.com/">Boostnix Media</a></sub></p>
+- Admin **Service Bookings**: bookings from the website form are saved (cPanel/PHP) and shown in the admin with Call, WhatsApp, Confirm and Done buttons.
+- Speed: product photos are resized (Shopify width or `img.php` WebP cache on cPanel); no fade on the first screen.
+- SEO for Bashundhara R/A and Baridhara (title, description, LocalBusiness + FAQ schema, area text).
