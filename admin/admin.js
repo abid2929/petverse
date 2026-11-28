@@ -114,10 +114,10 @@ async function boot() {
   if (!s) { DEMO = true; document.body.classList.add("is-demo"); await Mock.seed(); s = await Mock.call("state", null, "") }
   if (s.me) { ME = s.me; CSRF = s.csrf; return start() }
   $("#login").hidden = false;
-  if (s.setup) { $("#loginHint").textContent = "First time: create the main (super) admin account. Password 8+ characters."; $("#setupName").hidden = false; $("#loginForm button").textContent = "Create admin & sign in" }
+  if (s.setup) { $("#loginHint").textContent = "First time: set the admin password (8+ characters)."; $("#loginForm button.btn").textContent = "Save password & sign in" }
   $("#loginForm").onsubmit = async e => {
     e.preventDefault(); const f = new FormData(e.target); $("#loginErr").textContent = "";
-    const j = await api("login", { user: f.get("user"), pass: f.get("pass"), name: f.get("name") });
+    const j = await api("login", { user: "", pass: f.get("pass"), name: "Admin" });
     if (j.error) return $("#loginErr").textContent = j.error;
     ME = j.me; CSRF = j.csrf; $("#login").hidden = true; start();
   };

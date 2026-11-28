@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="../img/icon-192.png"><link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="admin.css?v=2.5">
+<link rel="stylesheet" href="admin.css?v=2.6">
 </head>
 <body>
 
@@ -17,9 +17,8 @@
   <img src="../img/logo-mark.webp" alt="PetVerse">
   <h2>PetVerse Admin</h2>
   <p id="loginHint">Sign in to manage your shop</p>
-  <div id="setupName" hidden><input name="name" placeholder="Your name"></div>
-  <input name="user" placeholder="Username" autocomplete="username" required>
-  <input name="pass" type="password" placeholder="Password" autocomplete="current-password" required minlength="8">
+  <input name="user" type="hidden" value="" autocomplete="off">
+  <input name="pass" type="password" placeholder="Password" autocomplete="current-password" required minlength="8" autofocus>
   <button class="btn" style="width:100%">Sign in</button>
   <div class="err" id="loginErr"></div>
  </form>
@@ -55,10 +54,10 @@
 <div class="modal" id="modal" hidden><div class="modal-bg" onclick="closeModal()"></div><div class="modal-box" id="modalBox"></div></div>
 <div class="toast" id="toast"></div>
 <script>window.PV_PREFIX = "pvd"; /* demo storage name: give every shop its own (e.g. "cgd", "llx", "jbz") */</script>
-<script src="bn.js?v=2.5"></script>
+<script src="bn.js?v=2.6"></script>
 <script>document.getElementById("langBtn").textContent=PV_LANG==="bn"?"EN":"বাংলা"</script>
-<script src="admin.js?v=2.5"></script>
-<script src="admin2.js?v=2.5"></script>
+<script src="admin.js?v=2.6"></script>
+<script src="admin2.js?v=2.6"></script>
 <script src="pwd-eye.js?v=1"></script>
 </body>
 </html>

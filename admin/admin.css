@@ -124,3 +124,5 @@ html[lang=bn] body{font-size:14.5px}html[lang=bn] .nv{font-size:14.5px}
 .sig a{display:inline-flex;align-items:center;gap:.3rem;font-weight:600;color:inherit;text-decoration:none}.sig a:hover{text-decoration:underline}
 .sig .sg-i{width:15px;height:15px;border-radius:3px;display:grid;place-items:center;flex-shrink:0;color:#fff;font:700 9.5px/1 system-ui,sans-serif}
 .sig .sg-li{background:#0a66c2}.sig .sg-bx{background:linear-gradient(135deg,#ff8a3d,#f04e23)}
+
+body:has(#login:not([hidden])) #tabbar,body:has(#login:not([hidden])) .fab{display:none!important}

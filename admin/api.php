@@ -34,15 +34,19 @@ if ($a === 'state') out(['setup' => !$users, 'me' => me(), 'csrf' => me() ? $_SE
 
 if ($a === 'login') {
   $b = body(); $un = strtolower(clean_str($b['user'] ?? '', 40)); $pw = (string)($b['pass'] ?? '');
+  if (!$users && $un === '') $un = 'admin';           // password-only sign in: first admin is "admin"
   $_SESSION['tries'] = (int)($_SESSION['tries'] ?? 0);
   if ($_SESSION['tries'] >= 8) out(['error' => 'Too many tries. Close the browser and try again later.'], 429);
   if (!$users) {                                   // first run: create the super admin
-    if (!preg_match('/^[a-z0-9_.]{3,30}$/', $un) || strlen($pw) < 8) out(['error' => 'Username 3+ letters, password 8+ characters.'], 400);
+    if (!preg_match('/^[a-z0-9_.]{3,30}$/', $un) || strlen($pw) < 8) out(['error' => 'Password must be 8+ characters.'], 400);
     $users = [['u' => $un, 'name' => clean_str($b['name'] ?? 'Super Admin', 60) ?: 'Super Admin', 'role' => 'super', 'hash' => password_hash($pw, PASSWORD_DEFAULT), 'on' => 1]];
     pv_write('users', $users);
   }
-  $found = null; foreach ($users as $u) if ($u['u'] === $un && !empty($u['on'])) $found = $u;
-  if (!$found || !password_verify($pw, $found['hash'])) { $_SESSION['tries']++; usleep(700000); out(['error' => 'Wrong username or password.'], 403); }
+  $found = null;
+  if ($un === '') { foreach ($users as $u) if (!empty($u['on']) && password_verify($pw, $u['hash'])) { $found = $u; break; } }   // password only
+  else foreach ($users as $u) if ($u['u'] === $un && !empty($u['on']) && password_verify($pw, $u['hash'])) $found = $u;
+  if (!$found) { $_SESSION['tries']++; usleep(700000); out(['error' => 'Wrong password.'], 403); }
+  $un = $found['u'];
   session_regenerate_id(true);
   $_SESSION['u'] = ['u' => $found['u'], 'name' => $found['name'], 'role' => $found['role']]; $_SESSION['tries'] = 0; $_SESSION['csrf'] = bin2hex(random_bytes(16));
   pv_update('users', function ($us) use ($un) { foreach ($us as &$x) if ($x['u'] === $un) $x['last'] = time(); return $us; });
@@ -206,6 +210,7 @@ if ($a === 'user_save') {
   $exists = false; foreach ($users as $u) if ($u['u'] === $un) $exists = true;
   if (!$exists && strlen($pw) < 8) out(['error' => 'New admin needs an 8+ character password.'], 400);
   if ($pw !== '' && strlen($pw) < 8) out(['error' => 'Password must be 8+ characters.'], 400);
+  if ($pw !== '') foreach ($users as $u) if ($u['u'] !== $un && password_verify($pw, $u['hash'])) out(['error' => 'Another admin already uses this password. Please choose a different one.'], 400);
   pv_update('users', function ($us) use ($b, $un, $role, $pw, $exists) {
     if (!$exists) $us[] = ['u' => $un, 'name' => '', 'role' => $role, 'hash' => '', 'on' => 1];
     foreach ($us as &$u) if ($u['u'] === $un) { $u['name'] = clean_str($b['name'] ?? $un, 60); if ($u['u'] !== me()['u']) { $u['role'] = $role; $u['on'] = empty($b['on']) ? 0 : 1; } if ($pw !== '') $u['hash'] = password_hash($pw, PASSWORD_DEFAULT); }
@@ -219,6 +224,7 @@ if ($a === 'pass') {
   foreach ($users as $u) if ($u['u'] === me()['u']) $mine = $u;
   if (!$mine || !password_verify($old, $mine['hash'])) out(['error' => 'Current password is wrong.'], 403);
   if (strlen($new) < 8) out(['error' => 'New password must be 8+ characters.'], 400);
+  foreach ($users as $u) if ($u['u'] !== me()['u'] && password_verify($new, $u['hash'])) out(['error' => 'Another admin already uses this password. Please choose a different one.'], 400);
   pv_update('users', function ($us) use ($new) { foreach ($us as &$u) if ($u['u'] === me()['u']) $u['hash'] = password_hash($new, PASSWORD_DEFAULT); return $us; });
   audit('changed own password'); out(['ok' => 1]);
 }
