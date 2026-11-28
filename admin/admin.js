@@ -44,7 +44,7 @@ async function load(c, force) { if (DB[c] && !force) return DB[c]; const j = awa
 async function save(c) { const j = await api("put", { data: DB[c] }, "&c=" + c); if (j.error) { toast(j.error); return false } return true }
 const imgSrc = s => !s ? "" : (/^(https?:|data:)/.test(s) ? s : "../img/" + s.replace(/^img\//, ""));
 const GHP = /github\.io$/.test(location.hostname);
-function thumb(x, cls = "th") { const s = x.i && !(GHP && x.r && /^p\//.test(x.i)) ? imgSrc(x.i) : (x.r || (x.g && x.g[0] && imgSrc(x.g[0].s)) || ""); return s ? `<img class="${cls}" src="${esc(s)}" data-r="${esc(x.r || "")}" onerror="if(this.dataset.r&&this.src!==this.dataset.r){this.src=this.dataset.r}else{this.outerHTML='<div class=ph0>${esc((x.b || "").slice(0, 14))}</div>'}" alt="">` : `<div class="ph0">${esc((x.b || "No photo").slice(0, 14))}</div>` }
+function thumb(x, cls = "th") { const s = x.i && !(x.r && /^p\/(?!up-)/.test(x.i)) ? imgSrc(x.i) : (x.r || (x.g && x.g[0] && imgSrc(x.g[0].s)) || ""); return s ? `<img class="${cls}" src="${esc(s)}" data-r="${esc(x.r || "")}" onerror="if(this.dataset.r&&this.src!==this.dataset.r){this.src=this.dataset.r}else{this.outerHTML='<div class=ph0>${esc((x.b || "").slice(0, 14))}</div>'}" alt="">` : `<div class="ph0">${esc((x.b || "No photo").slice(0, 14))}</div>` }
 function allProducts() { const out = []; const P = DB.products || {}; for (const k in P) (P[k] || []).forEach((x, j) => { if (!x.id) x.id = k + j; out.push({ ...x, _k: k, _j: j }) }); return out }
 function catName(k) { const c = (DB.categories || []).find(c => c.k === k); return c ? c.name : k }
 
@@ -198,7 +198,7 @@ async function Dash(V) {
   const series = days.map(d => valid.filter(o => day(o.t) === d).reduce((a, o) => a + o.total, 0));
   const last = O[0];
   const hr = new Date().getHours(), greet = hr < 12 ? "Good morning" : hr < 17 ? "Good afternoon" : hr < 21 ? "Good evening" : "Good night";
-  const qa = [["product/new", "plus", "New product", "#f0642a", can("products")], ["neworder", "cart", "Manual order", "#7c3aed", can("orders")], ["pending", "clock", "Pending orders", "#f59e0b", can("orders"), cnt("pending")], ["bookings", "cal", "Service bookings", "#0e7490", can("bookings"), (DB.bookings || []).filter(k => k.status === "new").length || ""], ["inventory", "stock", "Update stock", "#16a34a", can("inventory"), low || ""], ["banners", "image", "Banners & offers", "#2563eb", can("banners")], ["store", "ext", "View shop", "#c2185b", true]].filter(x => x[4]);
+  const qa = [["product/new", "plus", "New product", "#f0642a", can("products")], ["neworder", "cart", "Manual order", "#7c3aed", can("orders")], ["pending", "clock", "Pending orders", "#f59e0b", can("orders"), cnt("pending")], ["bookings", "cal", "Service bookings", "#0e7490", can("bookings"), (DB.bookings || []).filter(k => k.status === "new").length || ""], ["inventory", "stock", "Update stock", "#16a34a", can("inventory"), low || ""], ["banners", "image", "Banners & offers", "#2563eb", can("banners")]].filter(x => x[4]);
   V.innerHTML = `
   <div class="hello"><div><h2><span>${greet}</span>, ${esc(ME.name || ME.u || "")} 👋</h2><p><span>Today</span>: <b>${todayOrders}</b> <span class="tl">new orders</span> · <b>${tk(todaySales)}</b> <span class="tl">sales</span> · <b>${cnt("pending")}</b> <span class="tl">waiting</span></p></div></div>
   <div class="qa">${qa.map(x => `<button class="qa-b" onclick="quick('${x[0]}')" style="--c:${x[3]}"><i>${ic(x[1])}</i><span>${x[2]}</span>${x[5] ? `<em>${x[5]}</em>` : ""}</button>`).join("")}</div>

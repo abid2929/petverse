@@ -272,6 +272,28 @@ if ($a === 'ai') {
   out($t ? ['ok' => 1, 'text' => $t] : ['error' => 'AI did not answer. Check the Gemini key.']);
 }
 
+if ($a === 'backup') {   // Download all data: one zip (full = whole website + data + photos, data = only data files)
+  if (!me() || (me()['role'] ?? '') !== 'super') out(['error' => 'Only the main admin can download a backup.'], 403);
+  if (!class_exists('ZipArchive')) out(['error' => 'This server cannot make zip files (ZipArchive missing). Ask hosting to enable the PHP zip extension.'], 500);
+  @set_time_limit(600); @ini_set('memory_limit', '512M');
+  $full = ($_GET['t'] ?? 'full') !== 'data';
+  $root = realpath(PV_ROOT); $tmp = tempnam(sys_get_temp_dir(), 'pvb');
+  $z = new ZipArchive(); if ($z->open($tmp, ZipArchive::OVERWRITE) !== true) out(['error' => 'Could not create the zip.'], 500);
+  $base = $full ? $root : $root . '/data';
+  $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($base, FilesystemIterator::SKIP_DOTS), RecursiveIteratorIterator::LEAVES_ONLY);
+  $n = 0;
+  foreach ($it as $f) {
+    if (!$f->isFile()) continue; $path = $f->getPathname(); $rel = ltrim(str_replace('\\', '/', substr($path, strlen($root))), '/');
+    if (preg_match('~^img/c/|/\.lock-|^error_log$|\.zip$~', $rel)) continue;   // skip cache, lock files, old zips
+    $z->addFile($path, $rel); $n++;
+  }
+  if ($full) foreach (glob($root . '/img/p/up-*') ?: [] as $f) if (!$z->locateName('img/p/' . basename($f))) $z->addFile($f, 'img/p/' . basename($f));
+  $z->close(); audit('downloaded backup (' . ($full ? 'full' : 'data') . ", $n files)");
+  $name = 'petverse-' . ($full ? 'full' : 'data') . '-backup-' . date('Y-m-d-His') . '.zip';
+  header_remove('Content-Type'); header('Content-Type: application/zip'); header('Content-Disposition: attachment; filename="' . $name . '"');
+  header('Content-Length: ' . filesize($tmp)); header('Cache-Control: no-store');
+  readfile($tmp); @unlink($tmp); exit;
+}
 if ($a === 'export') {
   need('reports'); header('Content-Type: text/csv; charset=utf-8'); header('Content-Disposition: attachment; filename="petverse-orders-' . date('Ymd') . '.csv"');
   $f = fopen('php://output', 'w'); fwrite($f, "\xEF\xBB\xBF");
